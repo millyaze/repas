@@ -225,11 +225,13 @@ button.rond { width: 44px; padding: 0; font-size: 1.2rem; }
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 2px 12px;
   padding: 8px 0;
   border-top: 1px solid var(--bordure);
 }
 .liste-historique li:first-child { border-top: none; }
+.historique-texte { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 
 /* Téléphone : tout sur une colonne */
 @media (max-width: 600px) {

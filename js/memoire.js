@@ -60,7 +60,15 @@ function donneesValides(donnees) {
   if (donnees.historique !== undefined) {
     if (!Array.isArray(donnees.historique)) return false;
     const historiqueCorrect = donnees.historique.every(function (entree) {
-      return entree && typeof entree.id === "string" && entree.id !== ""
+      // « retraits » (ce qui a été retiré du stock, pour pouvoir annuler) est facultatif
+      const retraitsCorrects = entree && (entree.retraits === undefined
+        || (Array.isArray(entree.retraits) && entree.retraits.every(function (r) {
+          return r && typeof r.id === "string" && r.id !== ""
+            && typeof r.nom === "string" && r.nom !== ""
+            && typeof r.quantite === "number" && r.quantite >= 0
+            && typeof r.unite === "string";
+        })));
+      return retraitsCorrects && typeof entree.id === "string" && entree.id !== ""
         && /^\d{4}-\d{2}-\d{2}$/.test(entree.date);
     });
     if (!historiqueCorrect) return false;

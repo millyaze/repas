@@ -18,6 +18,17 @@ const HISTORIQUE_MAX = 50;
 // Recette dont le récapitulatif « Cuisiner » est ouvert (null = aucune)
 let idEnCuisine = null;
 
+// ---------- Outils ----------
+
+// Arrondi au millième, pour ne pas perdre de grammes quand le stock est en kg ou en l
+function auMillieme(nombre) { return Math.round(nombre * 1000) / 1000; }
+
+// Nom d'une recette à partir de son identifiant
+function nomDeRecette(id) {
+  const recette = RECETTES.find(function (r) { return r.id === id; });
+  return recette ? recette.nom : id;
+}
+
 // ---------- Historique ----------
 
 // Nombre de jours depuis la dernière fois qu'une recette a été cuisinée (null = jamais)
@@ -43,7 +54,7 @@ function ecrireDepuis(jours) {
 function fusionnerHistorique(autres) {
   (autres || []).forEach(function (entree) {
     const dejaLa = historique.some(function (e) { return e.id === entree.id && e.date === entree.date; });
-    if (!dejaLa) historique.push({ id: entree.id, date: entree.date });
+    if (!dejaLa) historique.push(entree);
   });
   // La plus récente d'abord
   historique.sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
@@ -55,12 +66,21 @@ function afficherHistorique() {
   const liste = element("liste-historique");
   liste.textContent = "";
   historique.slice(0, HISTORIQUE_AFFICHE).forEach(function (entree) {
-    const recette = RECETTES.find(function (r) { return r.id === entree.id; });
     const p = entree.date.split("-");
     const ligne = creer("li", "");
-    ligne.appendChild(creer("span", "recette-nom", recette ? recette.nom : entree.id));
-    ligne.appendChild(creer("span", "recette-infos",
+    const texte = creer("span", "historique-texte");
+    texte.appendChild(creer("span", "recette-nom", nomDeRecette(entree.id)));
+    texte.appendChild(creer("span", "recette-infos",
       p[2] + "/" + p[1] + "/" + p[0] + " (" + ecrireDepuis(Math.max(0, -joursRestants(entree.date))) + ")"));
+    ligne.appendChild(texte);
+    // Bouton « Annuler » : seulement si l'on sait ce qui avait été retiré du stock
+    if (entree.retraits) {
+      const bouton = creer("button", "", "Annuler");
+      bouton.type = "button";
+      bouton.setAttribute("aria-label", "Annuler " + nomDeRecette(entree.id) + " et remettre les quantités dans le stock");
+      bouton.addEventListener("click", function () { annulerCuisine(entree); });
+      ligne.appendChild(bouton);
+    }
     liste.appendChild(ligne);
   });
   element("vide-historique").hidden = historique.length > 0;
@@ -175,20 +195,64 @@ function validerCuisine(recette, lignes, zoneErreur) {
   }
 
   // 2) On retire du stock (jamais en dessous de 0 ; la ligne reste dans le stock, même à 0)
+  //    On retient ce qui a été retiré, pour pouvoir annuler plus tard
+  const retires = [];
   lignes.forEach(function (ligne, i) {
+    const avant = ligne.enStock.quantite;
     const reste = Math.max(0, ligne.maximum - retraits[i]);
-    // Arrondi au millième pour ne pas perdre de grammes quand le stock est en kg ou en l
     const resteEnStock = convertir(reste, ligne.unite, ligne.enStock.unite);
-    ligne.enStock.quantite = Math.max(0, Math.round(resteEnStock * 1000) / 1000);
+    ligne.enStock.quantite = Math.max(0, auMillieme(resteEnStock));
+    const retire = auMillieme(avant - ligne.enStock.quantite);
+    if (retire > 0) {
+      retires.push({ id: ligne.enStock.id, nom: ligne.enStock.nom, quantite: retire, unite: ligne.enStock.unite });
+    }
   });
 
   // 3) On note la recette en tête de l'historique
-  historique.unshift({ id: recette.id, date: dateDuJour() });
+  historique.unshift({ id: recette.id, date: dateDuJour(), retraits: retires });
   historique.splice(HISTORIQUE_MAX);
 
   idEnCuisine = null;
   sauvegarder();
   afficher(); // rafraîchit le stock, puis les recettes
   montrerMessage("« " + recette.nom + " » cuisinée : le stock a été mis à jour.");
+  element("message").scrollIntoView({ block: "center" });
+}
+
+// ---------- Annulation ----------
+
+// Bouton « Annuler » de l'historique : remet dans le stock ce qu'une recette avait retiré
+// et l'enlève de l'historique.
+function annulerCuisine(entree) {
+  const position = historique.indexOf(entree);
+  if (position === -1) return;
+  const nom = nomDeRecette(entree.id);
+  if (!confirm("Annuler « " + nom + " » ? Les quantités retirées seront remises dans le stock.")) return;
+
+  const aLaMain = []; // ce qui n'a pas pu être remis automatiquement
+  entree.retraits.forEach(function (retrait) {
+    const ligne = stock.find(function (l) { return l.id === retrait.id; });
+    if (!ligne) {
+      // La ligne a été supprimée entre-temps : on la recrée (sans date de péremption)
+      stock.push({ id: retrait.id, nom: retrait.nom, quantite: retrait.quantite, unite: retrait.unite, peremption: null });
+      return;
+    }
+    const aRemettre = convertir(retrait.quantite, retrait.unite, ligne.unite);
+    if (aRemettre === null) {
+      // L'unité de la ligne a été changée entre-temps : impossible de calculer
+      aLaMain.push(retrait.nom + " (" + ecrireQuantite(retrait.quantite, retrait.unite) + ")");
+    } else {
+      ligne.quantite = auMillieme(ligne.quantite + aRemettre);
+    }
+  });
+
+  historique.splice(position, 1);
+  sauvegarder();
+  afficher(); // rafraîchit le stock, puis les recettes
+  if (aLaMain.length > 0) {
+    montrerMessage("« " + nom + " » annulée. À remettre toi-même dans le stock : " + aLaMain.join(", ") + ".", true);
+  } else {
+    montrerMessage("« " + nom + " » annulée : les quantités ont été remises dans le stock.");
+  }
   element("message").scrollIntoView({ block: "center" });
 }
