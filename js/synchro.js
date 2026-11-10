@@ -97,7 +97,7 @@ function lireEnLigne() {
 // Envoie le stock de cet appareil. shaConnu = version en ligne que l'on remplace (null = création).
 function envoyerEnLigne(shaConnu) {
   const modifieEnvoye = reglagesSynchro.modifie || new Date().toISOString();
-  const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes, favoris: favoris, historique: historique, modifie: modifieEnvoye };
+  const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes, favoris: favoris, historique: historique, courses: courses, modifie: modifieEnvoye };
   const corps = { message: "Mise à jour du stock", content: versBase64(JSON.stringify(donnees, null, 1)) };
   if (shaConnu) corps.sha = shaConnu;
   return appelGitHub(ADRESSE_GITHUB + "/contents/" + FICHIER_DONNEES, "PUT", corps).then(function (reponse) {
@@ -133,7 +133,7 @@ function synchroniser() {
     const iciPlusRecent = reglagesSynchro.enAttente
       && (reglagesSynchro.modifie || "") > (enLigne.donnees.modifie || "");
     if (iciPlusRecent) return envoyerEnLigne(enLigne.sha);
-    remplacerDonnees(enLigne.donnees.stock, enLigne.donnees.codes || {}, enLigne.donnees.favoris || [], enLigne.donnees.historique || []);
+    remplacerDonnees(enLigne.donnees.stock, enLigne.donnees.codes || {}, enLigne.donnees.favoris || [], enLigne.donnees.historique || [], enLigne.donnees.courses || []);
     reglagesSynchro.sha = enLigne.sha;
     reglagesSynchro.enAttente = false;
     reglagesSynchro.modifie = enLigne.donnees.modifie || "";

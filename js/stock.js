@@ -20,6 +20,8 @@ let codes = {};
 let favoris = [];
 // Recettes cuisinées, la plus récente d'abord : { id, date }, voir js/cuisiner.js
 let historique = [];
+// Liste de courses : { id, nom, quantite, unite, coche, recettes }, voir js/courses.js
+let courses = [];
 // Code-barre du produit en cours d'ajout après un scan (null = saisie à la main)
 let codeEnAttente = null;
 
@@ -57,6 +59,7 @@ function demarrer() {
     codes = donnees.codes || {};
     favoris = donnees.favoris || [];
     historique = donnees.historique || [];
+    courses = donnees.courses || [];
   } else {
     stock = STOCK_TEST.map(function (ligne) { return Object.assign({}, ligne); });
     sauvegarder();
@@ -66,7 +69,7 @@ function demarrer() {
   element("bouton-annuler").addEventListener("click", quitterModification);
   element("recherche").addEventListener("input", afficher);
   element("bouton-exporter").addEventListener("click", function () {
-    exporterFichier(stock, codes, favoris, historique);
+    exporterFichier(stock, codes, favoris, historique, courses);
     montrerMessage("Fichier de sauvegarde créé (dossier Téléchargements).");
   });
   element("bouton-importer").addEventListener("click", function () { element("fichier-import").click(); });
@@ -113,7 +116,7 @@ function infoPeremption(date) {
 }
 
 function sauvegarder() {
-  if (!enregistrerDonnees(stock, codes, favoris, historique)) {
+  if (!enregistrerDonnees(stock, codes, favoris, historique, courses)) {
     montrerMessage("Attention : l'enregistrement dans le navigateur a échoué. Exporte un fichier pour ne rien perdre.", true);
   }
   // Prévient la synchro automatique (js/synchro.js) qu'il y a du nouveau à envoyer
@@ -121,12 +124,13 @@ function sauvegarder() {
 }
 
 // Utilisé par la synchro : remplace le stock par celui reçu de l'autre appareil
-function remplacerDonnees(nouveauStock, nouveauxCodes, nouveauxFavoris, nouvelHistorique) {
+function remplacerDonnees(nouveauStock, nouveauxCodes, nouveauxFavoris, nouvelHistorique, nouvellesCourses) {
   stock = nouveauStock;
   codes = nouveauxCodes;
   favoris = nouveauxFavoris || [];
   historique = nouvelHistorique || [];
-  enregistrerDonnees(stock, codes, favoris, historique);
+  courses = nouvellesCourses || [];
+  enregistrerDonnees(stock, codes, favoris, historique, courses);
   // Si la ligne en cours de modification n'existe plus, on revient au mode « Ajouter »
   if (idEnModification && !stock.some(function (l) { return l.id === idEnModification; })) quitterModification();
   afficher();
@@ -382,7 +386,7 @@ function importer() {
   const fichier = element("fichier-import").files[0];
   element("fichier-import").value = ""; // permet de rechoisir le même fichier ensuite
   if (!fichier) return;
-  importerFichier(fichier, function (nouveauStock, nouveauxCodes, nouveauxFavoris, nouvelHistorique) {
+  importerFichier(fichier, function (nouveauStock, nouveauxCodes, nouveauxFavoris, nouvelHistorique, nouvellesCourses) {
     if (!confirm("Remplacer le stock actuel (" + stock.length + " ingrédients) par celui du fichier (" + nouveauStock.length + " ingrédients) ?")) return;
     stock = nouveauStock;
     // Les produits scannés déjà connus sont gardés, ceux du fichier s'y ajoutent
@@ -391,6 +395,8 @@ function importer() {
     nouveauxFavoris.forEach(function (id) { if (favoris.indexOf(id) === -1) favoris.push(id); });
     // Et pour l'historique des recettes cuisinées (js/cuisiner.js)
     fusionnerHistorique(nouvelHistorique);
+    // Et pour la liste de courses (js/courses.js)
+    fusionnerCourses(nouvellesCourses);
     quitterModification();
     sauvegarder();
     afficher();

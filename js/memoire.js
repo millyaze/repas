@@ -26,9 +26,10 @@ function chargerDonnees() {
 // codes = associations retenues après un scan (code-barre -> ingrédient)
 // favoris = identifiants des recettes marquées d'une étoile
 // historique = recettes cuisinées, la plus récente d'abord : { id, date }
-function enregistrerDonnees(stock, codes, favoris, historique) {
+// courses = liste de courses : { id, nom, quantite, unite, coche, recettes }
+function enregistrerDonnees(stock, codes, favoris, historique, courses) {
   try {
-    const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes || {}, favoris: favoris || [], historique: historique || [] };
+    const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes || {}, favoris: favoris || [], historique: historique || [], courses: courses || [] };
     localStorage.setItem(CLE_MEMOIRE, JSON.stringify(donnees));
     return true;
   } catch (erreur) {
@@ -73,6 +74,21 @@ function donneesValides(donnees) {
     });
     if (!historiqueCorrect) return false;
   }
+  // La liste de courses est facultative (anciens fichiers sans « courses »)
+  if (donnees.courses !== undefined) {
+    if (!Array.isArray(donnees.courses)) return false;
+    const coursesCorrectes = donnees.courses.every(function (article) {
+      return article
+        && typeof article.id === "string" && article.id !== ""
+        && typeof article.nom === "string" && article.nom !== ""
+        && typeof article.quantite === "number" && article.quantite >= 0
+        && typeof article.unite === "string"
+        && (article.coche === undefined || typeof article.coche === "boolean")
+        && (article.recettes === undefined || (Array.isArray(article.recettes)
+          && article.recettes.every(function (id) { return typeof id === "string"; })));
+    });
+    if (!coursesCorrectes) return false;
+  }
   return donnees.stock.every(function (ligne) {
     return ligne
       && typeof ligne.id === "string" && ligne.id !== ""
@@ -84,8 +100,8 @@ function donneesValides(donnees) {
 }
 
 // Crée un fichier de sauvegarde et le fait télécharger (ex. stock-2026-11-10.json)
-function exporterFichier(stock, codes, favoris, historique) {
-  const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes || {}, favoris: favoris || [], historique: historique || [] };
+function exporterFichier(stock, codes, favoris, historique, courses) {
+  const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes || {}, favoris: favoris || [], historique: historique || [], courses: courses || [] };
   const contenu = new Blob([JSON.stringify(donnees, null, 2)], { type: "application/json" });
   const lien = document.createElement("a");
   lien.href = URL.createObjectURL(contenu);
@@ -97,13 +113,13 @@ function exporterFichier(stock, codes, favoris, historique) {
 }
 
 // Lit un fichier de sauvegarde choisi par l'utilisateur.
-// Appelle siReussi(stock, codes, favoris, historique) si le fichier est correct, sinon siErreur().
+// Appelle siReussi(stock, codes, favoris, historique, courses) si le fichier est correct, sinon siErreur().
 function importerFichier(fichier, siReussi, siErreur) {
   const lecteur = new FileReader();
   lecteur.onload = function () {
     try {
       const donnees = JSON.parse(lecteur.result);
-      if (donneesValides(donnees)) siReussi(donnees.stock, donnees.codes || {}, donnees.favoris || [], donnees.historique || []);
+      if (donneesValides(donnees)) siReussi(donnees.stock, donnees.codes || {}, donnees.favoris || [], donnees.historique || [], donnees.courses || []);
       else siErreur();
     } catch (erreur) {
       siErreur();

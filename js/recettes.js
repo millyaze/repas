@@ -3,7 +3,8 @@
 // - « Réalisables maintenant » : tout est dans le stock.
 // - « Presque réalisables » : au moins SEUIL_INCOMPLET % des ingrédients.
 // Les favoris (étoile) sont enregistrés et synchronisés avec le stock.
-// « Cuisiner » et l'historique sont dans js/cuisiner.js (chargé avant ce fichier).
+// « Cuisiner » et l'historique sont dans js/cuisiner.js, la liste de courses dans js/courses.js
+// (tous deux chargés avant ce fichier).
 // Utilise : stock, favoris, sauvegarder, element, joursRestants, JOURS_ALERTE, arrondir, creerId (js/stock.js),
 //           INGREDIENTS (data/ingredients.js), RECETTES (recettes/toutes.js).
 // ============================================================
@@ -109,7 +110,7 @@ function analyserRecette(recette) {
       if (manque > 0) {
         info.etat = "manque";
         info.note = enStock ? "il manque " + ecrireQuantite(manque, besoin.unite) : "pas dans le stock";
-        manquants.push({ nom: nom, quantite: manque, unite: besoin.unite });
+        manquants.push({ id: besoin.id, nom: nom, quantite: manque, unite: besoin.unite });
       } else {
         disponibles++;
       }
@@ -230,6 +231,7 @@ function afficherRecettes() {
   element("titre-realisables").textContent = "Réalisables maintenant (" + realisables.length + ")";
   element("titre-incompletes").textContent = "Presque réalisables (" + incompletes.length + ")";
   afficherHistorique(); // bloc « Dernières recettes cuisinées » (js/cuisiner.js)
+  afficherCourses();    // onglet « Courses » (js/courses.js)
 }
 
 function remplirListe(idListe, idVide, analyses, texteVide) {
@@ -324,6 +326,9 @@ function creerCarteRecette(analyse) {
   // Recette réalisable : bouton « J'ai cuisiné », ou son récapitulatif s'il est ouvert (js/cuisiner.js)
   if (analyse.pourcent === 100) {
     contenu.appendChild(idEnCuisine === recette.id ? creerPanneauCuisiner(recette) : creerBoutonCuisiner(recette));
+  } else {
+    // Recette incomplète : bouton pour mettre ce qui manque dans la liste de courses (js/courses.js)
+    contenu.appendChild(creerBoutonCourses(analyse));
   }
   carte.appendChild(contenu);
 
@@ -332,4 +337,5 @@ function creerCarteRecette(analyse) {
 
 // ---------- Démarrage ----------
 preparerFiltres();
+demarrerCourses();
 afficherRecettes();

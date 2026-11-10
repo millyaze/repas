@@ -249,3 +249,27 @@ button.rond { width: 44px; padding: 0; font-size: 1.2rem; }
 
 /* Numéro de version en bas de page */
 .version { margin: 16px 0 24px; text-align: center; font-size: 0.85rem; color: var(--texte-discret); }
+
+/* ---------- Liste de courses (js/courses.js) ---------- */
+.course {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+  border-top: 1px solid var(--bordure);
+}
+.course:first-child { border-top: none; }
+.course-case { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; min-height: 44px; cursor: pointer; }
+.course-case input { width: 24px; height: 24px; min-height: 0; padding: 0; flex: none; accent-color: var(--accent); }
+.course.achete .ligne-nom { text-decoration: line-through; color: var(--texte-discret); font-weight: 400; }
+.boutons-courses { margin-top: 12px; }
+.formulaire-courses { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.rangement-ligne {
+  display: grid;
+  grid-template-columns: 80px 52px 1fr;
+  align-items: center;
+  gap: 4px 8px;
+  padding: 8px 0;
+  border-top: 1px solid var(--bordure);
+}
+.rangement-ligne .cuisiner-nom { grid-column: 1 / -1; }

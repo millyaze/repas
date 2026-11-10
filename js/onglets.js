@@ -1,5 +1,5 @@
 // ============================================================
-// ONGLETS : passe d'une partie de la page à l'autre (Stock, Recettes).
+// ONGLETS : passe d'une partie de la page à l'autre (Stock, Recettes, Courses).
 // Pour ajouter un onglet : ajouter un bouton data-onglet="nom" dans la barre
 // et un bloc id="vue-nom" dans index.html.
 // ============================================================

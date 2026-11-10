@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Générateur de repas</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header>
@@ -13,6 +13,7 @@
     <nav class="onglets" aria-label="Parties de l'outil">
       <button type="button" class="onglet" data-onglet="stock">Stock</button>
       <button type="button" class="onglet" data-onglet="recettes">Recettes</button>
+      <button type="button" class="onglet" data-onglet="courses">Courses</button>
     </nav>
   </header>
 
@@ -142,28 +143,71 @@
         <p id="vide-historique" class="vide" hidden>Aucune pour l'instant : ouvre une recette réalisable et touche « J'ai cuisiné cette recette ».</p>
       </section>
     </div>
-    <!-- Numéro de version : à augmenter partout dans ce fichier (« ?v=3 » et « Version 3 ») à chaque mise en ligne -->
-    <p class="version">Version 3</p>
+
+
+    <!-- ===================== ONGLET COURSES (voir js/courses.js) ===================== -->
+    <div id="vue-courses" hidden>
+      <section class="bloc">
+        <h2>Liste de courses</h2>
+        <p class="aide">Au magasin, coche ce que tu as acheté. Ensuite, « Ranger les courses » l'ajoute au stock.</p>
+        <ul id="liste-courses" class="liste"></ul>
+        <p id="vide-courses" class="vide" hidden>La liste est vide. Ajoute un article ci-dessous, ou ouvre une recette « presque réalisable » et touche « Ajouter ce qui manque à la liste de courses ».</p>
+        <div id="zone-rangement"></div>
+        <div class="boutons-sauvegarde boutons-courses">
+          <button type="button" id="bouton-ranger" class="principal" hidden>Ranger les courses cochées</button>
+          <button type="button" id="bouton-vider-courses" class="danger" hidden>Vider la liste</button>
+        </div>
+      </section>
+
+      <section class="bloc">
+        <h2>Ajouter un article</h2>
+        <form id="formulaire-courses" class="formulaire-courses">
+          <label class="champ champ-large">Nom
+            <input type="text" id="courses-nom" required maxlength="60" placeholder="ex. Citron" autocomplete="off" list="suggestions-noms">
+          </label>
+          <label class="champ">Quantité (facultatif)
+            <input type="number" id="courses-quantite" min="0" step="any" inputmode="decimal" placeholder="ex. 2">
+          </label>
+          <label class="champ">Unité
+            <select id="courses-unite"></select>
+          </label>
+          <div class="boutons-formulaire">
+            <button type="submit" class="principal">Ajouter à la liste</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="bloc">
+        <h2>À zéro dans le stock</h2>
+        <p class="aide">Les ingrédients épuisés. Touche « Ajouter » pour les mettre dans la liste.</p>
+        <ul id="liste-zero" class="liste-historique"></ul>
+        <p id="vide-zero" class="vide" hidden>Aucun ingrédient à zéro dans le stock.</p>
+      </section>
+    </div>
+
+    <!-- Numéro de version : à augmenter partout dans ce fichier (« ?v=4 » et « Version 4 ») à chaque mise en ligne -->
+    <p class="version">Version 4</p>
   </main>
 
-  <script src="data/ingredients.js?v=3"></script>
-  <script src="data/stock-test.js?v=3"></script>
-  <script src="js/memoire.js?v=3"></script>
-  <script src="js/stock.js?v=3"></script>
+  <script src="data/ingredients.js?v=4"></script>
+  <script src="data/stock-test.js?v=4"></script>
+  <script src="js/memoire.js?v=4"></script>
+  <script src="js/stock.js?v=4"></script>
   <!-- Lecteur de code-barre gratuit (html5-qrcode), chargé depuis Internet -->
   <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" async></script>
-  <script src="js/scan.js?v=3"></script>
-  <script src="js/synchro.js?v=3"></script>
+  <script src="js/scan.js?v=4"></script>
+  <script src="js/synchro.js?v=4"></script>
   <!-- Recettes : un fichier par cuisine, réunis par toutes.js -->
-  <script src="recettes/francaise.js?v=3"></script>
-  <script src="recettes/italienne.js?v=3"></script>
-  <script src="recettes/asiatique.js?v=3"></script>
-  <script src="recettes/mediterraneenne.js?v=3"></script>
-  <script src="recettes/mexicaine.js?v=3"></script>
-  <script src="recettes/rapides.js?v=3"></script>
-  <script src="recettes/toutes.js?v=3"></script>
-  <script src="js/cuisiner.js?v=3"></script>
-  <script src="js/recettes.js?v=3"></script>
-  <script src="js/onglets.js?v=3"></script>
+  <script src="recettes/francaise.js?v=4"></script>
+  <script src="recettes/italienne.js?v=4"></script>
+  <script src="recettes/asiatique.js?v=4"></script>
+  <script src="recettes/mediterraneenne.js?v=4"></script>
+  <script src="recettes/mexicaine.js?v=4"></script>
+  <script src="recettes/rapides.js?v=4"></script>
+  <script src="recettes/toutes.js?v=4"></script>
+  <script src="js/cuisiner.js?v=4"></script>
+  <script src="js/courses.js?v=4"></script>
+  <script src="js/recettes.js?v=4"></script>
+  <script src="js/onglets.js?v=4"></script>
 </body>
 </html>
