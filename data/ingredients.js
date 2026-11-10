@@ -32,6 +32,7 @@ const INGREDIENTS = [
   { id: "thon-en-boite",   nom: "Thon en boîte",   unite: "boîte" },
   { id: "tofu",            nom: "Tofu",            unite: "g" },
   { id: "anchois",         nom: "Anchois",         unite: "g" },
+  { id: "cote-de-porc",    nom: "Côte de porc",    unite: "pièce" },
 
   // --- Légumes et fruits ---
   { id: "tomate",          nom: "Tomate",          unite: "pièce" },
@@ -54,12 +55,14 @@ const INGREDIENTS = [
   { id: "haricots-verts",  nom: "Haricots verts",  unite: "g" },
   { id: "petits-pois",     nom: "Petits pois",     unite: "g" },
   { id: "gingembre",       nom: "Gingembre",       unite: "g" },
+  { id: "chou",            nom: "Chou",            unite: "g" },
 
   // --- Herbes fraîches ---
   { id: "basilic",         nom: "Basilic",         unite: "g" },
   { id: "persil",          nom: "Persil",          unite: "g" },
   { id: "coriandre",       nom: "Coriandre",       unite: "g" },
   { id: "menthe",          nom: "Menthe",          unite: "g" },
+  { id: "laurier",         nom: "Laurier",         unite: "pièce" },
 
   // --- Féculents, pains ---
   { id: "pates",               nom: "Pâtes",               unite: "g" },
@@ -71,13 +74,17 @@ const INGREDIENTS = [
   { id: "pain",                nom: "Pain",                unite: "tranche" },
   { id: "pain-de-mie",         nom: "Pain de mie",         unite: "tranche" },
   { id: "tortilla-de-ble",     nom: "Tortilla de blé",     unite: "pièce" },
+  { id: "pain-a-burger",       nom: "Pain à burger",       unite: "pièce" },
+  { id: "chapelure",           nom: "Chapelure",           unite: "g" },
 
   // --- Conserves ---
   { id: "sauce-tomate",             nom: "Sauce tomate",             unite: "g" },
   { id: "mais-en-boite",            nom: "Maïs en boîte",            unite: "boîte" },
   { id: "haricots-rouges-en-boite", nom: "Haricots rouges en boîte", unite: "boîte" },
   { id: "pois-chiches-en-boite",    nom: "Pois chiches en boîte",    unite: "boîte" },
+  { id: "haricots-blancs-en-boite", nom: "Haricots blancs en boîte", unite: "boîte" },
   { id: "olives-noires",            nom: "Olives noires",            unite: "g" },
+  { id: "cornichons",               nom: "Cornichons",               unite: "g" },
   { id: "lait-de-coco",             nom: "Lait de coco",             unite: "ml" },
 
   // --- Placard : huiles, sauces, épices ---
@@ -101,6 +108,12 @@ const INGREDIENTS = [
   { id: "pignons-de-pin",     nom: "Pignons de pin",     unite: "g" },
   { id: "graines-de-sesame",  nom: "Graines de sésame",  unite: "g" },
   { id: "tahini",             nom: "Tahini",             unite: "g" },
+  { id: "garam-masala",       nom: "Garam masala",       unite: "g" },
+  { id: "noix-de-muscade",    nom: "Noix de muscade",    unite: "g" },
+  { id: "harissa",            nom: "Harissa",            unite: "g" },
+  { id: "ketchup",            nom: "Ketchup",            unite: "g" },
+  { id: "mayonnaise",         nom: "Mayonnaise",         unite: "g" },
+  { id: "abricots-secs",      nom: "Abricots secs",      unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
