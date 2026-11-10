@@ -18,6 +18,10 @@ const FICHIER_DONNEES = "donnees.json";
 const ADRESSE_GITHUB = "https://api.github.com/repos/" + DEPOT_DONNEES;
 // Nom sous lequel les réglages de synchro sont gardés dans le navigateur
 const CLE_SYNCHRO = "repas-synchro";
+// Temps entre deux vérifications automatiques quand la page reste ouverte (en millisecondes)
+const DELAI_VERIFICATION = 30000;
+// Numéro de version de la page, lu en bas de la page (« Version 5 » -> 5), voir index.html
+const VERSION_PAGE = Number((document.querySelector(".version") || { textContent: "" }).textContent.replace(/\D/g, "")) || 0;
 
 // Réglages de cet appareil :
 //  jeton     = la clé d'accès GitHub
@@ -48,6 +52,19 @@ function demarrerSynchro() {
     if (document.visibilityState === "visible") synchroniser();
   });
   window.addEventListener("online", synchroniser);
+  // Tant que la page est ouverte et visible, on vérifie régulièrement
+  // si l'autre appareil a changé quelque chose (sans rien afficher s'il n'y a rien de neuf)
+  setInterval(function () {
+    if (document.visibilityState === "visible" && !synchroEnCours) synchroniser(true);
+  }, DELAI_VERIFICATION);
+
+  // Nouvelle version de la page sur cet appareil : on retélécharge tout depuis la version en ligne,
+  // car l'ancienne version a pu recevoir des données qu'elle ne connaissait pas (et donc les ignorer).
+  if (reglagesSynchro.jeton && reglagesSynchro.version !== VERSION_PAGE) {
+    if (!reglagesSynchro.enAttente) delete reglagesSynchro.sha;
+    reglagesSynchro.version = VERSION_PAGE;
+    garderReglagesSynchro();
+  }
   afficherSynchro();
   synchroniser();
 }
@@ -97,7 +114,7 @@ function lireEnLigne() {
 // Envoie le stock de cet appareil. shaConnu = version en ligne que l'on remplace (null = création).
 function envoyerEnLigne(shaConnu) {
   const modifieEnvoye = reglagesSynchro.modifie || new Date().toISOString();
-  const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes, favoris: favoris, historique: historique, courses: courses, modifie: modifieEnvoye };
+  const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes, favoris: favoris, historique: historique, courses: courses, modifie: modifieEnvoye, versionPage: VERSION_PAGE };
   const corps = { message: "Mise à jour du stock", content: versBase64(JSON.stringify(donnees, null, 1)) };
   if (shaConnu) corps.sha = shaConnu;
   return appelGitHub(ADRESSE_GITHUB + "/contents/" + FICHIER_DONNEES, "PUT", corps).then(function (reponse) {
@@ -115,16 +132,20 @@ function envoyerEnLigne(shaConnu) {
 
 // ---------- La synchro elle-même ----------
 
-function synchroniser() {
+// discret = true pour la vérification automatique : pas de texte « en cours » à l'écran
+function synchroniser(discret) {
   if (!reglagesSynchro.jeton) return;
   if (synchroEnCours) { synchroARelancer = true; return; }
   synchroEnCours = true;
   clearTimeout(minuterieSynchro);
-  afficherSynchro("Synchronisation en cours…");
+  if (discret !== true) afficherSynchro("Synchronisation en cours…");
 
   lireEnLigne().then(function (enLigne) {
     // 1) Rien en ligne : premier envoi
     if (!enLigne.existe) return envoyerEnLigne(null);
+    // L'autre appareil a une version plus récente de la page : on ne touche à rien,
+    // sinon cet appareil effacerait les données qu'il ne connaît pas encore.
+    if ((enLigne.donnees.versionPage || 0) > VERSION_PAGE) throw new Error("version");
     // 2) Rien de neuf en ligne : on envoie nos changements s'il y en a
     if (enLigne.sha === reglagesSynchro.sha) {
       return reglagesSynchro.enAttente ? envoyerEnLigne(enLigne.sha) : null;
@@ -155,6 +176,7 @@ function synchroniser() {
     const textes = {
       cle: "Clé d'accès refusée ou expirée : désactive puis réactive la synchro avec une nouvelle clé.",
       fichier: "Le fichier en ligne est illisible. Rien n'a été modifié ici.",
+      version: "Une nouvelle version de la page existe : recharge la page pour reprendre la synchro.",
     };
     afficherSynchro(textes[erreur.message] || "Pas de connexion : la synchro reprendra plus tard.", true);
   });
@@ -181,7 +203,7 @@ function activerSynchro(evenement) {
   evenement.preventDefault();
   const jeton = element("champ-cle-synchro").value.trim();
   if (!jeton) return;
-  reglagesSynchro = { jeton: jeton };
+  reglagesSynchro = { jeton: jeton, version: VERSION_PAGE };
   afficherSynchro("Vérification de la clé…");
   // On vérifie que la clé ouvre bien le dépôt privé
   appelGitHub(ADRESSE_GITHUB, "GET").then(function (reponse) {
