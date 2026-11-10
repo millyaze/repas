@@ -16,6 +16,8 @@ let stock = [];
 let idEnModification = null;
 // Associations retenues après un scan : code-barre -> { nom, quantite, unite }
 let codes = {};
+// Recettes marquées d'une étoile (liste de leurs identifiants), voir js/recettes.js
+let favoris = [];
 // Code-barre du produit en cours d'ajout après un scan (null = saisie à la main)
 let codeEnAttente = null;
 
@@ -51,6 +53,7 @@ function demarrer() {
   if (donnees) {
     stock = donnees.stock;
     codes = donnees.codes || {};
+    favoris = donnees.favoris || [];
   } else {
     stock = STOCK_TEST.map(function (ligne) { return Object.assign({}, ligne); });
     sauvegarder();
@@ -60,7 +63,7 @@ function demarrer() {
   element("bouton-annuler").addEventListener("click", quitterModification);
   element("recherche").addEventListener("input", afficher);
   element("bouton-exporter").addEventListener("click", function () {
-    exporterFichier(stock, codes);
+    exporterFichier(stock, codes, favoris);
     montrerMessage("Fichier de sauvegarde créé (dossier Téléchargements).");
   });
   element("bouton-importer").addEventListener("click", function () { element("fichier-import").click(); });
@@ -107,7 +110,7 @@ function infoPeremption(date) {
 }
 
 function sauvegarder() {
-  if (!enregistrerDonnees(stock, codes)) {
+  if (!enregistrerDonnees(stock, codes, favoris)) {
     montrerMessage("Attention : l'enregistrement dans le navigateur a échoué. Exporte un fichier pour ne rien perdre.", true);
   }
   // Prévient la synchro automatique (js/synchro.js) qu'il y a du nouveau à envoyer
@@ -115,10 +118,11 @@ function sauvegarder() {
 }
 
 // Utilisé par la synchro : remplace le stock par celui reçu de l'autre appareil
-function remplacerDonnees(nouveauStock, nouveauxCodes) {
+function remplacerDonnees(nouveauStock, nouveauxCodes, nouveauxFavoris) {
   stock = nouveauStock;
   codes = nouveauxCodes;
-  enregistrerDonnees(stock, codes);
+  favoris = nouveauxFavoris || [];
+  enregistrerDonnees(stock, codes, favoris);
   // Si la ligne en cours de modification n'existe plus, on revient au mode « Ajouter »
   if (idEnModification && !stock.some(function (l) { return l.id === idEnModification; })) quitterModification();
   afficher();
@@ -374,11 +378,13 @@ function importer() {
   const fichier = element("fichier-import").files[0];
   element("fichier-import").value = ""; // permet de rechoisir le même fichier ensuite
   if (!fichier) return;
-  importerFichier(fichier, function (nouveauStock, nouveauxCodes) {
+  importerFichier(fichier, function (nouveauStock, nouveauxCodes, nouveauxFavoris) {
     if (!confirm("Remplacer le stock actuel (" + stock.length + " ingrédients) par celui du fichier (" + nouveauStock.length + " ingrédients) ?")) return;
     stock = nouveauStock;
     // Les produits scannés déjà connus sont gardés, ceux du fichier s'y ajoutent
     codes = Object.assign({}, codes, nouveauxCodes);
+    // Pareil pour les recettes favorites
+    nouveauxFavoris.forEach(function (id) { if (favoris.indexOf(id) === -1) favoris.push(id); });
     quitterModification();
     sauvegarder();
     afficher();

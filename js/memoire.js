@@ -24,9 +24,10 @@ function chargerDonnees() {
 
 // Enregistre les données. Renvoie true si tout s'est bien passé.
 // codes = associations retenues après un scan (code-barre -> ingrédient)
-function enregistrerDonnees(stock, codes) {
+// favoris = identifiants des recettes marquées d'une étoile
+function enregistrerDonnees(stock, codes, favoris) {
   try {
-    const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes || {} };
+    const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes || {}, favoris: favoris || [] };
     localStorage.setItem(CLE_MEMOIRE, JSON.stringify(donnees));
     return true;
   } catch (erreur) {
@@ -49,6 +50,11 @@ function donneesValides(donnees) {
     });
     if (!codesCorrects) return false;
   }
+  // Les favoris sont facultatifs (anciens fichiers sans « favoris »)
+  if (donnees.favoris !== undefined) {
+    if (!Array.isArray(donnees.favoris)) return false;
+    if (!donnees.favoris.every(function (id) { return typeof id === "string" && id !== ""; })) return false;
+  }
   return donnees.stock.every(function (ligne) {
     return ligne
       && typeof ligne.id === "string" && ligne.id !== ""
@@ -60,8 +66,8 @@ function donneesValides(donnees) {
 }
 
 // Crée un fichier de sauvegarde et le fait télécharger (ex. stock-2026-11-10.json)
-function exporterFichier(stock, codes) {
-  const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes || {} };
+function exporterFichier(stock, codes, favoris) {
+  const donnees = { version: VERSION_DONNEES, stock: stock, codes: codes || {}, favoris: favoris || [] };
   const contenu = new Blob([JSON.stringify(donnees, null, 2)], { type: "application/json" });
   const lien = document.createElement("a");
   lien.href = URL.createObjectURL(contenu);
@@ -73,13 +79,13 @@ function exporterFichier(stock, codes) {
 }
 
 // Lit un fichier de sauvegarde choisi par l'utilisateur.
-// Appelle siReussi(stock, codes) si le fichier est correct, sinon siErreur().
+// Appelle siReussi(stock, codes, favoris) si le fichier est correct, sinon siErreur().
 function importerFichier(fichier, siReussi, siErreur) {
   const lecteur = new FileReader();
   lecteur.onload = function () {
     try {
       const donnees = JSON.parse(lecteur.result);
-      if (donneesValides(donnees)) siReussi(donnees.stock, donnees.codes || {});
+      if (donneesValides(donnees)) siReussi(donnees.stock, donnees.codes || {}, donnees.favoris || []);
       else siErreur();
     } catch (erreur) {
       siErreur();

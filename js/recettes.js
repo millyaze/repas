@@ -2,7 +2,8 @@
 // RECETTES : compare les recettes au stock et les affiche.
 // - « Réalisables maintenant » : tout est dans le stock.
 // - « Presque réalisables » : au moins SEUIL_INCOMPLET % des ingrédients.
-// Utilise : stock, element, joursRestants, JOURS_ALERTE, arrondir, creerId (js/stock.js),
+// Les favoris (étoile) sont enregistrés et synchronisés avec le stock.
+// Utilise : stock, favoris, sauvegarder, element, joursRestants, JOURS_ALERTE, arrondir, creerId (js/stock.js),
 //           INGREDIENTS (data/ingredients.js), RECETTES (recettes/toutes.js).
 // ============================================================
 
@@ -160,6 +161,7 @@ function preparerFiltres() {
   cuisines.forEach(function (c) { ajouterOption(element("filtre-cuisine"), c, majuscule(c)); });
   ajouterOption(element("filtre-difficulte"), "", "Toutes");
   difficultes.forEach(function (d) { ajouterOption(element("filtre-difficulte"), d, majuscule(d)); });
+  element("filtre-favoris").addEventListener("change", afficherRecettes);
   ajouterOption(element("filtre-temps"), "", "Peu importe");
   TEMPS_PROPOSES.forEach(function (t) { ajouterOption(element("filtre-temps"), String(t), t + " min ou moins"); });
 
@@ -176,7 +178,19 @@ function passeLesFiltres(recette) {
   if (cuisine && recette.cuisine !== cuisine) return false;
   if (difficulte && recette.difficulte !== difficulte) return false;
   if (temps && recette.tempsMinutes > Number(temps)) return false;
+  if (element("filtre-favoris").checked && favoris.indexOf(recette.id) === -1) return false;
   return true;
+}
+
+// ---------- Favoris ----------
+
+// Ajoute ou retire l'étoile d'une recette, puis enregistre (et synchronise)
+function basculerFavori(id) {
+  const position = favoris.indexOf(id);
+  if (position === -1) favoris.push(id);
+  else favoris.splice(position, 1);
+  sauvegarder();
+  afficherRecettes();
 }
 
 // ---------- Affichage ----------
@@ -205,6 +219,7 @@ function afficherRecettes() {
 
   remplirListe("liste-realisables", "vide-realisables", realisables,
     "Aucune recette réalisable avec le stock actuel et ces filtres.");
+  element("aide-favoris").hidden = !(element("filtre-favoris").checked && favoris.length === 0);
   remplirListe("liste-incompletes", "vide-incompletes", incompletes,
     "Aucune recette presque réalisable avec ces filtres.");
   element("titre-realisables").textContent = "Réalisables maintenant (" + realisables.length + ")";
@@ -230,13 +245,14 @@ function creer(balise, classe, texte) {
 // Fabrique la carte dépliable d'une recette
 function creerCarteRecette(analyse) {
   const recette = analyse.recette;
+  const estFavori = favoris.indexOf(recette.id) !== -1;
   const carte = creer("details", "recette");
   carte.open = recettesOuvertes[recette.id] === true;
   carte.addEventListener("toggle", function () { recettesOuvertes[recette.id] = carte.open; });
 
   // --- Partie toujours visible ---
   const resume = creer("summary", "recette-resume");
-  resume.appendChild(creer("span", "recette-nom", recette.nom));
+  resume.appendChild(creer("span", "recette-nom", (estFavori ? "★ " : "") + recette.nom));
   resume.appendChild(creer("span", "recette-infos",
     majuscule(recette.cuisine) + " · " + recette.difficulte + " · " + recette.tempsMinutes + " min"));
 
@@ -265,6 +281,10 @@ function creerCarteRecette(analyse) {
 
   // --- Partie dépliée : ingrédients et étapes ---
   const contenu = creer("div", "recette-contenu");
+  const boutonFavori = creer("button", "bouton-favori", estFavori ? "★ Retirer des favoris" : "☆ Ajouter aux favoris");
+  boutonFavori.type = "button";
+  boutonFavori.addEventListener("click", function () { basculerFavori(recette.id); });
+  contenu.appendChild(boutonFavori);
   contenu.appendChild(creer("h3", "", "Ingrédients (pour " + recette.portions + " personnes)"));
   const ingredients = creer("ul", "recette-ingredients");
   analyse.lignes.forEach(function (info) {
