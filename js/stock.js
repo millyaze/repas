@@ -110,6 +110,18 @@ function sauvegarder() {
   if (!enregistrerDonnees(stock, codes)) {
     montrerMessage("Attention : l'enregistrement dans le navigateur a échoué. Exporte un fichier pour ne rien perdre.", true);
   }
+  // Prévient la synchro automatique (js/synchro.js) qu'il y a du nouveau à envoyer
+  if (typeof signalerChangement === "function") signalerChangement();
+}
+
+// Utilisé par la synchro : remplace le stock par celui reçu de l'autre appareil
+function remplacerDonnees(nouveauStock, nouveauxCodes) {
+  stock = nouveauStock;
+  codes = nouveauxCodes;
+  enregistrerDonnees(stock, codes);
+  // Si la ligne en cours de modification n'existe plus, on revient au mode « Ajouter »
+  if (idEnModification && !stock.some(function (l) { return l.id === idEnModification; })) quitterModification();
+  afficher();
 }
 
 function montrerMessage(texte, estErreur) {

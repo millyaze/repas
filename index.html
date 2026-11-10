@@ -75,6 +75,21 @@
         <button type="button" id="bouton-vider" class="danger">Tout vider</button>
       </div>
     </section>
+
+    <!-- Synchro automatique entre appareils (voir js/synchro.js) -->
+    <section class="bloc">
+      <h2>Synchronisation automatique</h2>
+      <p class="aide">Garde le même stock sur l'ordinateur et le téléphone, sans fichier à transférer. À activer une fois sur chaque appareil avec ta clé d'accès GitHub.</p>
+      <p id="etat-synchro" class="etat-synchro" role="status" aria-live="polite"></p>
+      <form id="formulaire-synchro" class="ligne-synchro">
+        <input type="password" id="champ-cle-synchro" autocomplete="off" placeholder="Colle ta clé d'accès ici" aria-label="Clé d'accès GitHub">
+        <button type="submit" class="principal">Activer</button>
+      </form>
+      <div id="boutons-synchro" class="boutons-sauvegarde" hidden>
+        <button type="button" id="bouton-synchroniser">Synchroniser maintenant</button>
+        <button type="button" id="bouton-desactiver-synchro" class="danger">Désactiver sur cet appareil</button>
+      </div>
+    </section>
   </main>
 
   <script src="data/ingredients.js"></script>
@@ -84,5 +99,6 @@
   <!-- Lecteur de code-barre gratuit (html5-qrcode), chargé depuis Internet -->
   <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" async></script>
   <script src="js/scan.js"></script>
+  <script src="js/synchro.js"></script>
 </body>
 </html>

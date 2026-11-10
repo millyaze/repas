@@ -72,6 +72,12 @@ h2 { margin: 0 0 12px; font-size: 1.1rem; }
 #zone-scan { flex-basis: 100%; }
 #zone-camera { max-width: 420px; margin: 0 auto 8px; border-radius: 8px; overflow: hidden; }
 
+/* Synchronisation automatique */
+.ligne-synchro { display: flex; gap: 8px; }
+.ligne-synchro button { flex: none; white-space: nowrap; }
+.etat-synchro { margin: 0 0 12px; font-weight: 600; }
+.etat-synchro.erreur { color: var(--rouge); }
+
 /* Formulaire */
 #formulaire {
   display: grid;
