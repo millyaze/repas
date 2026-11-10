@@ -154,8 +154,55 @@ button.rond { width: 44px; padding: 0; font-size: 1.2rem; }
 .vide, .aide { color: var(--texte-discret); margin: 0 0 12px; }
 .vide { margin: 8px 0 0; }
 
+/* Onglets (Stock, Recettes) */
+.onglets { display: flex; gap: 8px; margin: 12px 0 16px; }
+.onglet { flex: 1; font-weight: 600; }
+.onglet.actif { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); }
+
+/* Recettes */
+.filtres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.recette { border-top: 1px solid var(--bordure); }
+.recette:first-child { border-top: none; }
+.recette-resume {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 12px 28px 12px 4px;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+}
+.recette-resume::-webkit-details-marker { display: none; }
+.recette-resume::after { content: "▾"; position: absolute; right: 6px; top: 12px; color: var(--texte-discret); }
+.recette[open] > .recette-resume::after { content: "▴"; }
+.recette-nom { font-weight: 600; }
+.recette-infos, .manque { font-size: 0.85rem; color: var(--texte-discret); }
+.manque { color: var(--rouge); }
+.etiquette {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.etiquette.bientot { background: var(--orange-fond); color: var(--orange); }
+.etiquette.perime { background: var(--rouge-fond); color: var(--rouge); }
+.ligne-barre { display: flex; align-items: center; gap: 8px; width: 100%; }
+.barre { flex: 1; height: 10px; border-radius: 999px; background: #e7e3d9; overflow: hidden; }
+.barre-remplie { display: block; height: 100%; background: var(--accent); }
+.pourcent { font-size: 0.85rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.recette-contenu { padding: 0 4px 12px; }
+.recette-contenu h3 { margin: 8px 0 6px; font-size: 0.95rem; }
+.recette-ingredients { list-style: none; margin: 0; padding: 0; }
+.recette-ingredients li { padding: 2px 0; }
+.recette-ingredients li.manquant { color: var(--rouge); }
+.recette-etapes { margin: 0; padding-left: 22px; }
+.recette-etapes li { padding: 2px 0; }
+
 /* Téléphone : tout sur une colonne */
 @media (max-width: 600px) {
+  .filtres { grid-template-columns: 1fr; }
   #formulaire { grid-template-columns: 1fr 1fr; }
   #bouton-scanner { flex: 1 1 100%; }
   .champ:nth-of-type(4) { grid-column: 1 / -1; }

@@ -3,18 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Générateur de repas : mon stock</title>
+  <title>Générateur de repas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Mon stock</h1>
-    <p id="resume" class="resume"></p>
+    <h1>Générateur de repas</h1>
+    <!-- Onglets : voir js/onglets.js -->
+    <nav class="onglets" aria-label="Parties de l'outil">
+      <button type="button" class="onglet" data-onglet="stock">Stock</button>
+      <button type="button" class="onglet" data-onglet="recettes">Recettes</button>
+    </nav>
   </header>
 
   <main>
     <!-- Zone des messages (confirmation, erreur) -->
     <p id="message" class="message" role="status" aria-live="polite" hidden></p>
+
+    <!-- ===================== ONGLET STOCK ===================== -->
+    <div id="vue-stock">
+    <p id="resume" class="resume"></p>
 
     <!-- Formulaire : sert à ajouter ET à modifier un ingrédient -->
     <section class="bloc">
@@ -90,6 +98,39 @@
         <button type="button" id="bouton-desactiver-synchro" class="danger">Désactiver sur cet appareil</button>
       </div>
     </section>
+    </div>
+
+    <!-- ===================== ONGLET RECETTES (voir js/recettes.js) ===================== -->
+    <div id="vue-recettes" hidden>
+      <section class="bloc">
+        <h2>Filtres</h2>
+        <div class="filtres">
+          <label class="champ">Cuisine
+            <select id="filtre-cuisine"></select>
+          </label>
+          <label class="champ">Difficulté
+            <select id="filtre-difficulte"></select>
+          </label>
+          <label class="champ">Temps
+            <select id="filtre-temps"></select>
+          </label>
+        </div>
+      </section>
+
+      <section class="bloc">
+        <h2 id="titre-realisables">Réalisables maintenant</h2>
+        <p class="aide">Tu as tout ce qu'il faut. Celles qui utilisent un ingrédient qui périme bientôt sont en premier.</p>
+        <div id="liste-realisables"></div>
+        <p id="vide-realisables" class="vide" hidden></p>
+      </section>
+
+      <section class="bloc">
+        <h2 id="titre-incompletes">Presque réalisables</h2>
+        <p class="aide">Tu as au moins la moitié des ingrédients.</p>
+        <div id="liste-incompletes"></div>
+        <p id="vide-incompletes" class="vide" hidden></p>
+      </section>
+    </div>
   </main>
 
   <script src="data/ingredients.js"></script>
@@ -100,5 +141,15 @@
   <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" async></script>
   <script src="js/scan.js"></script>
   <script src="js/synchro.js"></script>
+  <!-- Recettes : un fichier par cuisine, réunis par toutes.js -->
+  <script src="recettes/francaise.js"></script>
+  <script src="recettes/italienne.js"></script>
+  <script src="recettes/asiatique.js"></script>
+  <script src="recettes/mediterraneenne.js"></script>
+  <script src="recettes/mexicaine.js"></script>
+  <script src="recettes/rapides.js"></script>
+  <script src="recettes/toutes.js"></script>
+  <script src="js/recettes.js"></script>
+  <script src="js/onglets.js"></script>
 </body>
 </html>

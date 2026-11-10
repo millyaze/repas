@@ -168,6 +168,9 @@ function afficher() {
   const alertes = stock.filter(function (ligne) { return infoPeremption(ligne.peremption).etat !== ""; }).length;
   element("resume").textContent = stock.length + " ingrédient" + (stock.length > 1 ? "s" : "")
     + (alertes > 0 ? " · " + alertes + " à surveiller (périmé ou bientôt)" : "");
+
+  // Le stock a changé : les recettes proposées aussi (js/recettes.js)
+  if (typeof afficherRecettes === "function") afficherRecettes();
 }
 
 // Fabrique une ligne de la liste pour un ingrédient
