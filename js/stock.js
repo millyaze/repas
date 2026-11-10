@@ -279,9 +279,11 @@ function validerFormulaire(evenement) {
       return;
     }
     if (existante) {
-      // Même ingrédient : on additionne et on garde la date la plus proche
+      // Même ingrédient : on additionne.
+      // Stock épuisé (à 0) : la nouvelle date remplace l'ancienne. Sinon on garde la date la plus proche.
+      if (existante.quantite === 0) existante.peremption = peremption;
+      else if (peremption && (!existante.peremption || peremption < existante.peremption)) existante.peremption = peremption;
       existante.quantite = arrondir(existante.quantite + quantite);
-      if (peremption && (!existante.peremption || peremption < existante.peremption)) existante.peremption = peremption;
       montrerMessage("Quantité ajoutée à « " + existante.nom + " » (total : " + existante.quantite.toLocaleString("fr-FR") + " " + existante.unite + ").");
     } else {
       stock.push({ id: creerId(nom), nom: nom, quantite: quantite, unite: unite, peremption: peremption });
