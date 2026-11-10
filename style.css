@@ -246,3 +246,6 @@ button.rond { width: 44px; padding: 0; font-size: 1.2rem; }
   .ligne-actions { margin-left: auto; }
   .boutons-sauvegarde button { flex: 1 1 100%; }
 }
+
+/* Numéro de version en bas de page */
+.version { margin: 16px 0 24px; text-align: center; font-size: 0.85rem; color: var(--texte-discret); }
