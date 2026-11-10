@@ -1,0 +1,162 @@
+/* ============================================================
+   MISE EN FORME de la page (ordinateur et téléphone)
+   ============================================================ */
+
+/* Couleurs réutilisées partout : à changer ici pour changer l'allure */
+:root {
+  --fond: #f6f4ef;
+  --carte: #ffffff;
+  --texte: #23282b;
+  --texte-discret: #667076;
+  --bordure: #dedad1;
+  --accent: #2f6f4f;
+  --accent-texte: #ffffff;
+  --rouge: #b3261e;
+  --rouge-fond: #fdecea;
+  --orange: #a15c00;
+  --orange-fond: #fff3dc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+header, main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header { padding-top: 24px; }
+h1 { margin: 0; font-size: 1.7rem; }
+h2 { margin: 0 0 12px; font-size: 1.1rem; }
+.resume { margin: 4px 0 16px; color: var(--texte-discret); }
+
+/* Blocs blancs */
+.bloc {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* Messages */
+.message {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #e6f2ea;
+  color: #1d4a33;
+}
+.message.erreur { background: var(--rouge-fond); color: var(--rouge); }
+
+/* Scan de code-barre */
+.scan {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--bordure);
+}
+.scan-code { display: flex; gap: 8px; flex: 1 1 260px; }
+.scan-code button { flex: none; white-space: nowrap; }
+#zone-scan { flex-basis: 100%; }
+#zone-camera { max-width: 420px; margin: 0 auto 8px; border-radius: 8px; overflow: hidden; }
+
+/* Formulaire */
+#formulaire {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--texte-discret);
+  min-width: 0;
+}
+.champ-large, .boutons-formulaire { grid-column: 1 / -1; }
+
+input, select, button {
+  font: inherit;
+  color: var(--texte);
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-height: 44px; /* assez grand pour le doigt sur téléphone */
+  background: #fff;
+  width: 100%;
+  min-width: 0;
+}
+button { width: auto; cursor: pointer; background: #f1eee7; }
+button:hover { background: #e7e3d9; }
+button.principal { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); font-weight: 600; }
+button.principal:hover { background: #275c42; }
+button.danger { color: var(--rouge); }
+:focus-visible { outline: 3px solid #7fb69a; outline-offset: 1px; }
+
+.boutons-formulaire, .boutons-sauvegarde { display: flex; flex-wrap: wrap; gap: 8px; }
+[hidden] { display: none !important; }
+
+/* Liste */
+.entete-liste {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.entete-liste h2 { margin: 0; }
+.entete-liste input { max-width: 240px; }
+
+.liste { list-style: none; margin: 0; padding: 0; }
+.ligne {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--bordure);
+  border-left: 4px solid transparent;
+}
+.ligne:first-child { border-top: none; }
+.ligne-texte { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.ligne-nom { font-weight: 600; overflow-wrap: anywhere; }
+.ligne-date { font-size: 0.85rem; color: var(--texte-discret); }
+
+.ligne-quantite { display: flex; align-items: center; gap: 6px; }
+.valeur { min-width: 84px; text-align: center; font-variant-numeric: tabular-nums; }
+button.rond { width: 44px; padding: 0; font-size: 1.2rem; }
+.ligne-actions { display: flex; gap: 6px; }
+
+/* Alertes de péremption */
+.ligne.bientot { background: var(--orange-fond); border-left-color: var(--orange); }
+.ligne.bientot .ligne-date { color: var(--orange); font-weight: 600; }
+.ligne.perime { background: var(--rouge-fond); border-left-color: var(--rouge); }
+.ligne.perime .ligne-date { color: var(--rouge); font-weight: 600; }
+
+.vide, .aide { color: var(--texte-discret); margin: 0 0 12px; }
+.vide { margin: 8px 0 0; }
+
+/* Téléphone : tout sur une colonne */
+@media (max-width: 600px) {
+  #formulaire { grid-template-columns: 1fr 1fr; }
+  #bouton-scanner { flex: 1 1 100%; }
+  .champ:nth-of-type(4) { grid-column: 1 / -1; }
+  .entete-liste { flex-direction: column; align-items: stretch; }
+  .entete-liste input { max-width: none; }
+  .ligne { flex-wrap: wrap; }
+  .ligne-texte { flex-basis: 100%; }
+  .ligne-actions { margin-left: auto; }
+  .boutons-sauvegarde button { flex: 1 1 100%; }
+}

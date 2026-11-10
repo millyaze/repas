@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Générateur de repas : mon stock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mon stock</h1>
+    <p id="resume" class="resume"></p>
+  </header>
+
+  <main>
+    <!-- Zone des messages (confirmation, erreur) -->
+    <p id="message" class="message" role="status" aria-live="polite" hidden></p>
+
+    <!-- Formulaire : sert à ajouter ET à modifier un ingrédient -->
+    <section class="bloc">
+      <!-- Scan : préremplit le formulaire ci-dessous (voir js/scan.js) -->
+      <div class="scan">
+        <button type="button" id="bouton-scanner">Scanner un code-barre</button>
+        <form id="formulaire-code" class="scan-code">
+          <input type="text" id="champ-code" inputmode="numeric" autocomplete="off" placeholder="ou taper son numéro" aria-label="Numéro du code-barre">
+          <button type="submit">Chercher</button>
+        </form>
+        <div id="zone-scan" hidden>
+          <div id="zone-camera"></div>
+          <button type="button" id="bouton-arreter-scan">Arrêter le scan</button>
+        </div>
+      </div>
+
+      <h2 id="titre-formulaire">Ajouter un ingrédient</h2>
+      <form id="formulaire">
+        <label class="champ champ-large">Nom
+          <input type="text" id="champ-nom" required maxlength="60" placeholder="ex. Tomate" autocomplete="off" list="suggestions-noms">
+          <!-- Noms proposés pendant la saisie (remplis depuis data/ingredients.js) -->
+          <datalist id="suggestions-noms"></datalist>
+        </label>
+        <label class="champ">Quantité
+          <input type="number" id="champ-quantite" required min="0" step="any" inputmode="decimal" placeholder="ex. 4">
+        </label>
+        <label class="champ">Unité
+          <select id="champ-unite"></select>
+        </label>
+        <label class="champ">Péremption (facultatif)
+          <input type="date" id="champ-peremption">
+        </label>
+        <div class="boutons-formulaire">
+          <button type="submit" id="bouton-valider" class="principal">Ajouter</button>
+          <button type="button" id="bouton-annuler" hidden>Annuler</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Liste du stock -->
+    <section class="bloc">
+      <div class="entete-liste">
+        <h2>Ingrédients</h2>
+        <input type="search" id="recherche" placeholder="Rechercher…" aria-label="Rechercher un ingrédient">
+      </div>
+      <ul id="liste" class="liste"></ul>
+      <p id="liste-vide" class="vide" hidden></p>
+    </section>
+
+    <!-- Sauvegarde -->
+    <section class="bloc">
+      <h2>Sauvegarde</h2>
+      <p class="aide">Le stock est enregistré tout seul dans ce navigateur. Le fichier de sauvegarde sert à le transférer sur un autre appareil ou à le récupérer en cas de problème.</p>
+      <div class="boutons-sauvegarde">
+        <button type="button" id="bouton-exporter">Exporter (créer un fichier)</button>
+        <button type="button" id="bouton-importer">Importer (lire un fichier)</button>
+        <input type="file" id="fichier-import" accept=".json,application/json" hidden>
+        <button type="button" id="bouton-vider" class="danger">Tout vider</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/ingredients.js"></script>
+  <script src="data/stock-test.js"></script>
+  <script src="js/memoire.js"></script>
+  <script src="js/stock.js"></script>
+  <!-- Lecteur de code-barre gratuit (html5-qrcode), chargé depuis Internet -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" async></script>
+  <script src="js/scan.js"></script>
+</body>
+</html>

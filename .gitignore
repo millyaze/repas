@@ -1,0 +1,5 @@
+# Fichiers qui ne doivent JAMAIS être publiés sur GitHub (notes et réglages privés)
+NOTES.md
+CLAUDE.md
+docs/
+.claude/
