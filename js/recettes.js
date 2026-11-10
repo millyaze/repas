@@ -3,6 +3,7 @@
 // - « Réalisables maintenant » : tout est dans le stock.
 // - « Presque réalisables » : au moins SEUIL_INCOMPLET % des ingrédients.
 // Les favoris (étoile) sont enregistrés et synchronisés avec le stock.
+// « Cuisiner » et l'historique sont dans js/cuisiner.js (chargé avant ce fichier).
 // Utilise : stock, favoris, sauvegarder, element, joursRestants, JOURS_ALERTE, arrondir, creerId (js/stock.js),
 //           INGREDIENTS (data/ingredients.js), RECETTES (recettes/toutes.js).
 // ============================================================
@@ -203,7 +204,9 @@ function afficherRecettes() {
   const realisables = analyses
     .filter(function (a) { return a.pourcent === 100; })
     .sort(function (a, b) {
-      const urgenceA = a.urgents.length ? a.urgents[0].jours : Infinity;
+      const recent = cuisineeRecemment(a.recette.id) - cuisineeRecemment(b.recette.id);
+      if (recent !== 0) return recent; // cuisinées récemment : en bas de la liste
+      const urgenceA =a.urgents.length ? a.urgents[0].jours : Infinity;
       const urgenceB = b.urgents.length ? b.urgents[0].jours : Infinity;
       if (urgenceA !== urgenceB) return urgenceA - urgenceB;
       return a.recette.tempsMinutes - b.recette.tempsMinutes;
@@ -213,6 +216,8 @@ function afficherRecettes() {
   const incompletes = analyses
     .filter(function (a) { return a.pourcent < 100 && a.pourcent >= SEUIL_INCOMPLET; })
     .sort(function (a, b) {
+      const recent = cuisineeRecemment(a.recette.id) - cuisineeRecemment(b.recette.id);
+      if (recent !== 0) return recent; // cuisinées récemment : en bas de la liste
       if (a.pourcent !== b.pourcent) return b.pourcent - a.pourcent;
       return a.manquants.length - b.manquants.length;
     });
@@ -224,6 +229,7 @@ function afficherRecettes() {
     "Aucune recette presque réalisable avec ces filtres.");
   element("titre-realisables").textContent = "Réalisables maintenant (" + realisables.length + ")";
   element("titre-incompletes").textContent = "Presque réalisables (" + incompletes.length + ")";
+  afficherHistorique(); // bloc « Dernières recettes cuisinées » (js/cuisiner.js)
 }
 
 function remplirListe(idListe, idVide, analyses, texteVide) {
@@ -255,6 +261,11 @@ function creerCarteRecette(analyse) {
   resume.appendChild(creer("span", "recette-nom", (estFavori ? "★ " : "") + recette.nom));
   resume.appendChild(creer("span", "recette-infos",
     majuscule(recette.cuisine) + " · " + recette.difficulte + " · " + recette.tempsMinutes + " min"));
+
+  // Recette cuisinée récemment (js/cuisiner.js)
+  if (cuisineeRecemment(recette.id)) {
+    resume.appendChild(creer("span", "recette-infos", "Cuisinée " + ecrireDepuis(joursDepuisCuisine(recette.id))));
+  }
 
   if (analyse.urgents.length > 0) {
     const noms = analyse.urgents.map(function (u) { return u.nom.toLowerCase() + " (" + ecrireDelai(u.jours) + ")"; });
@@ -309,6 +320,11 @@ function creerCarteRecette(analyse) {
   const etapes = creer("ol", "recette-etapes");
   recette.etapes.forEach(function (etape) { etapes.appendChild(creer("li", "", etape)); });
   contenu.appendChild(etapes);
+
+  // Recette réalisable : bouton « J'ai cuisiné », ou son récapitulatif s'il est ouvert (js/cuisiner.js)
+  if (analyse.pourcent === 100) {
+    contenu.appendChild(idEnCuisine === recette.id ? creerPanneauCuisiner(recette) : creerBoutonCuisiner(recette));
+  }
   carte.appendChild(contenu);
 
   return carte;
