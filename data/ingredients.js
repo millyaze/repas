@@ -262,6 +262,16 @@ const INGREDIENTS = [
   { id: "boulgour",               nom: "Boulgour",               unite: "g" },
   { id: "feuilles-de-vigne",      nom: "Feuilles de vigne",      unite: "pièce" },
   { id: "mloukhia-corete",        nom: "Mloukhia (corète)",      unite: "g" },
+  // --- Ajoutés pour : asie-oceanie ---
+  // Cuisines australienne, philippine et malaisienne
+  { id: "flocons-d-avoine",     nom: "Flocons d'avoine",     unite: "g" },
+  { id: "noix-de-coco-rapee",   nom: "Noix de coco râpée",   unite: "g" },
+  { id: "betterave-cuite",      nom: "Betterave cuite",      unite: "g" },
+  { id: "fruits-rouges",        nom: "Fruits rouges",        unite: "g" },
+  { id: "confiture",            nom: "Confiture",            unite: "g" },
+  { id: "pate-brisee",          nom: "Pâte brisée",          unite: "pièce" },
+  { id: "asperges",             nom: "Asperges",             unite: "g" },
+  { id: "romarin",              nom: "Romarin",              unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
