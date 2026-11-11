@@ -302,6 +302,23 @@ const INGREDIENTS = [
   { id: "asperges",             nom: "Asperges",             unite: "g" },
   { id: "romarin",              nom: "Romarin",              unite: "g" },
 
+  // --- Ajoutés pour : canadienne ---
+  { id: "cassonade",            nom: "Cassonade",            unite: "g" },
+  { id: "sirop-d-erable",       nom: "Sirop d'érable",       unite: "ml" },
+  { id: "extrait-de-vanille",   nom: "Extrait de vanille",   unite: "ml" },
+  { id: "pate-brisee",          nom: "Pâte brisée",          unite: "pièce" },
+  { id: "pois-casses",          nom: "Pois cassés",          unite: "g" },
+  { id: "boeuf-a-bouillir",     nom: "Bœuf à bouillir",      unite: "g" },
+  { id: "navet",                nom: "Navet",                unite: "pièce" },
+  { id: "aneth",                nom: "Aneth",                unite: "g" },
+  { id: "confiture",            nom: "Confiture",            unite: "g" },
+  { id: "dattes",               nom: "Dattes",               unite: "g" },
+  { id: "flocons-d-avoine",     nom: "Flocons d'avoine",     unite: "g" },
+  { id: "noix-de-coco-rapee",   nom: "Noix de coco râpée",   unite: "g" },
+  { id: "sucre-glace",          nom: "Sucre glace",          unite: "g" },
+  { id: "biscuits-secs",        nom: "Biscuits secs",        unite: "g" },
+  { id: "myrtilles",            nom: "Myrtilles",            unite: "g" },
+
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
   { id: "poivre", nom: "Poivre", unite: "g",  base: true },
