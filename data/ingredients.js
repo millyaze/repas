@@ -253,6 +253,17 @@ const INGREDIENTS = [
   { id: "banane",               nom: "Banane",               unite: "pièce" },
   { id: "pate-filo",            nom: "Pâte filo",            unite: "g" },
   { id: "ricotta",              nom: "Ricotta",              unite: "g" },
+  // --- Ajoutés pour : ouest-sud --- (cuisines irlandaise, portugaise, uruguayenne)
+  { id: "cidre",                nom: "Cidre",                unite: "ml" },
+  { id: "boeuf-a-braiser",      nom: "Bœuf à braiser",       unite: "g" },
+  { id: "sardines",             nom: "Sardines",             unite: "pièce" },
+  { id: "romarin",              nom: "Romarin",              unite: "g" },
+  { id: "origan",               nom: "Origan",               unite: "g" },
+  { id: "pate-feuilletee",      nom: "Pâte feuilletée",      unite: "pièce" },
+  { id: "confiture-de-lait",    nom: "Confiture de lait",    unite: "g" },
+  { id: "noix-de-coco-rapee",   nom: "Noix de coco râpée",   unite: "g" },
+  { id: "extrait-de-vanille",   nom: "Extrait de vanille",   unite: "ml" },
+  { id: "peches-au-sirop",      nom: "Pêches au sirop",      unite: "boîte" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
