@@ -3,6 +3,7 @@
 // - « Réalisables maintenant » : tout est dans le stock.
 // - « Presque réalisables » : au moins seuilCompletion % des ingrédients
 //   (réglé par le curseur « Complétion minimum », retenu sur l'appareil).
+// - Champ « Rechercher » : nom ou ingrédient ; pendant une recherche, le curseur est ignoré.
 // Les favoris (étoile) sont enregistrés et synchronisés avec le stock.
 // « Cuisiner » et l'historique sont dans js/cuisiner.js, la liste de courses dans js/courses.js
 // (tous deux chargés avant ce fichier).
@@ -214,6 +215,8 @@ function preparerFiltres() {
   ["filtre-cuisine", "filtre-difficulte", "filtre-temps"].forEach(function (id) {
     element(id).addEventListener("change", afficherRecettes);
   });
+  // Recherche : les listes suivent pendant la frappe
+  element("filtre-recherche").addEventListener("input", afficherRecettes);
 
   // Curseur « Complétion minimum » : les listes suivent pendant qu'on le glisse
   element("filtre-completion").value = seuilCompletion;
@@ -224,8 +227,34 @@ function preparerFiltres() {
   });
 }
 
+// ---------- Recherche ----------
+// Un seul champ : cherche dans le nom de la recette et le nom de ses ingrédients
+// (remplaçants compris). Accents et majuscules ignorés (même règle que le stock : creerId).
+// Plusieurs mots = tous obligatoires. Les mots de 1 ou 2 lettres (« de », « au »…) sont ignorés.
+
+// Texte où chercher, préparé une seule fois par recette
+const textesRecherche = {};
+function texteRecherche(recette) {
+  if (!textesRecherche[recette.id]) {
+    const morceaux = [recette.nom];
+    recette.ingredients.forEach(function (b) {
+      morceaux.push(nomIngredient(b.id));
+      if (b.ou) morceaux.push(nomIngredient(b.ou.id));
+    });
+    textesRecherche[recette.id] = morceaux.map(creerId).join(" ");
+  }
+  return textesRecherche[recette.id];
+}
+
+// Mots tapés dans le champ « Rechercher » (liste vide = pas de recherche)
+function motsRecherches() {
+  return creerId(element("filtre-recherche").value).split("-").filter(function (mot) { return mot.length >= 3; });
+}
+
 // Dit si une recette passe les filtres choisis
 function passeLesFiltres(recette) {
+  const mots = motsRecherches();
+  if (mots.length && !mots.every(function (mot) { return texteRecherche(recette).indexOf(mot) !== -1; })) return false;
   const cuisine = element("filtre-cuisine").value;
   const difficulte = element("filtre-difficulte").value;
   const temps = element("filtre-temps").value;
@@ -252,6 +281,9 @@ function basculerFavori(id) {
 // Rafraîchit les deux listes (appelé au démarrage, quand un filtre ou le stock change)
 function afficherRecettes() {
   const analyses = RECETTES.filter(passeLesFiltres).map(analyserRecette);
+  // Pendant une recherche, le curseur est mis de côté : toutes les recettes trouvées s'affichent
+  const enRecherche = motsRecherches().length > 0;
+  const seuil = enRecherche ? 0 : seuilCompletion;
 
   // Réalisables : ce qui périme le plus tôt d'abord, puis les plus rapides
   const realisables = analyses
@@ -267,7 +299,7 @@ function afficherRecettes() {
 
   // Presque réalisables : de la plus complète à la moins complète
   const incompletes = analyses
-    .filter(function (a) { return a.pourcent < 100 && a.pourcent >= seuilCompletion; })
+    .filter(function (a) { return a.pourcent < 100 && a.pourcent >= seuil; })
     .sort(function (a, b) {
       const recent = cuisineeRecemment(a.recette.id) - cuisineeRecemment(b.recette.id);
       if (recent !== 0) return recent; // cuisinées récemment : en bas de la liste
@@ -275,15 +307,19 @@ function afficherRecettes() {
       return a.manquants.length - b.manquants.length;
     });
 
-  remplirListe("liste-realisables", "vide-realisables", realisables,
-    "Aucune recette réalisable avec le stock actuel et ces filtres.");
+  remplirListe("liste-realisables", "vide-realisables", realisables, enRecherche
+    ? "Aucune recette réalisable ne correspond à cette recherche."
+    : "Aucune recette réalisable avec le stock actuel et ces filtres.");
   element("aide-favoris").hidden = !(element("filtre-favoris").checked && favoris.length === 0);
-  remplirListe("liste-incompletes", "vide-incompletes", incompletes,
-    "Aucune recette presque réalisable avec ces filtres.");
+  remplirListe("liste-incompletes", "vide-incompletes", incompletes, enRecherche
+    ? "Aucune autre recette ne correspond à cette recherche et à ces filtres."
+    : "Aucune recette presque réalisable avec ces filtres.");
   element("titre-realisables").textContent = "Réalisables maintenant (" + realisables.length + ")";
   element("titre-incompletes").textContent = "Presque réalisables (" + incompletes.length + ")";
   element("valeur-completion").textContent = "Complétion minimum : " + seuilCompletion + " %";
-  element("aide-incompletes").textContent = seuilCompletion === 100
+  element("aide-incompletes").textContent = enRecherche
+    ? "Recherche en cours : toutes les recettes trouvées sont affichées, quel que soit le curseur."
+    : seuilCompletion === 100
     ? "Curseur à 100 % : seules les recettes réalisables sont affichées."
     : "Tu as au moins " + seuilCompletion + " % des ingrédients.";
   afficherHistorique(); // bloc « Dernières recettes cuisinées » (js/cuisiner.js)

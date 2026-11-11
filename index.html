@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Générateur de repas</title>
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
   <header>
@@ -105,6 +105,10 @@
     <div id="vue-recettes" hidden>
       <section class="bloc">
         <h2>Filtres</h2>
+        <!-- Recherche : dans le nom et les ingrédients (plusieurs mots = tous obligatoires) -->
+        <label class="champ champ-recherche">Rechercher (nom ou ingrédient)
+          <input type="search" id="filtre-recherche" placeholder="ex. poulet riz" autocomplete="off">
+        </label>
         <div class="filtres">
           <label class="champ">Cuisine
             <select id="filtre-cuisine"></select>
@@ -190,36 +194,36 @@
       </section>
     </div>
 
-    <!-- Numéro de version : à augmenter partout dans ce fichier (« ?v=12 » et « Version 12 ») à chaque mise en ligne -->
-    <p class="version">Version 12</p>
+    <!-- Numéro de version : à augmenter partout dans ce fichier (« ?v=13 » et « Version 13 ») à chaque mise en ligne -->
+    <p class="version">Version 13</p>
   </main>
 
-  <script src="data/ingredients.js?v=12"></script>
-  <script src="data/stock-test.js?v=12"></script>
-  <script src="js/memoire.js?v=12"></script>
-  <script src="js/stock.js?v=12"></script>
+  <script src="data/ingredients.js?v=13"></script>
+  <script src="data/stock-test.js?v=13"></script>
+  <script src="js/memoire.js?v=13"></script>
+  <script src="js/stock.js?v=13"></script>
   <!-- Lecteur de code-barre gratuit (html5-qrcode), chargé depuis Internet -->
   <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" async></script>
-  <script src="js/scan.js?v=12"></script>
-  <script src="js/synchro.js?v=12"></script>
+  <script src="js/scan.js?v=13"></script>
+  <script src="js/synchro.js?v=13"></script>
   <!-- Recettes : un fichier par cuisine, réunis par toutes.js -->
-  <script src="recettes/francaise.js?v=12"></script>
-  <script src="recettes/italienne.js?v=12"></script>
-  <script src="recettes/asiatique.js?v=12"></script>
-  <script src="recettes/mediterraneenne.js?v=12"></script>
-  <script src="recettes/mexicaine.js?v=12"></script>
-  <script src="recettes/rapides.js?v=12"></script>
+  <script src="recettes/francaise.js?v=13"></script>
+  <script src="recettes/italienne.js?v=13"></script>
+  <script src="recettes/asiatique.js?v=13"></script>
+  <script src="recettes/mediterraneenne.js?v=13"></script>
+  <script src="recettes/mexicaine.js?v=13"></script>
+  <script src="recettes/rapides.js?v=13"></script>
   <!-- Recettes importées de TheMealDB -->
-  <script src="recettes/indienne.js?v=12"></script>
-  <script src="recettes/britannique.js?v=12"></script>
-  <script src="recettes/marocaine.js?v=12"></script>
-  <script src="recettes/japonaise.js?v=12"></script>
-  <script src="recettes/americaine.js?v=12"></script>
-  <script src="recettes/coreenne.js?v=12"></script>
-  <script src="recettes/toutes.js?v=12"></script>
-  <script src="js/cuisiner.js?v=12"></script>
-  <script src="js/courses.js?v=12"></script>
-  <script src="js/recettes.js?v=12"></script>
-  <script src="js/onglets.js?v=12"></script>
+  <script src="recettes/indienne.js?v=13"></script>
+  <script src="recettes/britannique.js?v=13"></script>
+  <script src="recettes/marocaine.js?v=13"></script>
+  <script src="recettes/japonaise.js?v=13"></script>
+  <script src="recettes/americaine.js?v=13"></script>
+  <script src="recettes/coreenne.js?v=13"></script>
+  <script src="recettes/toutes.js?v=13"></script>
+  <script src="js/cuisiner.js?v=13"></script>
+  <script src="js/courses.js?v=13"></script>
+  <script src="js/recettes.js?v=13"></script>
+  <script src="js/onglets.js?v=13"></script>
 </body>
 </html>
