@@ -34,8 +34,19 @@ header, main {
   padding: 0 16px;
 }
 
-header { padding-top: 24px; }
-h1 { margin: 0; font-size: 1.7rem; }
+/* En-tête (titre + onglets) collé en haut de l'écran : les onglets restent visibles en descendant */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-top: 10px;
+  background: var(--fond);
+  border-bottom: 1px solid var(--bordure);
+  margin-bottom: 12px;
+}
+h1 { margin: 0; font-size: 1.2rem; }
+/* Titres qui ne doivent pas passer sous l'en-tête collé quand la page y défile */
+h2, #message { scroll-margin-top: 110px; }
 h2 { margin: 0 0 12px; font-size: 1.1rem; }
 .resume { margin: 4px 0 16px; color: var(--texte-discret); }
 
@@ -142,8 +153,10 @@ button.danger { color: var(--rouge); }
 
 .ligne-quantite { display: flex; align-items: center; gap: 6px; }
 .valeur { min-width: 84px; text-align: center; font-variant-numeric: tabular-nums; }
-button.rond { width: 44px; padding: 0; font-size: 1.2rem; }
-.ligne-actions { display: flex; gap: 6px; }
+button.rond { width: 44px; padding: 0; font-size: 1.2rem; flex: none; }
+/* Crayon « Modifier » au bout de chaque ligne du stock */
+button.bouton-modifier { background: none; border-color: transparent; color: var(--texte-discret); }
+button.bouton-modifier:hover { background: #e7e3d9; }
 
 /* Alertes de péremption */
 .ligne.bientot { background: var(--orange-fond); border-left-color: var(--orange); }
@@ -155,7 +168,7 @@ button.rond { width: 44px; padding: 0; font-size: 1.2rem; }
 .vide { margin: 8px 0 0; }
 
 /* Onglets (Stock, Recettes) */
-.onglets { display: flex; gap: 8px; margin: 12px 0 16px; }
+.onglets { display: flex; gap: 8px; margin: 8px 0 10px; }
 .onglet { flex: 1; font-weight: 600; }
 .onglet.actif { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); }
 
@@ -163,6 +176,20 @@ button.rond { width: 44px; padding: 0; font-size: 1.2rem; }
 .filtres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 /* Champ « Rechercher » au-dessus des filtres, sur toute la largeur */
 .champ-recherche { margin-bottom: 12px; }
+/* Bloc repliable « Plus de filtres » */
+.plus-filtres > summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--accent);
+  list-style: none;
+}
+.plus-filtres > summary::-webkit-details-marker { display: none; }
+.plus-filtres > summary::after { content: " ▾"; white-space: pre; }
+.plus-filtres[open] > summary::after { content: " ▴"; }
+.plus-filtres[open] > summary { margin-bottom: 8px; }
 /* Case à cocher « Favoris seulement » */
 .case { display: flex; align-items: center; gap: 10px; margin-top: 12px; min-height: 44px; cursor: pointer; }
 .case input { width: 22px; height: 22px; min-height: 0; padding: 0; flex: none; accent-color: var(--accent); }
@@ -248,9 +275,11 @@ button.afficher-plus { width: 100%; margin-top: 8px; }
   .champ:nth-of-type(4) { grid-column: 1 / -1; }
   .entete-liste { flex-direction: column; align-items: stretch; }
   .entete-liste input { max-width: none; }
-  .ligne { flex-wrap: wrap; }
-  .ligne-texte { flex-basis: 100%; }
-  .ligne-actions { margin-left: auto; }
+  /* Ligne du stock : tout sur une rangée, en un peu plus serré */
+  .ligne { gap: 6px; padding: 8px 6px 8px 8px; }
+  .ligne-quantite { gap: 4px; }
+  button.rond { width: 40px; }
+  .valeur { min-width: 60px; font-size: 0.95rem; }
   .boutons-sauvegarde button { flex: 1 1 100%; }
 }
 

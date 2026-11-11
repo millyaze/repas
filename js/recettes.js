@@ -246,6 +246,13 @@ function preparerFiltres() {
     try { localStorage.setItem(CLE_COMPLETION, String(seuilCompletion)); } catch (erreur) { /* sans gravité */ }
     changerFiltre();
   });
+
+  // Bloc « Plus de filtres » : ouvert d'office si un de ses filtres est déjà réglé
+  // (ex. curseur retenu à 30 %), pour ne pas cacher un filtre oublié
+  const filtreActif = element("filtre-cuisine").value || element("filtre-difficulte").value ||
+    element("filtre-temps").value || element("filtre-favoris").checked ||
+    seuilCompletion !== SEUIL_INCOMPLET;
+  if (filtreActif) element("plus-filtres").open = true;
 }
 
 // ---------- Recherche ----------

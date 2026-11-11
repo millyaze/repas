@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 15;
+    const VERSION = 16;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
   </script>
 </head>
@@ -64,6 +64,7 @@
         <div class="boutons-formulaire">
           <button type="submit" id="bouton-valider" class="principal">Ajouter</button>
           <button type="button" id="bouton-annuler" hidden>Annuler</button>
+          <button type="button" id="bouton-supprimer" class="danger" hidden>Supprimer</button>
         </div>
       </form>
     </section>
@@ -114,6 +115,9 @@
         <label class="champ champ-recherche">Rechercher (nom ou ingrédient)
           <input type="search" id="filtre-recherche" placeholder="ex. poulet riz" autocomplete="off">
         </label>
+        <!-- Autres filtres, repliés pour gagner de la place sur téléphone (ouverts d'office si l'un est réglé : js/recettes.js) -->
+        <details id="plus-filtres" class="plus-filtres">
+        <summary>Plus de filtres</summary>
         <div class="filtres">
           <label class="champ">Cuisine
             <select id="filtre-cuisine"></select>
@@ -133,6 +137,7 @@
           <span id="valeur-completion">Complétion minimum : 50 %</span>
           <input type="range" id="filtre-completion" min="0" max="100" step="5" value="50">
         </label>
+        </details>
         <p id="aide-favoris" class="vide" hidden>Aucun favori pour l'instant : ouvre une recette et touche « Ajouter aux favoris ».</p>
       </section>
 

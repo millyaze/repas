@@ -67,6 +67,10 @@ function demarrer() {
 
   element("formulaire").addEventListener("submit", validerFormulaire);
   element("bouton-annuler").addEventListener("click", quitterModification);
+  // « Supprimer » (visible seulement en mode modification) : supprime l'ingrédient en cours
+  element("bouton-supprimer").addEventListener("click", function () {
+    if (idEnModification) supprimerLigne(idEnModification);
+  });
   element("recherche").addEventListener("input", afficher);
   element("bouton-exporter").addEventListener("click", function () {
     exporterFichier(stock, codes, favoris, historique, courses);
@@ -217,17 +221,14 @@ function creerLigne(ligne) {
   quantite.appendChild(valeur);
   quantite.appendChild(plus);
 
-  // Boutons Modifier / Supprimer
-  const actions = document.createElement("div");
-  actions.className = "ligne-actions";
-  actions.appendChild(creerBouton("Modifier", "Modifier " + ligne.nom, function () { ouvrirModification(ligne.id); }));
-  const supprimer = creerBouton("Supprimer", "Supprimer " + ligne.nom, function () { supprimerLigne(ligne.id); });
-  supprimer.classList.add("danger");
-  actions.appendChild(supprimer);
+  // Petit bouton crayon : ouvre le formulaire en mode « Modifier »
+  // (le bouton « Supprimer » se trouve dans ce formulaire)
+  const modifier = creerBouton("✎", "Modifier " + ligne.nom, function () { ouvrirModification(ligne.id); });
+  modifier.classList.add("rond", "bouton-modifier");
 
   li.appendChild(texte);
   li.appendChild(quantite);
-  li.appendChild(actions);
+  li.appendChild(modifier);
   return li;
 }
 
@@ -320,6 +321,7 @@ function ouvrirModification(id) {
   element("titre-formulaire").textContent = "Modifier « " + ligne.nom + " »";
   element("bouton-valider").textContent = "Enregistrer";
   element("bouton-annuler").hidden = false;
+  element("bouton-supprimer").hidden = false;
   element("titre-formulaire").scrollIntoView({ behavior: "smooth", block: "start" });
   element("champ-quantite").focus({ preventScroll: true });
 }
@@ -330,6 +332,7 @@ function quitterModification() {
   element("titre-formulaire").textContent = "Ajouter un ingrédient";
   element("bouton-valider").textContent = "Ajouter";
   element("bouton-annuler").hidden = true;
+  element("bouton-supprimer").hidden = true;
   viderFormulaire();
 }
 
