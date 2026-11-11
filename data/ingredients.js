@@ -216,6 +216,16 @@ const INGREDIENTS = [
   // Cuisine chinoise, lot 2
   { id: "feuilles-de-wonton",   nom: "Feuilles de wonton",   unite: "pièce" },
   { id: "crevettes-sechees",    nom: "Crevettes séchées",    unite: "g" },
+  // Cuisine vietnamienne
+  { id: "anis-etoile",          nom: "Anis étoilé",          unite: "pièce" },
+  { id: "feuilles-de-riz",      nom: "Feuilles de riz",      unite: "pièce" },
+  { id: "noix-de-cajou",        nom: "Noix de cajou",        unite: "g" },
+  { id: "souris-d-agneau",      nom: "Souris d'agneau",      unite: "pièce" },
+  { id: "houmous",              nom: "Houmous",              unite: "g" },
+  { id: "baguette",             nom: "Baguette",             unite: "pièce" },
+  { id: "blanc-de-dinde",       nom: "Blanc de dinde",       unite: "tranche" },
+  { id: "radis",                nom: "Radis",                unite: "g" },
+  { id: "levure-de-boulanger",  nom: "Levure de boulanger",  unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
