@@ -85,7 +85,7 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 150, portions: 2,
     source: "TheMealDB", idSource: "53057",
     ingredients: [
-      { id: "boeuf-a-mijoter", quantite: 250, unite: "g", ou: { id: "steak-de-boeuf", quantite: 250, unite: "g" } },
+      { id: "boeuf-a-braiser", quantite: 250, unite: "g", ou: { id: "steak-de-boeuf", quantite: 250, unite: "g" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 1, unite: "gousse" },
@@ -107,7 +107,7 @@ ajouterRecettes([
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     source: "TheMealDB", idSource: "53061",
     ingredients: [
-      { id: "sardines", quantite: 400, unite: "g", ou: { id: "poisson-blanc", quantite: 300, unite: "g" } },
+      { id: "sardines", quantite: 8, unite: "pièce", ou: { id: "poisson-blanc", quantite: 300, unite: "g" } },
       { id: "farine", quantite: 40, unite: "g" },
       { id: "huile-de-tournesol", quantite: 100, unite: "ml" },
       { id: "citron", quantite: 1, unite: "pièce", optionnel: true },

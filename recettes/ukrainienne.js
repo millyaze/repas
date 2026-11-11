@@ -66,7 +66,7 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 150, portions: 2,
     source: "TheMealDB", idSource: "53311",
     ingredients: [
-      { id: "boeuf-a-mijoter", quantite: 300, unite: "g", ou: { id: "steak-de-boeuf", quantite: 300, unite: "g" } },
+      { id: "boeuf-a-braiser", quantite: 300, unite: "g", ou: { id: "steak-de-boeuf", quantite: 300, unite: "g" } },
       { id: "betterave", quantite: 150, unite: "g" },
       { id: "pomme-de-terre", quantite: 300, unite: "g" },
       { id: "chou", quantite: 150, unite: "g" },

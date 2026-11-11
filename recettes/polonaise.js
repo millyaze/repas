@@ -66,7 +66,7 @@ ajouterRecettes([
       { id: "saucisse", quantite: 2, unite: "pièce" },
       { id: "lardons", quantite: 80, unite: "g" },
       { id: "oignon", quantite: 1, unite: "pièce" },
-      { id: "boeuf-a-mijoter", quantite: 250, unite: "g", ou: { id: "steak-de-boeuf", quantite: 250, unite: "g" } },
+      { id: "boeuf-a-braiser", quantite: 250, unite: "g", ou: { id: "steak-de-boeuf", quantite: 250, unite: "g" } },
       { id: "pruneaux", quantite: 60, unite: "g" },
       { id: "laurier", quantite: 1, unite: "pièce" },
       { id: "clous-de-girofle", quantite: 1, unite: "pièce", optionnel: true },
