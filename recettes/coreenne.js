@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine coréenne (20 recettes, pour 2 personnes)
+// RECETTES : cuisine coréenne (40 recettes, pour 2 personnes)
 // Écrites par Claude (TheMealDB n'a aucune recette coréenne).
 // Même format que recettes/japonaise.js
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
@@ -370,5 +370,357 @@ const RECETTES_COREENNE = [
       { id: "sel", quantite: 2, unite: "g" }
     ],
     etapes: ["Couper le concombre en rondelles fines, le saler et le laisser dégorger 5 min, puis l'égoutter.", "Mélanger le gochugaru, l'ail écrasé, le vinaigre de riz, la sauce soja, le sucre et l'huile de sésame.", "Ajouter le concombre et l'oignon nouveau émincé, bien mélanger.", "Parsemer de graines de sésame. Se mange tout de suite, en accompagnement."]
+  },
+
+  // ---------- Lot 2 ----------
+  {
+    id: "galbi-jjim", nom: "Galbi-jjim (côtes de bœuf braisées)", cuisine: "coréenne",
+    difficulte: "moyen", tempsMinutes: 120, portions: 2,
+    ingredients: [
+      { id: "cotes-de-boeuf", quantite: 600, unite: "g" },
+      { id: "daikon", quantite: 250, unite: "g", ou: { id: "carotte", quantite: 2, unite: "pièce" } },
+      { id: "carotte", quantite: 1, unite: "pièce" },
+      { id: "pomme-de-terre", quantite: 200, unite: "g" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "sauce-soja", quantite: 60, unite: "ml" },
+      { id: "sucre", quantite: 30, unite: "g", ou: { id: "sirop-de-riz", quantite: 30, unite: "g" } },
+      { id: "ail", quantite: 5, unite: "gousse" },
+      { id: "gingembre", quantite: 10, unite: "g" },
+      { id: "huile-de-sesame", quantite: 15, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 15, unite: "ml" } },
+      { id: "poire", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "jujubes", quantite: 4, unite: "pièce", optionnel: true },
+      { id: "eau", quantite: 500, unite: "ml" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Faire tremper les côtes 30 min dans l'eau froide pour enlever le sang, puis les égoutter.", "Les blanchir 5 min dans l'eau bouillante, les égoutter et les rincer.", "Mélanger la sauce soja, le sucre, l'ail écrasé, le gingembre râpé, l'huile de sésame, le poivre et la poire râpée.", "Mettre les côtes dans une grande casserole avec la sauce et l'eau, porter à ébullition, puis laisser mijoter 1 h à couvert.", "Ajouter le radis, la carotte et la pomme de terre en gros morceaux, l'oignon en quartiers et les jujubes. Cuire encore 30 à 40 min jusqu'à ce que la viande se détache de l'os et que la sauce épaississe.", "Arroser les côtes de sauce avant de servir, avec du riz."]
+  },
+  {
+    id: "samgyetang", nom: "Samgyetang (soupe de poulet au riz gluant)", cuisine: "coréenne",
+    difficulte: "moyen", tempsMinutes: 90, portions: 2,
+    ingredients: [
+      { id: "poulet-entier", quantite: 1, unite: "pièce" },
+      { id: "riz-gluant", quantite: 80, unite: "g", ou: { id: "riz", quantite: 80, unite: "g" } },
+      { id: "ail", quantite: 8, unite: "gousse" },
+      { id: "gingembre", quantite: 10, unite: "g", optionnel: true },
+      { id: "jujubes", quantite: 4, unite: "pièce", optionnel: true },
+      { id: "ginseng", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "oignon-nouveau", quantite: 2, unite: "pièce", optionnel: true },
+      { id: "eau", quantite: 1500, unite: "ml" },
+      { id: "sel", quantite: 5, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Rincer le riz gluant et le laisser tremper 30 min, puis l'égoutter.", "Remplir l'intérieur du poulet avec le riz, 3 gousses d'ail, le ginseng et 2 jujubes. Fermer l'ouverture avec un pic ou en croisant les cuisses.", "Mettre le poulet dans une grande casserole avec le reste d'ail, de jujubes et le gingembre. Couvrir d'eau.", "Porter à ébullition, puis laisser mijoter 1 h à couvert à feu doux, jusqu'à ce que le poulet soit très tendre.", "Servir chaque personne avec un morceau de poulet et du bouillon, saler et poivrer à table, parsemer d'oignon nouveau émincé."]
+  },
+  {
+    id: "bossam", nom: "Bossam (porc bouilli en feuilles de salade)", cuisine: "coréenne",
+    difficulte: "moyen", tempsMinutes: 80, portions: 2,
+    ingredients: [
+      { id: "poitrine-de-porc", quantite: 600, unite: "g" },
+      { id: "doenjang", quantite: 30, unite: "g" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "ail", quantite: 5, unite: "gousse" },
+      { id: "gingembre", quantite: 10, unite: "g" },
+      { id: "ssamjang", quantite: 40, unite: "g", ou: { id: "gochujang", quantite: 20, unite: "g" } },
+      { id: "salade-verte", quantite: 1, unite: "pièce" },
+      { id: "feuilles-de-perilla", quantite: 8, unite: "pièce", optionnel: true },
+      { id: "kimchi", quantite: 150, unite: "g", optionnel: true },
+      { id: "eau", quantite: 1500, unite: "ml" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Porter l'eau à ébullition avec le doenjang, l'oignon coupé en deux, 3 gousses d'ail et le gingembre.", "Y plonger la poitrine de porc entière et cuire 50 à 60 min à feu moyen, à couvert.", "Laisser la viande reposer 10 min dans le bouillon, puis la couper en tranches de 5 mm.", "Laver et égoutter les feuilles de salade et de périlla. Trancher le reste de l'ail en lamelles.", "Pour manger : poser une tranche de porc sur une feuille de salade, ajouter un peu de ssamjang, une lamelle d'ail et un peu de kimchi, puis rouler et manger en une bouchée."]
+  },
+  {
+    id: "jjajangmyeon", nom: "Jjajangmyeon (nouilles à la sauce de haricots noirs)", cuisine: "coréenne",
+    difficulte: "moyen", tempsMinutes: 40, portions: 2,
+    ingredients: [
+      { id: "nouilles-udon", quantite: 300, unite: "g", ou: { id: "nouilles-chinoises", quantite: 300, unite: "g" } },
+      { id: "pate-de-haricots-noirs", quantite: 60, unite: "g", ou: { id: "doenjang", quantite: 40, unite: "g" } },
+      { id: "poitrine-de-porc", quantite: 200, unite: "g" },
+      { id: "oignon", quantite: 2, unite: "pièce" },
+      { id: "courgette", quantite: 1, unite: "pièce" },
+      { id: "pomme-de-terre", quantite: 150, unite: "g" },
+      { id: "sucre", quantite: 10, unite: "g" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "huile-de-tournesol", quantite: 40, unite: "ml" },
+      { id: "fecule", quantite: 10, unite: "g", ou: { id: "farine", quantite: 10, unite: "g" } },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "concombre", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "eau", quantite: 300, unite: "ml" }
+    ],
+    etapes: ["Couper le porc, l'oignon, la courgette et la pomme de terre en dés d'1 cm.", "Faire chauffer l'huile dans une poêle, y faire revenir 2 min la pâte de haricots noirs à feu doux (elle perd son amertume), puis la retirer avec l'huile.", "Dans la même poêle, saisir le porc et l'ail écrasé 3 min, puis ajouter l'oignon et la pomme de terre, cuire 5 min.", "Ajouter la courgette, la pâte de haricots avec son huile, le sucre et la sauce soja, puis l'eau. Mijoter 10 min.", "Délayer la fécule dans un peu d'eau froide, la verser dans la sauce et remuer 1 min jusqu'à ce qu'elle épaississe.", "Cuire les nouilles selon le paquet, les égoutter, les répartir dans deux bols et napper de sauce. Ajouter du concombre en fins bâtonnets."]
+  },
+  {
+    id: "budae-jjigae", nom: "Budae-jjigae (ragoût de l'armée : spam, saucisses, kimchi)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 30, portions: 2,
+    ingredients: [
+      { id: "spam", quantite: 100, unite: "g", ou: { id: "jambon", quantite: 2, unite: "tranche" } },
+      { id: "saucisse", quantite: 2, unite: "pièce" },
+      { id: "kimchi", quantite: 150, unite: "g" },
+      { id: "tofu", quantite: 150, unite: "g" },
+      { id: "nouilles-ramyeon", quantite: 1, unite: "pièce", ou: { id: "nouilles-chinoises", quantite: 100, unite: "g" } },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "gochujang", quantite: 20, unite: "g" },
+      { id: "gochugaru", quantite: 5, unite: "g", ou: { id: "piment-en-poudre", quantite: 3, unite: "g" } },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "champignons", quantite: 80, unite: "g", optionnel: true },
+      { id: "haricots-blancs-en-boite", quantite: 1, unite: "boîte", optionnel: true },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "eau", quantite: 600, unite: "ml" }
+    ],
+    etapes: ["Couper le spam, les saucisses et le tofu en tranches, l'oignon en lamelles.", "Mélanger le gochujang, le gochugaru, la sauce soja et l'ail écrasé : c'est la sauce.", "Dans une casserole large, ranger en tas le spam, les saucisses, le tofu, le kimchi, l'oignon et les champignons. Déposer la sauce au centre.", "Verser l'eau, porter à ébullition, puis laisser mijoter 12 min.", "Ajouter les haricots blancs et les nouilles ramyeon, cuire 3 min de plus jusqu'à ce que les nouilles soient tendres.", "Parsemer d'oignon nouveau émincé et manger tout de suite, directement dans la casserole."]
+  },
+  {
+    id: "mandu-guk", nom: "Mandu-guk (soupe de raviolis)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 20, portions: 2,
+    ingredients: [
+      { id: "mandu", quantite: 12, unite: "pièce" },
+      { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "eau", quantite: 600, unite: "ml" },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "algue-nori", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "huile-de-sesame", quantite: 5, unite: "ml", optionnel: true, ou: { id: "huile-de-tournesol", quantite: 5, unite: "ml" } },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Porter l'eau à ébullition avec le bouillon cube, la sauce soja et l'ail écrasé.", "Ajouter les mandu (surgelés, sans les décongeler) et cuire 6 à 8 min : ils remontent à la surface quand ils sont cuits.", "Battre l'œuf et le verser en filet dans la soupe en remuant doucement.", "Saler, poivrer, arroser d'huile de sésame.", "Servir avec l'oignon nouveau émincé et l'algue nori en lanières."]
+  },
+  {
+    id: "naengmyeon", nom: "Naengmyeon (nouilles froides de sarrasin)", cuisine: "coréenne",
+    difficulte: "moyen", tempsMinutes: 30, portions: 2,
+    ingredients: [
+      { id: "nouilles-de-sarrasin", quantite: 200, unite: "g", ou: { id: "nouilles-somen", quantite: 200, unite: "g" } },
+      { id: "bouillon-cube", quantite: 2, unite: "pièce" },
+      { id: "eau", quantite: 600, unite: "ml" },
+      { id: "vinaigre-de-riz", quantite: 30, unite: "ml", ou: { id: "vinaigre", quantite: 30, unite: "ml" } },
+      { id: "sucre", quantite: 15, unite: "g" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "concombre", quantite: 1, unite: "pièce" },
+      { id: "poire", quantite: 1, unite: "pièce", ou: { id: "citron", quantite: 1, unite: "pièce" } },
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "moutarde", quantite: 5, unite: "g", optionnel: true },
+      { id: "daikon", quantite: 80, unite: "g", optionnel: true },
+      { id: "sel", quantite: 2, unite: "g" }
+    ],
+    etapes: ["Préparer le bouillon : dissoudre les cubes dans l'eau bouillante, ajouter la sauce soja, le vinaigre de riz, le sucre et le sel. Laisser refroidir, puis mettre 2 h au congélateur (jusqu'à ce qu'il soit glacé et un peu pris).", "Cuire les œufs durs 10 min, les rafraîchir et les couper en deux.", "Couper le concombre en bâtonnets, la poire en fines tranches et le radis en lamelles.", "Cuire les nouilles selon le paquet, les rincer longuement à l'eau très froide en les frottant, puis bien les égoutter.", "Répartir les nouilles dans deux bols, verser le bouillon glacé, disposer dessus concombre, poire, radis et œuf. Ajouter un peu de moutarde et de vinaigre à table."]
+  },
+  {
+    id: "bibim-guksu", nom: "Bibim-guksu (nouilles froides pimentées)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 20, portions: 2,
+    ingredients: [
+      { id: "nouilles-somen", quantite: 160, unite: "g", ou: { id: "nouilles-udon", quantite: 200, unite: "g" } },
+      { id: "gochujang", quantite: 40, unite: "g" },
+      { id: "gochugaru", quantite: 5, unite: "g", ou: { id: "piment-en-poudre", quantite: 3, unite: "g" } },
+      { id: "vinaigre-de-riz", quantite: 20, unite: "ml", ou: { id: "vinaigre", quantite: 20, unite: "ml" } },
+      { id: "sucre", quantite: 15, unite: "g" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "huile-de-sesame", quantite: 10, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 10, unite: "ml" } },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "concombre", quantite: 1, unite: "pièce" },
+      { id: "kimchi", quantite: 100, unite: "g", optionnel: true },
+      { id: "oeuf", quantite: 2, unite: "pièce", optionnel: true },
+      { id: "graines-de-sesame", quantite: 3, unite: "g", optionnel: true }
+    ],
+    etapes: ["Si on met des œufs : les cuire durs (10 min), les écaler et les couper en deux.", "Mélanger le gochujang, le gochugaru, le vinaigre de riz, le sucre, la sauce soja, l'huile de sésame et l'ail écrasé : c'est la sauce.", "Cuire les nouilles selon le paquet, les rincer très longuement à l'eau froide et les égoutter à fond.", "Couper le concombre en bâtonnets fins et le kimchi en petits morceaux.", "Mélanger les nouilles avec la sauce, répartir dans deux bols, ajouter concombre, kimchi et œuf, parsemer de graines de sésame."]
+  },
+  {
+    id: "kalguksu", nom: "Kalguksu (soupe de nouilles au poulet)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 35, portions: 2,
+    ingredients: [
+      { id: "nouilles-udon", quantite: 250, unite: "g", ou: { id: "pates", quantite: 200, unite: "g" } },
+      { id: "blanc-de-poulet", quantite: 1, unite: "pièce" },
+      { id: "courgette", quantite: 1, unite: "pièce" },
+      { id: "pomme-de-terre", quantite: 100, unite: "g" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "eau", quantite: 900, unite: "ml" },
+      { id: "oeuf", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "sel", quantite: 2, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Porter l'eau à ébullition avec le bouillon cube, l'oignon coupé en deux et l'ail. Ajouter le blanc de poulet et cuire 15 min.", "Sortir le poulet et l'effilocher. Retirer l'oignon.", "Ajouter dans le bouillon la pomme de terre en fines tranches, cuire 5 min.", "Ajouter les nouilles et la courgette en demi-rondelles, cuire 5 min.", "Remettre le poulet, ajouter la sauce soja, saler et poivrer. Verser l'œuf battu en filet si on en met.", "Servir avec de l'oignon nouveau émincé."]
+  },
+  {
+    id: "ramyeon-kimchi", nom: "Ramyeon au kimchi et à l'œuf", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 15, portions: 2,
+    ingredients: [
+      { id: "nouilles-ramyeon", quantite: 2, unite: "pièce", ou: { id: "nouilles-chinoises", quantite: 200, unite: "g" } },
+      { id: "kimchi", quantite: 150, unite: "g" },
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "gochugaru", quantite: 3, unite: "g", optionnel: true, ou: { id: "piment-en-poudre", quantite: 2, unite: "g" } },
+      { id: "sauce-soja", quantite: 10, unite: "ml" },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "tofu", quantite: 100, unite: "g", optionnel: true },
+      { id: "eau", quantite: 600, unite: "ml" }
+    ],
+    etapes: ["Porter l'eau à ébullition avec le bouillon cube, le kimchi coupé en morceaux, l'ail écrasé, la sauce soja et le gochugaru. Laisser bouillir 5 min.", "Ajouter le tofu en dés et les nouilles (avec leur sachet d'assaisonnement si on en a), cuire 3 min.", "Casser les œufs dans le bouillon et cuire 1 à 2 min sans remuer.", "Parsemer d'oignon nouveau émincé et servir très chaud."]
+  },
+  {
+    id: "tteokguk", nom: "Tteokguk (soupe de gâteaux de riz au bœuf)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 35, portions: 2,
+    ingredients: [
+      { id: "gateaux-de-riz", quantite: 300, unite: "g" },
+      { id: "steak-de-boeuf", quantite: 100, unite: "g", ou: { id: "boeuf-hache", quantite: 100, unite: "g" } },
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "sauce-soja", quantite: 20, unite: "ml" },
+      { id: "huile-de-sesame", quantite: 10, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 10, unite: "ml" } },
+      { id: "eau", quantite: 800, unite: "ml" },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "algue-nori", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "sel", quantite: 2, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Faire tremper les gâteaux de riz 20 min dans l'eau froide, puis les égoutter.", "Couper le bœuf en petits morceaux et le faire revenir 2 min dans l'huile de sésame, avec l'ail écrasé.", "Verser l'eau et la sauce soja, porter à ébullition et laisser mijoter 15 min.", "Ajouter les gâteaux de riz et cuire 7 à 8 min : ils deviennent mous et flottent.", "Battre les œufs et les verser en filet, remuer doucement. Saler, poivrer.", "Servir avec l'oignon nouveau émincé et l'algue nori en lanières."]
+  },
+  {
+    id: "kongnamul-guk", nom: "Kongnamul-guk (soupe de pousses de soja)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 20, portions: 2,
+    ingredients: [
+      { id: "pousses-de-soja", quantite: 250, unite: "g" },
+      { id: "anchois-seches", quantite: 15, unite: "g", ou: { id: "bouillon-cube", quantite: 1, unite: "pièce" } },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "sauce-soja", quantite: 10, unite: "ml" },
+      { id: "eau", quantite: 800, unite: "ml" },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "gochugaru", quantite: 3, unite: "g", optionnel: true, ou: { id: "piment-en-poudre", quantite: 2, unite: "g" } },
+      { id: "riz", quantite: 150, unite: "g", optionnel: true },
+      { id: "sel", quantite: 3, unite: "g" }
+    ],
+    etapes: ["Faire bouillir l'eau avec les anchois séchés (ou le bouillon cube) pendant 8 min, puis retirer les anchois.", "Laver les pousses de soja et les ajouter au bouillon, couvrir et cuire 8 min sans soulever le couvercle (sinon elles gardent un goût de cru).", "Ajouter l'ail écrasé, la sauce soja et le gochugaru, saler.", "Cuire encore 2 min, parsemer d'oignon nouveau émincé. Se mange très chaud, avec du riz si on veut."]
+  },
+  {
+    id: "myeolchi-bokkeum", nom: "Myeolchi-bokkeum (anchois séchés sautés)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 15, portions: 2,
+    ingredients: [
+      { id: "anchois-seches", quantite: 60, unite: "g" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "sirop-de-riz", quantite: 20, unite: "g", ou: { id: "miel", quantite: 20, unite: "g" } },
+      { id: "sucre", quantite: 5, unite: "g" },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "huile-de-tournesol", quantite: 10, unite: "ml" },
+      { id: "piment-frais", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "graines-de-sesame", quantite: 3, unite: "g", optionnel: true },
+      { id: "huile-de-sesame", quantite: 5, unite: "ml", optionnel: true, ou: { id: "huile-de-tournesol", quantite: 5, unite: "ml" } }
+    ],
+    etapes: ["Faire sauter les anchois à sec 2 min dans une poêle antiadhésive, pour qu'ils soient croustillants. Les mettre de côté.", "Dans la même poêle, chauffer l'huile avec l'ail en lamelles et le piment émincé 1 min.", "Ajouter la sauce soja, le sucre et le sirop de riz, laisser bouillonner 1 min.", "Remettre les anchois, mélanger vite pour bien les enrober, puis éteindre le feu.", "Ajouter l'huile de sésame et les graines de sésame. Se mange en accompagnement avec du riz."]
+  },
+  {
+    id: "ojingeo-bokkeum", nom: "Ojingeo-bokkeum (calmar sauté pimenté)", cuisine: "coréenne",
+    difficulte: "moyen", tempsMinutes: 25, portions: 2,
+    ingredients: [
+      { id: "calmar", quantite: 300, unite: "g" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "carotte", quantite: 1, unite: "pièce" },
+      { id: "chou", quantite: 100, unite: "g", optionnel: true },
+      { id: "gochujang", quantite: 30, unite: "g" },
+      { id: "gochugaru", quantite: 5, unite: "g", ou: { id: "piment-en-poudre", quantite: 3, unite: "g" } },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "sucre", quantite: 10, unite: "g" },
+      { id: "ail", quantite: 3, unite: "gousse" },
+      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "huile-de-sesame", quantite: 5, unite: "ml", optionnel: true, ou: { id: "huile-de-tournesol", quantite: 5, unite: "ml" } },
+      { id: "riz", quantite: 150, unite: "g", optionnel: true }
+    ],
+    etapes: ["Nettoyer le calmar, le couper en anneaux et les tentacules en deux. Les rincer et bien les égoutter.", "Mélanger le gochujang, le gochugaru, la sauce soja, le sucre et l'ail écrasé : c'est la sauce.", "Chauffer l'huile dans une grande poêle très chaude, y faire sauter l'oignon, la carotte et le chou émincés 3 min.", "Ajouter le calmar et la sauce, sauter 3 à 4 min à feu vif (pas plus, sinon il devient caoutchouteux).", "Ajouter l'oignon nouveau émincé et l'huile de sésame. Servir avec du riz."]
+  },
+  {
+    id: "saewoo-bokkeum", nom: "Saewoo-bokkeum (crevettes sautées au gochujang)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 15, portions: 2,
+    ingredients: [
+      { id: "crevettes", quantite: 250, unite: "g" },
+      { id: "gochujang", quantite: 20, unite: "g" },
+      { id: "ail", quantite: 3, unite: "gousse" },
+      { id: "sauce-soja", quantite: 10, unite: "ml" },
+      { id: "miel", quantite: 10, unite: "g", ou: { id: "sirop-de-riz", quantite: 10, unite: "g" } },
+      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "oignon-nouveau", quantite: 2, unite: "pièce", optionnel: true },
+      { id: "graines-de-sesame", quantite: 3, unite: "g", optionnel: true },
+      { id: "riz", quantite: 150, unite: "g", optionnel: true }
+    ],
+    etapes: ["Mélanger le gochujang, la sauce soja, le miel et l'ail écrasé.", "Chauffer l'huile dans une poêle bien chaude, sauter les crevettes 2 min jusqu'à ce qu'elles rosissent.", "Ajouter la sauce et cuire encore 2 min en remuant : elle doit napper les crevettes.", "Parsemer d'oignon nouveau émincé et de graines de sésame. Servir avec du riz."]
+  },
+  {
+    id: "gamja-jorim", nom: "Gamja-jorim (pommes de terre braisées)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 30, portions: 2,
+    ingredients: [
+      { id: "pomme-de-terre", quantite: 400, unite: "g" },
+      { id: "sauce-soja", quantite: 30, unite: "ml" },
+      { id: "sirop-de-riz", quantite: 20, unite: "g", ou: { id: "sucre", quantite: 15, unite: "g" } },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "huile-de-tournesol", quantite: 10, unite: "ml" },
+      { id: "eau", quantite: 150, unite: "ml" },
+      { id: "piment-frais", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "huile-de-sesame", quantite: 5, unite: "ml", optionnel: true, ou: { id: "huile-de-tournesol", quantite: 5, unite: "ml" } },
+      { id: "graines-de-sesame", quantite: 3, unite: "g", optionnel: true }
+    ],
+    etapes: ["Couper les pommes de terre en cubes de 2 cm et les rincer à l'eau froide.", "Les faire dorer 3 min dans l'huile, avec l'ail écrasé.", "Ajouter l'eau, la sauce soja, le sirop de riz et le piment émincé.", "Porter à ébullition, puis cuire 15 min à feu moyen en remuant de temps en temps, jusqu'à ce que la sauce soit presque évaporée et brillante.", "Ajouter l'huile de sésame et les graines de sésame."]
+  },
+  {
+    id: "hobak-jeon", nom: "Hobak-jeon (courgette poêlée à l'œuf)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 20, portions: 2,
+    ingredients: [
+      { id: "courgette", quantite: 2, unite: "pièce" },
+      { id: "farine", quantite: 50, unite: "g" },
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "huile-de-tournesol", quantite: 30, unite: "ml" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "vinaigre-de-riz", quantite: 10, unite: "ml", ou: { id: "vinaigre", quantite: 10, unite: "ml" } },
+      { id: "sel", quantite: 2, unite: "g" }
+    ],
+    etapes: ["Couper les courgettes en rondelles de 5 mm, les saler et les laisser dégorger 5 min. Les éponger.", "Battre les œufs avec une pincée de sel.", "Passer chaque rondelle dans la farine, puis dans l'œuf battu.", "Les cuire dans l'huile chaude 2 à 3 min de chaque côté, à feu moyen, jusqu'à ce qu'elles soient dorées.", "Servir avec la sauce soja mélangée au vinaigre de riz."]
+  },
+  {
+    id: "dubu-jorim", nom: "Dubu-jorim (tofu braisé à la sauce piquante)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 25, portions: 2,
+    ingredients: [
+      { id: "tofu", quantite: 300, unite: "g" },
+      { id: "sauce-soja", quantite: 30, unite: "ml" },
+      { id: "gochugaru", quantite: 5, unite: "g", ou: { id: "piment-en-poudre", quantite: 3, unite: "g" } },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "sucre", quantite: 5, unite: "g" },
+      { id: "huile-de-tournesol", quantite: 20, unite: "ml" },
+      { id: "eau", quantite: 100, unite: "ml" },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "huile-de-sesame", quantite: 5, unite: "ml", optionnel: true, ou: { id: "huile-de-tournesol", quantite: 5, unite: "ml" } },
+      { id: "graines-de-sesame", quantite: 3, unite: "g", optionnel: true }
+    ],
+    etapes: ["Couper le tofu en tranches de 1 cm et bien les éponger avec du papier absorbant.", "Les faire dorer 3 min de chaque côté dans l'huile, puis les ranger dans la poêle.", "Mélanger la sauce soja, le gochugaru, l'ail écrasé, le sucre, l'eau et l'oignon nouveau émincé.", "Verser la sauce sur le tofu et cuire 8 à 10 min à feu doux, en arrosant avec la sauce, jusqu'à ce qu'elle réduise.", "Ajouter l'huile de sésame et les graines de sésame."]
+  },
+  {
+    id: "sigeumchi-namul", nom: "Sigeumchi-namul (épinards assaisonnés)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 10, portions: 2,
+    ingredients: [
+      { id: "epinards", quantite: 250, unite: "g" },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "sauce-soja", quantite: 10, unite: "ml" },
+      { id: "huile-de-sesame", quantite: 10, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 10, unite: "ml" } },
+      { id: "graines-de-sesame", quantite: 3, unite: "g", optionnel: true },
+      { id: "sel", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Plonger les épinards 1 min dans l'eau bouillante salée, puis les rafraîchir à l'eau froide.", "Les presser fermement pour enlever toute l'eau, puis les couper en deux.", "Les mélanger avec l'ail écrasé, la sauce soja et l'huile de sésame, en les défaisant avec les doigts.", "Parsemer de graines de sésame. Se mange tiède ou froid, en accompagnement."]
+  },
+  {
+    id: "gaji-namul", nom: "Gaji-namul (aubergine vapeur assaisonnée)", cuisine: "coréenne",
+    difficulte: "facile", tempsMinutes: 20, portions: 2,
+    ingredients: [
+      { id: "aubergine", quantite: 2, unite: "pièce" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "huile-de-sesame", quantite: 10, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 10, unite: "ml" } },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "gochugaru", quantite: 3, unite: "g", optionnel: true, ou: { id: "piment-en-poudre", quantite: 2, unite: "g" } },
+      { id: "graines-de-sesame", quantite: 3, unite: "g", optionnel: true }
+    ],
+    etapes: ["Couper les aubergines en deux dans la longueur, puis en bâtonnets de la taille d'un doigt.", "Les cuire 8 à 10 min à la vapeur (ou au micro-ondes couvert, 5 min), jusqu'à ce qu'elles soient très tendres.", "Les laisser tiédir, puis les égoutter en les pressant doucement.", "Mélanger avec la sauce soja, l'ail écrasé, l'huile de sésame, l'oignon nouveau émincé et le gochugaru.", "Parsemer de graines de sésame. Se mange tiède ou froid."]
   }
 ];
