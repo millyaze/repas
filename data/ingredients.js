@@ -318,6 +318,14 @@ const INGREDIENTS = [
   { id: "sucre-glace",          nom: "Sucre glace",          unite: "g" },
   { id: "biscuits-secs",        nom: "Biscuits secs",        unite: "g" },
   { id: "myrtilles",            nom: "Myrtilles",            unite: "g" },
+  // --- Ajoutés pour : complements ---
+  { id: "boeuf-a-braiser",        nom: "Bœuf à braiser",          unite: "g" },
+  { id: "origan",                 nom: "Origan",                  unite: "g" },
+  { id: "sauce-salsa",            nom: "Sauce salsa",             unite: "ml" },
+  { id: "tortilla-de-mais",       nom: "Tortilla de maïs",        unite: "pièce" },
+  { id: "quinoa",                 nom: "Quinoa",                  unite: "g" },
+  { id: "haricots-noirs-en-boite", nom: "Haricots noirs en boîte", unite: "boîte" },
+  { id: "farine-de-mais",         nom: "Farine de maïs",          unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
