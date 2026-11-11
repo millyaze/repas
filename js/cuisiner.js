@@ -4,7 +4,7 @@
 // Chargé AVANT js/recettes.js, qui affiche le bouton et le récapitulatif.
 // Utilise : stock, historique, sauvegarder, afficher, montrerMessage, element,
 //           arrondir, joursRestants (js/stock.js), dateDuJour (js/memoire.js),
-//           ligneDuStock, ingredientDeReference, besoinRetenu, convertir, ecrireQuantite, creer,
+//           ligneDuStock, preparerIndexStock, ingredientDeReference, besoinRetenu, convertir, ecrireQuantite, creer,
 //           afficherRecettes (js/recettes.js), RECETTES (recettes/toutes.js).
 // ============================================================
 
@@ -91,6 +91,7 @@ function afficherHistorique() {
 // Liste ce qu'une recette retire du stock : une ligne par ingrédient présent dans le stock.
 // Sel, poivre, eau et ingrédients facultatifs absents ne sont pas retirés.
 function lignesACuisiner(recette) {
+  preparerIndexStock(); // le stock a pu changer depuis le dernier affichage (js/recettes.js)
   const lignes = [];
   recette.ingredients.forEach(function (origine) {
     // Ingrédient avec remplaçant : on retire celui des deux qui est dans le stock (l'origine d'abord)
