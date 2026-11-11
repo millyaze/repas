@@ -377,8 +377,8 @@ const RECETTES_COREENNE = [
     id: "galbi-jjim", nom: "Galbi-jjim (côtes de bœuf braisées)", cuisine: "coréenne",
     difficulte: "moyen", tempsMinutes: 120, portions: 2,
     ingredients: [
-      { id: "cotes-de-boeuf", quantite: 600, unite: "g" },
-      { id: "daikon", quantite: 250, unite: "g", ou: { id: "carotte", quantite: 2, unite: "pièce" } },
+      { id: "cotes-de-boeuf-galbi", quantite: 600, unite: "g" },
+      { id: "radis-blanc-daikon", quantite: 250, unite: "g", ou: { id: "carotte", quantite: 2, unite: "pièce" } },
       { id: "carotte", quantite: 1, unite: "pièce" },
       { id: "pomme-de-terre", quantite: 200, unite: "g" },
       { id: "oignon", quantite: 1, unite: "pièce" },
@@ -434,7 +434,7 @@ const RECETTES_COREENNE = [
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     ingredients: [
       { id: "nouilles-udon", quantite: 300, unite: "g", ou: { id: "nouilles-chinoises", quantite: 300, unite: "g" } },
-      { id: "pate-de-haricots-noirs", quantite: 60, unite: "g", ou: { id: "doenjang", quantite: 40, unite: "g" } },
+      { id: "pate-de-haricots-noirs-chunjang", quantite: 60, unite: "g", ou: { id: "doenjang", quantite: 40, unite: "g" } },
       { id: "poitrine-de-porc", quantite: 200, unite: "g" },
       { id: "oignon", quantite: 2, unite: "pièce" },
       { id: "courgette", quantite: 1, unite: "pièce" },
@@ -453,7 +453,7 @@ const RECETTES_COREENNE = [
     id: "budae-jjigae", nom: "Budae-jjigae (ragoût de l'armée : spam, saucisses, kimchi)", cuisine: "coréenne",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     ingredients: [
-      { id: "spam", quantite: 100, unite: "g", ou: { id: "jambon", quantite: 2, unite: "tranche" } },
+      { id: "spam-jambon-en-boite", quantite: 100, unite: "g", ou: { id: "jambon", quantite: 2, unite: "tranche" } },
       { id: "saucisse", quantite: 2, unite: "pièce" },
       { id: "kimchi", quantite: 150, unite: "g" },
       { id: "tofu", quantite: 150, unite: "g" },
@@ -474,7 +474,7 @@ const RECETTES_COREENNE = [
     id: "mandu-guk", nom: "Mandu-guk (soupe de raviolis)", cuisine: "coréenne",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     ingredients: [
-      { id: "mandu", quantite: 12, unite: "pièce" },
+      { id: "mandu-raviolis-coreens", quantite: 12, unite: "pièce" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "sauce-soja", quantite: 15, unite: "ml" },
@@ -502,7 +502,7 @@ const RECETTES_COREENNE = [
       { id: "poire", quantite: 1, unite: "pièce", ou: { id: "citron", quantite: 1, unite: "pièce" } },
       { id: "oeuf", quantite: 2, unite: "pièce" },
       { id: "moutarde", quantite: 5, unite: "g", optionnel: true },
-      { id: "daikon", quantite: 80, unite: "g", optionnel: true },
+      { id: "radis-blanc-daikon", quantite: 80, unite: "g", optionnel: true },
       { id: "sel", quantite: 2, unite: "g" }
     ],
     etapes: ["Préparer le bouillon : dissoudre les cubes dans l'eau bouillante, ajouter la sauce soja, le vinaigre de riz, le sucre et le sel. Laisser refroidir, puis mettre 2 h au congélateur (jusqu'à ce qu'il soit glacé et un peu pris).", "Cuire les œufs durs 10 min, les rafraîchir et les couper en deux.", "Couper le concombre en bâtonnets, la poire en fines tranches et le radis en lamelles.", "Cuire les nouilles selon le paquet, les rincer longuement à l'eau très froide en les frottant, puis bien les égoutter.", "Répartir les nouilles dans deux bols, verser le bouillon glacé, disposer dessus concombre, poire, radis et œuf. Ajouter un peu de moutarde et de vinaigre à table."]
