@@ -204,6 +204,15 @@ const INGREDIENTS = [
   { id: "poisson-blanc",        nom: "Poisson blanc",        unite: "g" },
   { id: "truite",               nom: "Truite",               unite: "g" },
   { id: "pousses-de-bambou",    nom: "Pousses de bambou",    unite: "g" },
+  // Cuisine chinoise
+  { id: "vin-de-shaoxing",      nom: "Vin de Shaoxing",      unite: "ml" },
+  { id: "poivre-du-sichuan",    nom: "Poivre du Sichuan",    unite: "g" },
+  { id: "pate-de-piment-aux-feves-doubanjiang", nom: "Pâte de piment aux fèves (doubanjiang)", unite: "g" },
+  { id: "sauce-aux-prunes",     nom: "Sauce aux prunes",     unite: "ml" },
+  { id: "champignons-noirs",    nom: "Champignons noirs",    unite: "g" },
+  { id: "pois-gourmands",       nom: "Pois gourmands",       unite: "g" },
+  { id: "ananas-en-boite",      nom: "Ananas en boîte",      unite: "boîte" },
+  { id: "haricots-noirs-fermentes", nom: "Haricots noirs fermentés", unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
