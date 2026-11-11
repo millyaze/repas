@@ -226,6 +226,23 @@ const INGREDIENTS = [
   { id: "blanc-de-dinde",       nom: "Blanc de dinde",       unite: "tranche" },
   { id: "radis",                nom: "Radis",                unite: "g" },
   { id: "levure-de-boulanger",  nom: "Levure de boulanger",  unite: "g" },
+  // Cuisine espagnole
+  { id: "chorizo",              nom: "Chorizo",              unite: "g" },
+  { id: "safran",               nom: "Safran",               unite: "sachet" },
+  { id: "amandes",              nom: "Amandes",              unite: "g" },
+  { id: "thym",                 nom: "Thym",                 unite: "g" },
+  { id: "olives-vertes",        nom: "Olives vertes",        unite: "g" },
+  { id: "moules",               nom: "Moules",               unite: "g" },
+  { id: "palourdes",            nom: "Palourdes",            unite: "g" },
+  { id: "fruits-de-mer-surgeles", nom: "Fruits de mer surgelés", unite: "g" },
+  { id: "chocolat-noir",        nom: "Chocolat noir",        unite: "g" },
+  { id: "cacao-en-poudre",      nom: "Cacao en poudre",      unite: "g" },
+  { id: "levure-chimique",      nom: "Levure chimique",      unite: "g" },
+  { id: "raisins-secs",         nom: "Raisins secs",         unite: "g" },
+  { id: "jambon-cru",           nom: "Jambon cru",           unite: "tranche" },
+  { id: "fenouil",              nom: "Fenouil",              unite: "pièce" },
+  { id: "figues-seches",        nom: "Figues sèches",        unite: "g" },
+  { id: "pimientos-de-padron",  nom: "Pimientos de padrón",  unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
