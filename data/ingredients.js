@@ -179,6 +179,23 @@ const INGREDIENTS = [
   { id: "riz-gluant",           nom: "Riz gluant",           unite: "g" },
   { id: "jujubes",              nom: "Jujubes",              unite: "pièce" },
   { id: "ginseng",              nom: "Ginseng",              unite: "pièce" },
+  // Cuisine thaïlandaise
+  { id: "sauce-poisson",        nom: "Sauce poisson",        unite: "ml" },
+  { id: "nouilles-de-riz",      nom: "Nouilles de riz",      unite: "g" },
+  { id: "sauce-huitre",         nom: "Sauce huître",         unite: "ml" },
+  { id: "citronnelle",          nom: "Citronnelle",          unite: "pièce" },
+  { id: "feuilles-de-combava",  nom: "Feuilles de combava",  unite: "pièce" },
+  { id: "galanga",              nom: "Galanga",              unite: "g" },
+  { id: "sauce-chili-douce",    nom: "Sauce chili douce",    unite: "ml" },
+  { id: "tamarin",              nom: "Tamarin",              unite: "g" },
+  { id: "cannelle",             nom: "Cannelle",             unite: "g" },
+  { id: "echalote",             nom: "Échalote",             unite: "pièce" },
+  { id: "potiron",              nom: "Potiron",              unite: "g" },
+  { id: "filet-mignon-de-porc", nom: "Filet mignon de porc", unite: "g" },
+  { id: "porc-hache",           nom: "Porc haché",           unite: "g" },
+  { id: "chou-chinois",         nom: "Chou chinois",         unite: "g" },
+  { id: "chataignes-d-eau",     nom: "Châtaignes d'eau",     unite: "g" },
+  { id: "pate-de-crevettes",    nom: "Pâte de crevettes",    unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
