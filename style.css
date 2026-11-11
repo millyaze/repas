@@ -74,9 +74,12 @@ h2 { margin: 0 0 12px; font-size: 1.1rem; }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--bordure);
+}
+/* Formulaire d'ajout déplié : séparé du scan par un trait */
+#zone-formulaire {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid var(--bordure);
 }
 .scan-code { display: flex; gap: 8px; flex: 1 1 260px; }
 .scan-code button { flex: none; white-space: nowrap; }
@@ -169,7 +172,7 @@ button.bouton-modifier:hover { background: #e7e3d9; }
 
 /* Onglets (Stock, Recettes) */
 .onglets { display: flex; gap: 8px; margin: 8px 0 10px; }
-.onglet { flex: 1; font-weight: 600; }
+.onglet { flex: 1; font-weight: 600; padding: 10px 4px; min-width: 0; }
 .onglet.actif { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); }
 
 /* Recettes */
@@ -271,7 +274,10 @@ button.afficher-plus { width: 100%; margin-top: 8px; }
 @media (max-width: 600px) {
   .filtres { grid-template-columns: 1fr; }
   #formulaire { grid-template-columns: 1fr 1fr; }
-  #bouton-scanner { flex: 1 1 100%; }
+  /* « Scanner » et « + Ajouter à la main » côte à côte, le champ du numéro en dessous */
+  #bouton-scanner, #bouton-ajouter-main { flex: 1 1 40%; }
+  .onglets { gap: 4px; }
+  .onglet { font-size: 0.9rem; }
   .champ:nth-of-type(4) { grid-column: 1 / -1; }
   .entete-liste { flex-direction: column; align-items: stretch; }
   .entete-liste input { max-width: none; }

@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 16;
+    const VERSION = 17;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
   </script>
 </head>
@@ -19,6 +19,7 @@
       <button type="button" class="onglet" data-onglet="stock">Stock</button>
       <button type="button" class="onglet" data-onglet="recettes">Recettes</button>
       <button type="button" class="onglet" data-onglet="courses">Courses</button>
+      <button type="button" class="onglet" data-onglet="reglages">Réglages</button>
     </nav>
   </header>
 
@@ -34,7 +35,9 @@
     <section class="bloc">
       <!-- Scan : préremplit le formulaire ci-dessous (voir js/scan.js) -->
       <div class="scan">
-        <button type="button" id="bouton-scanner">Scanner un code-barre</button>
+        <button type="button" id="bouton-scanner" aria-label="Scanner un code-barre">Scanner</button>
+        <!-- Déplie le formulaire ci-dessous (voir ouvrirFormulaire dans js/stock.js) -->
+        <button type="button" id="bouton-ajouter-main" aria-label="Ajouter un ingrédient à la main">+ À la main</button>
         <form id="formulaire-code" class="scan-code">
           <input type="text" id="champ-code" inputmode="numeric" autocomplete="off" placeholder="ou taper son numéro" aria-label="Numéro du code-barre">
           <button type="submit">Chercher</button>
@@ -45,6 +48,8 @@
         </div>
       </div>
 
+      <!-- Formulaire replié au départ (ouvert par « + Ajouter à la main », un scan ou le crayon ✎) -->
+      <div id="zone-formulaire" hidden>
       <h2 id="titre-formulaire">Ajouter un ingrédient</h2>
       <form id="formulaire">
         <label class="champ champ-large">Nom
@@ -63,10 +68,11 @@
         </label>
         <div class="boutons-formulaire">
           <button type="submit" id="bouton-valider" class="principal">Ajouter</button>
-          <button type="button" id="bouton-annuler" hidden>Annuler</button>
+          <button type="button" id="bouton-annuler">Fermer</button>
           <button type="button" id="bouton-supprimer" class="danger" hidden>Supprimer</button>
         </div>
       </form>
+      </div>
     </section>
 
     <!-- Liste du stock -->
@@ -78,7 +84,10 @@
       <ul id="liste" class="liste"></ul>
       <p id="liste-vide" class="vide" hidden></p>
     </section>
+    </div>
 
+    <!-- ===================== ONGLET RÉGLAGES (sauvegarde et synchro, touchés rarement) ===================== -->
+    <div id="vue-reglages" hidden>
     <!-- Sauvegarde -->
     <section class="bloc">
       <h2>Sauvegarde</h2>

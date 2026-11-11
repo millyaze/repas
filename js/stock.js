@@ -66,7 +66,12 @@ function demarrer() {
   }
 
   element("formulaire").addEventListener("submit", validerFormulaire);
-  element("bouton-annuler").addEventListener("click", quitterModification);
+  element("bouton-annuler").addEventListener("click", fermerFormulaire);
+  // « + Ajouter à la main » : déplie le formulaire et place le curseur dans « Nom »
+  element("bouton-ajouter-main").addEventListener("click", function () {
+    ouvrirFormulaire();
+    element("champ-nom").focus();
+  });
   // « Supprimer » (visible seulement en mode modification) : supprime l'ingrédient en cours
   element("bouton-supprimer").addEventListener("click", function () {
     if (idEnModification) supprimerLigne(idEnModification);
@@ -271,7 +276,7 @@ function validerFormulaire(evenement) {
     ligne.unite = unite;
     ligne.peremption = peremption;
     montrerMessage("« " + nom + " » modifié.");
-    quitterModification();
+    fermerFormulaire();
   } else {
     // --- Ajout ---
     const existante = trouverParNom(nom);
@@ -320,8 +325,9 @@ function ouvrirModification(id) {
   element("champ-peremption").value = ligne.peremption || "";
   element("titre-formulaire").textContent = "Modifier « " + ligne.nom + " »";
   element("bouton-valider").textContent = "Enregistrer";
-  element("bouton-annuler").hidden = false;
+  element("bouton-annuler").textContent = "Annuler";
   element("bouton-supprimer").hidden = false;
+  ouvrirFormulaire();
   element("titre-formulaire").scrollIntoView({ behavior: "smooth", block: "start" });
   element("champ-quantite").focus({ preventScroll: true });
 }
@@ -331,9 +337,23 @@ function quitterModification() {
   idEnModification = null;
   element("titre-formulaire").textContent = "Ajouter un ingrédient";
   element("bouton-valider").textContent = "Ajouter";
-  element("bouton-annuler").hidden = true;
+  element("bouton-annuler").textContent = "Fermer";
   element("bouton-supprimer").hidden = true;
   viderFormulaire();
+}
+
+// Le formulaire est replié au départ : il s'ouvre avec « + Ajouter à la main »,
+// après un scan réussi ou avec le crayon ✎ d'une ligne
+function ouvrirFormulaire() {
+  element("zone-formulaire").hidden = false;
+  element("bouton-ajouter-main").hidden = true;
+}
+
+// Bouton « Fermer » / « Annuler » : vide le formulaire et le replie
+function fermerFormulaire() {
+  quitterModification();
+  element("zone-formulaire").hidden = true;
+  element("bouton-ajouter-main").hidden = false;
 }
 
 function viderFormulaire() {
@@ -363,6 +383,7 @@ function preremplirFormulaire(nom, quantite, unite, code) {
   element("champ-quantite").value = quantite;
   choisirUnite(unite);
   codeEnAttente = code;
+  ouvrirFormulaire();
   element("titre-formulaire").scrollIntoView({ behavior: "smooth", block: "start" });
   element("champ-peremption").focus({ preventScroll: true });
 }
@@ -371,7 +392,7 @@ function supprimerLigne(id) {
   const ligne = stock.find(function (l) { return l.id === id; });
   if (!ligne || !confirm("Supprimer « " + ligne.nom + " » du stock ?")) return;
   stock = stock.filter(function (l) { return l.id !== id; });
-  if (idEnModification === id) quitterModification();
+  if (idEnModification === id) fermerFormulaire();
   sauvegarder();
   afficher();
   montrerMessage("« " + ligne.nom + " » supprimé.");
