@@ -1,7 +1,8 @@
 // ============================================================
 // RECETTES : compare les recettes au stock et les affiche.
 // - « Réalisables maintenant » : tout est dans le stock.
-// - « Presque réalisables » : au moins SEUIL_INCOMPLET % des ingrédients.
+// - « Presque réalisables » : au moins seuilCompletion % des ingrédients
+//   (réglé par le curseur « Complétion minimum », retenu sur l'appareil).
 // Les favoris (étoile) sont enregistrés et synchronisés avec le stock.
 // « Cuisiner » et l'historique sont dans js/cuisiner.js, la liste de courses dans js/courses.js
 // (tous deux chargés avant ce fichier).
@@ -9,8 +10,21 @@
 //           INGREDIENTS (data/ingredients.js), RECETTES (recettes/toutes.js).
 // ============================================================
 
-// % minimum pour qu'une recette incomplète soit proposée
+// % minimum pour qu'une recette incomplète soit proposée : valeur de départ du curseur
 const SEUIL_INCOMPLET = 50;
+// Nom sous lequel le réglage du curseur est retenu dans le navigateur (propre à chaque appareil)
+const CLE_COMPLETION = "repas-completion";
+// Réglage actuel du curseur « Complétion minimum » (de 0 à 100)
+let seuilCompletion = lireSeuilCompletion();
+
+// Relit le réglage retenu ; s'il est absent ou abîmé, on repart de la valeur de départ
+function lireSeuilCompletion() {
+  let texte = null;
+  try { texte = localStorage.getItem(CLE_COMPLETION); } catch (erreur) { /* sans gravité */ }
+  const valeur = Number(texte);
+  if (texte === null || texte === "" || isNaN(valeur) || valeur < 0 || valeur > 100) return SEUIL_INCOMPLET;
+  return Math.round(valeur);
+}
 // Choix proposés dans le filtre « Temps » (en minutes)
 const TEMPS_PROPOSES = [15, 20, 30, 45, 60];
 // Conversions discrètes : chaque unité ramenée à une unité commune
@@ -170,6 +184,14 @@ function preparerFiltres() {
   ["filtre-cuisine", "filtre-difficulte", "filtre-temps"].forEach(function (id) {
     element(id).addEventListener("change", afficherRecettes);
   });
+
+  // Curseur « Complétion minimum » : les listes suivent pendant qu'on le glisse
+  element("filtre-completion").value = seuilCompletion;
+  element("filtre-completion").addEventListener("input", function () {
+    seuilCompletion = Number(element("filtre-completion").value);
+    try { localStorage.setItem(CLE_COMPLETION, String(seuilCompletion)); } catch (erreur) { /* sans gravité */ }
+    afficherRecettes();
+  });
 }
 
 // Dit si une recette passe les filtres choisis
@@ -215,7 +237,7 @@ function afficherRecettes() {
 
   // Presque réalisables : de la plus complète à la moins complète
   const incompletes = analyses
-    .filter(function (a) { return a.pourcent < 100 && a.pourcent >= SEUIL_INCOMPLET; })
+    .filter(function (a) { return a.pourcent < 100 && a.pourcent >= seuilCompletion; })
     .sort(function (a, b) {
       const recent = cuisineeRecemment(a.recette.id) - cuisineeRecemment(b.recette.id);
       if (recent !== 0) return recent; // cuisinées récemment : en bas de la liste
@@ -230,6 +252,10 @@ function afficherRecettes() {
     "Aucune recette presque réalisable avec ces filtres.");
   element("titre-realisables").textContent = "Réalisables maintenant (" + realisables.length + ")";
   element("titre-incompletes").textContent = "Presque réalisables (" + incompletes.length + ")";
+  element("valeur-completion").textContent = "Complétion minimum : " + seuilCompletion + " %";
+  element("aide-incompletes").textContent = seuilCompletion === 100
+    ? "Curseur à 100 % : seules les recettes réalisables sont affichées."
+    : "Tu as au moins " + seuilCompletion + " % des ingrédients.";
   afficherHistorique(); // bloc « Dernières recettes cuisinées » (js/cuisiner.js)
   afficherCourses();    // onglet « Courses » (js/courses.js)
 }
