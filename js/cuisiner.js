@@ -227,7 +227,6 @@ function validerCuisine(recette, lignes, zoneErreur) {
   sauvegarder();
   afficher(); // rafraîchit le stock, puis les recettes
   montrerMessage("« " + recette.nom + " » cuisinée : le stock a été mis à jour.");
-  element("message").scrollIntoView({ block: "center" });
 }
 
 // ---------- Annulation ----------
@@ -265,5 +264,4 @@ function annulerCuisine(entree) {
   } else {
     montrerMessage("« " + nom + " » annulée : les quantités ont été remises dans le stock.");
   }
-  element("message").scrollIntoView({ block: "center" });
 }

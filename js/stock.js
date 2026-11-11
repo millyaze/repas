@@ -67,6 +67,8 @@ function demarrer() {
 
   element("formulaire").addEventListener("submit", validerFormulaire);
   element("bouton-annuler").addEventListener("click", fermerFormulaire);
+  // Toucher le bandeau de message le ferme
+  element("message").addEventListener("click", cacherMessage);
   // « + Ajouter à la main » : déplie le formulaire et place le curseur dans « Nom »
   element("bouton-ajouter-main").addEventListener("click", function () {
     ouvrirFormulaire();
@@ -145,11 +147,21 @@ function remplacerDonnees(nouveauStock, nouveauxCodes, nouveauxFavoris, nouvelHi
   afficher();
 }
 
+// Bandeau de message en bas de l'écran (confirmation ou erreur).
+// Une confirmation disparaît seule au bout de DUREE_MESSAGE ; une erreur reste jusqu'à ce qu'on la touche.
+const DUREE_MESSAGE = 4000; // en millisecondes
+let minuterieMessage = null;
 function montrerMessage(texte, estErreur) {
   const zone = element("message");
   zone.textContent = texte;
   zone.className = estErreur ? "message erreur" : "message";
   zone.hidden = false;
+  clearTimeout(minuterieMessage);
+  if (!estErreur) minuterieMessage = setTimeout(cacherMessage, DUREE_MESSAGE);
+}
+function cacherMessage() {
+  clearTimeout(minuterieMessage);
+  element("message").hidden = true;
 }
 
 // Recherche une ligne du stock portant le même nom (accents et majuscules ignorés)

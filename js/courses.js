@@ -290,7 +290,6 @@ function validerRangement(lignes, zoneErreur) {
   sauvegarder();
   afficher();
   montrerMessage("Courses rangées : " + ajoutes + " article" + (ajoutes > 1 ? "s ajoutés" : " ajouté") + " au stock.");
-  element("message").scrollIntoView({ block: "center" });
 }
 
 // ---------- Démarrage (appelé par js/recettes.js, une fois tous les fichiers chargés) ----------

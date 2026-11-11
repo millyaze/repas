@@ -2,19 +2,62 @@
    MISE EN FORME de la page (ordinateur et téléphone)
    ============================================================ */
 
-/* Couleurs réutilisées partout : à changer ici pour changer l'allure */
+/* Couleurs réutilisées partout : à changer ici pour changer l'allure.
+   Rouge = périmé ou erreur seulement ; orange = périme bientôt. */
 :root {
+  color-scheme: light;          /* champs de date, listes… dessinés en clair */
   --fond: #f6f4ef;
   --carte: #ffffff;
   --texte: #23282b;
   --texte-discret: #667076;
   --bordure: #dedad1;
-  --accent: #2f6f4f;
-  --accent-texte: #ffffff;
+  --accent: #2f6f4f;            /* fond des boutons principaux, onglet actif */
+  --accent-survol: #275c42;
+  --accent-texte: #ffffff;      /* texte sur le vert */
+  --accent-lien: #2f6f4f;       /* texte vert sur fond clair (« Plus de filtres ») */
+  --champ: #ffffff;             /* fond des cases à remplir */
+  --bouton: #ffffff;            /* boutons secondaires : blancs bordés */
+  --bouton-survol: #f1eee7;
+  --bordure-bouton: #cfc9bd;
+  --barre-fond: #e7e3d9;        /* partie vide de la barre de % */
+  --focus: #7fb69a;
+  --manque: #4a5257;            /* « Manque : … » et ingrédients ✗ (gris foncé) */
   --rouge: #b3261e;
   --rouge-fond: #fdecea;
   --orange: #a15c00;
   --orange-fond: #fff3dc;
+  --succes: #1d4a33;
+  --succes-fond: #e6f2ea;
+  --ombre: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* MODE SOMBRE : mêmes noms, autres valeurs.
+   Activé par js/apparence.js (réglage du téléphone, ou choix dans l'onglet Réglages). */
+:root[data-theme="sombre"] {
+  color-scheme: dark;
+  --fond: #15191b;
+  --carte: #1f2528;
+  --texte: #e4e7e8;
+  --texte-discret: #9aa4a9;
+  --bordure: #343c40;
+  --accent: #2f7a55;
+  --accent-survol: #358a60;
+  --accent-texte: #ffffff;
+  --accent-lien: #7dcaa2;
+  --champ: #15191b;
+  --bouton: #2a3135;
+  --bouton-survol: #343c41;
+  --bordure-bouton: #465055;
+  --barre-fond: #343c40;
+  --focus: #7dcaa2;
+  --manque: #c2c9cc;
+  --rouge: #ff8f85;
+  --rouge-fond: #3b2120;
+  --orange: #f2b45c;
+  --orange-fond: #3a2d16;
+  --succes: #bfe5cf;
+  --succes-fond: #1c3a2b;
+  --ombre: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 * { box-sizing: border-box; }
@@ -59,13 +102,23 @@ h2 { margin: 0 0 12px; font-size: 1.1rem; }
   margin-bottom: 16px;
 }
 
-/* Messages */
+/* Bandeau de message, flottant en bas de l'écran (toucher pour fermer) */
 .message {
-  margin: 0 0 16px;
-  padding: 10px 14px;
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 560px;
+  z-index: 20;
+  margin: 0;
+  padding: 12px 16px;
   border-radius: 10px;
-  background: #e6f2ea;
-  color: #1d4a33;
+  border: 1px solid var(--bordure);
+  background: var(--succes-fond);
+  color: var(--succes);
+  box-shadow: var(--ombre);
+  cursor: pointer;
 }
 .message.erreur { background: var(--rouge-fond); color: var(--rouge); }
 
@@ -115,16 +168,16 @@ input, select, button {
   border-radius: 8px;
   padding: 10px 12px;
   min-height: 44px; /* assez grand pour le doigt sur téléphone */
-  background: #fff;
+  background: var(--champ);
   width: 100%;
   min-width: 0;
 }
-button { width: auto; cursor: pointer; background: #f1eee7; }
-button:hover { background: #e7e3d9; }
+button { width: auto; cursor: pointer; background: var(--bouton); border-color: var(--bordure-bouton); }
+button:hover { background: var(--bouton-survol); }
 button.principal { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); font-weight: 600; }
-button.principal:hover { background: #275c42; }
+button.principal:hover { background: var(--accent-survol); }
 button.danger { color: var(--rouge); }
-:focus-visible { outline: 3px solid #7fb69a; outline-offset: 1px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
 
 .boutons-formulaire, .boutons-sauvegarde { display: flex; flex-wrap: wrap; gap: 8px; }
 [hidden] { display: none !important; }
@@ -159,7 +212,7 @@ button.danger { color: var(--rouge); }
 button.rond { width: 44px; padding: 0; font-size: 1.2rem; flex: none; }
 /* Crayon « Modifier » au bout de chaque ligne du stock */
 button.bouton-modifier { background: none; border-color: transparent; color: var(--texte-discret); }
-button.bouton-modifier:hover { background: #e7e3d9; }
+button.bouton-modifier:hover { background: var(--bouton-survol); }
 
 /* Alertes de péremption */
 .ligne.bientot { background: var(--orange-fond); border-left-color: var(--orange); }
@@ -186,7 +239,7 @@ button.bouton-modifier:hover { background: #e7e3d9; }
   display: flex;
   align-items: center;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-lien);
   list-style: none;
 }
 .plus-filtres > summary::-webkit-details-marker { display: none; }
@@ -219,7 +272,7 @@ button.afficher-plus { width: 100%; margin-top: 8px; }
 .recette[open] > .recette-resume::after { content: "▴"; }
 .recette-nom { font-weight: 600; }
 .recette-infos, .manque { font-size: 0.85rem; color: var(--texte-discret); }
-.manque { color: var(--rouge); }
+.manque { color: var(--manque); }
 .etiquette {
   display: inline-block;
   font-size: 0.8rem;
@@ -230,14 +283,14 @@ button.afficher-plus { width: 100%; margin-top: 8px; }
 .etiquette.bientot { background: var(--orange-fond); color: var(--orange); }
 .etiquette.perime { background: var(--rouge-fond); color: var(--rouge); }
 .ligne-barre { display: flex; align-items: center; gap: 8px; width: 100%; }
-.barre { flex: 1; height: 10px; border-radius: 999px; background: #e7e3d9; overflow: hidden; }
+.barre { flex: 1; height: 10px; border-radius: 999px; background: var(--barre-fond); overflow: hidden; }
 .barre-remplie { display: block; height: 100%; background: var(--accent); }
 .pourcent { font-size: 0.85rem; font-weight: 600; font-variant-numeric: tabular-nums; }
 .recette-contenu { padding: 0 4px 12px; }
 .recette-contenu h3 { margin: 8px 0 6px; font-size: 0.95rem; }
 .recette-ingredients { list-style: none; margin: 0; padding: 0; }
 .recette-ingredients li { padding: 2px 0; }
-.recette-ingredients li.manquant { color: var(--rouge); }
+.recette-ingredients li.manquant { color: var(--manque); }
 .recette-etapes { margin: 0; padding-left: 22px; }
 .recette-etapes li { padding: 2px 0; }
 

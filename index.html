@@ -7,8 +7,10 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 17;
+    const VERSION = 18;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
+    // Mode clair ou sombre, choisi avant l'affichage (voir js/apparence.js)
+    document.write('<script src="js/apparence.js?v=' + VERSION + '"><\/script>');
   </script>
 </head>
 <body>
@@ -88,6 +90,18 @@
 
     <!-- ===================== ONGLET RÉGLAGES (sauvegarde et synchro, touchés rarement) ===================== -->
     <div id="vue-reglages" hidden>
+    <!-- Apparence : clair ou sombre (voir js/apparence.js) -->
+    <section class="bloc">
+      <h2>Apparence</h2>
+      <label class="champ">Couleurs de la page (retenu sur cet appareil)
+        <select id="choix-apparence">
+          <option value="auto">Automatique (comme l'appareil)</option>
+          <option value="clair">Toujours clair</option>
+          <option value="sombre">Toujours sombre</option>
+        </select>
+      </label>
+    </section>
+
     <!-- Sauvegarde -->
     <section class="bloc">
       <h2>Sauvegarde</h2>
