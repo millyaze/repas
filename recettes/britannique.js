@@ -3,7 +3,7 @@
 // Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude.
 // Même format que recettes/indienne.js
 // ============================================================
-const RECETTES_BRITANNIQUE = [
+ajouterRecettes([
   {
     id: "veloute-de-tomates", nom: "Velouté de tomates", cuisine: "britannique",
     difficulte: "facile", tempsMinutes: 40, portions: 2,
@@ -76,4 +76,4 @@ const RECETTES_BRITANNIQUE = [
     ],
     etapes: ["Préchauffer le four à 200 °C. Faire dorer les saucisses à la poêle.", "Verser l'huile dans un plat à four et le mettre 5 min au four pour qu'il soit très chaud.", "Mélanger la farine, l'œuf et le raifort râpé, puis verser le lait petit à petit en fouettant. Saler et poivrer.", "Poser les saucisses dans le plat chaud, verser la pâte par-dessus et ajouter les tomates cerises.", "Cuire 30 min au four, jusqu'à ce que la pâte soit gonflée et dorée."]
   }
-];
+]);

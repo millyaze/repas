@@ -2,7 +2,7 @@
 // RECETTES : plats rapides, 20 minutes maximum (10 recettes, pour 2 personnes)
 // Même format que recettes/francaise.js
 // ============================================================
-const RECETTES_RAPIDES = [
+ajouterRecettes([
   {
     id: "pates-au-thon-et-a-la-creme", nom: "Pâtes au thon et à la crème", cuisine: "plats rapides",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
@@ -133,4 +133,4 @@ const RECETTES_RAPIDES = [
     ],
     etapes: ["Mélanger le thon égoutté avec la moutarde.", "Garnir deux tranches de pain de mie de thon et de fromage, refermer.", "Dorer les sandwichs dans le beurre, 2 à 3 min par face."]
   }
-];
+]);

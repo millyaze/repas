@@ -4,7 +4,7 @@
 // Même format que recettes/japonaise.js
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
 // ============================================================
-const RECETTES_COREENNE = [
+ajouterRecettes([
   {
     id: "bibimbap", nom: "Bibimbap (riz, légumes, bœuf et œuf)", cuisine: "coréenne",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
@@ -723,4 +723,4 @@ const RECETTES_COREENNE = [
     ],
     etapes: ["Couper les aubergines en deux dans la longueur, puis en bâtonnets de la taille d'un doigt.", "Les cuire 8 à 10 min à la vapeur (ou au micro-ondes couvert, 5 min), jusqu'à ce qu'elles soient très tendres.", "Les laisser tiédir, puis les égoutter en les pressant doucement.", "Mélanger avec la sauce soja, l'ail écrasé, l'huile de sésame, l'oignon nouveau émincé et le gochugaru.", "Parsemer de graines de sésame. Se mange tiède ou froid."]
   }
-];
+]);

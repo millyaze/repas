@@ -4,7 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Générateur de repas</title>
-  <link rel="stylesheet" href="style.css?v=13">
+  <script>
+    // NUMÉRO DE VERSION : le seul endroit où il est écrit.
+    // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
+    const VERSION = 14;
+    document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
+  </script>
 </head>
 <body>
   <header>
@@ -194,36 +199,37 @@
       </section>
     </div>
 
-    <!-- Numéro de version : à augmenter partout dans ce fichier (« ?v=13 » et « Version 13 ») à chaque mise en ligne -->
-    <p class="version">Version 13</p>
+    <!-- Numéro de version (écrit tout seul à partir de VERSION, en haut de ce fichier) -->
+    <p class="version">Version <script>document.write(VERSION)</script></p>
   </main>
 
-  <script src="data/ingredients.js?v=13"></script>
-  <script src="data/stock-test.js?v=13"></script>
-  <script src="js/memoire.js?v=13"></script>
-  <script src="js/stock.js?v=13"></script>
   <!-- Lecteur de code-barre gratuit (html5-qrcode), chargé depuis Internet -->
   <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" async></script>
-  <script src="js/scan.js?v=13"></script>
-  <script src="js/synchro.js?v=13"></script>
-  <!-- Recettes : un fichier par cuisine, réunis par toutes.js -->
-  <script src="recettes/francaise.js?v=13"></script>
-  <script src="recettes/italienne.js?v=13"></script>
-  <script src="recettes/asiatique.js?v=13"></script>
-  <script src="recettes/mediterraneenne.js?v=13"></script>
-  <script src="recettes/mexicaine.js?v=13"></script>
-  <script src="recettes/rapides.js?v=13"></script>
-  <!-- Recettes importées de TheMealDB -->
-  <script src="recettes/indienne.js?v=13"></script>
-  <script src="recettes/britannique.js?v=13"></script>
-  <script src="recettes/marocaine.js?v=13"></script>
-  <script src="recettes/japonaise.js?v=13"></script>
-  <script src="recettes/americaine.js?v=13"></script>
-  <script src="recettes/coreenne.js?v=13"></script>
-  <script src="recettes/toutes.js?v=13"></script>
-  <script src="js/cuisiner.js?v=13"></script>
-  <script src="js/courses.js?v=13"></script>
-  <script src="js/recettes.js?v=13"></script>
-  <script src="js/onglets.js?v=13"></script>
+
+  <script>
+    // CUISINES : un fichier par cuisine dans le dossier recettes/ (ex. "francaise" -> recettes/francaise.js).
+    // Pour ajouter une cuisine : créer son fichier, puis ajouter son nom ici. Rien d'autre à changer.
+    const CUISINES = [
+      // Écrites par Claude
+      "francaise", "italienne", "asiatique", "mediterraneenne", "mexicaine", "rapides",
+      // Importées de TheMealDB
+      "indienne", "britannique", "marocaine", "japonaise", "americaine",
+      // Lots suivants
+      "coreenne"
+    ];
+
+    // FICHIERS : tout ce que la page charge, dans l'ordre (l'ordre compte).
+    const FICHIERS = [].concat(
+      ["data/ingredients.js", "data/stock-test.js", "js/memoire.js", "js/stock.js", "js/scan.js", "js/synchro.js"],
+      ["recettes/toutes.js"], // prépare la liste des recettes, avant les cuisines
+      CUISINES.map(function (nom) { return "recettes/" + nom + ".js"; }),
+      ["js/cuisiner.js", "js/courses.js", "js/recettes.js", "js/onglets.js"]
+    );
+
+    // Chargement de chaque fichier avec le numéro de version
+    FICHIERS.forEach(function (fichier) {
+      document.write('<script src="' + fichier + '?v=' + VERSION + '"><\/script>');
+    });
+  </script>
 </body>
 </html>

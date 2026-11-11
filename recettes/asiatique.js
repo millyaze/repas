@@ -2,7 +2,7 @@
 // RECETTES : cuisine asiatique (10 recettes, pour 2 personnes)
 // Même format que recettes/francaise.js
 // ============================================================
-const RECETTES_ASIATIQUE = [
+ajouterRecettes([
   {
     id: "riz-saute-aux-oeufs-et-legumes", nom: "Riz sauté aux œufs et légumes", cuisine: "asiatique",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
@@ -148,4 +148,4 @@ const RECETTES_ASIATIQUE = [
     ],
     etapes: ["Cuire le riz.", "Faire revenir l'oignon et l'ail hachés dans l'huile 3 min.", "Ajouter le bœuf et le faire dorer 5 min en l'émiettant.", "Ajouter la sauce soja et le sucre, cuire 2 min.", "Servir sur le riz."]
   }
-];
+]);

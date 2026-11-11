@@ -8,7 +8,7 @@
 //   { id: "sake", quantite: 15, unite: "ml", ou: { id: "vin-blanc", quantite: 15, unite: "ml" } }
 // La recette affiche l'origine en premier et reste réalisable avec l'un ou l'autre.
 // ============================================================
-const RECETTES_INDIENNE = [
+ajouterRecettes([
   {
     id: "poulet-tandoori", nom: "Poulet tandoori", cuisine: "indienne",
     difficulte: "facile", tempsMinutes: 90, portions: 2,
@@ -85,4 +85,4 @@ const RECETTES_INDIENNE = [
     ],
     etapes: ["Mixer le piment, le gingembre, l'ail, les tiges et un tiers des feuilles de coriandre avec un peu d'eau, jusqu'à obtenir une pâte (y ajouter les cacahuètes si elles remplacent le beurre de cacahuète).", "Dorer 1 min le poulet coupé en morceaux dans l'huile, ajouter la pâte et cuire encore 1 min.", "Ajouter le beurre de cacahuète, le bouillon cube dissous dans l'eau chaude et le yaourt.", "Laisser mijoter 10 min, jusqu'à ce que le poulet soit cuit et la sauce épaissie.", "Parsemer du reste de coriandre et servir, avec du riz si on veut."]
   }
-];
+]);

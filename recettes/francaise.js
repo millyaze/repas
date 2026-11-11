@@ -5,7 +5,7 @@
 // ingredients : id et unité pris dans data/ingredients.js
 // optionnel: true = ingrédient facultatif : la recette reste réalisable sans lui
 // ============================================================
-const RECETTES_FRANCAISE = [
+ajouterRecettes([
   {
     id: "omelette-aux-champignons", nom: "Omelette aux champignons", cuisine: "française",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
@@ -146,4 +146,4 @@ const RECETTES_FRANCAISE = [
     ],
     etapes: ["Éplucher les pommes de terre et les couper en petits dés.", "Les cuire 15 min dans l'huile à feu moyen en remuant.", "Ajouter l'oignon émincé et les lardons, cuire encore 8 min.", "Poivrer et parsemer de persil haché."]
   }
-];
+]);

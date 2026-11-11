@@ -2,7 +2,7 @@
 // RECETTES : cuisine mexicaine (10 recettes, pour 2 personnes)
 // Même format que recettes/francaise.js
 // ============================================================
-const RECETTES_MEXICAINE = [
+ajouterRecettes([
   {
     id: "chili-con-carne", nom: "Chili con carne", cuisine: "mexicaine",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
@@ -158,4 +158,4 @@ const RECETTES_MEXICAINE = [
     ],
     etapes: ["Faire revenir l'oignon et l'ail hachés dans l'huile avec le cumin.", "Ajouter l'eau, le bouillon cube, la sauce tomate et le poulet entier, cuire 20 min.", "Sortir le poulet, l'effilocher à la fourchette et le remettre avec le maïs égoutté.", "Griller la tortilla coupée en lanières à la poêle et la poser sur la soupe."]
   }
-];
+]);

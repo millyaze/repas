@@ -2,7 +2,7 @@
 // RECETTES : cuisine méditerranéenne (10 recettes, pour 2 personnes)
 // Même format que recettes/francaise.js
 // ============================================================
-const RECETTES_MEDITERRANEENNE = [
+ajouterRecettes([
   {
     id: "salade-grecque", nom: "Salade grecque", cuisine: "méditerranéenne",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
@@ -161,4 +161,4 @@ const RECETTES_MEDITERRANEENNE = [
     ],
     etapes: ["Faire revenir l'oignon haché dans l'huile 3 min.", "Ajouter le riz, remuer 1 min, puis les épinards, l'eau et le sel.", "Couvrir et cuire 15 à 18 min à feu doux, jusqu'à absorption de l'eau.", "Servir avec le jus du citron et la feta émiettée."]
   }
-];
+]);

@@ -3,7 +3,7 @@
 // Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude.
 // Même format que recettes/indienne.js
 // ============================================================
-const RECETTES_AMERICAINE = [
+ajouterRecettes([
   {
     id: "poulet-miel-balsamique-brocoli-et-pommes-de-terre", nom: "Poulet miel-balsamique, brocoli et pommes de terre", cuisine: "américaine",
     difficulte: "facile", tempsMinutes: 40, portions: 2,
@@ -93,4 +93,4 @@ const RECETTES_AMERICAINE = [
     ],
     etapes: ["Sauce : mélanger la mayonnaise, la moutarde, le vinaigre, l'ail en poudre, le paprika, un peu d'oignon haché très fin et de cornichon haché. Saler et garder au frais.", "Saler et poivrer le bœuf, former 4 steaks fins.", "Les cuire dans l'huile à feu vif, 1 à 2 min de chaque côté, et poser le cheddar dessus en fin de cuisson pour qu'il fonde.", "Faire griller légèrement les pains coupés en deux.", "Monter chaque burger : pain, sauce, oignon haché, quelques feuilles de salade, deux steaks au cheddar, rondelles de cornichon, sauce, pain."]
   }
-];
+]);

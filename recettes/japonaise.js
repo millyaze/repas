@@ -3,7 +3,7 @@
 // Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude.
 // Même format que recettes/indienne.js
 // ============================================================
-const RECETTES_JAPONAISE = [
+ajouterRecettes([
   {
     id: "poulet-pane-au-curry-katsu", nom: "Poulet pané au curry (katsu)", cuisine: "japonaise",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
@@ -86,4 +86,4 @@ const RECETTES_JAPONAISE = [
     ],
     etapes: ["Cuire les nouilles dans l'eau bouillante le temps indiqué sur le paquet, puis les égoutter.", "Faire sauter 5 min dans la moitié de l'huile l'oignon émincé et le chou coupé en lanières.", "Ajouter les champignons émincés et la moitié des oignons nouveaux émincés, cuire 1 min.", "Ajouter le reste d'huile et les nouilles, puis le mirin, la sauce soja, la sauce Worcestershire et le sucre.", "Faire sauter jusqu'à ce que tout soit bien chaud et nappé de sauce, puis parsemer du reste d'oignons nouveaux."]
   }
-];
+]);

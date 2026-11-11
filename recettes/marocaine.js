@@ -3,7 +3,7 @@
 // Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude.
 // Même format que recettes/indienne.js
 // ============================================================
-const RECETTES_MAROCAINE = [
+ajouterRecettes([
   {
     id: "couscous-au-poulet", nom: "Couscous au poulet", cuisine: "marocaine",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
@@ -80,4 +80,4 @@ const RECETTES_MAROCAINE = [
     ],
     etapes: ["Cuire les lentilles 20 à 25 min dans l'eau bouillante, puis les égoutter.", "Mélanger le tahini avec le zeste et le jus du citron et les 50 ml d'eau froide pour faire une sauce fluide. Saler.", "Faire revenir l'oignon émincé 2 min dans l'huile avec une pincée de sel.", "Ajouter l'ail écrasé, le poivron en lamelles, les haricots verts et la courgette en rondelles, cuire 5 min en remuant souvent.", "Ajouter le chou kale en lanières, les lentilles et la sauce au tahini, remuer 2 min sur le feu jusqu'à ce que le chou soit tombé."]
   }
-];
+]);

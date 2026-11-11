@@ -2,7 +2,7 @@
 // RECETTES : cuisine italienne (10 recettes, pour 2 personnes)
 // Même format que recettes/francaise.js
 // ============================================================
-const RECETTES_ITALIENNE = [
+ajouterRecettes([
   {
     id: "pates-a-la-carbonara", nom: "Pâtes à la carbonara", cuisine: "italienne",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
@@ -147,4 +147,4 @@ const RECETTES_ITALIENNE = [
     ],
     etapes: ["Couper tous les légumes en petits dés.", "Les faire revenir dans l'huile 5 min.", "Ajouter l'eau, le bouillon cube et la sauce tomate, cuire 20 min.", "Ajouter les pâtes et cuire encore 10 min.", "Servir avec le parmesan râpé."]
   }
-];
+]);

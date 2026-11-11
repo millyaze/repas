@@ -20,8 +20,8 @@ const ADRESSE_GITHUB = "https://api.github.com/repos/" + DEPOT_DONNEES;
 const CLE_SYNCHRO = "repas-synchro";
 // Temps entre deux vérifications automatiques quand la page reste ouverte (en millisecondes)
 const DELAI_VERIFICATION = 30000;
-// Numéro de version de la page, lu en bas de la page (« Version 5 » -> 5), voir index.html
-const VERSION_PAGE = Number((document.querySelector(".version") || { textContent: "" }).textContent.replace(/\D/g, "")) || 0;
+// Numéro de version de la page (VERSION, écrit en haut de index.html)
+const VERSION_PAGE = (typeof VERSION === "number") ? VERSION : 0;
 
 // Réglages de cet appareil :
 //  jeton     = la clé d'accès GitHub
