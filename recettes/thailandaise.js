@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine thaïlandaise (20 recettes, pour 2 personnes)
+// RECETTES : cuisine thaïlandaise (27 recettes, pour 2 personnes)
 // Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude.
 // Même format que recettes/japonaise.js
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
@@ -418,5 +418,139 @@ ajouterRecettes([
       { id: "citron-vert", quantite: 2, unite: "pièce" }
     ],
     etapes: ["Porter à ébullition le bouillon cube dissous dans l'eau. Ajouter la citronnelle écrasée, le galanga en 5 tranches, les racines (ou tiges) de coriandre et les feuilles de combava, puis laisser frémir 2 min.", "Ajouter les crevettes (6 grosses), la sauce poisson, les petits piments et le jus des citrons verts (4 cuillères à soupe), et refaire bouillir.", "Goûter et ajuster avec un peu plus de jus de citron vert ou de sauce poisson. Servir parsemé de feuilles de coriandre."]
+  },
+
+  // ----- Lot 2 -----
+  {
+    id: "ragout-de-boeuf-citronnelle-et-nouilles", nom: "Ragoût de bœuf à la citronnelle et nouilles de riz", cuisine: "thaïlandaise",
+    difficulte: "facile", tempsMinutes: 105, portions: 2,
+    source: "TheMealDB", idSource: "53211",
+    ingredients: [
+      { id: "gingembre", quantite: 15, unite: "g" },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "citronnelle", quantite: 3, unite: "pièce", ou: { id: "citron", quantite: 1, unite: "pièce" } },
+      { id: "coriandre", quantite: 10, unite: "g" },
+      { id: "piment-frais", quantite: 2, unite: "pièce", ou: { id: "piment-en-poudre", quantite: 2, unite: "g" } },
+      { id: "huile-de-tournesol", quantite: 30, unite: "ml" },
+      { id: "steak-de-boeuf", quantite: 250, unite: "g" },
+      { id: "sauce-soja", quantite: 30, unite: "ml" },
+      { id: "cinq-epices", quantite: 2, unite: "g", ou: { id: "cannelle", quantite: 2, unite: "g" } },
+      { id: "sucre", quantite: 5, unite: "g" },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "eau", quantite: 400, unite: "ml" },
+      { id: "nouilles-de-riz", quantite: 100, unite: "g", ou: { id: "nouilles-chinoises", quantite: 100, unite: "g" } },
+      { id: "citron-vert", quantite: 1, unite: "pièce", optionnel: true }
+    ],
+    etapes: ["Mixer le gingembre, l'ail, la citronnelle, la moitié de la coriandre et 1 piment jusqu'à obtenir une purée.", "Chauffer l'huile à feu doux dans une casserole, ajouter la purée et cuire 5 min.", "Ajouter le bœuf en morceaux, la sauce soja, le cinq-épices, le sucre et le bouillon cube dissous dans l'eau chaude (bouillon de bœuf de préférence). Couvrir, porter à ébullition puis laisser mijoter 1 h 15.", "Retirer le couvercle et cuire encore 15 min jusqu'à ce que le bœuf soit tendre.", "Juste avant de servir, cuire les nouilles comme indiqué sur le paquet et les égoutter. Les répartir dans deux bols, verser le ragoût dessus et parsemer du reste de piment émincé et de coriandre. Servir avec des quartiers de citron vert."]
+  },
+  {
+    id: "brochettes-de-poulet-au-curry-rouge", nom: "Brochettes de poulet au curry rouge", cuisine: "thaïlandaise",
+    difficulte: "facile", tempsMinutes: 25, portions: 2,
+    source: "TheMealDB", idSource: "53204",
+    ingredients: [
+      { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
+      { id: "pate-de-curry", quantite: 30, unite: "g" },
+      { id: "lait-de-coco", quantite: 30, unite: "ml" },
+      { id: "poivron", quantite: 1, unite: "pièce" },
+      { id: "courgette", quantite: 1, unite: "pièce" },
+      { id: "oignon-rouge", quantite: 1, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
+      { id: "citron-vert", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "riz", quantite: 150, unite: "g", optionnel: true }
+    ],
+    etapes: ["Allumer le barbecue ou chauffer une poêle-gril à feu vif.", "Mélanger le poulet en cubes avec la pâte de curry (rouge de préférence) et le lait de coco, jusqu'à ce qu'il soit bien enrobé.", "Enfiler sur des piques le poulet, le poivron et la courgette en morceaux, et l'oignon rouge en quartiers.", "Cuire 5 à 8 min en retournant souvent, jusqu'à ce que le poulet soit cuit et bien grillé.", "Servir avec du riz aux herbes, une salade et un demi-citron vert à presser."]
+  },
+  {
+    id: "pilons-de-poulet-thais", nom: "Pilons de poulet thaïs à l'orange", cuisine: "thaïlandaise",
+    difficulte: "facile", tempsMinutes: 50, portions: 2,
+    source: "TheMealDB", idSource: "53212",
+    ingredients: [
+      { id: "sauce-chili-douce", quantite: 15, unite: "ml" },
+      { id: "orange", quantite: 1, unite: "pièce", ou: { id: "citron", quantite: 1, unite: "pièce" } },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "pate-de-curry", quantite: 8, unite: "g" },
+      { id: "pilons-de-poulet", quantite: 4, unite: "pièce", ou: { id: "cuisse-de-poulet", quantite: 2, unite: "pièce" } },
+      { id: "sel", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Préchauffer le four à 200 °C et couvrir une plaque de papier aluminium.", "Mélanger la sauce chili douce, le zeste de l'orange et 1 cuillère à soupe de son jus, l'ail écrasé, la pâte de curry (rouge de préférence) et le sel. Ajouter le poulet et bien l'enrober.", "Disposer les pilons espacés sur la plaque, les napper du reste de marinade et cuire 35 à 40 min jusqu'à ce qu'ils soient tendres.", "Se mangent chauds ou froids (pratique pour un pique-nique)."]
+  },
+  {
+    id: "soupe-verte-thaie-au-poulet", nom: "Soupe verte thaïe au poulet", cuisine: "thaïlandaise",
+    difficulte: "facile", tempsMinutes: 35, portions: 2,
+    source: "TheMealDB", idSource: "53214",
+    ingredients: [
+      { id: "huile-de-tournesol", quantite: 10, unite: "ml" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "cuisse-de-poulet", quantite: 2, unite: "pièce", ou: { id: "blanc-de-poulet", quantite: 1, unite: "pièce" } },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "pate-de-curry", quantite: 90, unite: "g" },
+      { id: "lait-de-coco", quantite: 130, unite: "ml" },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "eau", quantite: 650, unite: "ml" },
+      { id: "feuilles-de-combava", quantite: 2, unite: "pièce", ou: { id: "citron-vert", quantite: 1, unite: "pièce" } },
+      { id: "sauce-poisson", quantite: 10, unite: "ml", ou: { id: "sauce-soja", quantite: 10, unite: "ml" } },
+      { id: "oignon-nouveau", quantite: 2, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
+      { id: "haricots-verts", quantite: 90, unite: "g" },
+      { id: "pousses-de-bambou", quantite: 50, unite: "g", optionnel: true },
+      { id: "citron-vert", quantite: 1, unite: "pièce" },
+      { id: "basilic", quantite: 10, unite: "g" }
+    ],
+    etapes: ["Chauffer l'huile dans une grande casserole, faire revenir l'oignon haché 3 min. Ajouter le poulet désossé en morceaux et l'ail émincé, cuire jusqu'à ce que le poulet change de couleur.", "Ajouter la pâte de curry (verte de préférence), le lait de coco, le bouillon cube dissous dans l'eau chaude, les feuilles de combava et la sauce poisson. Laisser frémir 12 min.", "Ajouter le vert des oignons nouveaux haché, les haricots verts et les pousses de bambou, cuire 4 à 6 min jusqu'à ce que les haricots soient juste tendres.", "Pendant ce temps, mixer le jus du citron vert avec le basilic pour obtenir une pâte verte lisse.", "La verser dans la soupe avec le blanc des oignons nouveaux émincé, réchauffer et servir."]
+  },
+  {
+    id: "bouillon-de-poisson-thai-aux-legumes-verts", nom: "Bouillon de poisson thaï aux légumes verts", cuisine: "thaïlandaise",
+    difficulte: "facile", tempsMinutes: 20, portions: 2,
+    source: "TheMealDB", idSource: "53213",
+    ingredients: [
+      { id: "nouilles-de-riz", quantite: 100, unite: "g", ou: { id: "nouilles-chinoises", quantite: 100, unite: "g" } },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "eau", quantite: 750, unite: "ml" },
+      { id: "pate-de-curry", quantite: 15, unite: "g" },
+      { id: "feuilles-de-combava", quantite: 4, unite: "pièce", ou: { id: "citron-vert", quantite: 1, unite: "pièce" } },
+      { id: "sauce-poisson", quantite: 15, unite: "ml", ou: { id: "sauce-soja", quantite: 15, unite: "ml" } },
+      { id: "poisson-blanc", quantite: 200, unite: "g", ou: { id: "saumon", quantite: 200, unite: "g" } },
+      { id: "crevettes", quantite: 100, unite: "g" },
+      { id: "pak-choi", quantite: 2, unite: "pièce", ou: { id: "epinards", quantite: 150, unite: "g" } },
+      { id: "coriandre", quantite: 5, unite: "g", optionnel: true }
+    ],
+    etapes: ["Cuire les nouilles (de riz complet de préférence) comme indiqué sur le paquet, les rafraîchir à l'eau froide et bien les égoutter.", "Dans une grande casserole, mélanger le bouillon cube dissous dans 500 ml d'eau chaude, la pâte de curry (rouge de préférence), les feuilles de combava, la sauce poisson et 250 ml d'eau froide. Porter à frémissement et cuire 5 min.", "Couper le poisson en cubes de 3 cm environ, l'ajouter et cuire 2 min à découvert après la reprise du frémissement.", "Ajouter les nouilles, les crevettes et le pak choï coupé en morceaux, laisser frémir 2 à 3 min jusqu'à ce que le poisson et les crevettes soient juste cuits.", "Servir dans des bols, parsemé de coriandre."]
+  },
+  {
+    id: "poisson-vapeur-a-la-thaie", nom: "Poisson vapeur à la thaïe", cuisine: "thaïlandaise",
+    difficulte: "facile", tempsMinutes: 25, portions: 2,
+    source: "TheMealDB", idSource: "53202",
+    ingredients: [
+      { id: "truite", quantite: 300, unite: "g", ou: { id: "saumon", quantite: 300, unite: "g" } },
+      { id: "gingembre", quantite: 10, unite: "g" },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "piment-frais", quantite: 1, unite: "pièce", ou: { id: "piment-en-poudre", quantite: 1, unite: "g" } },
+      { id: "citron-vert", quantite: 1, unite: "pièce" },
+      { id: "pak-choi", quantite: 3, unite: "pièce", ou: { id: "epinards", quantite: 200, unite: "g" } },
+      { id: "sauce-soja", quantite: 30, unite: "ml" }
+    ],
+    etapes: ["Poser les 2 filets de truite côte à côte sur une grande feuille de papier aluminium. Parsemer de gingembre râpé, d'ail et de piment hachés finement, et du zeste du citron vert. Arroser du jus du citron vert.", "Disposer les morceaux de pak choï (petits de préférence) autour et sur le poisson, et verser la sauce soja sur le pak choï.", "Fermer la papillote sans serrer, en laissant de la place en haut pour que la vapeur circule.", "Cuire 15 min à la vapeur. Sans cuit-vapeur : poser la papillote sur une assiette au-dessus d'une casserole d'eau qui frémit, et couvrir."]
+  },
+  {
+    id: "tom-yum-cremeux-aux-crevettes", nom: "Tom yum crémeux aux crevettes", cuisine: "thaïlandaise",
+    difficulte: "facile", tempsMinutes: 35, portions: 2,
+    source: "TheMealDB", idSource: "53194",
+    ingredients: [
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "tomate", quantite: 1, unite: "pièce" },
+      { id: "piment-frais", quantite: 2, unite: "pièce", ou: { id: "piment-en-poudre", quantite: 2, unite: "g" } },
+      { id: "galanga", quantite: 8, unite: "g", ou: { id: "gingembre", quantite: 8, unite: "g" } },
+      { id: "citronnelle", quantite: 1, unite: "pièce", ou: { id: "citron", quantite: 1, unite: "pièce" } },
+      { id: "crevettes", quantite: 125, unite: "g" },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "eau", quantite: 650, unite: "ml" },
+      { id: "champignons", quantite: 60, unite: "g" },
+      { id: "feuilles-de-combava", quantite: 4, unite: "pièce", ou: { id: "citron-vert", quantite: 1, unite: "pièce" } },
+      { id: "sucre", quantite: 8, unite: "g" },
+      { id: "sauce-poisson", quantite: 12, unite: "ml", ou: { id: "sauce-soja", quantite: 12, unite: "ml" } },
+      { id: "citron-vert", quantite: 1, unite: "pièce" },
+      { id: "lait-de-coco", quantite: 35, unite: "ml" },
+      { id: "sauce-chili-douce", quantite: 8, unite: "ml", optionnel: true },
+      { id: "coriandre", quantite: 5, unite: "g", optionnel: true }
+    ],
+    etapes: ["Dans une grande casserole à feu vif, mettre l'eau, l'oignon et la tomate en morceaux (environ 100 g et 75 g), les piments, le galanga, la citronnelle, les têtes des crevettes si elles sont entières, et le bouillon cube. Porter à ébullition puis laisser frémir 20 min à feu moyen.", "Filtrer le bouillon et jeter les têtes de crevettes. Remettre les légumes et herbes dans la casserole avec le bouillon. Ajouter les champignons (pleurotes de préférence) et les feuilles de combava, cuire 3 min.", "Ajouter le sucre, la sauce poisson, le jus du citron vert (environ 12 ml), le lait de coco et les crevettes. Porter à ébullition et cuire 1 à 2 min jusqu'à ce que les crevettes soient cuites. Retirer du feu.", "Retirer la citronnelle, puis ajouter la sauce chili douce (à la place de la confiture de piment thaï) si on veut. Parsemer de coriandre et servir."]
   }
 ]);

@@ -196,6 +196,14 @@ const INGREDIENTS = [
   { id: "chou-chinois",         nom: "Chou chinois",         unite: "g" },
   { id: "chataignes-d-eau",     nom: "Châtaignes d'eau",     unite: "g" },
   { id: "pate-de-crevettes",    nom: "Pâte de crevettes",    unite: "g" },
+  // Cuisine thaïlandaise, lot 2
+  { id: "pak-choi",             nom: "Pak choï",             unite: "pièce" },
+  { id: "cinq-epices",          nom: "Cinq-épices",          unite: "g" },
+  { id: "pilons-de-poulet",     nom: "Pilons de poulet",     unite: "pièce" },
+  { id: "orange",               nom: "Orange",               unite: "pièce" },
+  { id: "poisson-blanc",        nom: "Poisson blanc",        unite: "g" },
+  { id: "truite",               nom: "Truite",               unite: "g" },
+  { id: "pousses-de-bambou",    nom: "Pousses de bambou",    unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
