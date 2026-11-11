@@ -253,6 +253,18 @@ const INGREDIENTS = [
   { id: "banane",               nom: "Banane",               unite: "pièce" },
   { id: "pate-filo",            nom: "Pâte filo",            unite: "g" },
   { id: "ricotta",              nom: "Ricotta",              unite: "g" },
+  // --- Ajoutés pour : jamaïcaine ---
+  { id: "piment-de-la-jamaique", nom: "Piment de la Jamaïque", unite: "g" },
+  { id: "morue-salee",          nom: "Morue salée",          unite: "g" },
+  { id: "akee",                 nom: "Akee",                 unite: "g" },
+  { id: "banane-plantain",      nom: "Banane plantain",      unite: "pièce" },
+  { id: "semoule-de-mais",      nom: "Semoule de maïs",      unite: "g" },
+  { id: "lait-concentre-sucre", nom: "Lait concentré sucré", unite: "g" },
+  { id: "rhum",                 nom: "Rhum",                 unite: "ml" },
+  { id: "biere",                nom: "Bière",                unite: "ml" },
+  { id: "queue-de-boeuf",       nom: "Queue de bœuf",        unite: "g" },
+  { id: "viande-de-chevre",     nom: "Viande de chèvre",     unite: "g" },
+  { id: "corned-beef",          nom: "Corned-beef",          unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
