@@ -36,6 +36,10 @@ const INGREDIENTS = [
   { id: "anchois",         nom: "Anchois",         unite: "g" },
   { id: "cote-de-porc",    nom: "Côte de porc",    unite: "pièce" },
   { id: "cuisse-de-poulet", nom: "Cuisse de poulet", unite: "pièce" },
+  { id: "steak-de-boeuf",  nom: "Steak de bœuf",   unite: "g" },
+  { id: "poitrine-de-porc", nom: "Poitrine de porc", unite: "g" },
+  { id: "tofu-soyeux",     nom: "Tofu soyeux",     unite: "g" },
+  { id: "galettes-de-poisson", nom: "Galettes de poisson", unite: "g" },
 
   // --- Légumes et fruits ---
   { id: "tomate",          nom: "Tomate",          unite: "pièce" },
@@ -68,6 +72,9 @@ const INGREDIENTS = [
   { id: "piment-frais",    nom: "Piment frais",    unite: "pièce" },
   { id: "champignons-shiitake", nom: "Champignons shiitaké", unite: "g" },
   { id: "raifort",         nom: "Raifort",         unite: "g" },
+  { id: "pousses-de-soja", nom: "Pousses de soja", unite: "g" },
+  { id: "patate-douce",    nom: "Patate douce",    unite: "g" },
+  { id: "poire",           nom: "Poire",           unite: "pièce" },
 
   // --- Herbes fraîches ---
   { id: "basilic",         nom: "Basilic",         unite: "g" },
@@ -91,6 +98,8 @@ const INGREDIENTS = [
   { id: "chapelure",           nom: "Chapelure",           unite: "g" },
   { id: "nouilles-udon",       nom: "Nouilles udon",       unite: "g" },
   { id: "fecule",              nom: "Fécule",              unite: "g" },
+  { id: "gateaux-de-riz",      nom: "Gâteaux de riz",      unite: "g" },
+  { id: "nouilles-de-patate-douce", nom: "Nouilles de patate douce", unite: "g" },
 
   // --- Conserves ---
   { id: "sauce-tomate",             nom: "Sauce tomate",             unite: "g" },
@@ -143,6 +152,15 @@ const INGREDIENTS = [
   { id: "epices-a-fajitas",     nom: "Épices à fajitas",     unite: "g" },
   { id: "ail-en-poudre",        nom: "Ail en poudre",        unite: "g" },
   { id: "graines-de-coriandre", nom: "Graines de coriandre", unite: "g" },
+  // Cuisine coréenne
+  { id: "gochujang",            nom: "Gochujang",            unite: "g" },
+  { id: "gochugaru",            nom: "Gochugaru",            unite: "g" },
+  { id: "kimchi",               nom: "Kimchi",               unite: "g" },
+  { id: "doenjang",             nom: "Doenjang",             unite: "g" },
+  { id: "algue-nori",           nom: "Algue nori",           unite: "pièce" },
+  { id: "algue-wakame",         nom: "Algue wakame",         unite: "g" },
+  { id: "radis-jaune-marine",   nom: "Radis jaune mariné",   unite: "g" },
+  { id: "vinaigre-de-riz",      nom: "Vinaigre de riz",      unite: "ml" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
