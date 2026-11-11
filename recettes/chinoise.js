@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine chinoise (20 recettes, pour 2 personnes)
+// RECETTES : cuisine chinoise (27 recettes, pour 2 personnes)
 // Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude.
 // Même format que recettes/thailandaise.js
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
@@ -423,5 +423,130 @@ ajouterRecettes([
       { id: "riz", quantite: 150, unite: "g", optionnel: true }
     ],
     etapes: ["Couper le bœuf en lamelles. Le mélanger avec une demi-cuillère à café de sel, l'huile de sésame, une pincée de poivre, le blanc de l'œuf, 2 cuillères à soupe de fécule et 1 cuillère à soupe d'huile.", "Chauffer 2 cuillères à soupe d'huile dans un wok et faire dorer le bœuf. Le réserver.", "Ajouter 1 cuillère à soupe d'huile, le gingembre et l'ail hachés, faire sauter quelques secondes.", "Ajouter l'oignon, la carotte, le poivron vert, le céleri et les champignons émincés, puis le vin de Shaoxing et 240 ml d'eau.", "Ajouter la sauce huître, la sauce piquante, le sucre, le bœuf et la sauce soja.", "Délayer le reste de la fécule dans 2 cuillères à soupe d'eau et la verser petit à petit jusqu'à ce que la sauce épaississe. Servir avec du riz."]
+  },
+  // --- Lot 2 ---
+  {
+    id: "rouleaux-imperiaux-au-porc", nom: "Rouleaux impériaux au porc (au four)", cuisine: "chinoise",
+    difficulte: "moyen", tempsMinutes: 45, portions: 2,
+    source: "TheMealDB", idSource: "53373",
+    ingredients: [
+      { id: "huile-d-olive", quantite: 15, unite: "ml" },
+      { id: "porc-hache", quantite: 250, unite: "g", ou: { id: "boeuf-hache", quantite: 250, unite: "g" } },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "gingembre", quantite: 8, unite: "g" },
+      { id: "carotte", quantite: 1, unite: "pièce" },
+      { id: "oignon-nouveau", quantite: 2, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
+      { id: "chou", quantite: 110, unite: "g" },
+      { id: "sauce-soja", quantite: 8, unite: "ml" },
+      { id: "vinaigre-de-riz", quantite: 8, unite: "ml", ou: { id: "vinaigre", quantite: 8, unite: "ml" } },
+      { id: "feuilles-de-wonton", quantite: 6, unite: "pièce" },
+      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "sauce-aux-prunes", quantite: 30, unite: "ml", optionnel: true }
+    ],
+    etapes: ["Préchauffer le four à 200 °C (ou la friteuse sans huile à 180 °C).", "Farce : chauffer l'huile d'olive à feu moyen, cuire le porc haché 6 à 8 min en l'émiettant. Ajouter l'ail et le gingembre hachés, la carotte râpée, l'oignon nouveau émincé et le chou en fines lanières. Cuire 3 à 4 min jusqu'à ce que le chou soit tendre. Assaisonner avec la sauce soja et le vinaigre de riz, puis laisser tiédir.", "Poser une grande feuille (format rouleau impérial) en losange, une pointe vers soi. Mettre environ 4 cuillères à soupe de farce au milieu. Mouiller les bords avec le doigt, rabattre les côtés vers le centre puis rouler bien serré en s'éloignant de soi.", "Poser les rouleaux sur une plaque sans qu'ils se touchent et les badigeonner d'huile.", "Cuire 10 min, retourner, badigeonner l'autre face et cuire encore 8 à 10 min, jusqu'à ce qu'ils soient dorés et croustillants (friteuse sans huile : 6 à 7 min puis 4 à 5 min). Servir aussitôt, avec la sauce aux prunes et un peu de sauce soja."]
+  },
+  {
+    id: "wontons-au-porc", nom: "Wontons au porc", cuisine: "chinoise",
+    difficulte: "moyen", tempsMinutes: 45, portions: 2,
+    source: "TheMealDB", idSource: "52948",
+    ingredients: [
+      { id: "porc-hache", quantite: 225, unite: "g", ou: { id: "boeuf-hache", quantite: 225, unite: "g" } },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "gingembre", quantite: 3, unite: "g" },
+      { id: "sauce-soja", quantite: 8, unite: "ml" },
+      { id: "huile-de-sesame", quantite: 3, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 3, unite: "ml" } },
+      { id: "carotte", quantite: 1, unite: "pièce" },
+      { id: "celeri-branche", quantite: 1, unite: "pièce", ou: { id: "poireau", quantite: 1, unite: "pièce" } },
+      { id: "oignon-nouveau", quantite: 3, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
+      { id: "feuilles-de-wonton", quantite: 20, unite: "pièce" },
+      { id: "huile-de-tournesol", quantite: 500, unite: "ml" },
+      { id: "sauce-aux-prunes", quantite: 30, unite: "ml", optionnel: true }
+    ],
+    etapes: ["Mélanger dans un bol le porc, l'ail et le gingembre hachés, la sauce soja, l'huile de sésame, la carotte, le céleri et l'oignon nouveau hachés très fin.", "Séparer les feuilles de wonton. Mettre une bonne cuillère à café de farce au centre de chaque feuille.", "Mouiller deux bords de la feuille avec un peu d'eau, plier en triangle et bien souder les bords. Rapprocher les deux pointes du grand côté et les pincer ensemble.", "Chauffer l'huile à 180 °C (un morceau de feuille doit grésiller et dorer en quelques secondes). Frire les wontons 4 ou 5 à la fois, jusqu'à ce qu'ils soient dorés.", "Égoutter sur du papier absorbant et servir avec de la sauce aux prunes ou un peu de sauce soja."]
+  },
+  {
+    id: "chou-chinois-aux-crevettes-sechees", nom: "Chou chinois aux crevettes séchées", cuisine: "chinoise",
+    difficulte: "facile", tempsMinutes: 40, portions: 2,
+    source: "TheMealDB", idSource: "53377",
+    ingredients: [
+      { id: "crevettes-sechees", quantite: 15, unite: "g", ou: { id: "crevettes", quantite: 60, unite: "g" } },
+      { id: "eau", quantite: 195, unite: "ml" },
+      { id: "chou-chinois", quantite: 500, unite: "g", ou: { id: "chou", quantite: 500, unite: "g" } },
+      { id: "huile-de-tournesol", quantite: 30, unite: "ml" },
+      { id: "oignon-nouveau", quantite: 4, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
+      { id: "gingembre", quantite: 15, unite: "g" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "fecule", quantite: 5, unite: "g" },
+      { id: "riz", quantite: 150, unite: "g", optionnel: true }
+    ],
+    etapes: ["Mettre les crevettes séchées dans un bol, verser 180 ml d'eau bouillante, couvrir et laisser 30 min. (Avec des crevettes fraîches, sauter cette étape.)", "Pendant ce temps, couper le chou en deux, retirer le trognon et couper le reste en morceaux de 2 à 3 cm, en séparant les parties blanches épaisses et les feuilles vertes.", "Égoutter les crevettes. Chauffer l'huile à feu vif dans un wok, ajouter l'oignon nouveau émincé, le gingembre haché et les crevettes (attention aux projections). Faire sauter 1 min.", "Ajouter les parties blanches du chou et cuire 3 à 4 min à feu moyen-vif, jusqu'à ce que les bords deviennent un peu transparents. Baisser le feu, ajouter les feuilles vertes et cuire 2 min.", "Mélanger la sauce soja, 1 cuillère à soupe d'eau froide et la fécule, verser sur le chou et remuer jusqu'à ce que la sauce épaississe un peu. Saler, poivrer et servir, avec du riz si on veut."]
+  },
+  {
+    id: "crevettes-kung-pao", nom: "Crevettes kung pao", cuisine: "chinoise",
+    difficulte: "facile", tempsMinutes: 25, portions: 2,
+    source: "TheMealDB", idSource: "52946",
+    ingredients: [
+      { id: "crevettes", quantite: 300, unite: "g" },
+      { id: "sauce-soja", quantite: 30, unite: "ml" },
+      { id: "sauce-tomate", quantite: 5, unite: "g" },
+      { id: "fecule", quantite: 5, unite: "g" },
+      { id: "sucre", quantite: 15, unite: "g" },
+      { id: "vinaigre", quantite: 10, unite: "ml" },
+      { id: "eau", quantite: 30, unite: "ml" },
+      { id: "huile-de-tournesol", quantite: 30, unite: "ml" },
+      { id: "cacahuetes", quantite: 65, unite: "g" },
+      { id: "piment-frais", quantite: 2, unite: "pièce", ou: { id: "piment-en-poudre", quantite: 2, unite: "g" } },
+      { id: "chataignes-d-eau", quantite: 150, unite: "g", optionnel: true },
+      { id: "gingembre", quantite: 5, unite: "g" },
+      { id: "ail", quantite: 4, unite: "gousse" },
+      { id: "riz", quantite: 150, unite: "g", optionnel: true }
+    ],
+    etapes: ["Mélanger la fécule et 1 cuillère à soupe de sauce soja, y mettre les crevettes et laisser 10 min.", "Sauce : mélanger le vinaigre, le reste de la sauce soja, la sauce tomate, le sucre et 2 cuillères à soupe d'eau.", "Chauffer un wok à feu très vif, ajouter 1 cuillère à soupe d'huile et faire sauter les crevettes jusqu'à ce qu'elles soient dorées par endroits. Les réserver.", "Ajouter le reste de l'huile, les cacahuètes, les piments émincés et les châtaignes d'eau. Faire sauter 2 min, jusqu'à ce que les cacahuètes colorent. Ajouter le gingembre et l'ail hachés, 1 min.", "Remettre les crevettes, verser la sauce et laisser frémir 2 min jusqu'à ce qu'elle épaississe un peu. Servir avec du riz."]
+  },
+  {
+    id: "ramen-a-l-oeuf", nom: "Ramen à l'œuf", cuisine: "chinoise",
+    difficulte: "facile", tempsMinutes: 20, portions: 2,
+    source: "TheMealDB", idSource: "53383",
+    ingredients: [
+      { id: "nouilles-ramyeon", quantite: 2, unite: "pièce", ou: { id: "nouilles-chinoises", quantite: 200, unite: "g" } },
+      { id: "eau", quantite: 1000, unite: "ml" },
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "sauce-soja", quantite: 30, unite: "ml" },
+      { id: "sauce-sriracha", quantite: 5, unite: "ml", ou: { id: "piment-en-poudre", quantite: 1, unite: "g" } },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "mirin", quantite: 30, unite: "ml", optionnel: true },
+      { id: "sucre", quantite: 5, unite: "g", optionnel: true }
+    ],
+    etapes: ["Porter de l'eau à ébullition, y déposer doucement les œufs et les cuire exactement 6 min 30 à 7 min. Les plonger aussitôt dans un bol d'eau très froide 3 à 5 min, puis les écaler.", "Facultatif (meilleur) : faire mariner les œufs écalés au moins 4 h au frais dans 2 cuillères à soupe de sauce soja, le mirin, le sucre et 4 cuillères à soupe d'eau.", "Porter le litre d'eau à ébullition, cuire les nouilles comme indiqué sur le paquet (avec leur sachet d'assaisonnement si on veut).", "Ajouter dans le bouillon le reste de la sauce soja, la sauce piquante, une pincée de sel et de poivre.", "Servir en bols, parsemer d'oignon nouveau émincé et poser dessus les œufs coupés en deux : le jaune coulant se mélange au bouillon."]
+  },
+  {
+    id: "haricots-sautes-du-sichuan", nom: "Haricots sautés du Sichuan", cuisine: "chinoise",
+    difficulte: "facile", tempsMinutes: 15, portions: 2,
+    source: "TheMealDB", idSource: "53371",
+    ingredients: [
+      { id: "haricots-verts", quantite: 250, unite: "g" },
+      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "piment-en-poudre", quantite: 2, unite: "g" },
+      { id: "poivre-du-sichuan", quantite: 2, unite: "g", ou: { id: "poivre", quantite: 1, unite: "g" } },
+      { id: "sucre", quantite: 3, unite: "g" },
+      { id: "huile-de-sesame", quantite: 15, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 15, unite: "ml" } },
+      { id: "sauce-soja", quantite: 5, unite: "ml" },
+      { id: "riz", quantite: 150, unite: "g", optionnel: true }
+    ],
+    etapes: ["Équeuter les haricots (des haricots kilomètre si on en trouve) et les couper en tronçons de 5 à 6 cm. Bien les sécher.", "Chauffer l'huile à feu vif dans un wok. Faire sauter les haricots 5 à 7 min, en les laissant dorer et cloquer par endroits.", "Baisser à feu moyen, ajouter le piment et le poivre du Sichuan, faire sauter 30 s jusqu'à ce que ça sente bon.", "Ajouter une pincée de sel, le sucre, l'huile de sésame et un trait de sauce soja. Mélanger 30 s et servir, avec du riz si on veut."]
+  },
+  {
+    id: "tofu-soyeux-sauce-soja-sesame", nom: "Tofu soyeux, sauce soja-sésame", cuisine: "chinoise",
+    difficulte: "facile", tempsMinutes: 5, portions: 2,
+    source: "TheMealDB", idSource: "53369",
+    ingredients: [
+      { id: "tofu-soyeux", quantite: 450, unite: "g", ou: { id: "tofu", quantite: 450, unite: "g" } },
+      { id: "sauce-soja", quantite: 30, unite: "ml" },
+      { id: "tahini", quantite: 30, unite: "g" },
+      { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "graines-de-sesame", quantite: 5, unite: "g", optionnel: true },
+      { id: "riz", quantite: 150, unite: "g", optionnel: true }
+    ],
+    etapes: ["Égoutter le tofu et le démouler délicatement sur une grande assiette.", "Le couper en tranches d'un peu plus de 1 cm, puis pousser doucement les tranches du plat de la main pour les étaler en éventail.", "Arroser de sauce soja et de tahini (sauce sésame), détendu avec un peu d'eau s'il est trop épais.", "Parsemer d'oignon nouveau émincé et de graines de sésame. Servir froid, ou tiédi 30 s par 30 s au micro-ondes. Se garde 2 jours au frais, bien couvert."]
   }
 ]);

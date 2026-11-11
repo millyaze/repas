@@ -213,6 +213,9 @@ const INGREDIENTS = [
   { id: "pois-gourmands",       nom: "Pois gourmands",       unite: "g" },
   { id: "ananas-en-boite",      nom: "Ananas en boîte",      unite: "boîte" },
   { id: "haricots-noirs-fermentes", nom: "Haricots noirs fermentés", unite: "g" },
+  // Cuisine chinoise, lot 2
+  { id: "feuilles-de-wonton",   nom: "Feuilles de wonton",   unite: "pièce" },
+  { id: "crevettes-sechees",    nom: "Crevettes séchées",    unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
