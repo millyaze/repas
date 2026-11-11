@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 25;
+    const VERSION = 26;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
     // Mode clair ou sombre, choisi avant l'affichage (voir js/apparence.js)
     document.write('<script src="js/apparence.js?v=' + VERSION + '"><\/script>');
@@ -231,8 +231,10 @@
     <p class="version">Version <script>document.write(VERSION)</script></p>
   </main>
 
-  <!-- Lecteur de code-barre gratuit (html5-qrcode), chargé depuis Internet -->
-  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" async></script>
+  <!-- Lecteur de code-barre gratuit (html5-qrcode, version 2.3.8).
+       Copie gardée dans le projet (dossier lib/) plutôt que chargée depuis un autre site :
+       un site extérieur piraté ne peut donc pas remplacer ce fichier. -->
+  <script src="lib/html5-qrcode.min.js" async></script>
 
   <script>
     // CUISINES : un fichier par cuisine dans le dossier recettes/ (ex. "francaise" -> recettes/francaise.js).

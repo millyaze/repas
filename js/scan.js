@@ -27,7 +27,7 @@ function demarrerScan() {
 
 function ouvrirCamera() {
   if (lecteurCamera) return;
-  // La bibliothèque de lecture est chargée depuis Internet : sans connexion, elle manque
+  // La bibliothèque de lecture (lib/html5-qrcode.min.js) peut manquer si la page s'est mal chargée
   if (typeof Html5Qrcode === "undefined") {
     montrerMessage("Le lecteur de code-barre n'a pas pu se charger (connexion Internet ?). Tape le numéro du code-barre à la place.", true);
     return;
