@@ -4,7 +4,7 @@
 // Chargé AVANT js/recettes.js, qui affiche le bouton et le récapitulatif.
 // Utilise : stock, historique, sauvegarder, afficher, montrerMessage, element,
 //           arrondir, joursRestants (js/stock.js), dateDuJour (js/memoire.js),
-//           ligneDuStock, ingredientDeReference, convertir, ecrireQuantite, creer,
+//           ligneDuStock, ingredientDeReference, besoinRetenu, convertir, ecrireQuantite, creer,
 //           afficherRecettes (js/recettes.js), RECETTES (recettes/toutes.js).
 // ============================================================
 
@@ -92,13 +92,23 @@ function afficherHistorique() {
 // Sel, poivre, eau et ingrédients facultatifs absents ne sont pas retirés.
 function lignesACuisiner(recette) {
   const lignes = [];
-  recette.ingredients.forEach(function (besoin) {
+  recette.ingredients.forEach(function (origine) {
+    // Ingrédient avec remplaçant : on retire celui des deux qui est dans le stock (l'origine d'abord)
+    const besoin = besoinRetenu(origine);
     const reference = ingredientDeReference(besoin.id);
     if (reference && reference.base) return;
     const enStock = ligneDuStock(besoin.id);
     if (!enStock) return;
     const nom = reference ? reference.nom : besoin.id;
     const quantiteEnStock = convertir(enStock.quantite, enStock.unite, besoin.unite);
+    // Même ingrédient du stock déjà dans le récapitulatif (ex. sauce soja, et sauce soja
+    // qui remplace une autre sauce) : on additionne au lieu de faire deux lignes
+    const dejaLa = lignes.find(function (l) { return l.enStock === enStock; });
+    if (dejaLa) {
+      const enPlus = convertir(besoin.quantite, besoin.unite, dejaLa.unite);
+      if (enPlus !== null) dejaLa.valeur = Math.min(dejaLa.valeur + enPlus, dejaLa.maximum);
+      return;
+    }
     if (quantiteEnStock === null) {
       // Unités non comparables (ex. stock en sachet, recette en g) : à saisir à la main
       lignes.push({

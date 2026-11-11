@@ -20,6 +20,8 @@ const INGREDIENTS = [
   { id: "parmesan",        nom: "Parmesan",        unite: "g" },
   { id: "mozzarella",      nom: "Mozzarella",      unite: "g" },
   { id: "feta",            nom: "Feta",            unite: "g" },
+  { id: "yaourt-grec",     nom: "Yaourt grec",     unite: "g" },
+  { id: "cheddar",         nom: "Cheddar",         unite: "g" },
 
   // --- Viandes, poissons, protéines ---
   { id: "jambon",          nom: "Jambon",          unite: "tranche" },
@@ -33,6 +35,7 @@ const INGREDIENTS = [
   { id: "tofu",            nom: "Tofu",            unite: "g" },
   { id: "anchois",         nom: "Anchois",         unite: "g" },
   { id: "cote-de-porc",    nom: "Côte de porc",    unite: "pièce" },
+  { id: "cuisse-de-poulet", nom: "Cuisse de poulet", unite: "pièce" },
 
   // --- Légumes et fruits ---
   { id: "tomate",          nom: "Tomate",          unite: "pièce" },
@@ -56,6 +59,15 @@ const INGREDIENTS = [
   { id: "petits-pois",     nom: "Petits pois",     unite: "g" },
   { id: "gingembre",       nom: "Gingembre",       unite: "g" },
   { id: "chou",            nom: "Chou",            unite: "g" },
+  { id: "chou-kale",       nom: "Chou kale",       unite: "g" },
+  { id: "oignon-rouge",    nom: "Oignon rouge",    unite: "pièce" },
+  { id: "oignon-nouveau",  nom: "Oignon nouveau",  unite: "pièce" },
+  { id: "tomates-cerises", nom: "Tomates cerises", unite: "g" },
+  { id: "roquette",        nom: "Roquette",        unite: "g" },
+  { id: "celeri-branche",  nom: "Céleri branche",  unite: "pièce" },
+  { id: "piment-frais",    nom: "Piment frais",    unite: "pièce" },
+  { id: "champignons-shiitake", nom: "Champignons shiitaké", unite: "g" },
+  { id: "raifort",         nom: "Raifort",         unite: "g" },
 
   // --- Herbes fraîches ---
   { id: "basilic",         nom: "Basilic",         unite: "g" },
@@ -63,6 +75,7 @@ const INGREDIENTS = [
   { id: "coriandre",       nom: "Coriandre",       unite: "g" },
   { id: "menthe",          nom: "Menthe",          unite: "g" },
   { id: "laurier",         nom: "Laurier",         unite: "pièce" },
+  { id: "ciboulette",      nom: "Ciboulette",      unite: "g" },
 
   // --- Féculents, pains ---
   { id: "pates",               nom: "Pâtes",               unite: "g" },
@@ -76,6 +89,8 @@ const INGREDIENTS = [
   { id: "tortilla-de-ble",     nom: "Tortilla de blé",     unite: "pièce" },
   { id: "pain-a-burger",       nom: "Pain à burger",       unite: "pièce" },
   { id: "chapelure",           nom: "Chapelure",           unite: "g" },
+  { id: "nouilles-udon",       nom: "Nouilles udon",       unite: "g" },
+  { id: "fecule",              nom: "Fécule",              unite: "g" },
 
   // --- Conserves ---
   { id: "sauce-tomate",             nom: "Sauce tomate",             unite: "g" },
@@ -114,6 +129,20 @@ const INGREDIENTS = [
   { id: "ketchup",            nom: "Ketchup",            unite: "g" },
   { id: "mayonnaise",         nom: "Mayonnaise",         unite: "g" },
   { id: "abricots-secs",      nom: "Abricots secs",      unite: "g" },
+  { id: "sake",                 nom: "Saké",                 unite: "ml" },
+  { id: "mirin",                nom: "Mirin",                unite: "ml" },
+  { id: "huile-de-sesame",      nom: "Huile de sésame",      unite: "ml" },
+  { id: "vinaigre-balsamique",  nom: "Vinaigre balsamique",  unite: "ml" },
+  { id: "sauce-worcestershire", nom: "Sauce Worcestershire", unite: "ml" },
+  { id: "sauce-sriracha",       nom: "Sauce sriracha",       unite: "ml" },
+  { id: "wasabi",               nom: "Wasabi",               unite: "g" },
+  { id: "moutarde-en-poudre",   nom: "Moutarde en poudre",   unite: "g" },
+  { id: "melasse",              nom: "Mélasse",              unite: "g" },
+  { id: "beurre-de-cacahuete",  nom: "Beurre de cacahuète",  unite: "g" },
+  { id: "curcuma",              nom: "Curcuma",              unite: "g" },
+  { id: "epices-a-fajitas",     nom: "Épices à fajitas",     unite: "g" },
+  { id: "ail-en-poudre",        nom: "Ail en poudre",        unite: "g" },
+  { id: "graines-de-coriandre", nom: "Graines de coriandre", unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },

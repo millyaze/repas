@@ -79,6 +79,33 @@ function ecrireDelai(jours) {
 
 // ---------- Calcul ----------
 
+// Nom d'un ingrédient à partir de son identifiant
+function nomIngredient(id) {
+  const reference = ingredientDeReference(id);
+  return reference ? reference.nom : id;
+}
+
+// Regarde ce que le stock contient pour un ingrédient de recette.
+// Renvoie : enStock (la ligne du stock, ou null), manque (quantité qui manque, dans l'unité
+// de la recette), incomparable (vrai si les unités ne se comparent pas, ex. « sachet » et « g »).
+function disponibilite(besoin) {
+  const enStock = ligneDuStock(besoin.id);
+  if (!enStock) return { enStock: null, manque: besoin.quantite, incomparable: false };
+  const quantiteEnStock = convertir(enStock.quantite, enStock.unite, besoin.unite);
+  if (quantiteEnStock === null) return { enStock: enStock, manque: 0, incomparable: true };
+  return { enStock: enStock, manque: Math.max(0, besoin.quantite - quantiteEnStock), incomparable: false };
+}
+
+// Ingrédient avec remplaçant, écrit dans la recette avec « ou » :
+//   { id: "sake", quantite: 15, unite: "ml", ou: { id: "vin-blanc", quantite: 15, unite: "ml" } }
+// Renvoie celui des deux qui compte : l'ingrédient d'origine d'abord ; le remplaçant
+// seulement si l'origine manque et que le stock a assez du remplaçant.
+function besoinRetenu(besoin) {
+  if (!besoin.ou) return besoin;
+  if (disponibilite(besoin).manque === 0) return besoin;
+  return disponibilite(besoin.ou).manque === 0 ? besoin.ou : besoin;
+}
+
 // Compare une recette au stock.
 // Renvoie : pourcent, lignes (détail par ingrédient), manquants, urgents (à utiliser vite), aVerifier.
 function analyserRecette(recette) {
@@ -89,10 +116,16 @@ function analyserRecette(recette) {
   const urgents = [];
   let aVerifier = false;
 
-  recette.ingredients.forEach(function (besoin) {
-    const reference = ingredientDeReference(besoin.id);
-    const nom = reference ? reference.nom : besoin.id;
-    const info = { nom: nom, quantite: besoin.quantite, unite: besoin.unite, etat: "ok", note: "" };
+  recette.ingredients.forEach(function (origine) {
+    // Ingrédient avec remplaçant : « besoin » est celui des deux qui compte (voir besoinRetenu)
+    const besoin = besoinRetenu(origine);
+    const reference = ingredientDeReference(origine.id);
+    const nom = reference ? reference.nom : origine.id;
+    const info = { nom: nom, quantite: origine.quantite, unite: origine.unite, etat: "ok", note: "" };
+    if (origine.ou) {
+      info.ou = nomIngredient(origine.ou.id).toLowerCase() + " : " + ecrireQuantite(origine.ou.quantite, origine.ou.unite);
+      info.remplace = besoin !== origine; // vrai = c'est le remplaçant du stock qui sert
+    }
     lignes.push(info);
 
     // Sel, poivre, eau : toujours considérés comme présents
@@ -101,22 +134,16 @@ function analyserRecette(recette) {
       return;
     }
 
-    const enStock = ligneDuStock(besoin.id);
-    let manque = 0; // quantité qui manque, dans l'unité de la recette
-    if (!enStock) {
-      manque = besoin.quantite;
-    } else {
-      const quantiteEnStock = convertir(enStock.quantite, enStock.unite, besoin.unite);
-      if (quantiteEnStock === null) {
-        // Unités non comparables : on fait confiance, mais on le signale
-        info.note = "quantité à vérifier (stock : " + ecrireQuantite(enStock.quantite, enStock.unite) + ")";
-        aVerifier = true;
-      } else if (quantiteEnStock < besoin.quantite) {
-        manque = besoin.quantite - quantiteEnStock;
-      }
+    const dispo = disponibilite(besoin);
+    const enStock = dispo.enStock;
+    const manque = dispo.manque; // quantité qui manque, dans l'unité de la recette
+    if (dispo.incomparable) {
+      // Unités non comparables : on fait confiance, mais on le signale
+      info.note = "quantité à vérifier (stock : " + ecrireQuantite(enStock.quantite, enStock.unite) + ")";
+      aVerifier = true;
     }
 
-    if (besoin.optionnel) {
+    if (origine.optionnel) {
       // Un ingrédient optionnel ne rend jamais la recette incomplète
       info.etat = manque > 0 ? "optionnel-absent" : "optionnel";
     } else {
@@ -124,7 +151,10 @@ function analyserRecette(recette) {
       if (manque > 0) {
         info.etat = "manque";
         info.note = enStock ? "il manque " + ecrireQuantite(manque, besoin.unite) : "pas dans le stock";
-        manquants.push({ id: besoin.id, nom: nom, quantite: manque, unite: besoin.unite });
+        manquants.push({
+          id: besoin.id, nom: nom, quantite: manque, unite: besoin.unite,
+          ou: origine.ou ? nomIngredient(origine.ou.id).toLowerCase() : ""
+        });
       } else {
         disponibles++;
       }
@@ -136,7 +166,7 @@ function analyserRecette(recette) {
       if (jours <= JOURS_ALERTE) {
         info.peremption = jours < 0 ? "perime" : "bientot";
         info.delai = ecrireDelai(jours);
-        urgents.push({ nom: nom, jours: jours });
+        urgents.push({ nom: nomIngredient(besoin.id), jours: jours });
       }
     }
   });
@@ -313,7 +343,7 @@ function creerCarteRecette(analyse) {
     ligneBarre.appendChild(creer("span", "pourcent", analyse.pourcent + " %"));
     resume.appendChild(ligneBarre);
 
-    const noms = analyse.manquants.map(function (m) { return m.nom.toLowerCase() + " (" + ecrireQuantite(m.quantite, m.unite) + ")"; });
+    const noms = analyse.manquants.map(function (m) { return m.nom.toLowerCase() + " (" + ecrireQuantite(m.quantite, m.unite) + ")" + (m.ou ? " ou " + m.ou : ""); });
     resume.appendChild(creer("span", "manque", "Manque : " + noms.join(", ")));
   }
   carte.appendChild(resume);
@@ -331,6 +361,9 @@ function creerCarteRecette(analyse) {
     const ligne = creer("li", manque ? "manquant" : "");
     let texte = (manque ? "✗ " : info.etat === "optionnel-absent" ? "– " : "✓ ")
       + info.nom + " : " + ecrireQuantite(info.quantite, info.unite);
+    // Remplaçant : proposé entre parenthèses, ou signalé quand c'est lui qui sert
+    if (info.ou && info.remplace) texte += " — remplacé par " + info.ou;
+    else if (info.ou) texte += " (ou " + info.ou + ")";
     if (info.etat === "optionnel") texte += " (facultatif)";
     if (info.etat === "optionnel-absent") texte += " (facultatif, pas dans le stock)";
     if (info.note) texte += " — " + info.note;
