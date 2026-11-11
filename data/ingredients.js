@@ -367,6 +367,21 @@ const INGREDIENTS = [
   { id: "queue-de-boeuf",       nom: "Queue de bœuf",        unite: "g" },
   { id: "viande-de-chevre",     nom: "Viande de chèvre",     unite: "g" },
   { id: "corned-beef",          nom: "Corned-beef",          unite: "g" },
+  // --- Ajoutés pour : moyen-orient ---
+  // (cuisines saoudienne, syrienne et grecque)
+  { id: "origan",               nom: "Origan",               unite: "g" },
+  { id: "aneth",                nom: "Aneth",                unite: "g" },
+  { id: "cardamome",            nom: "Cardamome",            unite: "g" },
+  { id: "piment-de-la-jamaique", nom: "Piment de la Jamaïque", unite: "g" },
+  { id: "mascarpone",           nom: "Mascarpone",           unite: "g" },
+  { id: "biscuits-secs",        nom: "Biscuits secs",        unite: "g" },
+  { id: "boulgour",             nom: "Boulgour",             unite: "g" },
+  { id: "quinoa",               nom: "Quinoa",               unite: "g" },
+  { id: "dattes",               nom: "Dattes",               unite: "g" },
+  { id: "eau-de-rose",          nom: "Eau de rose",          unite: "ml" },
+  { id: "pate-kadaif",          nom: "Pâte kadaïf",          unite: "g" },
+  { id: "falafels",             nom: "Falafels",             unite: "pièce" },
+  { id: "boeuf-a-braiser",      nom: "Bœuf à braiser",       unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
