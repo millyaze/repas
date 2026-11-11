@@ -254,6 +254,17 @@ const INGREDIENTS = [
   { id: "pate-filo",            nom: "Pâte filo",            unite: "g" },
   { id: "ricotta",              nom: "Ricotta",              unite: "g" },
 
+  // --- Ajoutés pour : italienne ---
+  { id: "origan",               nom: "Origan",               unite: "g" },
+  { id: "romarin",              nom: "Romarin",              unite: "g" },
+  { id: "sauge",                nom: "Sauge",                unite: "g" },
+  { id: "vin-rouge",            nom: "Vin rouge",            unite: "ml" },
+  { id: "asperges",             nom: "Asperges",             unite: "g" },
+  { id: "sardines-en-boite",    nom: "Sardines en boîte",    unite: "boîte" },
+  { id: "jarret-de-veau",       nom: "Jarret de veau",       unite: "g" },
+  { id: "cuisse-de-canard",     nom: "Cuisse de canard",     unite: "pièce" },
+  { id: "cannelloni",           nom: "Cannelloni",           unite: "pièce" },
+
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
   { id: "poivre", nom: "Poivre", unite: "g",  base: true },
