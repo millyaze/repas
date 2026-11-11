@@ -254,6 +254,24 @@ const INGREDIENTS = [
   { id: "pate-filo",            nom: "Pâte filo",            unite: "g" },
   { id: "ricotta",              nom: "Ricotta",              unite: "g" },
 
+  // --- Ajoutés pour : europe-est ---
+  // Cuisines russe, ukrainienne et croate
+  { id: "betterave",            nom: "Betterave",            unite: "g" },
+  { id: "aneth",                nom: "Aneth",                unite: "g" },
+  { id: "sarrasin",             nom: "Sarrasin",             unite: "g" },
+  { id: "farine-de-sarrasin",   nom: "Farine de sarrasin",   unite: "g" },
+  { id: "sardines",             nom: "Sardines",             unite: "g" },
+  { id: "pruneaux",             nom: "Pruneaux",             unite: "g" },
+  { id: "boeuf-a-mijoter",      nom: "Bœuf à mijoter",       unite: "g" },
+  { id: "vin-rouge",            nom: "Vin rouge",            unite: "ml" },
+  { id: "chou-rouge",           nom: "Chou rouge",           unite: "g" },
+  { id: "choucroute",           nom: "Choucroute",           unite: "g" },
+  { id: "pomme",                nom: "Pomme",                unite: "pièce" },
+  { id: "romarin",              nom: "Romarin",              unite: "g" },
+  { id: "fraises",              nom: "Fraises",              unite: "g" },
+  { id: "fruits-rouges-surgeles", nom: "Fruits rouges surgelés", unite: "g" },
+  { id: "confiture",            nom: "Confiture",            unite: "g" },
+
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
   { id: "poivre", nom: "Poivre", unite: "g",  base: true },
