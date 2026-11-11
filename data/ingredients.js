@@ -243,6 +243,16 @@ const INGREDIENTS = [
   { id: "fenouil",              nom: "Fenouil",              unite: "pièce" },
   { id: "figues-seches",        nom: "Figues sèches",        unite: "g" },
   { id: "pimientos-de-padron",  nom: "Pimientos de padrón",  unite: "g" },
+  // Cuisine turque
+  { id: "agneau-hache",         nom: "Agneau haché",         unite: "g" },
+  { id: "gigot-d-agneau",       nom: "Gigot d'agneau",       unite: "g" },
+  { id: "cotelettes-d-agneau",  nom: "Côtelettes d'agneau",  unite: "pièce" },
+  { id: "pain-pita",            nom: "Pain pita",            unite: "pièce" },
+  { id: "noix",                 nom: "Noix",                 unite: "g" },
+  { id: "fromage-de-chevre",    nom: "Fromage de chèvre",    unite: "g" },
+  { id: "banane",               nom: "Banane",               unite: "pièce" },
+  { id: "pate-filo",            nom: "Pâte filo",            unite: "g" },
+  { id: "ricotta",              nom: "Ricotta",              unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
