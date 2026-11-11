@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine marocaine (4 recettes, pour 2 personnes)
+// RECETTES : cuisine marocaine (6 recettes, pour 2 personnes)
 // Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude.
 // Même format que recettes/indienne.js
 // ============================================================
@@ -79,5 +79,56 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" }
     ],
     etapes: ["Cuire les lentilles 20 à 25 min dans l'eau bouillante, puis les égoutter.", "Mélanger le tahini avec le zeste et le jus du citron et les 50 ml d'eau froide pour faire une sauce fluide. Saler.", "Faire revenir l'oignon émincé 2 min dans l'huile avec une pincée de sel.", "Ajouter l'ail écrasé, le poivron en lamelles, les haricots verts et la courgette en rondelles, cuire 5 min en remuant souvent.", "Ajouter le chou kale en lanières, les lentilles et la sauce au tahini, remuer 2 min sur le feu jusqu'à ce que le chou soit tombé."]
+  },
+  // --- Ajoutées pour : afrique-nord ---
+  {
+    id: "feuilles-de-vigne-farcies-agneau", nom: "Feuilles de vigne farcies à l'agneau, sauce tomate au gingembre", cuisine: "marocaine",
+    difficulte: "difficile", tempsMinutes: 120, portions: 2,
+    source: "TheMealDB", idSource: "52782",
+    ingredients: [
+      { id: "feuilles-de-vigne", quantite: 25, unite: "pièce", ou: { id: "chou", quantite: 300, unite: "g" } },
+      { id: "agneau-hache", quantite: 200, unite: "g", ou: { id: "boeuf-hache", quantite: 200, unite: "g" } },
+      { id: "tomate", quantite: 5, unite: "pièce" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "fenouil", quantite: 1, unite: "pièce" },
+      { id: "pomme-de-terre", quantite: 50, unite: "g" },
+      { id: "riz", quantite: 15, unite: "g" },
+      { id: "gingembre", quantite: 10, unite: "g" },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "citron", quantite: 1, unite: "pièce" },
+      { id: "persil", quantite: 10, unite: "g" },
+      { id: "coriandre", quantite: 10, unite: "g" },
+      { id: "cannelle", quantite: 1, unite: "g" },
+      { id: "sucre", quantite: 3, unite: "g" },
+      { id: "huile-d-olive", quantite: 15, unite: "ml" },
+      { id: "sel", quantite: 3, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Feuilles de vigne en saumure : les égoutter, les plonger 10 min dans l'eau bouillante, puis les laisser sécher sur un torchon. Retirer les queues ; recouper les grandes feuilles à environ 12 cm. (Sans feuilles de vigne : utiliser des feuilles de chou blanchies 3 min.)", "Farce : mélanger la viande, l'oignon haché, la pomme de terre râpée, le riz, la moitié du persil et de la coriandre hachés, 1 gousse d'ail écrasée, la cannelle (et une pincée de clou de girofle si on en a) et 1 cuillère à soupe de jus de citron. Râper 1 tomate dans le bol (jeter la peau), saler, poivrer et mélanger. Avant de l'utiliser, presser la farce et jeter le jus.", "Sauce : chauffer l'huile, faire revenir le gingembre haché et l'autre gousse d'ail 1 à 2 min sans brûler, puis ajouter les 4 autres tomates pelées et hachées, 2 cuillères à soupe de jus de citron et le sucre. Saler, poivrer et laisser mijoter 20 min.", "Tapisser le fond d'une large casserole des feuilles abîmées, puis de tranches de fenouil de 5 mm pour couvrir tout le fond.", "Poser une feuille, nervures vers le haut, mettre 2 cuillères à café de farce en bas, rabattre les côtés et rouler serré en cigare. Ranger les rouleaux serrés les uns contre les autres dans la casserole, fermeture en dessous.", "Verser la sauce par-dessus (ajouter de l'eau juste à hauteur si besoin), poser une assiette dessus pour les maintenir, couvrir et cuire 70 min à très petit frémissement : presque tout le liquide doit s'évaporer.", "Laisser tiédir un peu et servir avec des tranches de fenouil, le jus de cuisson et le reste de coriandre, avec du riz ou de la semoule."]
+  },
+  {
+    id: "tajine-d-agneau-abricots-courge", nom: "Tajine d'agneau aux abricots et à la courge", cuisine: "marocaine",
+    difficulte: "moyen", tempsMinutes: 150, portions: 2,
+    source: "TheMealDB", idSource: "52843",
+    ingredients: [
+      { id: "gigot-d-agneau", quantite: 250, unite: "g" },
+      { id: "potiron", quantite: 300, unite: "g" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "carotte", quantite: 1, unite: "pièce" },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "abricots-secs", quantite: 50, unite: "g" },
+      { id: "miel", quantite: 10, unite: "g" },
+      { id: "cumin", quantite: 1, unite: "g" },
+      { id: "gingembre", quantite: 3, unite: "g" },
+      { id: "cannelle", quantite: 2, unite: "g" },
+      { id: "safran", quantite: 1, unite: "sachet", optionnel: true },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "huile-d-olive", quantite: 15, unite: "ml" },
+      { id: "semoule", quantite: 150, unite: "g" },
+      { id: "persil", quantite: 5, unite: "g", optionnel: true },
+      { id: "pignons-de-pin", quantite: 10, unite: "g", optionnel: true },
+      { id: "eau", quantite: 400, unite: "ml" }
+    ],
+    etapes: ["Dans une cocotte à fond épais, chauffer l'huile et faire revenir l'oignon émincé et la carotte en morceaux 3 à 4 min, jusqu'à ce qu'ils ramollissent.", "Ajouter l'agneau en cubes et le faire dorer sur toutes les faces.", "Ajouter l'ail écrasé, le cumin, le gingembre râpé, le safran et la cannelle, et cuire encore quelques minutes jusqu'à ce que les épices sentent bon.", "Ajouter le miel et les abricots, émietter le bouillon cube et verser 250 ml d'eau bouillante (la viande doit être couverte). Bien mélanger et porter à ébullition.", "Couvrir et laisser mijoter 1 h à feu doux, puis découvrir et cuire encore 30 min.", "Ajouter la courge (butternut ou potiron) en cubes et cuire 20 à 30 min, jusqu'à ce qu'elle soit fondante et l'agneau tendre.", "Préparer la semoule : la couvrir avec 150 ml d'eau bouillante salée, couvrir 5 min puis l'égrener à la fourchette. Servir le tajine sur la semoule, parsemé de persil et de pignons grillés."]
   }
 ]);

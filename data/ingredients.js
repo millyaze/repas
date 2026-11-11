@@ -254,6 +254,15 @@ const INGREDIENTS = [
   { id: "pate-filo",            nom: "Pâte filo",            unite: "g" },
   { id: "ricotta",              nom: "Ricotta",              unite: "g" },
 
+  // --- Ajoutés pour : afrique-nord ---
+  { id: "ras-el-hanout",          nom: "Ras el hanout",          unite: "g" },
+  { id: "eau-de-fleur-d-oranger", nom: "Eau de fleur d'oranger", unite: "ml" },
+  { id: "feves",                  nom: "Fèves",                  unite: "g" },
+  { id: "pruneaux",               nom: "Pruneaux",               unite: "g" },
+  { id: "boulgour",               nom: "Boulgour",               unite: "g" },
+  { id: "feuilles-de-vigne",      nom: "Feuilles de vigne",      unite: "pièce" },
+  { id: "mloukhia-corete",        nom: "Mloukhia (corète)",      unite: "g" },
+
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
   { id: "poivre", nom: "Poivre", unite: "g",  base: true },
