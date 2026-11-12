@@ -229,6 +229,21 @@ function creer(balise, classe, texte) {
 }
 
 // Fabrique la carte dépliable d'une recette
+// Ligne « Source : Wikilivres (texte adapté, licence CC BY-SA) », avec le lien vers la page d'origine.
+// Seulement pour les recettes qui ont un « lienSource » vers Wikilivres (sinon : rien).
+function creerLigneSource(recette) {
+  const lien = recette.lienSource;
+  if (typeof lien !== "string" || lien.indexOf("https://fr.wikibooks.org/") !== 0) return null;
+  const ligne = creer("p", "recette-source", "Source : ");
+  const a = creer("a", "", "Wikilivres");
+  a.href = lien;
+  a.target = "_blank";
+  a.rel = "noopener";
+  ligne.appendChild(a);
+  ligne.appendChild(document.createTextNode(" (texte adapté, licence CC BY-SA)"));
+  return ligne;
+}
+
 function creerCarteRecette(analyse) {
   const recette = analyse.recette;
   const estFavori = favoris.indexOf(recette.id) !== -1;
@@ -311,6 +326,10 @@ function creerCarteRecette(analyse) {
     // Recette incomplète : bouton pour mettre ce qui manque dans la liste de courses (js/courses.js)
     contenu.appendChild(creerBoutonCourses(analyse));
   }
+
+  // Recette reprise d'une source libre (Wikilivres) : la licence oblige à citer la page d'origine
+  const source = creerLigneSource(recette);
+  if (source) contenu.appendChild(source);
   carte.appendChild(contenu);
 
   return carte;

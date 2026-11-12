@@ -504,6 +504,27 @@ const INGREDIENTS = [
   { id: "escalope-de-veau",   nom: "Escalope de veau",   unite: "pièce" },
   { id: "fumet-de-poisson",   nom: "Fumet de poisson",   unite: "ml" },
 
+  // --- Ajoutés pour : Wikilivres, 2e série --- (ingrédients des 143 plats finis, validés par moi)
+  { id: "pain-d-epices",               nom: "Pain d'épices",               unite: "g" },
+  { id: "tomates-sechees",             nom: "Tomates séchées",             unite: "g" },
+  { id: "pesto",                       nom: "Pesto",                       unite: "g" },
+  { id: "lentilles-corail",            nom: "Lentilles corail",            unite: "g" },
+  { id: "thon-frais",                  nom: "Thon frais",                  unite: "g" },
+  { id: "bar",                         nom: "Bar",                         unite: "g" },
+  { id: "chou-fleur",                  nom: "Chou-fleur",                  unite: "g" },
+  { id: "blettes",                     nom: "Blettes",                     unite: "g" },
+  { id: "fleurs-de-courgette",         nom: "Fleurs de courgette",         unite: "pièce" },
+  { id: "thon-a-la-catalane-en-boite", nom: "Thon à la catalane en boîte", unite: "boîte" },
+  { id: "vacherin-fribourgeois",       nom: "Vacherin fribourgeois",       unite: "g" },
+  { id: "farine-de-pois-chiches",      nom: "Farine de pois chiches",      unite: "g" },
+  { id: "tofu-fume",                   nom: "Tofu fumé",                   unite: "g" },
+  { id: "poivrons-piquillos",          nom: "Poivrons piquillos",          unite: "pièce" },
+  { id: "brousse",                     nom: "Brousse",                     unite: "g" },
+  { id: "saucisse-chinoise",           nom: "Saucisse chinoise",           unite: "g" },
+  { id: "saucisse-aux-choux",          nom: "Saucisse aux choux",          unite: "pièce" },
+  { id: "pied-de-porc",                nom: "Pied de porc",                unite: "pièce" },
+  { id: "vinaigre-noir-chinois",       nom: "Vinaigre noir chinois",       unite: "ml" },
+
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
   { id: "poivre", nom: "Poivre", unite: "g",  base: true },

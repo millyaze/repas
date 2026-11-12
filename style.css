@@ -290,6 +290,9 @@ button.afficher-plus { width: 100%; margin-top: 8px; }
 .recette-contenu h3 { margin: 8px 0 6px; font-size: 0.95rem; }
 .recette-ingredients { list-style: none; margin: 0; padding: 0; }
 .recette-ingredients li { padding: 2px 0; }
+/* Source d'une recette reprise de Wikilivres (obligatoire avec sa licence) */
+.recette-source { margin: 10px 0 0; font-size: 0.8rem; color: var(--texte-discret); }
+.recette-source a { color: inherit; }
 .recette-ingredients li.manquant { color: var(--manque); }
 .recette-etapes { margin: 0; padding-left: 22px; }
 .recette-etapes li { padding: 2px 0; }
