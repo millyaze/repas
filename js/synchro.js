@@ -80,7 +80,17 @@ function appelGitHub(adresse, methode, corps) {
       "Accept": "application/vnd.github+json"
     },
     body: corps ? JSON.stringify(corps) : undefined
+  }).catch(function () {
+    // GitHub injoignable : pas d'Internet, ou un bloqueur de pub / antivirus / VPN bloque api.github.com
+    throw new Error(navigator.onLine === false ? "horsligne" : "bloque");
   });
+}
+
+// Erreur renvoyée par GitHub (ex. 500 = panne chez GitHub) : on garde son numéro pour l'afficher
+function erreurGitHub(reponse) {
+  const erreur = new Error("github");
+  erreur.code = reponse.status;
+  return erreur;
 }
 
 // Texte <-> base64 (format demandé par GitHub), accents compris
@@ -102,7 +112,7 @@ function lireEnLigne() {
   return appelGitHub(ADRESSE_GITHUB + "/contents/" + FICHIER_DONNEES, "GET").then(function (reponse) {
     if (reponse.status === 404) return { existe: false };
     if (reponse.status === 401 || reponse.status === 403) throw new Error("cle");
-    if (!reponse.ok) throw new Error("reseau");
+    if (!reponse.ok) throw erreurGitHub(reponse);
     return reponse.json().then(function (fichier) {
       const donnees = JSON.parse(depuisBase64(fichier.content));
       if (!donneesValides(donnees)) throw new Error("fichier");
@@ -120,7 +130,7 @@ function envoyerEnLigne(shaConnu) {
   return appelGitHub(ADRESSE_GITHUB + "/contents/" + FICHIER_DONNEES, "PUT", corps).then(function (reponse) {
     if (reponse.status === 409 || reponse.status === 422) throw new Error("conflit"); // l'autre appareil vient d'écrire
     if (reponse.status === 401 || reponse.status === 403 || reponse.status === 404) throw new Error("cle");
-    if (!reponse.ok) throw new Error("reseau");
+    if (!reponse.ok) throw erreurGitHub(reponse);
     return reponse.json().then(function (resultat) {
       reglagesSynchro.sha = resultat.content.sha;
       // S'il y a eu un nouveau changement pendant l'envoi, il reste à envoyer
@@ -177,8 +187,12 @@ function synchroniser(discret) {
       cle: "Clé d'accès refusée ou expirée : désactive puis réactive la synchro avec une nouvelle clé.",
       fichier: "Le fichier en ligne est illisible. Rien n'a été modifié ici.",
       version: "Une nouvelle version de la page existe : recharge la page pour reprendre la synchro.",
+      horsligne: "Pas de connexion Internet : la synchro reprendra toute seule au retour du réseau.",
+      bloque: "GitHub ne répond pas : un bloqueur de pub, un antivirus ou un VPN bloque peut-être « api.github.com ». Autorise ce site, puis touche « Synchroniser maintenant ».",
+      github: "GitHub a renvoyé une erreur (n° " + erreur.code + ") : souci de leur côté, la synchro réessaiera toute seule."
     };
-    afficherSynchro(textes[erreur.message] || "Pas de connexion : la synchro reprendra plus tard.", true);
+    // Autre cas : erreur imprévue dans la page (on montre son texte pour pouvoir la corriger)
+    afficherSynchro(textes[erreur.message] || "Erreur inattendue pendant la synchro : « " + erreur.message + " ».", true);
   });
 }
 
@@ -216,7 +230,9 @@ function activerSynchro(evenement) {
     reglagesSynchro = {};
     afficherSynchro(erreur.message === "cle"
       ? "Cette clé ne donne pas accès au dépôt « " + DEPOT_DONNEES + " ». Vérifie-la et réessaie."
-      : "Pas de connexion : impossible de vérifier la clé.", true);
+      : erreur.message === "bloque"
+      ? "GitHub ne répond pas : un bloqueur de pub, un antivirus ou un VPN bloque peut-être « api.github.com ». Autorise ce site et réessaie."
+      : "Pas de connexion Internet : impossible de vérifier la clé.", true);
   });
 }
 
