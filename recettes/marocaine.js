@@ -99,12 +99,13 @@ ajouterRecettes([
       { id: "persil", quantite: 10, unite: "g" },
       { id: "coriandre", quantite: 10, unite: "g" },
       { id: "cannelle", quantite: 1, unite: "g" },
+      { id: "clous-de-girofle", quantite: 1, unite: "pièce", optionnel: true },
       { id: "sucre", quantite: 3, unite: "g" },
       { id: "huile-d-olive", quantite: 15, unite: "ml" },
       { id: "sel", quantite: 3, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Feuilles de vigne en saumure : les égoutter, les plonger 10 min dans l'eau bouillante, puis les laisser sécher sur un torchon. Retirer les queues ; recouper les grandes feuilles à environ 12 cm. (Sans feuilles de vigne : utiliser des feuilles de chou blanchies 3 min.)", "Farce : mélanger la viande, l'oignon haché, la pomme de terre râpée, le riz, la moitié du persil et de la coriandre hachés, 1 gousse d'ail écrasée, la cannelle (et une pincée de clou de girofle si on en a) et 1 cuillère à soupe de jus de citron. Râper 1 tomate dans le bol (jeter la peau), saler, poivrer et mélanger. Avant de l'utiliser, presser la farce et jeter le jus.", "Sauce : chauffer l'huile, faire revenir le gingembre haché et l'autre gousse d'ail 1 à 2 min sans brûler, puis ajouter les 4 autres tomates pelées et hachées, 2 cuillères à soupe de jus de citron et le sucre. Saler, poivrer et laisser mijoter 20 min.", "Tapisser le fond d'une large casserole des feuilles abîmées, puis de tranches de fenouil de 5 mm pour couvrir tout le fond.", "Poser une feuille, nervures vers le haut, mettre 2 cuillères à café de farce en bas, rabattre les côtés et rouler serré en cigare. Ranger les rouleaux serrés les uns contre les autres dans la casserole, fermeture en dessous.", "Verser la sauce par-dessus (ajouter de l'eau juste à hauteur si besoin), poser une assiette dessus pour les maintenir, couvrir et cuire 70 min à très petit frémissement : presque tout le liquide doit s'évaporer.", "Laisser tiédir un peu et servir avec des tranches de fenouil, le jus de cuisson et le reste de coriandre, avec du riz ou de la semoule."]
+    etapes: ["Feuilles de vigne en saumure : les égoutter, les plonger 10 min dans l'eau bouillante, puis les laisser sécher sur un torchon. Retirer les queues ; recouper les grandes feuilles à environ 12 cm. (Sans feuilles de vigne : utiliser des feuilles de chou blanchies 3 min.)", "Farce : mélanger la viande, l'oignon haché, la pomme de terre râpée, le riz, la moitié du persil et de la coriandre hachés, 1 gousse d'ail écrasée, la cannelle, le clou de girofle écrasé et 1 cuillère à soupe de jus de citron. Râper 1 tomate dans le bol (jeter la peau), saler, poivrer et mélanger. Avant de l'utiliser, presser la farce et jeter le jus.", "Sauce : chauffer l'huile, faire revenir le gingembre haché et l'autre gousse d'ail 1 à 2 min sans brûler, puis ajouter les 4 autres tomates pelées et hachées, 2 cuillères à soupe de jus de citron et le sucre. Saler, poivrer et laisser mijoter 20 min.", "Tapisser le fond d'une large casserole des feuilles abîmées, puis de tranches de fenouil de 5 mm pour couvrir tout le fond.", "Poser une feuille, nervures vers le haut, mettre 2 cuillères à café de farce en bas, rabattre les côtés et rouler serré en cigare. Ranger les rouleaux serrés les uns contre les autres dans la casserole, fermeture en dessous.", "Verser la sauce par-dessus (ajouter de l'eau juste à hauteur si besoin), poser une assiette dessus pour les maintenir, couvrir et cuire 70 min à très petit frémissement : presque tout le liquide doit s'évaporer.", "Laisser tiédir un peu et servir avec des tranches de fenouil, le jus de cuisson et le reste de coriandre, avec du riz ou de la semoule."]
   },
   {
     id: "tajine-d-agneau-abricots-courge", nom: "Tajine d'agneau aux abricots et à la courge", cuisine: "marocaine",
@@ -112,16 +113,16 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52843",
     ingredients: [
       { id: "gigot-d-agneau", quantite: 250, unite: "g" },
-      { id: "potiron", quantite: 300, unite: "g" },
+      { id: "courge-butternut", quantite: 300, unite: "g", ou: { id: "potiron", quantite: 300, unite: "g" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "abricots-secs", quantite: 50, unite: "g" },
       { id: "miel", quantite: 10, unite: "g" },
       { id: "cumin", quantite: 1, unite: "g" },
-      { id: "gingembre", quantite: 3, unite: "g" },
+      { id: "gingembre-en-poudre", quantite: 1, unite: "g", ou: { id: "gingembre", quantite: 3, unite: "g" } },
       { id: "cannelle", quantite: 2, unite: "g" },
-      { id: "safran", quantite: 1, unite: "sachet", optionnel: true },
+      { id: "safran", quantite: 1, unite: "sachet" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "huile-d-olive", quantite: 15, unite: "ml" },
       { id: "semoule", quantite: 150, unite: "g" },
@@ -129,6 +130,6 @@ ajouterRecettes([
       { id: "pignons-de-pin", quantite: 10, unite: "g", optionnel: true },
       { id: "eau", quantite: 400, unite: "ml" }
     ],
-    etapes: ["Dans une cocotte à fond épais, chauffer l'huile et faire revenir l'oignon émincé et la carotte en morceaux 3 à 4 min, jusqu'à ce qu'ils ramollissent.", "Ajouter l'agneau en cubes et le faire dorer sur toutes les faces.", "Ajouter l'ail écrasé, le cumin, le gingembre râpé, le safran et la cannelle, et cuire encore quelques minutes jusqu'à ce que les épices sentent bon.", "Ajouter le miel et les abricots, émietter le bouillon cube et verser 250 ml d'eau bouillante (la viande doit être couverte). Bien mélanger et porter à ébullition.", "Couvrir et laisser mijoter 1 h à feu doux, puis découvrir et cuire encore 30 min.", "Ajouter la courge (butternut ou potiron) en cubes et cuire 20 à 30 min, jusqu'à ce qu'elle soit fondante et l'agneau tendre.", "Préparer la semoule : la couvrir avec 150 ml d'eau bouillante salée, couvrir 5 min puis l'égrener à la fourchette. Servir le tajine sur la semoule, parsemé de persil et de pignons grillés."]
+    etapes: ["Dans une cocotte à fond épais, chauffer l'huile et faire revenir l'oignon émincé et la carotte en morceaux 3 à 4 min, jusqu'à ce qu'ils ramollissent.", "Ajouter l'agneau en cubes et le faire dorer sur toutes les faces.", "Ajouter l'ail écrasé, le cumin, le gingembre en poudre, le safran et la cannelle, et cuire encore quelques minutes jusqu'à ce que les épices sentent bon.", "Ajouter le miel et les abricots, émietter le bouillon cube et verser 250 ml d'eau bouillante (la viande doit être couverte). Bien mélanger et porter à ébullition.", "Couvrir et laisser mijoter 1 h à feu doux, puis découvrir et cuire encore 30 min.", "Ajouter la courge (butternut ou potiron) en cubes et cuire 20 à 30 min, jusqu'à ce qu'elle soit fondante et l'agneau tendre.", "Préparer la semoule : la couvrir avec 150 ml d'eau bouillante salée, couvrir 5 min puis l'égrener à la fourchette. Servir le tajine sur la semoule, parsemé de persil et de pignons grillés."]
   }
 ]);

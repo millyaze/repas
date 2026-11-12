@@ -80,6 +80,7 @@ ajouterRecettes([
       { id: "cuisse-de-poulet", quantite: 3, unite: "pièce", ou: { id: "blanc-de-poulet", quantite: 2, unite: "pièce" } },
       { id: "graines-de-coriandre", quantite: 4, unite: "g" },
       { id: "cumin", quantite: 6, unite: "g" },
+      { id: "cardamome", quantite: 2, unite: "g" },
       { id: "paprika", quantite: 3, unite: "g" },
       { id: "piment-en-poudre", quantite: 1, unite: "g" },
       { id: "citron", quantite: 1, unite: "pièce" },
@@ -92,7 +93,7 @@ ajouterRecettes([
       { id: "sel", quantite: 3, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Marinade : mélanger la coriandre moulue, 5 g de cumin, le paprika, le piment (et une pincée de cardamome si on en a), 2 cuillères à soupe de jus de citron, l'huile, le sel et le poivre. Enrober les cuisses de poulet désossées et laisser mariner au frais au moins 2 h, idéalement une nuit.", "Sauce : mélanger le yaourt avec l'ail écrasé, le reste du cumin et un filet de citron. Garder au frais.", "Faire chauffer une grande poêle épaisse (ou le barbecue) à feu moyen-vif. Cuire le poulet 4 à 5 min d'un côté jusqu'à ce qu'il soit bien grillé, puis 3 à 4 min de l'autre.", "Laisser reposer 5 min sous une feuille d'aluminium, puis couper en lamelles.", "Tartiner chaque pain pita de sauce au yaourt, ajouter de la salade et des tranches de tomate, puis le poulet. Rouler et servir."]
+    etapes: ["Marinade : mélanger la coriandre moulue, 5 g de cumin, le paprika, le piment, la cardamome, 2 cuillères à soupe de jus de citron, l'huile, le sel et le poivre. Enrober les cuisses de poulet désossées et laisser mariner au frais au moins 2 h, idéalement une nuit.", "Sauce : mélanger le yaourt avec l'ail écrasé, le reste du cumin et un filet de citron. Garder au frais.", "Faire chauffer une grande poêle épaisse (ou le barbecue) à feu moyen-vif. Cuire le poulet 4 à 5 min d'un côté jusqu'à ce qu'il soit bien grillé, puis 3 à 4 min de l'autre.", "Laisser reposer 5 min sous une feuille d'aluminium, puis couper en lamelles.", "Tartiner chaque pain pita de sauce au yaourt, ajouter de la salade et des tranches de tomate, puis le poulet. Rouler et servir."]
   },
   {
     id: "mloukhia-au-boeuf", nom: "Mloukhia (soupe verte de corète au bœuf et à l'ail)", cuisine: "égyptienne",
@@ -100,7 +101,7 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "53029",
     ingredients: [
       { id: "mloukhia-corete", quantite: 400, unite: "g", ou: { id: "epinards", quantite: 400, unite: "g" } },
-      { id: "steak-de-boeuf", quantite: 200, unite: "g", ou: { id: "cuisse-de-poulet", quantite: 2, unite: "pièce" } },
+      { id: "boeuf-a-braiser", quantite: 200, unite: "g", ou: { id: "cuisse-de-poulet", quantite: 2, unite: "pièce" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "huile-d-olive", quantite: 40, unite: "ml" },
@@ -129,13 +130,13 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 150, portions: 2,
     source: "TheMealDB", idSource: "53031",
     ingredients: [
-      { id: "steak-de-boeuf", quantite: 250, unite: "g" },
+      { id: "boeuf-a-braiser", quantite: 250, unite: "g", ou: { id: "steak-de-boeuf", quantite: 250, unite: "g" } },
       { id: "riz", quantite: 150, unite: "g" },
       { id: "pates", quantite: 20, unite: "g" },
       { id: "pain-pita", quantite: 1, unite: "pièce" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "tomate", quantite: 2, unite: "pièce" },
-      { id: "sauce-tomate", quantite: 20, unite: "g" },
+      { id: "concentre-de-tomate", quantite: 20, unite: "g", ou: { id: "sauce-tomate", quantite: 40, unite: "g" } },
       { id: "ail", quantite: 4, unite: "gousse" },
       { id: "cumin", quantite: 3, unite: "g" },
       { id: "vinaigre", quantite: 30, unite: "ml" },
@@ -146,6 +147,6 @@ ajouterRecettes([
       { id: "sel", quantite: 4, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Viande : dorer la viande en gros cubes dans un peu de beurre, ajouter l'oignon coupé en quatre, sel, poivre, le bouillon cube et de l'eau à hauteur (environ 600 ml). Porter à ébullition, puis couvrir et laisser mijoter environ 1 h 30 jusqu'à ce qu'elle soit tendre. Retirer la viande et garder le bouillon.", "Pain : déchirer le pain pita en morceaux et les faire dorer dans un peu de beurre. Ajouter une gousse d'ail écrasée, 1 g de cumin et du sel, mélanger et étaler au fond d'un plat creux.", "Riz : faire dorer les pâtes (vermicelles cassés) dans un peu de beurre en remuant, ajouter le riz et remuer jusqu'à ce qu'il devienne opaque. Ajouter 250 ml d'eau salée, couvrir et cuire à feu doux jusqu'à ce que le riz soit tendre.", "Arroser le pain de bouillon, couvrir de riz, puis verser du bouillon doucement jusqu'à arriver juste à hauteur du riz.", "Sauce : dans une poêle, chauffer l'huile, ajouter les tomates écrasées, la moitié de la sauce tomate, 2 gousses d'ail écrasées, 1 g de cumin, sel, poivre et le vinaigre. Cuire jusqu'à ce que ce soit un peu épais, puis l'étaler sur le riz.", "Faire dorer la viande dans un peu de beurre avec le reste de sauce tomate, d'ail et de cumin, la poser sur le riz et servir."]
+    etapes: ["Viande : dorer la viande en gros cubes dans un peu de beurre, ajouter l'oignon coupé en quatre, sel, poivre, le bouillon cube et de l'eau à hauteur (environ 600 ml). Porter à ébullition, puis couvrir et laisser mijoter environ 1 h 30 jusqu'à ce qu'elle soit tendre. Retirer la viande et garder le bouillon.", "Pain : déchirer le pain pita en morceaux et les faire dorer dans un peu de beurre. Ajouter une gousse d'ail écrasée, 1 g de cumin et du sel, mélanger et étaler au fond d'un plat creux.", "Riz : faire dorer les pâtes (vermicelles cassés) dans un peu de beurre en remuant, ajouter le riz et remuer jusqu'à ce qu'il devienne opaque. Ajouter 250 ml d'eau salée, couvrir et cuire à feu doux jusqu'à ce que le riz soit tendre.", "Arroser le pain de bouillon, couvrir de riz, puis verser du bouillon doucement jusqu'à arriver juste à hauteur du riz.", "Sauce : dans une poêle, chauffer l'huile, ajouter les tomates écrasées, la moitié du concentré de tomate, 2 gousses d'ail écrasées, 1 g de cumin, sel, poivre et le vinaigre. Cuire jusqu'à ce que ce soit un peu épais, puis l'étaler sur le riz.", "Faire dorer la viande dans un peu de beurre avec le reste de concentré de tomate, d'ail et de cumin, la poser sur le riz et servir."]
   }
 ]);
