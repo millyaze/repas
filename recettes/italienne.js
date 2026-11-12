@@ -160,12 +160,14 @@ ajouterRecettes([
       { id: "ricotta", quantite: 150, unite: "g" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "farine", quantite: 15, unite: "g" },
-      { id: "sucre", quantite: 60, unite: "g" },
+      { id: "sucre", quantite: 75, unite: "g" },
       { id: "cannelle", quantite: 1, unite: "g", optionnel: true },
       { id: "citron", quantite: 1, unite: "pièce" },
+      { id: "rhum", quantite: 20, unite: "ml", optionnel: true },
+      { id: "sucre-glace", quantite: 5, unite: "g", optionnel: true },
       { id: "beurre", quantite: 5, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 180 °C. Beurrer 2 ramequins et les fariner légèrement.", "Séparer le blanc du jaune d'œuf. Écraser la ricotta à la fourchette et la battre avec le jaune, puis ajouter le reste de farine, le sucre, la cannelle et le zeste râpé du citron (à l'origine on ajoute aussi un peu de rhum).", "Monter le blanc en neige ferme avec une pincée de sel et l'incorporer délicatement au mélange.", "Répartir dans les ramequins et cuire 25 à 30 min, jusqu'à ce que les gâteaux soient fermes et dorés.", "Servir tiède ou froid, saupoudré d'un peu de sucre."]
+    etapes: ["Préchauffer le four à 180 °C. Beurrer 2 ramequins et les fariner légèrement.", "Séparer le blanc du jaune d'œuf. Écraser la ricotta à la fourchette et la battre avec le jaune, puis ajouter le reste de farine, le sucre, la cannelle, le zeste râpé du citron et le rhum.", "Monter le blanc en neige ferme avec une pincée de sel et l'incorporer délicatement au mélange.", "Répartir dans les ramequins et cuire 25 à 30 min, jusqu'à ce que les gâteaux soient fermes et dorés.", "Servir tiède ou froid, saupoudré de sucre glace."]
   },
   {
     id: "pates-alfredo-au-poulet-et-aux-legumes", nom: "Pâtes Alfredo au poulet et aux légumes (primavera)", cuisine: "italienne",
@@ -181,12 +183,12 @@ ajouterRecettes([
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "piment-en-poudre", quantite: 1, unite: "g", optionnel: true },
-      { id: "vin-blanc", quantite: 60, unite: "ml", optionnel: true },
-      { id: "lait", quantite: 60, unite: "ml" },
-      { id: "creme-fraiche", quantite: 60, unite: "ml" },
+      { id: "vin-blanc", quantite: 50, unite: "ml" },
+      { id: "lait", quantite: 50, unite: "ml" },
+      { id: "creme-liquide", quantite: 50, unite: "ml", ou: { id: "creme-fraiche", quantite: 50, unite: "ml" } },
       { id: "parmesan", quantite: 40, unite: "g" },
       { id: "beurre", quantite: 15, unite: "g" },
-      { id: "huile-d-olive", quantite: 30, unite: "ml" },
+      { id: "huile-d-olive", quantite: 20, unite: "ml" },
       { id: "persil", quantite: 5, unite: "g", optionnel: true },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
@@ -207,14 +209,14 @@ ajouterRecettes([
       { id: "huile-d-olive", quantite: 20, unite: "ml" },
       { id: "basilic", quantite: 5, unite: "g", optionnel: true },
       { id: "salade-verte", quantite: 1, unite: "pièce", optionnel: true },
-      { id: "yaourt-grec", quantite: 30, unite: "g", optionnel: true },
+      { id: "fromage-frais", quantite: 30, unite: "g", optionnel: true, ou: { id: "yaourt-grec", quantite: 30, unite: "g" } },
       { id: "citron-vert", quantite: 1, unite: "pièce", optionnel: true },
       { id: "sucre", quantite: 5, unite: "g", optionnel: true },
       { id: "pain", quantite: 2, unite: "tranche", optionnel: true },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Sauce pour la salade : mélanger le yaourt (du fromage frais à l'origine), le zeste du citron vert et le sucre, saler et poivrer.", "Cuire les pâtes dans l'eau bouillante salée, en ajoutant les pois gourmands pour la dernière minute de cuisson.", "Pendant ce temps, chauffer l'huile dans une grande poêle ou un wok et y faire revenir doucement 30 secondes l'ail haché et le piment émincé, sans laisser l'ail dorer.", "Ajouter les crevettes décortiquées et les cuire 3 min à feu vif en remuant, jusqu'à ce qu'elles soient roses. Ajouter les tomates cerises et cuire encore 3 min.", "Égoutter les pâtes et les pois, les mélanger aux crevettes, ajouter le basilic déchiré, saler et poivrer.", "Servir avec la salade arrosée de sauce et du pain chaud."]
+    etapes: ["Sauce pour la salade : mélanger le fromage frais (ou du yaourt grec), le zeste du citron vert et le sucre, saler et poivrer.", "Cuire les pâtes dans l'eau bouillante salée, en ajoutant les pois gourmands pour la dernière minute de cuisson.", "Pendant ce temps, chauffer l'huile dans une grande poêle ou un wok et y faire revenir doucement 30 secondes l'ail haché et le piment émincé, sans laisser l'ail dorer.", "Ajouter les crevettes décortiquées et les cuire 3 min à feu vif en remuant, jusqu'à ce qu'elles soient roses. Ajouter les tomates cerises et cuire encore 3 min.", "Égoutter les pâtes et les pois, les mélanger aux crevettes, ajouter le basilic déchiré, saler et poivrer.", "Servir avec la salade arrosée de sauce et du pain chaud."]
   },
   {
     id: "fettuccine-alfredo", nom: "Fettuccine Alfredo (crème, beurre et parmesan)", cuisine: "italienne",
@@ -222,7 +224,7 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "53064",
     ingredients: [
       { id: "pates", quantite: 200, unite: "g" },
-      { id: "creme-fraiche", quantite: 120, unite: "ml" },
+      { id: "creme-liquide", quantite: 120, unite: "ml", ou: { id: "creme-fraiche", quantite: 120, unite: "ml" } },
       { id: "beurre", quantite: 50, unite: "g" },
       { id: "parmesan", quantite: 50, unite: "g" },
       { id: "persil", quantite: 5, unite: "g", optionnel: true },
@@ -237,11 +239,11 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52777",
     ingredients: [
       { id: "pates", quantite: 175, unite: "g" },
-      { id: "mozzarella", quantite: 125, unite: "g" },
-      { id: "tomates-cerises", quantite: 150, unite: "g", ou: { id: "tomate", quantite: 2, unite: "pièce" } },
+      { id: "mozzarella", quantite: 100, unite: "g" },
+      { id: "tomates-cerises", quantite: 125, unite: "g", ou: { id: "tomate", quantite: 2, unite: "pièce" } },
       { id: "thon-en-boite", quantite: 1, unite: "boîte" },
-      { id: "olives-vertes", quantite: 25, unite: "g", optionnel: true, ou: { id: "olives-noires", quantite: 25, unite: "g" } },
-      { id: "basilic", quantite: 10, unite: "g", optionnel: true },
+      { id: "olives-vertes", quantite: 20, unite: "g", ou: { id: "olives-noires", quantite: 20, unite: "g" } },
+      { id: "basilic", quantite: 10, unite: "g" },
       { id: "huile-d-olive", quantite: 30, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
@@ -260,10 +262,10 @@ ajouterRecettes([
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 1, unite: "pièce" },
       { id: "celeri-branche", quantite: 1, unite: "pièce" },
-      { id: "fenouil", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "fenouil", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
-      { id: "orange", quantite: 1, unite: "pièce", optionnel: true },
-      { id: "origan", quantite: 1, unite: "g", optionnel: true, ou: { id: "herbes-de-provence", quantite: 1, unite: "g" } },
+      { id: "orange", quantite: 1, unite: "pièce" },
+      { id: "marjolaine", quantite: 1, unite: "g", ou: { id: "origan", quantite: 1, unite: "g" } },
       { id: "laurier", quantite: 1, unite: "pièce" },
       { id: "vin-blanc", quantite: 120, unite: "ml" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
@@ -274,7 +276,7 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 150 °C. Saler et poivrer les tranches de jarret, les rouler dans la farine et les tapoter pour enlever l'excédent.", "Dans une cocotte allant au four, chauffer l'huile avec un tiers du beurre. Faire dorer la viande 5 min de chaque côté, puis la réserver. Jeter le gras de la cocotte sans enlever les sucs.", "Faire fondre le reste du beurre et cuire doucement 6 min l'oignon, la carotte, le céleri et le fenouil coupés en petits dés, sans les colorer. Ajouter 1 gousse d'ail hachée, 2 bandes de zeste d'orange, l'origan (de la marjolaine à l'origine) et le laurier, et cuire 2 min.", "Verser le vin, porter à ébullition et réduire de moitié (5 min). Ajouter le bouillon cube dilué dans l'eau et les tomates hachées avec leur jus, puis réduire encore 10 min.", "Remettre la viande, os vers le haut, avec son jus. Couvrir d'une feuille de papier cuisson puis du couvercle et cuire au four environ 2 h, en retournant la viande à mi-cuisson, jusqu'à ce qu'elle se détache de l'os.", "Gremolata : mélanger le persil haché, l'autre gousse d'ail hachée finement et le zeste râpé du citron.", "Parsemer la viande de la moitié de la gremolata et remettre au four 15 min sans couvercle. Servir la viande nappée de sauce (dégraissée et réduite si besoin) et du reste de gremolata, avec du riz ou une purée."]
+    etapes: ["Préchauffer le four à 150 °C. Saler et poivrer les tranches de jarret, les rouler dans la farine et les tapoter pour enlever l'excédent.", "Dans une cocotte allant au four, chauffer l'huile avec un tiers du beurre. Faire dorer la viande 5 min de chaque côté, puis la réserver. Jeter le gras de la cocotte sans enlever les sucs.", "Faire fondre le reste du beurre et cuire doucement 6 min l'oignon, la carotte, le céleri et le fenouil coupés en petits dés, sans les colorer. Ajouter 1 gousse d'ail hachée, 2 bandes de zeste d'orange, la marjolaine (ou de l'origan) et le laurier, et cuire 2 min.", "Verser le vin, porter à ébullition et réduire de moitié (5 min). Ajouter le bouillon cube dilué dans l'eau et les tomates hachées avec leur jus, puis réduire encore 10 min.", "Remettre la viande, os vers le haut, avec son jus. Couvrir d'une feuille de papier cuisson puis du couvercle et cuire au four environ 2 h, en retournant la viande à mi-cuisson, jusqu'à ce qu'elle se détache de l'os.", "Gremolata : mélanger le persil haché, l'autre gousse d'ail hachée finement et le zeste râpé du citron.", "Parsemer la viande de la moitié de la gremolata et remettre au four 15 min sans couvercle. Servir la viande nappée de sauce (dégraissée et réduite si besoin) et du reste de gremolata, avec du riz ou une purée."]
   },
   {
     id: "pates-puttanesca-aux-sardines", nom: "Pâtes à la puttanesca aux sardines", cuisine: "italienne",
@@ -285,14 +287,14 @@ ajouterRecettes([
       { id: "sardines-en-boite", quantite: 1, unite: "boîte", ou: { id: "thon-en-boite", quantite: 1, unite: "boîte" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
-      { id: "piment-frais", quantite: 1, unite: "pièce", optionnel: true, ou: { id: "piment-en-poudre", quantite: 1, unite: "g" } },
-      { id: "sauce-tomate", quantite: 100, unite: "g" },
+      { id: "piment-frais", quantite: 1, unite: "pièce", ou: { id: "piment-en-poudre", quantite: 1, unite: "g" } },
+      { id: "concentre-de-tomate", quantite: 15, unite: "g", ou: { id: "sauce-tomate", quantite: 60, unite: "g" } },
       { id: "olives-noires", quantite: 40, unite: "g" },
       { id: "huile-d-olive", quantite: 15, unite: "ml" },
       { id: "parmesan", quantite: 20, unite: "g", optionnel: true },
       { id: "sel", quantite: 2, unite: "g" }
     ],
-    etapes: ["Cuire les pâtes (des spaghettis à l'origine) dans l'eau bouillante salée.", "Pendant ce temps, chauffer l'huile dans une poêle et faire revenir 3 à 4 min l'oignon haché, l'ail haché et le piment émincé.", "Ajouter la sauce tomate (des sardines à la sauce tomate à l'origine) et cuire 1 min, puis ajouter les sardines avec leur jus. Les émietter à la cuillère en bois, ajouter les olives et cuire encore quelques minutes.", "Égoutter les pâtes en gardant un peu d'eau de cuisson, les ajouter dans la poêle avec 2 ou 3 cuillères à soupe de cette eau et bien mélanger.", "Servir parsemé de copeaux de parmesan."]
+    etapes: ["Cuire les pâtes (des spaghettis à l'origine) dans l'eau bouillante salée.", "Pendant ce temps, chauffer l'huile dans une poêle et faire revenir 3 à 4 min l'oignon haché, l'ail haché et le piment émincé.", "Ajouter le concentré de tomate et cuire 1 min, puis ajouter les sardines avec leur jus. Les émietter à la cuillère en bois, ajouter les olives et cuire encore quelques minutes.", "Égoutter les pâtes en gardant un peu d'eau de cuisson, les ajouter dans la poêle avec 2 ou 3 cuillères à soupe de cette eau et bien mélanger.", "Servir parsemé de copeaux de parmesan."]
   },
   {
     id: "pizza-margherita", nom: "Pizza Margherita (pâte maison)", cuisine: "italienne",
@@ -300,39 +302,39 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "53014",
     ingredients: [
       { id: "farine", quantite: 225, unite: "g" },
-      { id: "levure-de-boulanger", quantite: 7, unite: "g" },
+      { id: "levure-de-boulanger", quantite: 15, unite: "g" },
       { id: "sucre", quantite: 5, unite: "g" },
       { id: "eau", quantite: 150, unite: "ml" },
       { id: "huile-d-olive", quantite: 15, unite: "ml" },
       { id: "sauce-tomate", quantite: 80, unite: "g" },
-      { id: "mozzarella", quantite: 125, unite: "g" },
-      { id: "origan", quantite: 1, unite: "g", optionnel: true, ou: { id: "herbes-de-provence", quantite: 1, unite: "g" } },
+      { id: "mozzarella", quantite: 70, unite: "g" },
+      { id: "origan", quantite: 1, unite: "g", ou: { id: "herbes-de-provence", quantite: 1, unite: "g" } },
       { id: "basilic", quantite: 3, unite: "g", optionnel: true },
       { id: "sel", quantite: 6, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 230 °C. Délayer le sucre et la levure dans l'eau tiède et laisser reposer 10 à 15 min dans un endroit chaud, jusqu'à ce qu'une mousse se forme.", "Mettre la farine et le sel dans un saladier, creuser un puits, y verser la levure et un filet d'huile, puis mélanger jusqu'à former une boule.", "Fariner généreusement le plan de travail et pétrir la pâte 10 min, jusqu'à ce qu'elle soit lisse et souple.", "L'étaler dans une plaque huilée. Étaler la sauce tomate jusqu'au bord, répartir la mozzarella en tranches, parsemer d'origan, poivrer et arroser d'un filet d'huile.", "Cuire 10 à 12 min, jusqu'à ce que le fromage commence à dorer. Poser les feuilles de basilic à la sortie du four."]
+    etapes: ["Préchauffer le four à 230 °C. Délayer le sucre et la levure fraîche émiettée (ou 5 g de levure sèche) dans l'eau tiède et laisser reposer 10 à 15 min dans un endroit chaud, jusqu'à ce qu'une mousse se forme.", "Mettre la farine et le sel dans un saladier, creuser un puits, y verser la levure et un filet d'huile, puis mélanger jusqu'à former une boule.", "Fariner généreusement le plan de travail et pétrir la pâte 10 min, jusqu'à ce qu'elle soit lisse et souple.", "L'étaler dans une plaque huilée. Étaler la sauce tomate jusqu'au bord, répartir la mozzarella en tranches, parsemer d'origan, poivrer et arroser d'un filet d'huile.", "Cuire 10 à 12 min, jusqu'à ce que le fromage commence à dorer. Poser les feuilles de basilic à la sortie du four."]
   },
   {
-    id: "gratin-de-pommes-de-terre-poulet-et-lardons", nom: "Gratin rapide de pommes de terre, poulet et lardons", cuisine: "italienne",
+    id: "gratin-de-pommes-de-terre-poulet-et-lardons", nom: "Gratin rapide de pommes de terre, poulet et bacon", cuisine: "italienne",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "TheMealDB", idSource: "52780",
     ingredients: [
       { id: "pomme-de-terre", quantite: 400, unite: "g" },
       { id: "oignon", quantite: 2, unite: "pièce" },
       { id: "huile-d-olive", quantite: 15, unite: "ml" },
-      { id: "bouillon-cube", quantite: 1, unite: "pièce", optionnel: true },
-      { id: "creme-fraiche", quantite: 150, unite: "ml" },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "creme-fraiche", quantite: 100, unite: "ml" },
       { id: "parmesan", quantite: 30, unite: "g" },
       { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
-      { id: "lardons", quantite: 75, unite: "g" },
+      { id: "bacon", quantite: 2, unite: "tranche", ou: { id: "lardons", quantite: 75, unite: "g" } },
       { id: "epinards", quantite: 100, unite: "g", optionnel: true },
       { id: "petits-pois", quantite: 100, unite: "g", optionnel: true },
       { id: "eau", quantite: 50, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Éplucher et couper finement les pommes de terre, puis les cuire 5 à 8 min dans l'eau bouillante salée : elles doivent rester un peu fermes.", "Pendant ce temps, émincer les oignons et les cuire dans un plat allant sur le feu (ou une poêle) avec l'huile et l'eau mélangée au bouillon cube, jusqu'à ce qu'ils soient tendres.", "Égoutter les pommes de terre et les étaler sur les oignons dans un plat à gratin. Saler, poivrer et napper de crème fraîche sans noyer. Râper le parmesan par-dessus et passer sous le gril du four jusqu'à ce que le dessus soit bien doré.", "Pendant le gratin, cuire les blancs de poulet à la poêle 5 à 7 min de chaque côté avec les lardons, et cuire les petits pois et les épinards quelques minutes à l'eau bouillante.", "Servir le gratin avec le poulet, les lardons et les légumes verts."]
+    etapes: ["Éplucher et couper finement les pommes de terre, puis les cuire 5 à 8 min dans l'eau bouillante salée : elles doivent rester un peu fermes.", "Pendant ce temps, émincer les oignons et les cuire dans un plat allant sur le feu (ou une poêle) avec l'huile et l'eau mélangée au bouillon cube, jusqu'à ce qu'ils soient tendres.", "Égoutter les pommes de terre et les étaler sur les oignons dans un plat à gratin. Saler, poivrer et napper de crème fraîche sans noyer. Râper le parmesan par-dessus et passer sous le gril du four jusqu'à ce que le dessus soit bien doré.", "Pendant le gratin, cuire les blancs de poulet à la poêle 5 à 7 min de chaque côté avec le bacon, et cuire les petits pois et les épinards quelques minutes à l'eau bouillante.", "Servir le gratin avec le poulet, le bacon et les légumes verts."]
   },
   {
     id: "ribollita", nom: "Ribollita (soupe toscane au chou kale et au pain)", cuisine: "italienne",
@@ -340,17 +342,17 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52811",
     ingredients: [
       { id: "haricots-blancs-en-boite", quantite: 1, unite: "boîte" },
-      { id: "chou-kale", quantite: 200, unite: "g", ou: { id: "chou", quantite: 200, unite: "g" } },
+      { id: "chou-kale", quantite: 225, unite: "g", ou: { id: "chou", quantite: 225, unite: "g" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 1, unite: "pièce" },
-      { id: "celeri-branche", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "celeri-branche", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "sauce-tomate", quantite: 200, unite: "g" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce", optionnel: true },
-      { id: "romarin", quantite: 1, unite: "g", optionnel: true },
+      { id: "romarin", quantite: 1, unite: "g", ou: { id: "herbes-de-provence", quantite: 1, unite: "g" } },
       { id: "thym", quantite: 1, unite: "g", optionnel: true },
       { id: "pain", quantite: 2, unite: "tranche" },
-      { id: "oignon-rouge", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "oignon-rouge", quantite: 1, unite: "pièce" },
       { id: "parmesan", quantite: 30, unite: "g" },
       { id: "huile-d-olive", quantite: 40, unite: "ml" },
       { id: "eau", quantite: 500, unite: "ml" },
@@ -364,24 +366,25 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 75, portions: 2,
     source: "TheMealDB", idSource: "52783",
     ingredients: [
-      { id: "pates", quantite: 200, unite: "g" },
+      { id: "pates", quantite: 170, unite: "g" },
       { id: "saucisse", quantite: 2, unite: "pièce" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "fenouil", quantite: 1, unite: "pièce" },
+      { id: "graines-de-fenouil", quantite: 2, unite: "g", optionnel: true },
       { id: "paprika", quantite: 1, unite: "g" },
       { id: "ail", quantite: 2, unite: "gousse" },
-      { id: "vin-rouge", quantite: 40, unite: "ml", optionnel: true, ou: { id: "vin-blanc", quantite: 40, unite: "ml" } },
-      { id: "sauce-tomate", quantite: 200, unite: "g" },
+      { id: "vin-rouge", quantite: 35, unite: "ml", ou: { id: "vin-blanc", quantite: 35, unite: "ml" } },
+      { id: "sauce-tomate", quantite: 150, unite: "g" },
       { id: "sucre", quantite: 2, unite: "g" },
-      { id: "olives-noires", quantite: 20, unite: "g", optionnel: true },
+      { id: "olives-noires", quantite: 20, unite: "g" },
       { id: "basilic", quantite: 20, unite: "g" },
-      { id: "parmesan", quantite: 15, unite: "g" },
+      { id: "pecorino", quantite: 10, unite: "g", ou: { id: "parmesan", quantite: 10, unite: "g" } },
       { id: "anchois", quantite: 5, unite: "g", optionnel: true },
       { id: "huile-d-olive", quantite: 40, unite: "ml" },
       { id: "eau", quantite: 50, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" }
     ],
-    etapes: ["Chauffer une cuillère d'huile dans une sauteuse avec couvercle. Ajouter les saucisses coupées en rondelles épaisses et les dorer 10 min à feu moyen-vif. Les réserver.", "Dans la même sauteuse, cuire l'oignon et le fenouil hachés 15 min en remuant de temps en temps, jusqu'à ce qu'ils soient tendres et caramélisés (garder les plumets verts du fenouil pour la fin).", "Ajouter le paprika et 1 gousse d'ail émincée, cuire 2 min, puis verser le vin et laisser bouillir 30 secondes.", "Ajouter la sauce tomate, le sucre, l'eau, les saucisses et une pincée de sel. Couvrir et mijoter 30 min, en enlevant le couvercle au bout de 10 min, jusqu'à ce que la sauce soit épaisse. Ajouter les olives coupées en deux.", "Pendant ce temps, cuire les pâtes dans l'eau bouillante salée. Pesto : mixer grossièrement le parmesan (du pecorino à l'origine), l'anchois, l'autre gousse d'ail, le reste d'huile et une cuillère d'eau, puis ajouter le basilic et mixer juste quelques secondes.", "Égoutter les pâtes, les répartir dans les assiettes, napper de sauce et ajouter une cuillerée de pesto. Parsemer de plumets de fenouil hachés."]
+    etapes: ["Chauffer une cuillère d'huile dans une sauteuse avec couvercle. Ajouter les saucisses coupées en rondelles épaisses et les dorer 10 min à feu moyen-vif. Les réserver.", "Dans la même sauteuse, cuire l'oignon et le fenouil hachés 15 min en remuant de temps en temps, jusqu'à ce qu'ils soient tendres et caramélisés (garder les plumets verts du fenouil pour la fin).", "Ajouter le paprika (fumé à l'origine), 1 gousse d'ail émincée et la moitié des graines de fenouil grillées et écrasées, cuire 2 min, puis verser le vin et laisser bouillir 30 secondes.", "Ajouter la sauce tomate, le sucre, l'eau, les saucisses et une pincée de sel. Couvrir et mijoter 30 min, en enlevant le couvercle au bout de 10 min, jusqu'à ce que la sauce soit épaisse. Ajouter les olives coupées en deux et le reste des graines de fenouil.", "Pendant ce temps, cuire les pâtes dans l'eau bouillante salée. Pesto : mixer grossièrement le pecorino (ou du parmesan), l'anchois, l'autre gousse d'ail, le reste d'huile et une cuillère d'eau, puis ajouter le basilic et mixer juste quelques secondes.", "Égoutter les pâtes, les répartir dans les assiettes, napper de sauce et ajouter une cuillerée de pesto. Parsemer de plumets de fenouil hachés."]
   },
   {
     id: "risotto-saumon-et-crevettes", nom: "Risotto au saumon et aux crevettes", cuisine: "italienne",
@@ -390,14 +393,14 @@ ajouterRecettes([
     ingredients: [
       { id: "riz", quantite: 150, unite: "g" },
       { id: "saumon", quantite: 150, unite: "g" },
-      { id: "crevettes", quantite: 150, unite: "g" },
+      { id: "crevettes", quantite: 240, unite: "g" },
       { id: "oignon", quantite: 1, unite: "pièce" },
-      { id: "beurre", quantite: 30, unite: "g" },
-      { id: "vin-blanc", quantite: 100, unite: "ml", optionnel: true },
+      { id: "beurre", quantite: 50, unite: "g" },
+      { id: "vin-blanc", quantite: 125, unite: "ml" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "citron", quantite: 1, unite: "pièce" },
-      { id: "asperges", quantite: 100, unite: "g", optionnel: true, ou: { id: "haricots-verts", quantite: 100, unite: "g" } },
-      { id: "parmesan", quantite: 30, unite: "g", optionnel: true },
+      { id: "asperges", quantite: 100, unite: "g", ou: { id: "haricots-verts", quantite: 100, unite: "g" } },
+      { id: "parmesan", quantite: 50, unite: "g" },
       { id: "eau", quantite: 800, unite: "ml" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
@@ -411,36 +414,36 @@ ajouterRecettes([
       { id: "cannelloni", quantite: 8, unite: "pièce", ou: { id: "feuilles-de-lasagne", quantite: 4, unite: "pièce" } },
       { id: "epinards", quantite: 250, unite: "g" },
       { id: "ricotta", quantite: 200, unite: "g" },
-      { id: "parmesan", quantite: 40, unite: "g" },
+      { id: "parmesan", quantite: 50, unite: "g" },
       { id: "noix-de-muscade", quantite: 1, unite: "g", optionnel: true },
-      { id: "sauce-tomate", quantite: 400, unite: "g" },
+      { id: "sauce-tomate", quantite: 350, unite: "g" },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "sucre", quantite: 10, unite: "g" },
       { id: "vinaigre", quantite: 10, unite: "ml" },
-      { id: "basilic", quantite: 5, unite: "g", optionnel: true },
-      { id: "creme-fraiche", quantite: 100, unite: "ml" },
+      { id: "basilic", quantite: 5, unite: "g" },
+      { id: "mascarpone", quantite: 130, unite: "g", ou: { id: "creme-fraiche", quantite: 130, unite: "ml" } },
       { id: "lait", quantite: 15, unite: "ml" },
       { id: "mozzarella", quantite: 60, unite: "g" },
       { id: "huile-d-olive", quantite: 15, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Sauce tomate : chauffer l'huile dans une casserole et faire revenir l'ail haché 1 min. Ajouter le sucre, le vinaigre (de vin rouge à l'origine), la sauce tomate, du sel et du poivre, et mijoter 20 min jusqu'à ce que la sauce épaississe. Ajouter le basilic et verser la sauce dans un plat à gratin.", "Mélanger la crème fraîche (du mascarpone à l'origine) avec le lait jusqu'à ce que ce soit lisse, saler, poivrer et réserver.", "Mettre les épinards dans une passoire et les arroser d'eau bouillante pour les faire tomber. Une fois tiédis, bien les presser pour enlever l'eau puis les hacher grossièrement.", "Mélanger les épinards avec la ricotta et la moitié du parmesan. Saler, poivrer et ajouter la muscade. Préchauffer le four à 200 °C.", "Remplir les cannelloni de farce (avec une poche ou un sac en plastique dont on coupe un coin ; avec des feuilles de lasagne précuites, poser la farce dessus et les rouler). Les poser côte à côte sur la sauce tomate et les napper de sauce à la crème.", "Parsemer du reste de parmesan et de la mozzarella en tranches. Cuire 30 à 35 min jusqu'à ce que ce soit doré et bouillonnant. Laisser reposer 5 min avant de servir."]
+    etapes: ["Sauce tomate : chauffer l'huile dans une casserole et faire revenir l'ail haché 1 min. Ajouter le sucre, le vinaigre (de vin rouge à l'origine), la sauce tomate, du sel et du poivre, et mijoter 20 min jusqu'à ce que la sauce épaississe. Ajouter le basilic et verser la sauce dans un plat à gratin.", "Battre le mascarpone (ou de la crème fraîche) avec le lait jusqu'à ce que ce soit lisse, saler, poivrer et réserver.", "Mettre les épinards dans une passoire et les arroser d'eau bouillante pour les faire tomber. Une fois tiédis, bien les presser pour enlever l'eau puis les hacher grossièrement.", "Mélanger les épinards avec la ricotta et la moitié du parmesan. Saler, poivrer et ajouter la muscade. Préchauffer le four à 200 °C.", "Remplir les cannelloni de farce (avec une poche ou un sac en plastique dont on coupe un coin ; avec des feuilles de lasagne précuites, poser la farce dessus et les rouler). Les poser côte à côte sur la sauce tomate et les napper de sauce à la crème.", "Parsemer du reste de parmesan et de la mozzarella en tranches. Cuire 30 à 35 min jusqu'à ce que ce soit doré et bouillonnant. Laisser reposer 5 min avant de servir."]
   },
   {
     id: "linguine-a-la-courge-rotie-et-sauge", nom: "Linguine à la courge rôtie et à la sauge", cuisine: "italienne",
     difficulte: "facile", tempsMinutes: 50, portions: 2,
     source: "TheMealDB", idSource: "52866",
     ingredients: [
-      { id: "potiron", quantite: 200, unite: "g", ou: { id: "patate-douce", quantite: 200, unite: "g" } },
-      { id: "pates", quantite: 180, unite: "g" },
+      { id: "courge-butternut", quantite: 175, unite: "g", ou: { id: "potiron", quantite: 175, unite: "g" } },
+      { id: "pates", quantite: 175, unite: "g" },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "huile-d-olive", quantite: 30, unite: "ml" },
-      { id: "sauge", quantite: 5, unite: "g", optionnel: true },
+      { id: "sauge", quantite: 5, unite: "g" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 200 °C. Mettre la courge (butternut à l'origine) en cubes et les gousses d'ail sur une plaque, arroser de 2 cuillères d'huile et rôtir 35 à 40 min, jusqu'à ce que ce soit tendre. Saler, poivrer.", "Cuire les pâtes dans l'eau bouillante salée et les égoutter en gardant environ 200 ml d'eau de cuisson.", "Mixer la courge et l'ail épluché avec l'eau de cuisson gardée pour obtenir une sauce.", "Chauffer le reste d'huile dans une poêle et y faire frire les feuilles de sauge jusqu'à ce qu'elles soient croustillantes, puis les égoutter sur du papier absorbant.", "Verser les pâtes et la sauce dans la poêle et réchauffer en mélangeant. Servir parsemé de sauge frite."]
+    etapes: ["Préchauffer le four à 200 °C. Mettre la courge butternut (ou du potiron) en cubes et les gousses d'ail sur une plaque, arroser de 2 cuillères d'huile et rôtir 35 à 40 min, jusqu'à ce que ce soit tendre. Saler, poivrer.", "Cuire les pâtes dans l'eau bouillante salée et les égoutter en gardant environ 200 ml d'eau de cuisson.", "Mixer la courge et l'ail épluché avec l'eau de cuisson gardée pour obtenir une sauce.", "Chauffer le reste d'huile dans une poêle et y faire frire les feuilles de sauge jusqu'à ce qu'elles soient croustillantes, puis les égoutter sur du papier absorbant.", "Verser les pâtes et la sauce dans la poêle et réchauffer en mélangeant. Servir parsemé de sauge frite."]
   },
   {
     id: "ragu-de-canard-a-la-venitienne", nom: "Ragù de canard à la vénitienne", cuisine: "italienne",
@@ -454,9 +457,9 @@ ajouterRecettes([
       { id: "cannelle", quantite: 2, unite: "g" },
       { id: "farine", quantite: 5, unite: "g" },
       { id: "vin-rouge", quantite: 100, unite: "ml", ou: { id: "vin-blanc", quantite: 100, unite: "ml" } },
-      { id: "sauce-tomate", quantite: 400, unite: "g" },
+      { id: "sauce-tomate", quantite: 300, unite: "g" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
-      { id: "romarin", quantite: 1, unite: "g", optionnel: true, ou: { id: "thym", quantite: 1, unite: "g" } },
+      { id: "romarin", quantite: 1, unite: "g", ou: { id: "thym", quantite: 1, unite: "g" } },
       { id: "laurier", quantite: 1, unite: "pièce" },
       { id: "sucre", quantite: 2, unite: "g" },
       { id: "lait", quantite: 15, unite: "ml" },
@@ -480,15 +483,15 @@ ajouterRecettes([
       { id: "epinards", quantite: 100, unite: "g" },
       { id: "coriandre", quantite: 5, unite: "g", optionnel: true },
       { id: "bouillon-cube", quantite: 1, unite: "pièce", optionnel: true },
-      { id: "beurre", quantite: 20, unite: "g", ou: { id: "huile-d-olive", quantite: 20, unite: "ml" } },
-      { id: "farine", quantite: 25, unite: "g" },
-      { id: "lait", quantite: 200, unite: "ml" },
+      { id: "margarine", quantite: 20, unite: "g", ou: { id: "beurre", quantite: 20, unite: "g" } },
+      { id: "farine", quantite: 20, unite: "g" },
+      { id: "lait-de-soja", quantite: 150, unite: "ml", ou: { id: "lait", quantite: 150, unite: "ml" } },
       { id: "moutarde", quantite: 5, unite: "g" },
       { id: "vinaigre", quantite: 5, unite: "ml" },
       { id: "eau", quantite: 500, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 180 °C.", "Cuire 5 à 7 min dans l'eau bouillante la carotte, l'oignon et la courgette coupés en dés. Ajouter les lentilles rincées et le bouillon cube, et laisser cuire doucement environ 20 min en remuant, jusqu'à ce que les lentilles soient tendres. Saler, poivrer.", "Blanchir les épinards quelques minutes, les égoutter et réserver. Cuire ensuite les feuilles de lasagne dans l'eau bouillante, puis les égoutter.", "Sauce : faire fondre le beurre (végétal pour une version végane), ajouter la farine, puis verser le lait (de soja à l'origine) peu à peu avec la moutarde et le vinaigre. Cuire en remuant jusqu'à ce que la sauce soit lisse et épaisse.", "Dans un plat, alterner lentilles aux légumes, épinards, feuilles de lasagne et sauce, en finissant par la sauce. Parsemer de coriandre.", "Cuire au four environ 25 min."]
+    etapes: ["Préchauffer le four à 180 °C.", "Cuire 5 à 7 min dans l'eau bouillante la carotte, l'oignon et la courgette coupés en dés. Ajouter les lentilles rincées et le bouillon cube, et laisser cuire doucement environ 20 min en remuant, jusqu'à ce que les lentilles soient tendres. Saler, poivrer.", "Blanchir les épinards quelques minutes, les égoutter et réserver. Cuire ensuite les feuilles de lasagne dans l'eau bouillante, puis les égoutter.", "Sauce : faire fondre la margarine (ou du beurre, mais la recette n'est alors plus végane), ajouter la farine, puis verser le lait de soja (ou du lait) peu à peu avec la moutarde et le vinaigre. Cuire en remuant jusqu'à ce que la sauce soit lisse et épaisse.", "Dans un plat, alterner lentilles aux légumes, épinards, feuilles de lasagne et sauce, en finissant par la sauce. Parsemer de coriandre.", "Cuire au four environ 25 min."]
   }
 ]);
