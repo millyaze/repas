@@ -81,7 +81,7 @@ ajouterRecettes([
       { id: "citron", quantite: 1, unite: "pièce" },
       { id: "orange", quantite: 1, unite: "pièce", optionnel: true },
       { id: "miel", quantite: 90, unite: "g" },
-      { id: "fruits-rouges", quantite: 100, unite: "g", optionnel: true }
+      { id: "fruits-rouges-surgeles", quantite: 100, unite: "g", optionnel: true }
     ],
     etapes: ["Préchauffer le four à 160 °C (140 °C en chaleur tournante). Écraser les biscuits et la plupart des amandes dans un sac congélation avec un rouleau à pâtisserie.", "Mélanger avec le beurre fondu et tasser au fond de 2 grands ramequins (ou d'un petit plat). Cuire 10 min jusqu'à ce que le fond soit croustillant.", "Mélanger le yaourt et le mascarpone, puis ajouter l'œuf en fouettant. Ajouter les zestes du citron et de l'orange, puis les deux tiers du miel.", "Verser sur le fond de biscuits, couvrir de papier aluminium sans serrer et cuire 35 min. Retirer l'aluminium et cuire encore 10 min, jusqu'à ce que le dessus soit légèrement doré et ferme, avec juste un léger tremblement au centre.", "Laisser refroidir (se garde 2 jours au frais). Servir parsemé du reste des amandes, arrosé du reste de miel, avec des fruits frais."]
   },

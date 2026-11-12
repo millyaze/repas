@@ -95,7 +95,7 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "53315",
     ingredients: [
       { id: "chou-rouge", quantite: 350, unite: "g", ou: { id: "chou", quantite: 350, unite: "g" } },
-      { id: "kabanos", quantite: 4, unite: "pièce", ou: { id: "saucisse", quantite: 3, unite: "pièce" } },
+      { id: "kabanos", quantite: 100, unite: "g", ou: { id: "saucisse", quantite: 3, unite: "pièce" } },
       { id: "oignon-rouge", quantite: 1, unite: "pièce" },
       { id: "pomme", quantite: 1, unite: "pièce" },
       { id: "vinaigre-de-vin-rouge", quantite: 60, unite: "ml", ou: { id: "vinaigre", quantite: 60, unite: "ml" } },
