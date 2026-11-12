@@ -469,6 +469,17 @@ const INGREDIENTS = [
   { id: "eau-de-rose",          nom: "Eau de rose",          unite: "ml" },
   { id: "pate-kadaif",          nom: "Pâte kadaïf",          unite: "g" },
   { id: "falafels",             nom: "Falafels",             unite: "pièce" },
+  // (ingrédients d'origine remis, version fidèle à TheMealDB)
+  { id: "piment-de-cayenne",    nom: "Piment de Cayenne",    unite: "g" },
+  { id: "paprika-fume",         nom: "Paprika fumé",         unite: "g" },
+  { id: "coriandre-moulue",     nom: "Coriandre moulue",     unite: "g" },
+  { id: "gingembre-en-poudre",  nom: "Gingembre en poudre",  unite: "g" },
+  { id: "epices-kabsa",         nom: "Épices kabsa",         unite: "g" },
+  { id: "colorant-alimentaire", nom: "Colorant alimentaire", unite: "g" },
+  { id: "fromage-fondu",        nom: "Fromage fondu",        unite: "g" },
+  { id: "concentre-de-tomate",  nom: "Concentré de tomate",  unite: "g" },
+  { id: "tomates-concassees",   nom: "Tomates concassées",   unite: "g" },
+  { id: "haricots-blancs-secs", nom: "Haricots blancs secs", unite: "g" },
   // --- Ajoutés pour : ouest-sud --- (cuisines irlandaise, portugaise, uruguayenne)
   { id: "cidre",                nom: "Cidre",                unite: "ml" },
   { id: "confiture-de-lait",    nom: "Confiture de lait",    unite: "g" },
