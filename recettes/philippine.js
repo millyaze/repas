@@ -10,7 +10,7 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 120, portions: 2,
     source: "TheMealDB", idSource: "53071",
     ingredients: [
-      { id: "steak-de-boeuf", quantite: 400, unite: "g" },
+      { id: "boeuf-a-braiser", quantite: 400, unite: "g", ou: { id: "steak-de-boeuf", quantite: 400, unite: "g" } },
       { id: "sauce-soja", quantite: 45, unite: "ml" },
       { id: "vinaigre", quantite: 5, unite: "ml" },
       { id: "laurier", quantite: 2, unite: "pièce" },
@@ -20,7 +20,7 @@ ajouterRecettes([
       { id: "eau", quantite: 400, unite: "ml" },
       { id: "pomme-de-terre", quantite: 200, unite: "g" },
       { id: "carotte", quantite: 1, unite: "pièce" },
-      { id: "huile-de-tournesol", quantite: 40, unite: "ml" },
+      { id: "huile-d-olive", quantite: 40, unite: "ml" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "beurre", quantite: 20, unite: "g" },
@@ -33,7 +33,7 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "53070",
     ingredients: [
-      { id: "steak-de-boeuf", quantite: 400, unite: "g" },
+      { id: "boeuf-a-braiser", quantite: 400, unite: "g", ou: { id: "steak-de-boeuf", quantite: 400, unite: "g" } },
       { id: "huile-d-olive", quantite: 20, unite: "ml" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 3, unite: "gousse" },
@@ -56,7 +56,7 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 110, portions: 2,
     source: "TheMealDB", idSource: "53068",
     ingredients: [
-      { id: "steak-de-boeuf", quantite: 450, unite: "g" },
+      { id: "boeuf-a-braiser", quantite: 450, unite: "g", ou: { id: "steak-de-boeuf", quantite: 450, unite: "g" } },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "sauce-tomate", quantite: 120, unite: "g" },
@@ -81,7 +81,7 @@ ajouterRecettes([
       { id: "citron", quantite: 1, unite: "pièce", ou: { id: "citron-vert", quantite: 2, unite: "pièce" } },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "oignon", quantite: 2, unite: "pièce" },
-      { id: "huile-de-tournesol", quantite: 30, unite: "ml" },
+      { id: "huile-d-olive", quantite: 30, unite: "ml" },
       { id: "eau", quantite: 150, unite: "ml" },
       { id: "sel", quantite: 1, unite: "g" },
       { id: "poivre", quantite: 2, unite: "g" }
@@ -111,7 +111,7 @@ ajouterRecettes([
       { id: "aubergine", quantite: 2, unite: "pièce" },
       { id: "sucre", quantite: 25, unite: "g" },
       { id: "ail", quantite: 8, unite: "gousse" },
-      { id: "huile-de-tournesol", quantite: 45, unite: "ml" },
+      { id: "huile-d-olive", quantite: 45, unite: "ml" },
       { id: "porc-hache", quantite: 120, unite: "g", ou: { id: "boeuf-hache", quantite: 120, unite: "g" } },
       { id: "vinaigre-de-riz", quantite: 45, unite: "ml", ou: { id: "vinaigre", quantite: 30, unite: "ml" } },
       { id: "sauce-soja", quantite: 30, unite: "ml" },
@@ -130,7 +130,7 @@ ajouterRecettes([
       { id: "aubergine", quantite: 2, unite: "pièce" },
       { id: "lait-de-coco", quantite: 200, unite: "ml" },
       { id: "citron", quantite: 1, unite: "pièce" },
-      { id: "piment-en-poudre", quantite: 1, unite: "g", optionnel: true },
+      { id: "piment-en-poudre", quantite: 1, unite: "g" },
       { id: "oignon-nouveau", quantite: 2, unite: "pièce" },
       { id: "sel", quantite: 2, unite: "g" }
     ],
@@ -143,7 +143,7 @@ ajouterRecettes([
     ingredients: [
       { id: "aubergine", quantite: 2, unite: "pièce" },
       { id: "oeuf", quantite: 2, unite: "pièce" },
-      { id: "huile-de-tournesol", quantite: 20, unite: "ml" },
+      { id: "huile-d-olive", quantite: 20, unite: "ml" },
       { id: "sel", quantite: 1, unite: "g" }
     ],
     etapes: ["Griller les aubergines (longues et fines de préférence) jusqu'à ce que la peau soit presque noire.", "Les laisser tiédir puis retirer la peau en gardant la queue.", "Battre les œufs avec le sel dans une assiette creuse. Poser chaque aubergine à plat et l'écraser à la fourchette en éventail.", "Tremper les aubergines écrasées dans l'œuf battu.", "Chauffer l'huile dans une poêle et cuire les aubergines 3 à 4 min de chaque côté à feu moyen, en versant le reste de l'œuf dessus. Servir avec du riz et du ketchup."]
