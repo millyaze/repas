@@ -291,6 +291,12 @@ const INGREDIENTS = [
   { id: "boulgour",               nom: "Boulgour",               unite: "g" },
   { id: "feuilles-de-vigne",      nom: "Feuilles de vigne",      unite: "pièce" },
   { id: "mloukhia-corete",        nom: "Mloukhia (corète)",      unite: "g" },
+  { id: "concentre-de-tomate",    nom: "Concentré de tomate",    unite: "g" },
+  { id: "gingembre-en-poudre",    nom: "Gingembre en poudre",    unite: "g" },
+  { id: "frik",                   nom: "Frik",                   unite: "g" },
+  { id: "gouda",                  nom: "Gouda",                  unite: "g" },
+  { id: "pois-chiches-secs",      nom: "Pois chiches secs",      unite: "g" },
+  { id: "courge-butternut",       nom: "Courge butternut",       unite: "g" },
   // --- Ajoutés pour : asie-oceanie ---
   // Cuisines australienne, philippine et malaisienne
   { id: "noix-de-coco-rapee",   nom: "Noix de coco râpée",   unite: "g" },
