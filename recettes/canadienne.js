@@ -31,16 +31,16 @@ ajouterRecettes([
     ingredients: [
       { id: "pomme-de-terre", quantite: 500, unite: "g" },
       { id: "huile-d-olive", quantite: 20, unite: "ml" },
-      { id: "lardons", quantite: 80, unite: "g" },
+      { id: "bacon", quantite: 2, unite: "tranche", ou: { id: "lardons", quantite: 50, unite: "g" } },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "sirop-d-erable", quantite: 15, unite: "ml", ou: { id: "miel", quantite: 15, unite: "g" } },
-      { id: "paprika", quantite: 1, unite: "g", optionnel: true },
       { id: "persil", quantite: 5, unite: "g", optionnel: true },
+      { id: "piment-de-la-jamaique", quantite: 1, unite: "g", optionnel: true },
       { id: "oeuf", quantite: 2, unite: "pièce", optionnel: true },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Laver les pommes de terre et les couper en dés moyens. Les garder dans un bol d'eau froide le temps de chauffer la poêle.", "Chauffer l'huile dans une grande poêle à feu moyen-vif. Égoutter les pommes de terre, les mettre dans la poêle, saler, poivrer et ajouter le paprika. Cuire 10 min en remuant souvent, jusqu'à ce qu'elles dorent.", "Ajouter les lardons : leur gras finit de cuire les pommes de terre. Cuire 5 à 6 min, jusqu'à ce qu'ils soient croustillants.", "Baisser le feu, ajouter l'ail haché et le persil, et cuire 1 min.", "Juste avant de servir, arroser de sirop d'érable et remuer 1 min pour caraméliser. Servir chaud avec un œuf au plat par personne."]
+    etapes: ["Laver les pommes de terre et les couper en dés moyens. Les garder dans un bol d'eau froide le temps de chauffer la poêle.", "Chauffer l'huile dans une grande poêle à feu moyen-vif. Égoutter les pommes de terre, les mettre dans la poêle, saler, poivrer et ajouter une pincée de piment de la Jamaïque. Cuire 10 min en remuant souvent, jusqu'à ce qu'elles dorent.", "Ajouter le bacon coupé en petits morceaux (plus facile à couper s'il sort du congélateur) : son gras finit de cuire les pommes de terre. Cuire 5 à 6 min, jusqu'à ce qu'il soit croustillant.", "Baisser le feu, ajouter l'ail haché et le persil, et cuire 1 min.", "Juste avant de servir, arroser de sirop d'érable et remuer 1 min pour caraméliser. Servir chaud avec un œuf au plat par personne."]
   },
   {
     id: "tartelettes-au-beurre", nom: "Tartelettes au beurre (butter tarts)", cuisine: "canadienne",
@@ -49,28 +49,28 @@ ajouterRecettes([
     ingredients: [
       { id: "pate-brisee", quantite: 1, unite: "pièce" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
-      { id: "cassonade", quantite: 90, unite: "g", ou: { id: "sucre", quantite: 90, unite: "g" } },
+      { id: "sucre-muscovado", quantite: 90, unite: "g", ou: { id: "cassonade", quantite: 90, unite: "g" } },
       { id: "raisins-secs", quantite: 50, unite: "g" },
       { id: "beurre", quantite: 25, unite: "g" },
       { id: "creme-fraiche", quantite: 10, unite: "ml" },
       { id: "extrait-de-vanille", quantite: 3, unite: "ml", optionnel: true },
-      { id: "noix", quantite: 25, unite: "g", optionnel: true }
+      { id: "noix", quantite: 25, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 190 °C (170 °C chaleur tournante).", "Étaler la pâte un peu plus finement, y découper une dizaine de ronds de 7 à 8 cm et en garnir un moule à tartelettes (ou à muffins, sans trop remonter sur les bords).", "Dans une casserole, battre l'œuf puis ajouter la cassonade, les raisins, le beurre, la crème et la vanille. Cuire 3 à 4 min à feu doux en remuant sans arrêt, jusqu'à ce que le beurre fonde et que le mélange épaississe et nappe la cuillère (attention, ça brûle vite).", "Retirer du feu et ajouter les noix concassées. Remplir les fonds de tarte à ras bord.", "Cuire 15 à 18 min, jusqu'à ce que la garniture soit prise et dorée. Laisser tiédir quelques minutes avant de démouler. Se mangent tièdes ou froides (une dizaine de tartelettes, pour plusieurs goûters)."]
+    etapes: ["Préchauffer le four à 190 °C (170 °C chaleur tournante).", "Étaler la pâte un peu plus finement, y découper une dizaine de ronds de 7 à 8 cm et en garnir un moule à tartelettes (ou à muffins, sans trop remonter sur les bords).", "Dans une casserole, battre l'œuf puis ajouter le sucre muscovado, les raisins, le beurre, la crème et la vanille. Cuire 3 à 4 min à feu doux en remuant sans arrêt, jusqu'à ce que le beurre fonde et que le mélange épaississe et nappe la cuillère (attention, ça brûle vite).", "Retirer du feu et ajouter les noix concassées. Remplir les fonds de tarte à ras bord.", "Cuire 15 à 18 min, jusqu'à ce que la garniture soit prise et dorée. Laisser tiédir quelques minutes avant de démouler. Se mangent tièdes ou froides (une dizaine de tartelettes, pour plusieurs goûters)."]
   },
   {
     id: "tourtiere", nom: "Tourtière (tourte à la viande du Québec)", cuisine: "canadienne",
     difficulte: "moyen", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "53343",
     ingredients: [
-      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "huile-de-colza", quantite: 15, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 15, unite: "ml" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "boeuf-hache", quantite: 225, unite: "g" },
       { id: "porc-hache", quantite: 225, unite: "g" },
-      { id: "thym", quantite: 1, unite: "g", ou: { id: "herbes-de-provence", quantite: 1, unite: "g" } },
+      { id: "sarriette", quantite: 1, unite: "g", ou: { id: "thym", quantite: 1, unite: "g" } },
+      { id: "clous-de-girofle", quantite: 2, unite: "pièce" },
       { id: "noix-de-muscade", quantite: 1, unite: "g" },
-      { id: "cannelle", quantite: 1, unite: "g", optionnel: true },
       { id: "laurier", quantite: 1, unite: "pièce", optionnel: true },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 125, unite: "ml" },
@@ -80,7 +80,7 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Dans une grande poêle, chauffer l'huile et faire revenir l'oignon et l'ail hachés 5 min.", "Ajouter le bœuf, le porc (sans porc : 450 g de bœuf en tout), le thym (il remplace la sarriette), la muscade, la cannelle et le laurier. Cuire jusqu'à ce que la viande soit dorée.", "Ajouter l'eau et le bouillon cube émietté, porter à frémissement puis baisser le feu. Râper la pomme de terre directement dans la poêle et mélanger. Cuire environ 15 min, jusqu'à ce que le liquide soit presque absorbé.", "Retirer le laurier, saler, poivrer et laisser refroidir complètement (la garniture froide donne une pâte plus croustillante).", "Préchauffer le four à 190 °C. Garnir un moule à tarte de 20 cm avec une pâte, ajouter la viande et l'étaler. Couvrir avec la seconde pâte, souder les bords en les pinçant et faire un trou au centre pour la vapeur.", "Badigeonner d'œuf battu et cuire environ 45 min, jusqu'à ce que la pâte soit bien dorée. Laisser reposer 15 min avant de couper (4 parts : les restes se mangent froids le lendemain)."]
+    etapes: ["Dans une grande poêle, chauffer l'huile et faire revenir l'oignon et l'ail hachés 5 min.", "Ajouter le bœuf, le porc (sans porc : 450 g de bœuf en tout), la sarriette (ou du thym), les clous de girofle écrasés en poudre, la muscade et le laurier. Cuire jusqu'à ce que la viande soit dorée.", "Ajouter l'eau et le bouillon cube émietté, porter à frémissement puis baisser le feu. Râper la pomme de terre directement dans la poêle et mélanger. Cuire environ 15 min, jusqu'à ce que le liquide soit presque absorbé.", "Retirer le laurier, saler, poivrer et laisser refroidir complètement (la garniture froide donne une pâte plus croustillante).", "Préchauffer le four à 190 °C. Garnir un moule à tarte de 20 cm avec une pâte, ajouter la viande et l'étaler. Couvrir avec la seconde pâte, souder les bords en les pinçant et faire un trou au centre pour la vapeur.", "Badigeonner d'œuf battu et cuire environ 45 min, jusqu'à ce que la pâte soit bien dorée. Laisser reposer 15 min avant de couper (4 parts : les restes se mangent froids le lendemain)."]
   },
   {
     id: "carres-aux-dattes", nom: "Carrés aux dattes", cuisine: "canadienne",
@@ -108,14 +108,14 @@ ajouterRecettes([
       { id: "cassonade", quantite: 50, unite: "g", ou: { id: "sucre", quantite: 50, unite: "g" } },
       { id: "levure-chimique", quantite: 5, unite: "g" },
       { id: "cannelle", quantite: 2, unite: "g" },
-      { id: "gingembre", quantite: 2, unite: "g", optionnel: true },
-      { id: "noix-de-muscade", quantite: 1, unite: "g", optionnel: true },
+      { id: "gingembre-en-poudre", quantite: 2, unite: "g", ou: { id: "gingembre", quantite: 5, unite: "g" } },
+      { id: "piment-de-la-jamaique", quantite: 1, unite: "g", ou: { id: "noix-de-muscade", quantite: 1, unite: "g" } },
       { id: "raisins-secs", quantite: 80, unite: "g" },
       { id: "beurre", quantite: 35, unite: "g" },
       { id: "melasse", quantite: 85, unite: "g", ou: { id: "miel", quantite: 85, unite: "g" } },
       { id: "eau", quantite: 10, unite: "ml" }
     ],
-    etapes: ["Dans un saladier, mélanger la farine, la cassonade, la levure et les épices (cannelle, gingembre en poudre ou râpé, muscade : ils remplacent le piment de la Jamaïque). Ajouter les raisins et bien les enrober de farine.", "Ajouter le beurre fondu, la mélasse et l'eau, et mélanger à la cuillère en bois jusqu'à former une boule.", "Mettre la boule dans un torchon propre fariné, fermer avec une ficelle en laissant 2 à 3 cm de jeu pour qu'elle gonfle (ou la mettre dans un bol beurré couvert de papier aluminium bien serré).", "Plonger dans une grande casserole d'eau frémissante (le bol, lui, à mi-hauteur d'eau, couvercle posé) et cuire 1 h 15 à 1 h 30, en rajoutant de l'eau chaude si besoin, jusqu'à ce que le pudding soit ferme.", "Laisser tiédir avant de retirer le torchon. Couper en tranches comme un gâteau et servir chaud, nappé de mélasse tiède ou d'une sauce beurre-mélasse (mélasse, beurre et un peu d'eau chauffés ensemble)."]
+    etapes: ["Dans un saladier, mélanger la farine, la cassonade, la levure et les épices (cannelle, gingembre en poudre, piment de la Jamaïque). Ajouter les raisins et bien les enrober de farine.", "Ajouter le beurre fondu, la mélasse et l'eau, et mélanger à la cuillère en bois jusqu'à former une boule.", "Mettre la boule dans un torchon propre fariné, fermer avec une ficelle en laissant 2 à 3 cm de jeu pour qu'elle gonfle (ou la mettre dans un bol beurré couvert de papier aluminium bien serré).", "Plonger dans une grande casserole d'eau frémissante (le bol, lui, à mi-hauteur d'eau, couvercle posé) et cuire 1 h 15 à 1 h 30, en rajoutant de l'eau chaude si besoin, jusqu'à ce que le pudding soit ferme.", "Laisser tiédir avant de retirer le torchon. Couper en tranches comme un gâteau et servir chaud, nappé de mélasse tiède ou d'une sauce beurre-mélasse (mélasse, beurre et un peu d'eau chauffés ensemble)."]
   },
   {
     id: "tarte-flapper", nom: "Tarte flapper (crème vanille et meringue)", cuisine: "canadienne",
@@ -130,10 +130,10 @@ ajouterRecettes([
       { id: "fecule", quantite: 15, unite: "g" },
       { id: "oeuf", quantite: 2, unite: "pièce" },
       { id: "extrait-de-vanille", quantite: 3, unite: "ml", optionnel: true },
-      { id: "citron", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "creme-de-tartre", quantite: 1, unite: "g", optionnel: true, ou: { id: "citron", quantite: 1, unite: "pièce" } },
       { id: "sel", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 180 °C. Fond : écraser les biscuits en miettes fines et les mélanger avec le beurre fondu, 25 g de sucre et la cannelle. Garder 2 cuillères à soupe de miettes de côté et tasser le reste au fond et sur les bords d'un petit moule à tarte (18 cm). Cuire 10 min.", "Crème : séparer les blancs des jaunes. Dans une casserole, mélanger le lait, 70 g de sucre, la fécule, les jaunes, la vanille et le sel. Cuire à feu moyen en remuant sans arrêt jusqu'à ce que ça bouillonne et épaississe comme un flan. Laisser tiédir.", "Meringue : monter les blancs en neige ferme avec quelques gouttes de jus de citron, puis ajouter le reste du sucre petit à petit en battant jusqu'à ce qu'elle soit brillante.", "Verser la crème sur le fond, couvrir d'une épaisse couche de meringue en formant des petites pointes, et parsemer des miettes gardées de côté.", "Cuire environ 10 min en surveillant, jusqu'à ce que la meringue soit dorée. Mettre au frais et manger dans les heures qui suivent (la meringue ramollit ensuite)."]
+    etapes: ["Préchauffer le four à 180 °C. Fond : écraser les biscuits en miettes fines et les mélanger avec le beurre fondu, 25 g de sucre et la cannelle. Garder 2 cuillères à soupe de miettes de côté et tasser le reste au fond et sur les bords d'un petit moule à tarte (18 cm). Cuire 10 min.", "Crème : séparer les blancs des jaunes. Dans une casserole, mélanger le lait, 70 g de sucre, la fécule, les jaunes, la vanille et le sel. Cuire à feu moyen en remuant sans arrêt jusqu'à ce que ça bouillonne et épaississe comme un flan. Laisser tiédir.", "Meringue : monter les blancs en neige ferme avec la crème de tartre (ou quelques gouttes de jus de citron), puis ajouter le reste du sucre petit à petit en battant jusqu'à ce qu'elle soit brillante.", "Verser la crème sur le fond, couvrir d'une épaisse couche de meringue en formant des petites pointes, et parsemer des miettes gardées de côté.", "Cuire environ 10 min en surveillant, jusqu'à ce que la meringue soit dorée. Mettre au frais et manger dans les heures qui suivent (la meringue ramollit ensuite)."]
   },
   {
     id: "hodge-podge", nom: "Hodge podge (légumes nouveaux mijotés au lait)", cuisine: "canadienne",
@@ -148,7 +148,7 @@ ajouterRecettes([
       { id: "lait", quantite: 350, unite: "ml" },
       { id: "creme-fraiche", quantite: 60, unite: "ml" },
       { id: "ciboulette", quantite: 5, unite: "g" },
-      { id: "aneth", quantite: 3, unite: "g", optionnel: true },
+      { id: "aneth", quantite: 3, unite: "g" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
@@ -178,11 +178,11 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 170, portions: 2,
     source: "TheMealDB", idSource: "53335",
     ingredients: [
-      { id: "boeuf-a-bouillir", quantite: 400, unite: "g", ou: { id: "poitrine-de-porc", quantite: 400, unite: "g" } },
+      { id: "boeuf-a-braiser", quantite: 400, unite: "g", ou: { id: "poitrine-de-porc", quantite: 400, unite: "g" } },
       { id: "pois-casses", quantite: 100, unite: "g", ou: { id: "lentilles", quantite: 100, unite: "g" } },
       { id: "chou", quantite: 500, unite: "g" },
       { id: "carotte", quantite: 2, unite: "pièce" },
-      { id: "navet", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "navet", quantite: 1, unite: "pièce" },
       { id: "pomme-de-terre", quantite: 400, unite: "g" },
       { id: "beurre", quantite: 20, unite: "g" },
       { id: "eau", quantite: 2500, unite: "ml" },
@@ -193,21 +193,21 @@ ajouterRecettes([
   },
   {
     id: "feves-au-lard-a-la-melasse", nom: "Fèves au lard à la mélasse", cuisine: "canadienne",
-    difficulte: "facile", tempsMinutes: 110, portions: 2,
+    difficulte: "facile", tempsMinutes: 240, portions: 2,
     source: "TheMealDB", idSource: "53336",
     ingredients: [
-      { id: "haricots-blancs-en-boite", quantite: 2, unite: "boîte" },
-      { id: "lardons", quantite: 100, unite: "g" },
+      { id: "haricots-blancs-secs", quantite: 150, unite: "g", ou: { id: "haricots-blancs-en-boite", quantite: 2, unite: "boîte" } },
+      { id: "bacon", quantite: 4, unite: "tranche", ou: { id: "lardons", quantite: 100, unite: "g" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "melasse", quantite: 50, unite: "g", ou: { id: "miel", quantite: 40, unite: "g" } },
       { id: "cassonade", quantite: 25, unite: "g", ou: { id: "sucre", quantite: 25, unite: "g" } },
-      { id: "vinaigre", quantite: 15, unite: "ml" },
+      { id: "vinaigre-de-cidre", quantite: 15, unite: "ml", ou: { id: "vinaigre", quantite: 15, unite: "ml" } },
       { id: "moutarde-en-poudre", quantite: 2, unite: "g", ou: { id: "moutarde", quantite: 10, unite: "g" } },
       { id: "eau", quantite: 300, unite: "ml" },
       { id: "sel", quantite: 1, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 160 °C. Rincer et égoutter les haricots (la recette d'origine part de haricots secs trempés une nuit et cuits 30 min : ici, des haricots en boîte déjà cuits).", "Dans une cocotte qui va au four, faire dorer les lardons à feu moyen-vif jusqu'à ce qu'ils rendent leur gras, puis ajouter l'oignon émincé et cuire jusqu'à ce qu'il soit tendre.", "Ajouter les haricots, la mélasse, la cassonade, le vinaigre (de cidre si possible), la moutarde, le sel, le poivre et l'eau. Bien mélanger.", "Enfourner sans couvercle 1 h 30, en remuant de temps en temps, jusqu'à ce que la sauce soit épaisse et caramélisée sur les bords. Rajouter un peu d'eau si ça sèche."]
+    etapes: ["La veille, faire tremper les haricots secs dans un grand volume d'eau froide toute la nuit.", "Égoutter, couvrir largement d'eau fraîche et cuire 30 min : ils doivent être tendres mais encore fermes. Égoutter en gardant l'eau de cuisson. (Avec des haricots en boîte : simplement les rincer et sauter cette étape.)", "Préchauffer le four à 160 °C. Dans une cocotte qui va au four, faire dorer le bacon coupé en morceaux à feu moyen-vif jusqu'à ce qu'il rende son gras, puis ajouter l'oignon émincé et cuire jusqu'à ce qu'il soit tendre.", "Ajouter les haricots, la mélasse, la cassonade, le vinaigre de cidre, la moutarde, le sel, le poivre et 300 ml d'eau de cuisson des haricots (ou d'eau). Bien mélanger.", "Enfourner sans couvercle 3 h (1 h 30 avec des haricots en boîte), en remuant de temps en temps, jusqu'à ce que la sauce soit épaisse et caramélisée sur les bords. Rajouter un peu d'eau si ça sèche."]
   },
   {
     id: "barres-nanaimo", nom: "Barres Nanaimo (chocolat, coco et crème vanillée)", cuisine: "canadienne",
@@ -222,12 +222,11 @@ ajouterRecettes([
       { id: "noix-de-coco-rapee", quantite: 50, unite: "g" },
       { id: "amandes", quantite: 25, unite: "g", optionnel: true },
       { id: "creme-fraiche", quantite: 30, unite: "ml" },
-      { id: "fecule", quantite: 12, unite: "g" },
-      { id: "extrait-de-vanille", quantite: 3, unite: "ml", optionnel: true },
+      { id: "poudre-a-creme-anglaise", quantite: 12, unite: "g", ou: { id: "fecule", quantite: 12, unite: "g" } },
       { id: "sucre-glace", quantite: 125, unite: "g" },
       { id: "chocolat-noir", quantite: 75, unite: "g" }
     ],
-    etapes: ["Couche du bas : au bain-marie, faire fondre 65 g de beurre avec le sucre et le cacao en remuant. Ajouter l'œuf battu et fouetter 2 à 3 min jusqu'à ce que ça épaississe. Hors du feu, ajouter les biscuits écrasés en miettes, la noix de coco et les amandes hachées. Tasser dans un petit moule carré (15 cm) ou un moule à cake chemisé de papier cuisson. 10 min au frais.", "Couche du milieu : fouetter 50 g de beurre mou avec la crème, la fécule et la vanille (ils remplacent la poudre à crème anglaise « custard »), puis ajouter le sucre glace petit à petit jusqu'à obtenir une crème légère. L'étaler sur la première couche et remettre au frais au moins 10 min.", "Couche du dessus : faire fondre le chocolat avec le reste du beurre (au micro-ondes ou au bain-marie) et l'étaler sur la crème.", "Laisser prendre au frais environ 2 h, puis démouler et couper en carrés (pour plusieurs goûters)."]
+    etapes: ["Couche du bas : au bain-marie, faire fondre 65 g de beurre avec le sucre et le cacao en remuant. Ajouter l'œuf battu et fouetter 2 à 3 min jusqu'à ce que ça épaississe. Hors du feu, ajouter les biscuits écrasés en miettes, la noix de coco et les amandes hachées. Tasser dans un petit moule carré (15 cm) ou un moule à cake chemisé de papier cuisson. 10 min au frais.", "Couche du milieu : fouetter 50 g de beurre mou avec la crème et la poudre à crème anglaise (« custard powder » ; sinon de la fécule et quelques gouttes de vanille), puis ajouter le sucre glace petit à petit jusqu'à obtenir une crème légère. L'étaler sur la première couche et remettre au frais au moins 10 min.", "Couche du dessus : faire fondre le chocolat avec le reste du beurre (au micro-ondes ou au bain-marie) et l'étaler sur la crème.", "Laisser prendre au frais environ 2 h, puis démouler et couper en carrés (pour plusieurs goûters)."]
   },
   {
     id: "pate-chinois", nom: "Pâté chinois (bœuf, maïs et purée gratinés)", cuisine: "canadienne",
@@ -301,35 +300,39 @@ ajouterRecettes([
   },
   {
     id: "tarte-aux-petits-fruits-saskatoon", nom: "Tarte aux petits fruits (façon tarte aux baies de Saskatoon)", cuisine: "canadienne",
-    difficulte: "moyen", tempsMinutes: 80, portions: 2,
+    difficulte: "moyen", tempsMinutes: 140, portions: 2,
     source: "TheMealDB", idSource: "53337",
     ingredients: [
-      { id: "pate-brisee", quantite: 2, unite: "pièce" },
+      { id: "farine", quantite: 250, unite: "g" },
+      { id: "sel", quantite: 3, unite: "g" },
+      { id: "beurre", quantite: 90, unite: "g" },
+      { id: "graisse-vegetale", quantite: 75, unite: "g" },
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "vinaigre", quantite: 5, unite: "ml" },
+      { id: "eau", quantite: 70, unite: "ml" },
       { id: "myrtilles", quantite: 500, unite: "g" },
       { id: "sucre", quantite: 80, unite: "g" },
-      { id: "fecule", quantite: 20, unite: "g" },
-      { id: "beurre", quantite: 15, unite: "g" },
-      { id: "oeuf", quantite: 1, unite: "pièce" }
+      { id: "fecule", quantite: 20, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 180 °C, grille dans le bas du four, et poser une feuille de papier aluminium sur la plaque pour récupérer le jus. (La recette d'origine fait sa pâte maison avec farine, beurre, graisse végétale, œuf et vinaigre : ici, de la pâte brisée toute prête.)", "Garnir un moule à tarte de 20 cm avec une pâte, en la laissant dépasser des bords.", "Mélanger les myrtilles (fraîches ou surgelées, elles remplacent les baies de Saskatoon, introuvables en France) avec 70 g de sucre et la fécule. Verser dans le fond de tarte et parsemer de petits morceaux de beurre.", "Découper la seconde pâte en larges bandes et les tresser en croisillons sur les fruits. Replier les bords de la pâte du fond par-dessus pour enfermer le jus.", "Badigeonner d'œuf battu, saupoudrer du reste du sucre et cuire environ 1 h, jusqu'à ce que la pâte soit dorée et que le jus bouillonne. Servir tiède ou froid, avec de la crème fouettée ou une glace (6 parts : se garde 4 jours au frais)."]
+    etapes: ["Pâte : mélanger la farine et le sel. Ajouter 75 g de beurre froid et la graisse végétale (type Végétaline ; sinon 75 g de beurre de plus) en dés, et les travailler du bout des doigts jusqu'à obtenir une semoule grossière avec quelques morceaux de la taille d'un petit pois.", "Battre 1 œuf avec le vinaigre et l'eau très froide, verser sur la farine et mélanger juste assez pour que la pâte se tienne. Partager en 2 boules aplaties, filmer et mettre 1 h au frais. (Pressé ? 2 rouleaux de pâte brisée toute prête.)", "Préchauffer le four à 180 °C, grille dans le bas du four, et poser une feuille de papier aluminium sur la plaque pour récupérer le jus.", "Étaler une boule et garnir un moule à tarte de 20 cm, en laissant la pâte dépasser des bords.", "Mélanger les myrtilles (fraîches ou surgelées, elles remplacent les baies de Saskatoon, introuvables en France) avec 70 g de sucre et la fécule. Verser dans le fond de tarte et parsemer du reste du beurre en petits morceaux.", "Étaler la seconde boule, la découper en larges bandes et les tresser en croisillons sur les fruits. Replier les bords de la pâte du fond par-dessus pour enfermer le jus.", "Badigeonner avec le second œuf battu avec 1 cuillère à soupe d'eau, saupoudrer du reste du sucre et cuire environ 1 h, jusqu'à ce que la pâte soit dorée et que le jus bouillonne. Servir tiède ou froid, avec de la crème fouettée ou une glace (6 parts : se garde 4 jours au frais)."]
   },
   {
     id: "soupe-aux-pois-casses-et-jambon", nom: "Soupe aux pois cassés et au jambon", cuisine: "canadienne",
     difficulte: "facile", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "52925",
     ingredients: [
-      { id: "poitrine-de-porc", quantite: 250, unite: "g", ou: { id: "lardons", quantite: 150, unite: "g" } },
+      { id: "jambonneau", quantite: 350, unite: "g", ou: { id: "poitrine-de-porc", quantite: 250, unite: "g" } },
       { id: "pois-casses", quantite: 100, unite: "g" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 1, unite: "pièce" },
-      { id: "celeri-branche", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "celeri-branche", quantite: 1, unite: "pièce" },
       { id: "laurier", quantite: 1, unite: "pièce" },
       { id: "petits-pois", quantite: 150, unite: "g" },
       { id: "eau", quantite: 1000, unite: "ml" },
       { id: "pain", quantite: 2, unite: "tranche", optionnel: true },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["La recette d'origine fait cuire un jarret de jambon entier dans la soupe : ici, un morceau de poitrine de porc (demi-sel si possible) ou des lardons. Si la viande est salée, la mettre dans une casserole d'eau froide, porter à ébullition et jeter cette eau.", "Mettre dans une grande casserole la viande, l'eau, les pois cassés rincés, l'oignon, la carotte et le céleri hachés, et le laurier. Porter à ébullition puis laisser mijoter 1 h 15 à 1 h 30, en rajoutant de l'eau si besoin, jusqu'à ce que la viande soit tendre.", "Sortir la viande, retirer la couenne et l'effilocher à la fourchette.", "Retirer le laurier, ajouter les petits pois et cuire 1 min, puis mixer la soupe jusqu'à ce qu'elle soit lisse (ajouter un peu d'eau si elle est trop épaisse). Goûter avant de saler : la viande apporte déjà du sel.", "Mélanger la soupe avec presque toute la viande, garder le reste pour le dessus. Servir avec du pain beurré."]
+    etapes: ["Prendre un jambonneau (demi-sel si possible ; sinon un morceau de poitrine de porc). Si la viande est salée, la mettre dans une casserole d'eau froide, porter à ébullition et jeter cette eau.", "Mettre dans une grande casserole la viande, l'eau, les pois cassés rincés, l'oignon, la carotte et le céleri hachés, et le laurier. Porter à ébullition puis laisser mijoter 1 h 15 à 1 h 30, en rajoutant de l'eau si besoin, jusqu'à ce que la viande soit tendre.", "Sortir la viande, retirer la couenne et l'effilocher à la fourchette.", "Retirer le laurier, ajouter les petits pois et cuire 1 min, puis mixer la soupe jusqu'à ce qu'elle soit lisse (ajouter un peu d'eau si elle est trop épaisse). Goûter avant de saler : la viande apporte déjà du sel.", "Mélanger la soupe avec presque toute la viande, garder le reste pour le dessus. Servir avec du pain beurré."]
   },
   {
     id: "tarte-au-sucre", nom: "Tarte au sucre (sans pâte)", cuisine: "canadienne",
