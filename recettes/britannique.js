@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine britannique (58 recettes, pour 2 personnes)
+// RECETTES : cuisine britannique (59 recettes, pour 2 personnes)
 // Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude.
 // Même format que recettes/indienne.js
 // ============================================================
@@ -88,9 +88,10 @@ ajouterRecettes([
       { id: "sucre", quantite: 125, unite: "g" },
       { id: "poudre-d-amandes", quantite: 125, unite: "g" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
-      { id: "amandes", quantite: 50, unite: "g", optionnel: true }
+      { id: "extrait-d-amande-amere", quantite: 2, unite: "ml", optionnel: true },
+      { id: "amandes", quantite: 50, unite: "g" }
     ],
-    etapes: ["Pâte : sabler du bout des doigts la farine avec 75 g de beurre froid, ajouter 2 à 3 cuillères à soupe d'eau froide et former une boule. L'étaler et en garnir un moule à tarte de 20 cm. Mettre 30 min au frais.", "Préchauffer le four à 200 °C. Couvrir la pâte de papier cuisson et de légumes secs, cuire 15 min, retirer le papier et cuire encore 5 min.", "Étaler généreusement la confiture (de framboises de préférence) sur le fond de tarte.", "Faire fondre 125 g de beurre, hors du feu ajouter le sucre, la poudre d'amandes (ou des amandes mixées finement), l'œuf battu et quelques gouttes d'extrait d'amande si vous en avez.", "Verser sur la confiture, parsemer d'amandes effilées et cuire 20 à 25 min à 180 °C, jusqu'à ce que le dessus soit doré et pris. Une tarte entière : il en restera pour le goûter."]
+    etapes: ["Pâte : sabler du bout des doigts la farine avec 75 g de beurre froid, ajouter 2 à 3 cuillères à soupe d'eau froide et former une boule. L'étaler et en garnir un moule à tarte de 20 cm. Mettre 30 min au frais.", "Préchauffer le four à 200 °C. Couvrir la pâte de papier cuisson et de légumes secs, cuire 15 min, retirer le papier et cuire encore 5 min.", "Étaler généreusement la confiture (de framboises de préférence) sur le fond de tarte.", "Faire fondre 125 g de beurre, hors du feu ajouter le sucre, la poudre d'amandes (ou des amandes mixées finement), l'œuf battu et l'extrait d'amande amère.", "Verser sur la confiture, parsemer d'amandes effilées et cuire 20 à 25 min à 180 °C, jusqu'à ce que le dessus soit doré et pris. Une tarte entière : il en restera pour le goûter."]
   },
   {
     id: "tarte-frangipane-pommes-fond-biscuits", nom: "Tarte frangipane aux pommes sur fond de biscuits", cuisine: "britannique",
@@ -102,10 +103,11 @@ ajouterRecettes([
       { id: "pomme", quantite: 2, unite: "pièce" },
       { id: "sucre", quantite: 75, unite: "g" },
       { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "extrait-d-amande-amere", quantite: 5, unite: "ml", optionnel: true },
       { id: "poudre-d-amandes", quantite: 75, unite: "g" },
-      { id: "amandes", quantite: 50, unite: "g", optionnel: true }
+      { id: "amandes", quantite: 50, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 200 °C. Écraser les biscuits en fine poudre (dans un sac, au rouleau à pâtisserie).", "Faire fondre 75 g de beurre, y mélanger les miettes de biscuits, puis tasser le tout au fond et sur les bords d'un moule à tarte. Mettre au frais.", "Battre le reste du beurre mou avec le sucre jusqu'à ce que ce soit léger, ajouter les œufs battus, puis la poudre d'amandes (et quelques gouttes d'extrait d'amande si vous en avez).", "Éplucher les pommes et les couper en fines lamelles au dernier moment.", "Étaler la crème d'amandes sur le fond, y enfoncer les lamelles de pommes, parsemer d'amandes effilées et cuire 20 à 25 min à 180 °C, jusqu'à ce que ce soit doré et pris. Une tarte entière : il en restera."]
+    etapes: ["Préchauffer le four à 200 °C. Écraser les biscuits en fine poudre (dans un sac, au rouleau à pâtisserie).", "Faire fondre 75 g de beurre, y mélanger les miettes de biscuits, puis tasser le tout au fond et sur les bords d'un moule à tarte. Mettre au frais.", "Battre le reste du beurre mou avec le sucre jusqu'à ce que ce soit léger, ajouter les œufs battus, puis la poudre d'amandes et l'extrait d'amande amère.", "Éplucher les pommes et les couper en fines lamelles au dernier moment.", "Étaler la crème d'amandes sur le fond, y enfoncer les lamelles de pommes, parsemer d'amandes effilées et cuire 20 à 25 min à 180 °C, jusqu'à ce que ce soit doré et pris. Une tarte entière : il en restera."]
   },
   {
     id: "chili-lentilles-fume-potiron", nom: "Chili de lentilles fumé au potiron rôti", cuisine: "britannique",
@@ -118,36 +120,35 @@ ajouterRecettes([
       { id: "poireau", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "carotte", quantite: 2, unite: "pièce" },
-      { id: "sauce-tomate", quantite: 200, unite: "g" },
+      { id: "tomates-concassees", quantite: 200, unite: "g", ou: { id: "sauce-tomate", quantite: 200, unite: "g" } },
       { id: "cumin", quantite: 6, unite: "g" },
       { id: "graines-de-coriandre", quantite: 3, unite: "g", optionnel: true },
       { id: "paprika", quantite: 3, unite: "g" },
       { id: "cannelle", quantite: 1, unite: "g", optionnel: true },
       { id: "piment-en-poudre", quantite: 2, unite: "g" },
       { id: "cacao-en-poudre", quantite: 3, unite: "g", optionnel: true },
-      { id: "herbes-de-provence", quantite: 1, unite: "g", optionnel: true },
+      { id: "origan", quantite: 1, unite: "g", ou: { id: "herbes-de-provence", quantite: 1, unite: "g" } },
       { id: "noix-de-cajou", quantite: 60, unite: "g", optionnel: true },
-      { id: "vinaigre", quantite: 5, unite: "ml" },
+      { id: "vinaigre-de-cidre", quantite: 5, unite: "ml", ou: { id: "vinaigre", quantite: 5, unite: "ml" } },
       { id: "huile-d-olive", quantite: 20, unite: "ml" },
       { id: "eau", quantite: 350, unite: "ml" },
       { id: "sel", quantite: 3, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 200 °C. Couper le potiron en fines tranches, arroser d'un filet d'huile, saler et rôtir 20 à 30 min en retournant à mi-cuisson. Couper ensuite en cubes.", "Pendant ce temps, rincer les lentilles, les couvrir d'eau et les cuire 20 à 30 min à petit feu, puis égoutter.", "Faire revenir 5 min dans l'huile l'oignon et le poireau émincés. Ajouter l'ail haché et toutes les épices (cumin, coriandre moulue, paprika fumé si possible, cannelle, piment, cacao, origan), remuer 1 min.", "Ajouter la sauce tomate, l'eau et les carottes en dés, laisser mijoter 20 min. Ajouter les lentilles, le vinaigre et le sel, puis le potiron.", "Si vous avez des noix de cajou : les faire tremper dans l'eau chaude puis les mixer avec un peu d'eau pour obtenir une crème à servir sur le chili."]
+    etapes: ["Préchauffer le four à 200 °C. Couper le potiron en fines tranches, arroser d'un filet d'huile, saler et rôtir 20 à 30 min en retournant à mi-cuisson. Couper ensuite en cubes.", "Pendant ce temps, rincer les lentilles, les couvrir d'eau et les cuire 20 à 30 min à petit feu, puis égoutter.", "Faire revenir 5 min dans l'huile l'oignon et le poireau émincés. Ajouter l'ail haché et toutes les épices (cumin, coriandre moulue, paprika fumé si possible, cannelle, piment, cacao, origan), remuer 1 min.", "Ajouter les tomates concassées, l'eau et les carottes en dés, laisser mijoter 20 min. Ajouter les lentilles, le vinaigre de cidre et le sel, puis le potiron.", "Faire tremper dans l'eau chaude puis les mixer avec un peu d'eau pour obtenir une crème à servir sur le chili."]
   },
   {
-    id: "flapjacks-fruits-secs-orange", nom: "Flapjacks (barres d'avoine) aux fruits secs et à l'orange", cuisine: "britannique",
+    id: "flapjacks-fruits-secs-orange", nom: "Flapjacks (barres d'avoine) au Christmas pudding et à l'orange", cuisine: "britannique",
     difficulte: "facile", tempsMinutes: 55, portions: 2,
     source: "TheMealDB", idSource: "52788",
     ingredients: [
       { id: "flocons-d-avoine", quantite: 250, unite: "g" },
       { id: "beurre", quantite: 125, unite: "g" },
-      { id: "sucre", quantite: 110, unite: "g" },
-      { id: "miel", quantite: 75, unite: "g" },
+      { id: "cassonade", quantite: 110, unite: "g", ou: { id: "sucre", quantite: 110, unite: "g" } },
+      { id: "golden-syrup", quantite: 75, unite: "g", ou: { id: "miel", quantite: 75, unite: "g" } },
       { id: "orange", quantite: 1, unite: "pièce" },
-      { id: "raisins-secs", quantite: 100, unite: "g" },
-      { id: "fruits-confits", quantite: 25, unite: "g", optionnel: true }
+      { id: "pudding-de-noel", quantite: 125, unite: "g", ou: { id: "raisins-secs", quantite: 125, unite: "g" } }
     ],
-    etapes: ["Préchauffer le four à 180 °C et chemiser de papier cuisson un petit moule carré (environ 20 cm).", "Faire fondre doucement le beurre, le sucre (roux si possible), le miel (à l'origine du golden syrup) et le zeste d'orange, sans faire bouillir.", "Hors du feu, ajouter les flocons d'avoine puis les raisins secs et les fruits confits (la recette d'origine utilise un reste de pudding de Noël).", "Tasser dans le moule et cuire 30 à 35 min, jusqu'à ce que les bords dorent.", "Prédécouper en carrés encore tiède, laisser refroidir complètement avant de couper. Se garde 5 jours dans une boîte."]
+    etapes: ["Préchauffer le four à 180 °C et chemiser de papier cuisson un petit moule carré (environ 20 cm).", "Faire fondre doucement le beurre, la cassonade, le golden syrup (ou du miel) et le zeste d'orange, sans faire bouillir.", "Hors du feu, ajouter les flocons d'avoine puis le reste de Christmas pudding émietté (ou des raisins secs).", "Tasser dans le moule et cuire 30 à 35 min, jusqu'à ce que les bords dorent.", "Prédécouper en carrés encore tiède, laisser refroidir complètement avant de couper. Se garde 5 jours dans une boîte."]
   },
   {
     id: "eton-mess", nom: "Eton mess (fraises, crème fouettée et meringue)", cuisine: "britannique",
@@ -157,9 +158,10 @@ ajouterRecettes([
       { id: "fraises", quantite: 250, unite: "g" },
       { id: "creme-fraiche", quantite: 200, unite: "ml" },
       { id: "meringues", quantite: 40, unite: "g" },
+      { id: "sirop-de-gingembre", quantite: 8, unite: "ml", optionnel: true },
       { id: "menthe", quantite: 2, unite: "g", optionnel: true }
     ],
-    etapes: ["Mixer la moitié des fraises en purée. Couper les autres en morceaux, en gardant 2 belles fraises pour le décor.", "Fouetter la crème (liquide entière, bien froide) en chantilly ferme.", "Incorporer délicatement la purée de fraises et les meringues émiettées, puis les morceaux de fraises.", "Répartir dans 2 verres froids et décorer d'une fraise et d'une feuille de menthe. Servir tout de suite."]
+    etapes: ["Mixer la moitié des fraises en purée. Couper les autres en morceaux, en gardant 2 belles fraises pour le décor.", "Fouetter la crème (liquide entière, bien froide) en chantilly ferme.", "Incorporer délicatement la purée de fraises et les meringues émiettées, puis les morceaux de fraises et le sirop de gingembre.", "Répartir dans 2 verres froids et décorer d'une fraise et d'une feuille de menthe. Servir tout de suite."]
   },
   {
     id: "pudding-pain-beurre-raisins", nom: "Pudding au pain beurré et aux raisins secs", cuisine: "britannique",
@@ -186,15 +188,18 @@ ajouterRecettes([
       { id: "dattes", quantite: 110, unite: "g", ou: { id: "figues-seches", quantite: 110, unite: "g" } },
       { id: "eau", quantite: 90, unite: "ml" },
       { id: "farine", quantite: 90, unite: "g" },
-      { id: "levure-chimique", quantite: 3, unite: "g" },
+      { id: "levure-chimique", quantite: 4, unite: "g" },
+      { id: "bicarbonate-de-soude", quantite: 3, unite: "g" },
+      { id: "extrait-de-vanille", quantite: 3, unite: "ml" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "beurre", quantite: 70, unite: "g" },
-      { id: "sucre", quantite: 160, unite: "g" },
-      { id: "melasse", quantite: 20, unite: "g", optionnel: true },
+      { id: "cassonade", quantite: 160, unite: "g", ou: { id: "sucre", quantite: 160, unite: "g" } },
+      { id: "melasse", quantite: 20, unite: "g" },
       { id: "lait", quantite: 50, unite: "ml" },
-      { id: "creme-fraiche", quantite: 110, unite: "ml" }
+      { id: "creme-fraiche", quantite: 110, unite: "ml" },
+      { id: "glace-a-la-vanille", quantite: 100, unite: "ml", optionnel: true }
     ],
-    etapes: ["Dénoyauter et hacher les dattes, les couvrir d'eau bouillante et laisser tremper 30 min, puis les écraser à la fourchette (avec un peu de vanille si vous en avez).", "Préchauffer le four à 180 °C. Beurrer et fariner 3 ou 4 ramequins.", "Battre 45 g de beurre avec 70 g de sucre (roux si possible), ajouter l'œuf battu petit à petit, puis la moitié de la mélasse. Incorporer la farine mélangée à la levure en alternant avec le lait, puis les dattes.", "Répartir dans les ramequins et cuire 20 à 25 min, jusqu'à ce que les puddings soient gonflés et fermes.", "Sauce : faire fondre le reste du sucre et du beurre avec le reste de mélasse, ajouter la crème et faire bouillir 2 à 3 min en remuant. Démouler les puddings et les napper de sauce chaude."]
+    etapes: ["Dénoyauter et hacher les dattes, les couvrir d'eau bouillante et laisser tremper 30 min, puis les écraser à la fourchette puis ajouter l'extrait de vanille.", "Préchauffer le four à 180 °C. Beurrer et fariner 3 ou 4 ramequins.", "Battre 45 g de beurre avec 70 g de cassonade, ajouter l'œuf battu petit à petit, puis la moitié de la mélasse. Incorporer la farine mélangée à la levure et au bicarbonate en alternant avec le lait, puis les dattes.", "Répartir dans les ramequins et cuire 20 à 25 min, jusqu'à ce que les puddings soient gonflés et fermes.", "Sauce : faire fondre le reste de la cassonade et du beurre avec le reste de mélasse, ajouter la crème et faire bouillir 2 à 3 min en remuant. Démouler les puddings et les napper de sauce chaude. Servir avec une boule de glace à la vanille."]
   },
   {
     id: "fish-pie-poisson-crevettes-poireau", nom: "Fish pie (gratin de poisson et crevettes sous la purée)", cuisine: "britannique",
@@ -205,10 +210,12 @@ ajouterRecettes([
       { id: "poisson-blanc", quantite: 400, unite: "g" },
       { id: "crevettes", quantite: 100, unite: "g" },
       { id: "poireau", quantite: 1, unite: "pièce" },
+      { id: "topinambours", quantite: 100, unite: "g", optionnel: true },
       { id: "lait", quantite: 300, unite: "ml" },
       { id: "farine", quantite: 8, unite: "g" },
       { id: "creme-fraiche", quantite: 25, unite: "ml" },
       { id: "persil", quantite: 10, unite: "g" },
+      { id: "aneth", quantite: 5, unite: "g", optionnel: true },
       { id: "citron", quantite: 1, unite: "pièce" },
       { id: "fromage-rape", quantite: 15, unite: "g" },
       { id: "huile-d-olive", quantite: 20, unite: "ml" },
@@ -216,14 +223,14 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Cuire les pommes de terre 15 min à l'eau salée, égoutter et écraser en purée avec un filet d'huile d'olive. Saler, poivrer.", "Porter le lait à ébullition avec le poisson, couper le feu, couvrir et laisser 3 min. Sortir le poisson (garder le lait), l'émietter dans un plat à four en retirant peau et arêtes.", "Dans une casserole, chauffer le reste d'huile, ajouter la farine, puis verser peu à peu 200 ml du lait de cuisson en remuant jusqu'à épaississement. Ajouter muscade, crème, sel et poivre.", "Faire revenir le poireau émincé quelques minutes. Le répartir sur le poisson avec les crevettes crues, le persil haché, le zeste et le jus du citron. Napper de sauce.", "Couvrir de purée, parsemer de fromage râpé et cuire 25 à 30 min au four à 200 °C, jusqu'à ce que ce soit doré et bouillonnant."]
+    etapes: ["Cuire les pommes de terre 15 min à l'eau salée, égoutter et écraser en purée avec un filet d'huile d'olive. Saler, poivrer.", "Porter le lait à ébullition avec le poisson, couper le feu, couvrir et laisser 3 min. Sortir le poisson (garder le lait), l'émietter dans un plat à four en retirant peau et arêtes.", "Dans une casserole, chauffer le reste d'huile, ajouter la farine, puis verser peu à peu 200 ml du lait de cuisson en remuant jusqu'à épaississement. Ajouter muscade, crème, sel et poivre.", "Faire revenir le poireau émincé et les topinambours épluchés en fines tranches quelques minutes. Le répartir sur le poisson avec les crevettes crues, le persil et l'aneth hachés, le zeste et le jus du citron. Napper de sauce.", "Couvrir de purée, parsemer de fromage râpé et cuire 25 à 30 min au four à 200 °C, jusqu'à ce que ce soit doré et bouillonnant."]
   },
   {
     id: "boeuf-wellington", nom: "Bœuf Wellington (filet en croûte feuilletée)", cuisine: "britannique",
     difficulte: "difficile", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "52803",
     ingredients: [
-      { id: "steak-de-boeuf", quantite: 375, unite: "g" },
+      { id: "filet-de-boeuf", quantite: 375, unite: "g", ou: { id: "steak-de-boeuf", quantite: 375, unite: "g" } },
       { id: "champignons", quantite: 200, unite: "g" },
       { id: "moutarde", quantite: 15, unite: "g" },
       { id: "jambon-cru", quantite: 4, unite: "tranche" },
@@ -234,14 +241,14 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Mixer grossièrement les champignons avec sel et poivre, puis les cuire 10 min à feu vif dans une poêle pour évaporer toute leur eau. Laisser refroidir.", "Saler et poivrer le morceau de bœuf (filet de préférence), le saisir 30 secondes de chaque côté dans l'huile très chaude, laisser refroidir puis le badigeonner de moutarde.", "Sur un film alimentaire, poser les tranches de jambon cru qui se chevauchent, étaler les champignons dessus, poser le bœuf et rouler serré. Mettre 20 min au frais.", "Étaler la pâte feuilletée sur un plan fariné, retirer le film, envelopper la viande dans la pâte et souder les bords au jaune d'œuf. Dorer au jaune d'œuf et mettre encore 10 min au frais.", "Cuire 25 à 30 min au four à 200 °C, jusqu'à ce que la pâte soit bien dorée. Laisser reposer 10 min avant de couper en tranches épaisses."]
+    etapes: ["Mixer grossièrement les champignons avec sel et poivre, puis les cuire 10 min à feu vif dans une poêle pour évaporer toute leur eau. Laisser refroidir.", "Saler et poivrer le morceau de filet de bœuf, le saisir 30 secondes de chaque côté dans l'huile très chaude, laisser refroidir puis le badigeonner de moutarde.", "Sur un film alimentaire, poser les tranches de jambon cru qui se chevauchent, étaler les champignons dessus, poser le bœuf et rouler serré. Mettre 20 min au frais.", "Étaler la pâte feuilletée sur un plan fariné, retirer le film, envelopper la viande dans la pâte et souder les bords au jaune d'œuf. Dorer au jaune d'œuf et mettre encore 10 min au frais.", "Cuire 25 à 30 min au four à 200 °C, jusqu'à ce que la pâte soit bien dorée. Laisser reposer 10 min avant de couper en tranches épaisses."]
   },
   {
     id: "roti-de-boeuf-du-dimanche", nom: "Rôti de bœuf du dimanche, légumes et Yorkshire puddings", cuisine: "britannique",
     difficulte: "moyen", tempsMinutes: 75, portions: 2,
     source: "TheMealDB", idSource: "52824",
     ingredients: [
-      { id: "steak-de-boeuf", quantite: 400, unite: "g" },
+      { id: "roti-de-boeuf", quantite: 400, unite: "g", ou: { id: "steak-de-boeuf", quantite: 400, unite: "g" } },
       { id: "pomme-de-terre", quantite: 500, unite: "g" },
       { id: "carotte", quantite: 3, unite: "pièce" },
       { id: "brocoli", quantite: 1, unite: "pièce" },
@@ -262,37 +269,37 @@ ajouterRecettes([
       { id: "brocoli", quantite: 1, unite: "pièce" },
       { id: "fromage-bleu", quantite: 70, unite: "g", ou: { id: "cheddar", quantite: 70, unite: "g" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
-      { id: "celeri-branche", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "celeri-branche", quantite: 1, unite: "pièce" },
       { id: "poireau", quantite: 1, unite: "pièce" },
       { id: "pomme-de-terre", quantite: 100, unite: "g" },
       { id: "beurre", quantite: 10, unite: "g" },
-      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "huile-de-colza", quantite: 15, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 15, unite: "ml" } },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 500, unite: "ml" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Faire revenir l'oignon haché dans l'huile à feu moyen jusqu'à ce qu'il soit tendre.", "Ajouter le céleri, le poireau, la pomme de terre en dés et le beurre, couvrir et laisser suer 5 min.", "Verser l'eau chaude avec le bouillon cube, ajouter les tiges du brocoli coupées en morceaux et cuire 10 à 15 min.", "Ajouter les fleurettes de brocoli et cuire encore 5 min, puis mixer jusqu'à ce que ce soit lisse.", "Incorporer le fromage bleu émietté en laissant quelques morceaux, poivrer et servir."]
+    etapes: ["Faire revenir l'oignon haché dans l'huile de colza à feu moyen jusqu'à ce qu'il soit tendre.", "Ajouter le céleri, le poireau, la pomme de terre en dés et le beurre, couvrir et laisser suer 5 min.", "Verser l'eau chaude avec le bouillon cube, ajouter les tiges du brocoli coupées en morceaux et cuire 10 à 15 min.", "Ajouter les fleurettes de brocoli et cuire encore 5 min, puis mixer jusqu'à ce que ce soit lisse.", "Incorporer le fromage bleu émietté en laissant quelques morceaux, poivrer et servir."]
   },
   {
-    id: "pain-de-viande-haricots-sauce-barbecue", nom: "Pain de viande aux haricots blancs, sauce barbecue", cuisine: "britannique",
+    id: "pain-de-viande-haricots-sauce-barbecue", nom: "Pain de viande à la dinde et aux haricots blancs, sauce barbecue", cuisine: "britannique",
     difficulte: "facile", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "52845",
     ingredients: [
-      { id: "boeuf-hache", quantite: 250, unite: "g", ou: { id: "porc-hache", quantite: 250, unite: "g" } },
+      { id: "dinde-hachee", quantite: 250, unite: "g", ou: { id: "boeuf-hache", quantite: 250, unite: "g" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "chapelure", quantite: 40, unite: "g" },
-      { id: "sauce-worcestershire", quantite: 15, unite: "ml", optionnel: true },
-      { id: "sauce-tomate", quantite: 15, unite: "g" },
-      { id: "ketchup", quantite: 30, unite: "g" },
+      { id: "sauce-worcestershire", quantite: 15, unite: "ml" },
+      { id: "concentre-de-tomates", quantite: 15, unite: "g", ou: { id: "sauce-tomate", quantite: 15, unite: "g" } },
+      { id: "sauce-barbecue", quantite: 30, unite: "ml", ou: { id: "ketchup", quantite: 30, unite: "g" } },
       { id: "haricots-blancs-en-boite", quantite: 1, unite: "boîte" },
       { id: "persil", quantite: 5, unite: "g", optionnel: true },
       { id: "huile-d-olive", quantite: 8, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 180 °C. Faire revenir l'oignon haché 8 à 10 min dans l'huile, ajouter l'ail, la sauce Worcestershire et les deux tiers de la sauce tomate. Laisser tiédir.", "Mélanger la viande hachée (de la dinde hachée à l'origine, si vous en trouvez), l'œuf, la chapelure et le mélange à l'oignon, saler et poivrer. Former un pain allongé dans un plat à four.", "Le badigeonner de la moitié du ketchup (à l'origine de la sauce barbecue) et cuire 30 min.", "Mélanger les haricots (avec un peu de leur jus) avec le reste de ketchup et de sauce tomate.", "Répartir les haricots autour du pain de viande et cuire encore 15 min. Parsemer de persil et servir en tranches."]
+    etapes: ["Préchauffer le four à 180 °C. Faire revenir l'oignon haché 8 à 10 min dans l'huile, ajouter l'ail, la sauce Worcestershire et les deux tiers du concentré de tomates. Laisser tiédir.", "Mélanger la dinde hachée, l'œuf, la chapelure et le mélange à l'oignon, saler et poivrer. Former un pain allongé dans un plat à four.", "Le badigeonner de la moitié de la sauce barbecue et cuire 30 min.", "Mélanger les haricots (avec un peu de leur jus) avec le reste de sauce barbecue et de concentré de tomates.", "Répartir les haricots autour du pain de viande et cuire encore 15 min. Parsemer de persil et servir en tranches."]
   },
   {
     id: "mousse-chocolat-avocat-banane", nom: "Mousse au chocolat express (avocat et banane)", cuisine: "britannique",
@@ -303,11 +310,12 @@ ajouterRecettes([
       { id: "banane", quantite: 1, unite: "pièce" },
       { id: "cacao-en-poudre", quantite: 20, unite: "g" },
       { id: "miel", quantite: 30, unite: "g" },
+      { id: "extrait-de-vanille", quantite: 5, unite: "ml", optionnel: true },
       { id: "citron", quantite: 1, unite: "pièce", optionnel: true },
       { id: "eau", quantite: 30, unite: "ml" },
       { id: "sel", quantite: 1, unite: "g" }
     ],
-    etapes: ["Mixer ensemble l'avocat, la banane, le cacao, le miel, une cuillère à café de jus de citron, l'eau, une pincée de sel (et un peu de vanille si vous en avez) jusqu'à ce que ce soit bien lisse.", "Goûter et ajuster : un peu plus de miel ou de cacao selon la taille de l'avocat et de la banane.", "Répartir dans de petites coupes, saupoudrer d'un peu de cacao et servir bien frais (une banane congelée la rend encore plus fraîche)."]
+    etapes: ["Mixer ensemble l'avocat, la banane, le cacao, le miel, une cuillère à café de jus de citron, l'eau, une pincée de sel et la vanille jusqu'à ce que ce soit bien lisse.", "Goûter et ajuster : un peu plus de miel ou de cacao selon la taille de l'avocat et de la banane.", "Répartir dans de petites coupes, saupoudrer d'un peu de cacao et servir bien frais (une banane congelée la rend encore plus fraîche)."]
   },
   {
     id: "mijote-legumes-lentilles", nom: "Mijoté de légumes aux lentilles et au thym", cuisine: "britannique",
@@ -318,18 +326,18 @@ ajouterRecettes([
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "carotte", quantite: 2, unite: "pièce" },
-      { id: "celeri-branche", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "celeri-branche", quantite: 1, unite: "pièce" },
       { id: "poivron", quantite: 1, unite: "pièce" },
       { id: "courgette", quantite: 1, unite: "pièce" },
-      { id: "sauce-tomate", quantite: 400, unite: "g" },
+      { id: "tomates-concassees", quantite: 400, unite: "g", ou: { id: "sauce-tomate", quantite: 400, unite: "g" } },
       { id: "paprika", quantite: 2, unite: "g" },
       { id: "cumin", quantite: 1, unite: "g" },
       { id: "thym", quantite: 3, unite: "g" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
-      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "huile-de-colza", quantite: 15, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 15, unite: "ml" } },
       { id: "eau", quantite: 350, unite: "ml" }
     ],
-    etapes: ["Faire revenir doucement l'oignon émincé dans l'huile 5 à 10 min.", "Ajouter l'ail, le paprika, le cumin, la moitié du thym, les carottes, le céleri et le poivron en morceaux, et cuire 5 min.", "Ajouter la sauce tomate, l'eau avec le bouillon cube, les lentilles rincées, la courgette en rondelles et le reste du thym.", "Laisser mijoter 25 à 30 min, jusqu'à ce que les lentilles soient tendres (ajouter un peu d'eau si besoin). Servir avec du riz ou une purée."]
+    etapes: ["Faire revenir doucement l'oignon émincé dans l'huile 5 à 10 min.", "Ajouter l'ail, le paprika, le cumin, la moitié du thym, les carottes, le céleri et le poivron en morceaux, et cuire 5 min.", "Ajouter les tomates concassées, l'eau avec le bouillon cube, les lentilles rincées, la courgette en rondelles et le reste du thym.", "Laisser mijoter 25 à 30 min, jusqu'à ce que les lentilles soient tendres (ajouter un peu d'eau si besoin). Servir avec du riz ou une purée."]
   },
   {
     id: "rotolo-champignons-chataignes", nom: "Rotolo aux champignons et châtaignes (lasagnes roulées)", cuisine: "britannique",
@@ -338,19 +346,22 @@ ajouterRecettes([
     ingredients: [
       { id: "feuilles-de-lasagne", quantite: 8, unite: "pièce" },
       { id: "champignons", quantite: 300, unite: "g" },
+      { id: "champignons-seches", quantite: 15, unite: "g" },
       { id: "chataignes", quantite: 120, unite: "g" },
       { id: "echalote", quantite: 2, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
       { id: "ail", quantite: 2, unite: "gousse" },
-      { id: "thym", quantite: 2, unite: "g", ou: { id: "herbes-de-provence", quantite: 2, unite: "g" } },
+      { id: "romarin", quantite: 2, unite: "g", ou: { id: "thym", quantite: 2, unite: "g" } },
+      { id: "sauge", quantite: 3, unite: "g", optionnel: true },
       { id: "sauce-soja", quantite: 15, unite: "ml" },
       { id: "vin-blanc", quantite: 60, unite: "ml" },
       { id: "chapelure", quantite: 30, unite: "g" },
       { id: "huile-d-olive", quantite: 40, unite: "ml" },
+      { id: "huile-de-truffe", quantite: 5, unite: "ml", optionnel: true },
       { id: "eau", quantite: 250, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Mixer les trois quarts des châtaignes avec 75 ml d'eau en une crème. Hacher grossièrement le reste.", "Faire revenir les échalotes hachées dans 1 cuillère à soupe d'huile avec une pincée de sel, puis ajouter l'ail, les châtaignes hachées et le thym (romarin et sauge à l'origine), 2 min.", "Ajouter les champignons émincés et un peu d'huile, cuire 5 min, puis la sauce soja, 2 min de plus. Saler, poivrer.", "Sauce : mélanger le vin blanc, le reste de l'eau et la crème de châtaignes. Préchauffer le four à 200 °C.", "Précuire les feuilles de lasagne 2 min à l'eau bouillante, les étaler, les garnir de champignons et les rouler. Couper les rouleaux en deux et les poser debout dans un plat.", "Verser la sauce, parsemer de chapelure mélangée à un filet d'huile et cuire 25 min, jusqu'à ce que ce soit doré."]
+    etapes: ["Faire tremper les champignons séchés dans 175 ml d'eau bouillante. Mixer les trois quarts des châtaignes avec 75 ml d'eau en une crème. Hacher grossièrement le reste.", "Faire revenir les échalotes hachées dans 1 cuillère à soupe d'huile avec une pincée de sel, puis ajouter l'ail, les châtaignes hachées le romarin et la sauge hachés, 2 min.", "Ajouter les champignons émincés et un peu d'huile, cuire 3 min, puis les champignons séchés égouttés et hachés (garder l'eau de trempage) et la sauce soja, 2 min de plus. Saler, poivrer.", "Sauce : mélanger le vin blanc, l'eau de trempage des champignons et la crème de châtaignes. Préchauffer le four à 200 °C.", "Précuire les feuilles de lasagne 2 min à l'eau bouillante, les étaler, les garnir de champignons et les rouler. Couper les rouleaux en deux et les poser debout dans un plat.", "Verser la sauce, parsemer de chapelure mélangée à un filet d'huile et cuire 25 min, jusqu'à ce que ce soit doré. Arroser de quelques gouttes d'huile de truffe au moment de servir."]
   },
   {
     id: "chili-vegetarien-legumes-rotis", nom: "Chili végétarien express aux légumes rôtis", cuisine: "britannique",
@@ -362,12 +373,11 @@ ajouterRecettes([
       { id: "oignon-rouge", quantite: 1, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
       { id: "huile-d-olive", quantite: 15, unite: "ml" },
       { id: "haricots-rouges-en-boite", quantite: 1, unite: "boîte" },
-      { id: "sauce-tomate", quantite: 400, unite: "g" },
-      { id: "piment-en-poudre", quantite: 1, unite: "g", optionnel: true },
-      { id: "riz", quantite: 120, unite: "g" },
+      { id: "tomates-concassees", quantite: 400, unite: "g", ou: { id: "sauce-tomate", quantite: 400, unite: "g" } },
+      { id: "melange-de-cereales", quantite: 250, unite: "g", ou: { id: "riz", quantite: 120, unite: "g" } },
       { id: "sel", quantite: 2, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 200 °C. Couper les légumes en gros morceaux, les arroser d'huile, saler et les rôtir 20 min dans une cocotte allant au four.", "Ajouter les haricots égouttés, la sauce tomate et le piment, et remettre au four 10 à 15 min, jusqu'à ce que ce soit bien chaud.", "Pendant ce temps, cuire le riz (ou un mélange de céréales). Servir le chili sur le riz."]
+    etapes: ["Préchauffer le four à 200 °C. Couper les légumes en gros morceaux, les arroser d'huile, saler et les rôtir 20 min dans une cocotte allant au four.", "Ajouter les haricots égouttés, les tomates concassées, et remettre au four 10 à 15 min, jusqu'à ce que ce soit bien chaud.", "Pendant ce temps, réchauffer le sachet de céréales précuites 1 min au micro-ondes (ou cuire du riz). Servir avec le chili."]
   },
   {
     id: "ragout-boeuf-dumplings", nom: "Ragoût de bœuf et ses boulettes de pâte (dumplings)", cuisine: "britannique",
@@ -378,8 +388,9 @@ ajouterRecettes([
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "carotte", quantite: 1, unite: "pièce" },
-      { id: "celeri-branche", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "celeri-branche", quantite: 1, unite: "pièce" },
       { id: "poireau", quantite: 1, unite: "pièce" },
+      { id: "rutabaga", quantite: 100, unite: "g", ou: { id: "navet", quantite: 1, unite: "pièce" } },
       { id: "vin-rouge", quantite: 75, unite: "ml" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 300, unite: "ml" },
@@ -403,7 +414,7 @@ ajouterRecettes([
     ingredients: [
       { id: "boeuf-a-braiser", quantite: 500, unite: "g" },
       { id: "farine", quantite: 10, unite: "g" },
-      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "huile-de-colza", quantite: 15, unite: "ml", ou: { id: "huile-de-tournesol", quantite: 15, unite: "ml" } },
       { id: "vin-rouge", quantite: 100, unite: "ml" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 200, unite: "ml" },
@@ -434,7 +445,7 @@ ajouterRecettes([
       { id: "beurre", quantite: 140, unite: "g" },
       { id: "farine", quantite: 200, unite: "g" },
       { id: "lait", quantite: 100, unite: "ml" },
-      { id: "vin-blanc", quantite: 20, unite: "ml", optionnel: true },
+      { id: "vin-blanc", quantite: 20, unite: "ml" },
       { id: "creme-fraiche", quantite: 75, unite: "ml" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "sel", quantite: 2, unite: "g" },
@@ -449,24 +460,24 @@ ajouterRecettes([
     ingredients: [
       { id: "boeuf-hache", quantite: 250, unite: "g" },
       { id: "oignon", quantite: 1, unite: "pièce" },
-      { id: "sauce-tomate", quantite: 15, unite: "g" },
+      { id: "concentre-de-tomates", quantite: 15, unite: "g", ou: { id: "sauce-tomate", quantite: 15, unite: "g" } },
       { id: "farine", quantite: 10, unite: "g" },
       { id: "champignons", quantite: 40, unite: "g" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 125, unite: "ml" },
-      { id: "sauce-worcestershire", quantite: 5, unite: "ml", optionnel: true },
+      { id: "sauce-worcestershire", quantite: 5, unite: "ml" },
       { id: "pate-brisee", quantite: 1, unite: "pièce" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "huile-de-tournesol", quantite: 15, unite: "ml" }
     ],
-    etapes: ["Faire dorer la viande hachée 4 à 5 min dans l'huile en l'émiettant. Ajouter l'oignon haché 2 à 3 min, puis la sauce tomate 2 à 3 min.", "Saupoudrer de farine, remuer 1 min, puis ajouter les champignons hachés, l'eau avec le bouillon cube (ou de la bière brune) et la sauce Worcestershire.", "Porter à ébullition, couvrir et laisser mijoter 20 min. Laisser refroidir puis verser dans un petit plat à tourte. Préchauffer le four à 200 °C.", "Couvrir de pâte brisée un peu plus grande que le plat, souder les bords, faire une petite entaille au centre et dorer au jaune d'œuf.", "Cuire 20 à 25 min, jusqu'à ce que la pâte soit dorée."]
+    etapes: ["Faire dorer la viande hachée 4 à 5 min dans l'huile en l'émiettant. Ajouter l'oignon haché 2 à 3 min, puis le concentré de tomates 2 à 3 min.", "Saupoudrer de farine, remuer 1 min, puis ajouter les champignons hachés, l'eau avec le bouillon cube (ou de la bière brune) et la sauce Worcestershire.", "Porter à ébullition, couvrir et laisser mijoter 20 min. Laisser refroidir puis verser dans un petit plat à tourte. Préchauffer le four à 200 °C.", "Couvrir de pâte brisée un peu plus grande que le plat, souder les bords, faire une petite entaille au centre et dorer au jaune d'œuf.", "Cuire 20 à 25 min, jusqu'à ce que la pâte soit dorée."]
   },
   {
     id: "tourte-agneau-pommes-de-terre", nom: "Tourte à l'agneau et aux pommes de terre", cuisine: "britannique",
     difficulte: "moyen", tempsMinutes: 120, portions: 2,
     source: "TheMealDB", idSource: "52877",
     ingredients: [
-      { id: "gigot-d-agneau", quantite: 250, unite: "g" },
+      { id: "epaule-d-agneau", quantite: 250, unite: "g", ou: { id: "gigot-d-agneau", quantite: 250, unite: "g" } },
       { id: "farine", quantite: 8, unite: "g" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 1, unite: "pièce" },
@@ -482,11 +493,12 @@ ajouterRecettes([
     etapes: ["Fariner légèrement l'agneau coupé en cubes (épaule ou gigot). Le faire dorer dans l'huile avec l'oignon émincé, saler et poivrer.", "Ajouter les carottes en rondelles et l'eau avec le bouillon cube, porter à ébullition, couvrir et laisser mijoter au moins 1 h, jusqu'à ce que la viande soit tendre.", "Pendant ce temps, cuire les pommes de terre en cubes 10 min à l'eau et les égoutter. Préchauffer le four à 180 °C.", "Ajouter les pommes de terre à l'agneau, verser dans un plat et couvrir de pâte brisée. Faire 3 entailles sur le dessus et dorer à l'œuf battu.", "Cuire 30 à 40 min, jusqu'à ce que la pâte soit bien dorée."]
   },
   {
-    id: "tourte-boeuf-biere-brune", nom: "Tourte au bœuf mijoté à la bière brune", cuisine: "britannique",
+    id: "tourte-boeuf-biere-brune", nom: "Tourte au bœuf et aux huîtres, à la bière brune", cuisine: "britannique",
     difficulte: "difficile", tempsMinutes: 210, portions: 2,
     source: "TheMealDB", idSource: "52878",
     ingredients: [
       { id: "boeuf-a-braiser", quantite: 450, unite: "g" },
+      { id: "huitres", quantite: 4, unite: "pièce" },
       { id: "biere", quantite: 165, unite: "ml", ou: { id: "vin-rouge", quantite: 165, unite: "ml" } },
       { id: "lardons", quantite: 60, unite: "g" },
       { id: "echalote", quantite: 2, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
@@ -503,7 +515,7 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Saler et poivrer le bœuf en cubes, le faire dorer en plusieurs fois dans l'huile et le mettre dans une cocotte. Dans la même poêle, faire revenir les échalotes 4 à 5 min, l'ail 30 secondes et les lardons jusqu'à ce qu'ils dorent ; ajouter à la cocotte avec le thym et le laurier.", "Préchauffer le four à 180 °C. Verser la bière (brune, type stout) dans la poêle chaude en grattant les sucs, puis la verser dans la cocotte avec l'eau et le bouillon cube.", "Couvrir et cuire 2 h au four. Épaissir la sauce avec la fécule délayée dans un peu d'eau froide, laisser refroidir dans un plat à tourte.", "Pâte : sabler la farine et une pincée de sel avec le beurre froid, ajouter un peu d'eau froide pour former une boule, mettre au frais 20 min. (À l'origine, on ajoute 4 huîtres dans la garniture : facultatif.)", "Monter le four à 200 °C. Couvrir le plat de pâte, souder les bords, dorer à l'œuf battu et cuire 30 à 40 min, jusqu'à ce que la pâte soit bien dorée."]
+    etapes: ["Saler et poivrer le bœuf en cubes, le faire dorer en plusieurs fois dans l'huile et le mettre dans une cocotte. Dans la même poêle, faire revenir les échalotes 4 à 5 min, l'ail 30 secondes et les lardons jusqu'à ce qu'ils dorent ; ajouter à la cocotte avec le thym et le laurier.", "Préchauffer le four à 180 °C. Verser la bière (brune, type stout) dans la poêle chaude en grattant les sucs, puis la verser dans la cocotte avec l'eau et le bouillon cube.", "Couvrir et cuire 2 h au four. Épaissir la sauce avec la fécule délayée dans un peu d'eau froide, laisser refroidir dans un plat à tourte, puis ajouter les huîtres ouvertes, sans leur coquille.", "Pâte : sabler la farine et une pincée de sel avec le beurre froid, ajouter un peu d'eau froide pour former une boule, mettre au frais 20 min.", "Monter le four à 200 °C. Couvrir le plat de pâte, souder les bords, dorer à l'œuf battu et cuire 30 à 40 min, jusqu'à ce que la pâte soit bien dorée."]
   },
   {
     id: "scotch-pie-agneau-epice", nom: "Scotch pie à l'agneau épicé (tourte écossaise façon indienne)", cuisine: "britannique",
@@ -521,13 +533,13 @@ ajouterRecettes([
       { id: "coriandre", quantite: 10, unite: "g" },
       { id: "farine", quantite: 170, unite: "g" },
       { id: "lait", quantite: 45, unite: "ml" },
-      { id: "beurre", quantite: 75, unite: "g" },
+      { id: "saindoux", quantite: 75, unite: "g", ou: { id: "beurre", quantite: 75, unite: "g" } },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "huile-de-tournesol", quantite: 8, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Faire griller le cumin à sec quelques minutes, réserver. Dans la même poêle, faire revenir dans l'huile l'oignon, l'ail, les piments et le poivron hachés avec une pincée de sel, environ 8 min, jusqu'à ce qu'il n'y ait plus d'eau. Hors du feu, ajouter le cumin, la muscade et la coriandre moulue. Laisser refroidir.", "Mélanger l'agneau haché, le poivre, la coriandre fraîche hachée et le mélange aux oignons. Garder au frais.", "Préchauffer le four à 200 °C et beurrer un moule à gâteau de 15 à 18 cm. Pâte : chauffer le lait et le beurre (le saindoux à l'origine) jusqu'à frémissement, verser sur la farine et le sel et mélanger en pâte souple.", "Étaler les deux tiers de la pâte encore tiède pour foncer le moule, remplir de farce, couvrir avec le reste de pâte, souder les bords et faire un trou au centre. Dorer au jaune d'œuf.", "Cuire 1 h environ, jusqu'à ce que la pâte soit bien dorée et la viande cuite. Laisser tiédir avant de démouler."]
+    etapes: ["Faire griller le cumin à sec quelques minutes, réserver. Dans la même poêle, faire revenir dans l'huile l'oignon, l'ail, les piments et le poivron hachés avec une pincée de sel, environ 8 min, jusqu'à ce qu'il n'y ait plus d'eau. Hors du feu, ajouter le cumin, la muscade et la coriandre moulue. Laisser refroidir.", "Mélanger l'agneau haché, le poivre, la coriandre fraîche hachée et le mélange aux oignons. Garder au frais.", "Préchauffer le four à 200 °C et graisser au saindoux un moule à gâteau de 15 à 18 cm. Pâte : chauffer le lait et le saindoux jusqu'à frémissement, verser sur la farine et le sel et mélanger en pâte souple.", "Étaler les deux tiers de la pâte encore tiède pour foncer le moule, remplir de farce, couvrir avec le reste de pâte, souder les bords et faire un trou au centre. Dorer au jaune d'œuf.", "Cuire 1 h environ, jusqu'à ce que la pâte soit bien dorée et la viande cuite. Laisser tiédir avant de démouler."]
   },
   {
     id: "tourte-boeuf-rognons", nom: "Tourte au bœuf et aux rognons (steak and kidney pie)", cuisine: "britannique",
@@ -540,7 +552,7 @@ ajouterRecettes([
       { id: "farine", quantite: 15, unite: "g" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 400, unite: "ml" },
-      { id: "sauce-worcestershire", quantite: 5, unite: "ml", optionnel: true },
+      { id: "sauce-worcestershire", quantite: 5, unite: "ml" },
       { id: "pate-feuilletee", quantite: 1, unite: "pièce" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
@@ -557,7 +569,7 @@ ajouterRecettes([
       { id: "pomme-de-terre", quantite: 350, unite: "g" },
       { id: "saumon", quantite: 80, unite: "g" },
       { id: "poisson-blanc", quantite: 80, unite: "g" },
-      { id: "haddock-fume", quantite: 80, unite: "g", optionnel: true },
+      { id: "haddock-fume", quantite: 80, unite: "g" },
       { id: "oeuf", quantite: 2, unite: "pièce" },
       { id: "poireau", quantite: 1, unite: "pièce" },
       { id: "beurre", quantite: 35, unite: "g" },
@@ -578,14 +590,16 @@ ajouterRecettes([
     ingredients: [
       { id: "farine", quantite: 110, unite: "g" },
       { id: "levure-chimique", quantite: 6, unite: "g" },
+      { id: "bicarbonate-de-soude", quantite: 3, unite: "g" },
+      { id: "extrait-de-vanille", quantite: 3, unite: "ml" },
       { id: "beurre", quantite: 100, unite: "g" },
-      { id: "sucre", quantite: 150, unite: "g" },
+      { id: "cassonade", quantite: 150, unite: "g", ou: { id: "sucre", quantite: 150, unite: "g" } },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "melasse", quantite: 30, unite: "g", ou: { id: "miel", quantite: 30, unite: "g" } },
       { id: "lait", quantite: 140, unite: "ml" },
       { id: "creme-fraiche", quantite: 150, unite: "ml" }
     ],
-    etapes: ["Préchauffer le four à 180 °C et beurrer un petit plat à four.", "Mettre dans un saladier 50 g de beurre, 90 g de sucre (roux si possible), l'œuf, la farine, la levure et les deux tiers de la mélasse. Battre au batteur 30 secondes, puis ajouter le lait petit à petit jusqu'à ce que ce soit lisse.", "Verser dans le plat et cuire 30 à 35 min, jusqu'à ce que le gâteau soit bien gonflé et souple au centre.", "Sauce : chauffer doucement le reste du beurre, du sucre et de la mélasse avec 100 ml de crème (et un peu de vanille), puis faire bouillir 1 min en remuant.", "Verser la moitié de la sauce sur le pudding chaud, servir avec le reste de sauce et le reste de crème."]
+    etapes: ["Préchauffer le four à 180 °C et beurrer un petit plat à four.", "Mettre dans un saladier 50 g de beurre, 90 g de cassonade, l'œuf, la farine, la levure, le bicarbonate et les deux tiers de la mélasse. Battre au batteur 30 secondes, puis ajouter le lait petit à petit jusqu'à ce que ce soit lisse.", "Verser dans le plat et cuire 30 à 35 min, jusqu'à ce que le gâteau soit bien gonflé et souple au centre.", "Sauce : chauffer doucement le reste du beurre, du sucre et de la mélasse avec 100 ml de crème (et un peu de vanille), puis faire bouillir 1 min en remuant.", "Verser la moitié de la sauce sur le pudding chaud, servir avec le reste de sauce et le reste de crème."]
   },
   {
     id: "lancashire-hotpot", nom: "Lancashire hotpot (agneau mijoté sous les pommes de terre)", cuisine: "britannique",
@@ -593,11 +607,11 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52884",
     ingredients: [
       { id: "gigot-d-agneau", quantite: 450, unite: "g" },
-      { id: "rognons", quantite: 80, unite: "g", optionnel: true },
+      { id: "rognons", quantite: 80, unite: "g" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 2, unite: "pièce" },
       { id: "farine", quantite: 12, unite: "g" },
-      { id: "sauce-worcestershire", quantite: 10, unite: "ml", optionnel: true },
+      { id: "sauce-worcestershire", quantite: 10, unite: "ml" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 250, unite: "ml" },
       { id: "laurier", quantite: 1, unite: "pièce" },
@@ -612,7 +626,7 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52885",
     ingredients: [
       { id: "pomme-de-terre", quantite: 400, unite: "g" },
-      { id: "chou", quantite: 200, unite: "g" },
+      { id: "choux-de-bruxelles", quantite: 200, unite: "g", ou: { id: "chou", quantite: 200, unite: "g" } },
       { id: "bacon", quantite: 4, unite: "tranche", ou: { id: "lardons", quantite: 80, unite: "g" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 1, unite: "gousse" },
@@ -620,7 +634,7 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Cuire les pommes de terre à l'eau (ou utiliser un reste de purée ou de pommes de terre cuites) et les écraser grossièrement.", "Faire chauffer le beurre dans une poêle antiadhésive, y faire dorer le bacon en morceaux, puis ajouter l'oignon émincé et l'ail.", "Ajouter le chou émincé finement (ou des choux de Bruxelles) et le laisser colorer légèrement, 5 à 6 min en tout.", "Ajouter les pommes de terre, mélanger et tasser pour couvrir le fond de la poêle. Laisser bien accrocher et dorer, retourner par morceaux et recommencer : ce sont ces parties grillées qui font le plat.", "Saler, poivrer, couper en parts et servir."]
+    etapes: ["Cuire les pommes de terre à l'eau (ou utiliser un reste de purée ou de pommes de terre cuites) et les écraser grossièrement.", "Faire chauffer le beurre dans une poêle antiadhésive, y faire dorer le bacon en morceaux, puis ajouter l'oignon émincé et l'ail.", "Ajouter les choux de Bruxelles émincés finement (ou du chou) et le laisser colorer légèrement, 5 à 6 min en tout.", "Ajouter les pommes de terre, mélanger et tasser pour couvrir le fond de la poêle. Laisser bien accrocher et dorer, retourner par morceaux et recommencer : ce sont ces parties grillées qui font le plat.", "Saler, poivrer, couper en parts et servir."]
   },
   {
     id: "spotted-dick", nom: "Spotted dick (pudding vapeur aux raisins secs)", cuisine: "britannique",
@@ -633,7 +647,7 @@ ajouterRecettes([
       { id: "raisins-secs", quantite: 90, unite: "g" },
       { id: "sucre", quantite: 40, unite: "g" },
       { id: "citron", quantite: 1, unite: "pièce" },
-      { id: "orange", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "orange", quantite: 1, unite: "pièce" },
       { id: "lait", quantite: 75, unite: "ml" },
       { id: "creme-anglaise", quantite: 200, unite: "ml", optionnel: true },
       { id: "sel", quantite: 1, unite: "g" }
@@ -666,30 +680,34 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 50, portions: 2,
     source: "TheMealDB", idSource: "52888",
     ingredients: [
-      { id: "pate-feuilletee", quantite: 1, unite: "pièce" },
+      { id: "farine", quantite: 175, unite: "g", ou: { id: "pate-feuilletee", quantite: 1, unite: "pièce" } },
       { id: "raisins-secs", quantite: 100, unite: "g" },
-      { id: "fruits-confits", quantite: 25, unite: "g", optionnel: true },
-      { id: "beurre", quantite: 15, unite: "g" },
-      { id: "sucre", quantite: 60, unite: "g" },
+      { id: "fruits-confits", quantite: 25, unite: "g" },
+      { id: "beurre", quantite: 140, unite: "g" },
+      { id: "cassonade", quantite: 60, unite: "g", ou: { id: "sucre", quantite: 60, unite: "g" } },
       { id: "cannelle", quantite: 1, unite: "g" },
-      { id: "noix-de-muscade", quantite: 1, unite: "g", optionnel: true },
+      { id: "gingembre-en-poudre", quantite: 1, unite: "g", ou: { id: "gingembre", quantite: 3, unite: "g" } },
+      { id: "piment-de-la-jamaique", quantite: 1, unite: "g", ou: { id: "noix-de-muscade", quantite: 1, unite: "g" } },
       { id: "citron", quantite: 1, unite: "pièce" },
-      { id: "oeuf", quantite: 1, unite: "pièce" }
+      { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "eau", quantite: 50, unite: "ml" }
     ],
-    etapes: ["Garniture : faire fondre le beurre, hors du feu ajouter les raisins secs, les fruits confits hachés, 50 g de sucre (roux si possible), la cannelle, la muscade (ou du gingembre en poudre) et le zeste de citron. Laisser refroidir.", "Préchauffer le four à 200 °C. Découper dans la pâte feuilletée 6 disques d'environ 10 cm (la recette d'origine fait sa pâte feuilletée maison).", "Poser une cuillerée de garniture au centre de chaque disque, rabattre les bords et pincer pour fermer. Retourner les chaussons et les aplatir doucement au rouleau.", "Faire 3 petites entailles sur le dessus, badigeonner d'œuf battu et saupoudrer du reste de sucre.", "Cuire 15 à 20 min, jusqu'à ce qu'ils soient bien dorés. Laisser refroidir sur une grille."]
+    etapes: ["Garniture : faire fondre 15 g de beurre, hors du feu ajouter les raisins secs, les fruits confits hachés, 50 g de cassonade, la cannelle, le gingembre, le piment de la Jamaïque et le zeste de citron. Laisser refroidir.", "Pâte feuilletée rapide : mettre 125 g de beurre en dés au congélateur. Sabler la farine avec la moitié du beurre, ajouter le jus d'un demi-citron et l'eau glacée, puis le reste du beurre en gardant des morceaux visibles. Étaler en rectangle, plier les bouts au centre puis en deux ; recommencer 3 fois en laissant 20 min au frais entre deux (ou prendre 1 rouleau de pâte feuilletée).", "Préchauffer le four à 200 °C. Étaler la pâte et découper 6 disques d'environ 10 cm.", "Poser une cuillerée de garniture au centre de chaque disque, rabattre les bords et pincer pour fermer. Retourner les chaussons et les aplatir doucement au rouleau.", "Faire 3 petites entailles sur le dessus, badigeonner d'œuf battu et saupoudrer du reste de cassonade.", "Cuire 15 à 20 min, jusqu'à ce qu'ils soient bien dorés. Laisser refroidir sur une grille."]
   },
   {
     id: "summer-pudding-fruits-rouges", nom: "Summer pudding (dôme de pain aux fruits rouges)", cuisine: "britannique",
     difficulte: "facile", tempsMinutes: 520, portions: 2,
     source: "TheMealDB", idSource: "52889",
     ingredients: [
-      { id: "fruits-rouges-surgeles", quantite: 425, unite: "g" },
+      { id: "framboises", quantite: 250, unite: "g" },
+      { id: "mures", quantite: 125, unite: "g", ou: { id: "fruits-rouges-surgeles", quantite: 125, unite: "g" } },
+      { id: "groseilles", quantite: 50, unite: "g", optionnel: true },
       { id: "fraises", quantite: 150, unite: "g" },
       { id: "sucre", quantite: 90, unite: "g" },
       { id: "pain-de-mie", quantite: 4, unite: "tranche" },
       { id: "eau", quantite: 25, unite: "ml" }
     ],
-    etapes: ["À préparer la veille. Chauffer doucement le sucre avec l'eau jusqu'à ce qu'il fonde, faire bouillir 1 min, puis ajouter les fruits rouges (mûres, groseilles, framboises ; pas les fraises). Cuire 3 min à feu doux : les fruits doivent rester entiers dans un jus rouge foncé.", "Égoutter les fruits au-dessus d'un bol pour garder le jus. Ajouter les fraises coupées en morceaux aux fruits.", "Tapisser un bol (environ 600 ml) de film alimentaire. Retirer la croûte du pain, tremper les tranches d'un côté dans le jus et en tapisser le bol, côté trempé contre la paroi, sans laisser de trou.", "Remplir de fruits, couvrir d'une tranche de pain trempée, puis d'une assiette avec un poids dessus. Laisser une nuit au réfrigérateur.", "Démouler sur un plat, napper du reste de jus et servir avec de la crème."]
+    etapes: ["À préparer la veille. Chauffer doucement le sucre avec l'eau jusqu'à ce qu'il fonde, faire bouillir 1 min, puis ajouter les framboises, les mûres et les groseilles (pas les fraises). Cuire 3 min à feu doux : les fruits doivent rester entiers dans un jus rouge foncé.", "Égoutter les fruits au-dessus d'un bol pour garder le jus. Ajouter les fraises coupées en morceaux aux fruits.", "Tapisser un bol (environ 600 ml) de film alimentaire. Retirer la croûte du pain, tremper les tranches d'un côté dans le jus et en tapisser le bol, côté trempé contre la paroi, sans laisser de trou.", "Remplir de fruits, couvrir d'une tranche de pain trempée, puis d'une assiette avec un poids dessus. Laisser une nuit au réfrigérateur.", "Démouler sur un plat, napper du reste de jus et servir avec de la crème."]
   },
   {
     id: "jam-roly-poly", nom: "Jam roly-poly (roulé vapeur à la confiture)", cuisine: "britannique",
@@ -701,27 +719,28 @@ ajouterRecettes([
       { id: "beurre", quantite: 50, unite: "g" },
       { id: "lait", quantite: 75, unite: "ml" },
       { id: "confiture", quantite: 50, unite: "g" },
+      { id: "gousse-de-vanille", quantite: 1, unite: "pièce", optionnel: true, ou: { id: "extrait-de-vanille", quantite: 3, unite: "ml" } },
       { id: "creme-anglaise", quantite: 200, unite: "ml", optionnel: true }
     ],
-    etapes: ["Mettre un plat rempli aux deux tiers d'eau bouillante en bas du four et le préchauffer à 180 °C. Beurrer une grande feuille de papier cuisson posée sur une feuille d'aluminium.", "Sabler la farine et la levure avec le beurre froid (avec un peu de vanille si vous en avez), puis ajouter le lait et mélanger au couteau jusqu'à obtenir une pâte collante.", "Sur un plan fariné, étaler la pâte en un rectangle d'environ 1 cm d'épaisseur. Étaler la confiture (de framboises de préférence) en laissant 1 cm libre sur les bords, puis rouler.", "Envelopper le rouleau dans le papier et l'aluminium sans serrer (il va gonfler), fermer les bouts et poser sur la grille au-dessus du plat d'eau. Cuire 1 h.", "Laisser reposer 5 min, couper en tranches épaisses et servir avec de la crème anglaise chaude."]
+    etapes: ["Mettre un plat rempli aux deux tiers d'eau bouillante en bas du four et le préchauffer à 180 °C. Beurrer une grande feuille de papier cuisson posée sur une feuille d'aluminium.", "Sabler la farine et la levure avec le beurre froid (avec les graines de la gousse de vanille), puis ajouter le lait et mélanger au couteau jusqu'à obtenir une pâte collante.", "Sur un plan fariné, étaler la pâte en un rectangle d'environ 1 cm d'épaisseur. Étaler la confiture (de framboises de préférence) en laissant 1 cm libre sur les bords, puis rouler.", "Envelopper le rouleau dans le papier et l'aluminium sans serrer (il va gonfler), fermer les bouts et poser sur la grille au-dessus du plat d'eau. Cuire 1 h.", "Laisser reposer 5 min, couper en tranches épaisses et servir avec de la crème anglaise chaude."]
   },
   {
     id: "fool-aux-mures-biscuits", nom: "Fool aux mûres (crème aux fruits rouges) et biscuits croquants", cuisine: "britannique",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "52891",
     ingredients: [
-      { id: "fruits-rouges-surgeles", quantite: 300, unite: "g" },
+      { id: "mures", quantite: 300, unite: "g", ou: { id: "fruits-rouges-surgeles", quantite: 300, unite: "g" } },
       { id: "creme-fraiche", quantite: 150, unite: "ml" },
       { id: "yaourt-grec", quantite: 50, unite: "g", ou: { id: "yaourt-nature", quantite: 1, unite: "pièce" } },
       { id: "sucre", quantite: 85, unite: "g" },
       { id: "citron", quantite: 1, unite: "pièce" },
-      { id: "amandes", quantite: 15, unite: "g", optionnel: true },
+      { id: "noisettes", quantite: 15, unite: "g", ou: { id: "amandes", quantite: 15, unite: "g" } },
       { id: "beurre", quantite: 40, unite: "g" },
       { id: "farine", quantite: 50, unite: "g" },
       { id: "levure-chimique", quantite: 1, unite: "g" },
       { id: "menthe", quantite: 2, unite: "g", optionnel: true }
     ],
-    etapes: ["Biscuits : préchauffer le four à 200 °C. Griller les amandes (des noisettes à l'origine) 6 à 8 min, les laisser refroidir et les hacher.", "Battre le beurre avec 50 g de sucre jusqu'à ce que ce soit crémeux, ajouter les amandes, la moitié du zeste de citron, la farine et la levure. Former 8 petites boules, les aplatir sur une plaque et cuire 10 à 12 min. Laisser refroidir.", "Cuire les mûres (ou des fruits rouges) 5 min avec 25 g de sucre, puis les écraser et laisser refroidir. Ajouter le jus de citron.", "Fouetter la crème (liquide entière) avec le reste du sucre, incorporer le yaourt, puis mélanger grossièrement avec les fruits pour faire des marbrures.", "Servir en verres, décoré de menthe, avec les biscuits."]
+    etapes: ["Biscuits : préchauffer le four à 200 °C. Griller les noisettes 6 à 8 min, les laisser refroidir et les hacher.", "Battre le beurre avec 50 g de sucre jusqu'à ce que ce soit crémeux, ajouter les noisettes, la moitié du zeste de citron, la farine et la levure. Former 8 petites boules, les aplatir sur une plaque et cuire 10 à 12 min. Laisser refroidir.", "Cuire les mûres (ou des fruits rouges) 5 min avec 25 g de sucre, puis les écraser et laisser refroidir. Ajouter le jus de citron.", "Fouetter la crème (liquide entière) avec le reste du sucre, incorporer le yaourt, puis mélanger grossièrement avec les fruits pour faire des marbrures.", "Servir en verres, décoré de menthe, avec les biscuits."]
   },
   {
     id: "treacle-tart", nom: "Treacle tart (tarte au sirop et au citron)", cuisine: "britannique",
@@ -730,13 +749,13 @@ ajouterRecettes([
     ingredients: [
       { id: "farine", quantite: 125, unite: "g" },
       { id: "beurre", quantite: 70, unite: "g" },
-      { id: "miel", quantite: 200, unite: "g" },
-      { id: "pain-de-mie", quantite: 3, unite: "tranche", ou: { id: "chapelure", quantite: 75, unite: "g" } },
+      { id: "golden-syrup", quantite: 200, unite: "g", ou: { id: "miel", quantite: 200, unite: "g" } },
+      { id: "chapelure", quantite: 75, unite: "g", ou: { id: "pain-de-mie", quantite: 3, unite: "tranche" } },
       { id: "citron", quantite: 1, unite: "pièce" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 25, unite: "ml" }
     ],
-    etapes: ["Pâte : sabler la farine avec le beurre froid, ajouter environ 2 cuillères à soupe d'eau froide et former une boule. Mettre 20 min au frais.", "Préchauffer le four à 200 °C avec une plaque à l'intérieur. Garder un quart de la pâte pour le croisillon et foncer un petit moule à tarte (environ 16 cm) avec le reste.", "Chauffer doucement le miel (du golden syrup à l'origine) pour le rendre bien liquide. Hors du feu, ajouter le pain de mie mixé en miettes et le zeste de citron, puis la moitié de l'œuf battu.", "Verser sur le fond de tarte. Découper la pâte restante en bandes, les poser en croisillons et les dorer avec le reste d'œuf.", "Poser la tarte sur la plaque chaude, cuire 10 min puis baisser à 180 °C et cuire encore 25 à 30 min, jusqu'à ce que la garniture soit prise. Servir tiède."]
+    etapes: ["Pâte : sabler la farine avec le beurre froid, ajouter environ 2 cuillères à soupe d'eau froide et former une boule. Mettre 20 min au frais.", "Préchauffer le four à 200 °C avec une plaque à l'intérieur. Garder un quart de la pâte pour le croisillon et foncer un petit moule à tarte (environ 16 cm) avec le reste.", "Chauffer doucement le golden syrup (ou du miel) pour le rendre bien liquide. Hors du feu, ajouter la chapelure (ou du pain de mie mixé en miettes) et le zeste de citron, puis la moitié de l'œuf battu.", "Verser sur le fond de tarte. Découper la pâte restante en bandes, les poser en croisillons et les dorer avec le reste d'œuf.", "Poser la tarte sur la plaque chaude, cuire 10 min puis baisser à 180 °C et cuire encore 25 à 30 min, jusqu'à ce que la garniture soit prise. Servir tiède."]
   },
   {
     id: "crumble-pommes-mures", nom: "Crumble pommes et mûres", cuisine: "britannique",
@@ -744,13 +763,15 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52893",
     ingredients: [
       { id: "pomme", quantite: 2, unite: "pièce" },
-      { id: "fruits-rouges-surgeles", quantite: 60, unite: "g", optionnel: true },
+      { id: "mures", quantite: 60, unite: "g", ou: { id: "fruits-rouges-surgeles", quantite: 60, unite: "g" } },
       { id: "farine", quantite: 60, unite: "g" },
-      { id: "sucre", quantite: 45, unite: "g" },
+      { id: "sucre", quantite: 30, unite: "g" },
+      { id: "cassonade", quantite: 15, unite: "g" },
       { id: "beurre", quantite: 45, unite: "g" },
-      { id: "cannelle", quantite: 1, unite: "g" }
+      { id: "cannelle", quantite: 1, unite: "g" },
+      { id: "glace-a-la-vanille", quantite: 100, unite: "ml", optionnel: true }
     ],
-    etapes: ["Préchauffer le four à 190 °C. Sabler du bout des doigts la farine, 30 g de sucre et 30 g de beurre jusqu'à obtenir des miettes, sans trop travailler.", "Étaler les miettes sur une plaque et cuire 15 min, jusqu'à ce qu'elles soient légèrement dorées.", "Pendant ce temps, éplucher les pommes et les couper en dés. Faire fondre le reste du beurre et du sucre (roux si possible) 3 min jusqu'à un caramel clair, ajouter les pommes et cuire 3 min.", "Ajouter les mûres (ou des fruits rouges) et la cannelle, cuire encore 3 min, puis couvrir hors du feu 2 à 3 min.", "Répartir les fruits dans 2 coupes et couvrir de crumble. Servir tiède, avec une boule de glace si vous voulez."]
+    etapes: ["Préchauffer le four à 190 °C. Sabler du bout des doigts la farine, 30 g de sucre et 30 g de beurre jusqu'à obtenir des miettes, sans trop travailler.", "Étaler les miettes sur une plaque et cuire 15 min, jusqu'à ce qu'elles soient légèrement dorées.", "Pendant ce temps, éplucher les pommes et les couper en dés. Faire fondre le reste du beurre avec la cassonade 3 min jusqu'à un caramel clair, ajouter les pommes et cuire 3 min.", "Ajouter les mûres (ou des fruits rouges) et la cannelle, cuire encore 3 min, puis couvrir hors du feu 2 à 3 min.", "Répartir les fruits dans 2 coupes et couvrir de crumble. Servir tiède, avec une boule de glace à la vanille."]
   },
   {
     id: "gateau-battenberg", nom: "Gâteau Battenberg (damier rose et jaune en pâte d'amandes)", cuisine: "britannique",
@@ -763,10 +784,14 @@ ajouterRecettes([
       { id: "poudre-d-amandes", quantite: 50, unite: "g", ou: { id: "amandes", quantite: 50, unite: "g" } },
       { id: "levure-chimique", quantite: 8, unite: "g" },
       { id: "oeuf", quantite: 3, unite: "pièce" },
+      { id: "extrait-de-vanille", quantite: 3, unite: "ml", optionnel: true },
+      { id: "extrait-d-amande-amere", quantite: 1, unite: "ml", optionnel: true },
+      { id: "colorant-alimentaire-rose", quantite: 3, unite: "ml", optionnel: true },
       { id: "confiture", quantite: 100, unite: "g" },
-      { id: "pate-d-amandes", quantite: 500, unite: "g" }
+      { id: "pate-d-amandes", quantite: 500, unite: "g" },
+      { id: "sucre-glace", quantite: 10, unite: "g", optionnel: true }
     ],
-    etapes: ["Préchauffer le four à 180 °C. Chemiser un moule carré de 20 cm et le séparer en deux avec une bande de papier cuisson pliée (ou d'aluminium).", "Battre ensemble le beurre mou, le sucre, la farine, la poudre d'amandes, la levure, les œufs et quelques gouttes de vanille ou d'extrait d'amande jusqu'à ce que ce soit lisse.", "Verser la moitié de la pâte d'un côté du moule. Colorer l'autre moitié avec quelques gouttes de colorant rose (si vous en avez) et la verser de l'autre côté. Cuire 25 à 30 min ; une lame doit ressortir sèche. Laisser refroidir.", "Égaliser les deux gâteaux, les couper chacun en 2 longs bâtonnets de même taille. Chauffer la confiture (d'abricots) et coller les bâtonnets en damier, rose et jaune en alternance.", "Étaler la pâte d'amandes en un rectangle assez grand pour envelopper le gâteau, la badigeonner de confiture, y rouler le gâteau et souder. Égaliser les bouts. Un gâteau entier : il en restera."]
+    etapes: ["Préchauffer le four à 180 °C. Chemiser un moule carré de 20 cm et le séparer en deux avec une bande de papier cuisson pliée (ou d'aluminium).", "Battre ensemble le beurre mou, le sucre, la farine, la poudre d'amandes, la levure, les œufs, la vanille et l'extrait d'amande amère jusqu'à ce que ce soit lisse.", "Verser la moitié de la pâte d'un côté du moule. Colorer l'autre moitié avec le colorant rose et la verser de l'autre côté. Cuire 25 à 30 min ; une lame doit ressortir sèche. Laisser refroidir.", "Égaliser les deux gâteaux, les couper chacun en 2 longs bâtonnets de même taille. Chauffer la confiture (d'abricots) et coller les bâtonnets en damier, rose et jaune en alternance.", "Étaler la pâte d'amandes en un rectangle assez grand pour envelopper le gâteau, la badigeonner de confiture, y rouler le gâteau et souder. Égaliser les bouts et saupoudrer de sucre glace. Un gâteau entier : il en restera."]
   },
   {
     id: "full-english-breakfast", nom: "Full English breakfast (petit-déjeuner anglais complet)", cuisine: "britannique",
@@ -778,15 +803,14 @@ ajouterRecettes([
       { id: "oeuf", quantite: 2, unite: "pièce" },
       { id: "champignons", quantite: 100, unite: "g" },
       { id: "tomate", quantite: 2, unite: "pièce" },
-      { id: "boudin-noir", quantite: 1, unite: "pièce", optionnel: true },
-      { id: "haricots-blancs-en-boite", quantite: 1, unite: "boîte" },
-      { id: "sauce-tomate", quantite: 100, unite: "g" },
+      { id: "boudin-noir", quantite: 1, unite: "pièce" },
+      { id: "haricots-a-la-tomate-en-boite", quantite: 1, unite: "boîte", ou: { id: "haricots-blancs-en-boite", quantite: 1, unite: "boîte" } },
       { id: "pain", quantite: 2, unite: "tranche" },
       { id: "huile-d-olive", quantite: 10, unite: "ml" },
       { id: "sel", quantite: 1, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Chauffer une grande poêle (ou une plancha) à feu doux avec un peu d'huile. Cuire les saucisses doucement 15 à 20 min en les retournant ; les garder au chaud au four si la place manque.", "Après 10 min, monter à feu moyen. Faire quelques entailles dans le gras du bacon et le cuire 2 à 4 min de chaque côté.", "Cuire en même temps les champignons, les tomates coupées en deux (côté coupé en bas d'abord) et les tranches de boudin noir, 2 à 3 min de chaque côté.", "Chauffer les haricots égouttés dans une petite casserole avec la sauce tomate (à la place des baked beans), saler, poivrer.", "Faire griller le pain dans la poêle, puis cuire les œufs au plat. Servir tout de suite, tout ensemble dans l'assiette."]
+    etapes: ["Chauffer une grande poêle (ou une plancha) à feu doux avec un peu d'huile. Cuire les saucisses doucement 15 à 20 min en les retournant ; les garder au chaud au four si la place manque.", "Après 10 min, monter à feu moyen. Faire quelques entailles dans le gras du bacon et le cuire 2 à 4 min de chaque côté.", "Cuire en même temps les champignons, les tomates coupées en deux (côté coupé en bas d'abord) et les tranches de boudin noir, 2 à 3 min de chaque côté.", "Chauffer les haricots à la tomate (baked beans) dans une petite casserole.", "Faire griller le pain dans la poêle, puis cuire les œufs au plat. Servir tout de suite, tout ensemble dans l'assiette."]
   },
   {
     id: "carrot-cake-glacage-fromage-frais", nom: "Carrot cake (gâteau aux carottes, glaçage au fromage frais)", cuisine: "britannique",
@@ -795,17 +819,17 @@ ajouterRecettes([
     ingredients: [
       { id: "carotte", quantite: 2, unite: "pièce" },
       { id: "farine", quantite: 100, unite: "g" },
-      { id: "levure-chimique", quantite: 4, unite: "g" },
+      { id: "bicarbonate-de-soude", quantite: 4, unite: "g", ou: { id: "levure-chimique", quantite: 4, unite: "g" } },
       { id: "sucre", quantite: 150, unite: "g" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "huile-de-tournesol", quantite: 110, unite: "ml" },
       { id: "cannelle", quantite: 3, unite: "g" },
-      { id: "noix", quantite: 40, unite: "g", optionnel: true },
+      { id: "noix", quantite: 40, unite: "g" },
       { id: "fromage-frais", quantite: 50, unite: "g", ou: { id: "yaourt-grec", quantite: 50, unite: "g" } },
       { id: "beurre", quantite: 25, unite: "g" },
       { id: "sel", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 160 °C, beurrer et chemiser un petit moule (à cake ou de 16 cm).", "Mélanger la farine, la levure, 110 g de sucre, l'œuf, l'huile, le sel et la cannelle jusqu'à ce que ce soit homogène.", "Ajouter les carottes râpées finement et les noix concassées. Verser dans le moule et cuire 50 min à 1 h ; une lame doit ressortir sèche.", "Laisser tiédir 10 min, démouler et laisser refroidir complètement sur une grille.", "Glaçage : battre le fromage frais (type Philadelphia), le beurre mou et le reste du sucre jusqu'à ce que ce soit crémeux, et l'étaler sur le gâteau froid."]
+    etapes: ["Préchauffer le four à 160 °C, beurrer et chemiser un petit moule (à cake ou de 16 cm).", "Mélanger la farine, le bicarbonate, 110 g de sucre, l'œuf, l'huile, le sel et la cannelle jusqu'à ce que ce soit homogène.", "Ajouter les carottes râpées finement et les noix concassées. Verser dans le moule et cuire 50 min à 1 h ; une lame doit ressortir sèche.", "Laisser tiédir 10 min, démouler et laisser refroidir complètement sur une grille.", "Glaçage : battre le fromage frais (type Philadelphia), le beurre mou et le reste du sucre jusqu'à ce que ce soit crémeux, et l'étaler sur le gâteau froid."]
   },
   {
     id: "chelsea-buns", nom: "Chelsea buns (brioches roulées aux raisins et à la cannelle)", cuisine: "britannique",
@@ -817,13 +841,14 @@ ajouterRecettes([
       { id: "lait", quantite: 165, unite: "ml" },
       { id: "beurre", quantite: 35, unite: "g" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
-      { id: "sucre", quantite: 55, unite: "g" },
+      { id: "cassonade", quantite: 40, unite: "g" },
+      { id: "sucre", quantite: 15, unite: "g" },
       { id: "cannelle", quantite: 5, unite: "g" },
       { id: "raisins-secs", quantite: 75, unite: "g" },
       { id: "huile-de-tournesol", quantite: 5, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" }
     ],
-    etapes: ["Mélanger la farine et le sel, faire un puits et y mettre la levure. Tiédir 150 ml de lait avec 20 g de beurre jusqu'à ce qu'il fonde, verser sur la farine avec l'œuf et mélanger en pâte souple.", "Pétrir 5 min sur un plan fariné jusqu'à ce que la pâte soit lisse et ne colle plus. La mettre dans un bol huilé, couvrir et laisser lever 1 h dans un endroit tiède : elle doit doubler.", "Étaler la pâte en rectangle, la badigeonner du reste du beurre fondu, puis parsemer de 40 g de sucre (roux si possible), de cannelle et de raisins secs.", "Rouler sur la longueur, couper en 6 tranches et les serrer côte à côte, côté coupé dessus, dans un moule beurré. Laisser lever encore 30 min. Préchauffer le four à 190 °C.", "Cuire 20 à 25 min. Faire chauffer le reste du lait avec le reste du sucre et en badigeonner les brioches à la sortie du four."]
+    etapes: ["Mélanger la farine et le sel, faire un puits et y mettre la levure. Tiédir 150 ml de lait avec 20 g de beurre jusqu'à ce qu'il fonde, verser sur la farine avec l'œuf et mélanger en pâte souple.", "Pétrir 5 min sur un plan fariné jusqu'à ce que la pâte soit lisse et ne colle plus. La mettre dans un bol huilé, couvrir et laisser lever 1 h dans un endroit tiède : elle doit doubler.", "Étaler la pâte en rectangle, la badigeonner du reste du beurre fondu, puis parsemer de cassonade, de cannelle et de raisins secs.", "Rouler sur la longueur, couper en 6 tranches et les serrer côte à côte, côté coupé dessus, dans un moule beurré. Laisser lever encore 30 min. Préchauffer le four à 190 °C.", "Cuire 20 à 25 min. Faire chauffer le reste du lait avec le sucre et en badigeonner les brioches à la sortie du four."]
   },
   {
     id: "dundee-cake", nom: "Dundee cake (cake écossais aux fruits secs et aux amandes)", cuisine: "britannique",
@@ -831,19 +856,20 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52899",
     ingredients: [
       { id: "beurre", quantite: 90, unite: "g" },
-      { id: "sucre", quantite: 95, unite: "g" },
+      { id: "cassonade", quantite: 90, unite: "g" },
+      { id: "sucre", quantite: 5, unite: "g" },
       { id: "oeuf", quantite: 2, unite: "pièce" },
       { id: "farine", quantite: 115, unite: "g" },
       { id: "levure-chimique", quantite: 3, unite: "g" },
       { id: "poudre-d-amandes", quantite: 50, unite: "g" },
       { id: "raisins-secs", quantite: 250, unite: "g" },
-      { id: "fruits-confits", quantite: 50, unite: "g", optionnel: true },
+      { id: "cerises-confites", quantite: 50, unite: "g", ou: { id: "fruits-confits", quantite: 50, unite: "g" } },
       { id: "amandes", quantite: 50, unite: "g" },
       { id: "orange", quantite: 1, unite: "pièce" },
       { id: "confiture", quantite: 25, unite: "g" },
       { id: "lait", quantite: 25, unite: "ml" }
     ],
-    etapes: ["Ébouillanter les amandes entières 5 min, les égoutter et retirer la peau. Préchauffer le four à 160 °C et chemiser un petit moule rond (environ 16 cm).", "Battre le beurre mou avec 90 g de sucre (roux si possible) jusqu'à ce que ce soit léger, puis ajouter le zeste d'orange et la confiture (d'abricots).", "Ajouter les œufs un à un en battant bien, puis la farine mélangée à la levure et la poudre d'amandes. Incorporer le lait, les raisins secs et les fruits confits (cerises confites à l'origine).", "Verser dans le moule, lisser et disposer les amandes en cercles sur le dessus, sans appuyer.", "Cuire 1 h à 1 h 15 ; une lame doit ressortir sèche. Badigeonner d'un peu de lait sucré avec le reste du sucre et laisser refroidir dans le moule. Un cake entier : il en restera pour plusieurs goûters."]
+    etapes: ["Ébouillanter les amandes entières 5 min, les égoutter et retirer la peau. Préchauffer le four à 160 °C et chemiser un petit moule rond (environ 16 cm).", "Battre le beurre mou avec la cassonade jusqu'à ce que ce soit léger, puis ajouter le zeste d'orange et la confiture (d'abricots).", "Ajouter les œufs un à un en battant bien, puis la farine mélangée à la levure et la poudre d'amandes. Incorporer le lait, les raisins secs et les cerises confites coupées en deux.", "Verser dans le moule, lisser et disposer les amandes en cercles sur le dessus, sans appuyer.", "Cuire 1 h à 1 h 15 ; une lame doit ressortir sèche. Badigeonner d'un peu de lait sucré avec le sucre et laisser refroidir dans le moule. Un cake entier : il en restera pour plusieurs goûters."]
   },
   {
     id: "madeira-cake-citron", nom: "Madeira cake (gâteau moelleux au citron)", cuisine: "britannique",
@@ -872,9 +898,10 @@ ajouterRecettes([
       { id: "beurre", quantite: 60, unite: "g" },
       { id: "raisins-secs", quantite: 75, unite: "g" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "extrait-de-vanille", quantite: 5, unite: "ml" },
       { id: "lait", quantite: 8, unite: "ml" }
     ],
-    etapes: ["Préchauffer le four à 180 °C et couvrir une plaque de papier cuisson.", "Mélanger la farine, le sucre et la levure, puis sabler avec le beurre froid en dés jusqu'à obtenir des miettes. Ajouter les raisins secs.", "Battre l'œuf avec le lait (et un peu de vanille si vous en avez), verser sur le mélange et remuer juste assez pour obtenir une pâte épaisse et grumeleuse.", "Déposer 6 tas de la taille d'une balle de golf sur la plaque, bien espacés : ils s'étalent.", "Cuire 15 à 20 min, jusqu'à ce qu'ils soient dorés. Laisser refroidir sur une grille."]
+    etapes: ["Préchauffer le four à 180 °C et couvrir une plaque de papier cuisson.", "Mélanger la farine, le sucre et la levure, puis sabler avec le beurre froid en dés jusqu'à obtenir des miettes. Ajouter les raisins secs.", "Battre l'œuf avec le lait et la vanille, verser sur le mélange et remuer juste assez pour obtenir une pâte épaisse et grumeleuse.", "Déposer 6 tas de la taille d'une balle de golf sur la plaque, bien espacés : ils s'étalent.", "Cuire 15 à 20 min, jusqu'à ce qu'ils soient dorés. Laisser refroidir sur une grille."]
   },
   {
     id: "parkin-pain-d-epices-avoine", nom: "Parkin (pain d'épices du Yorkshire à l'avoine)", cuisine: "britannique",
@@ -882,17 +909,17 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52902",
     ingredients: [
       { id: "beurre", quantite: 100, unite: "g" },
-      { id: "miel", quantite: 100, unite: "g" },
-      { id: "melasse", quantite: 45, unite: "g", optionnel: true },
-      { id: "sucre", quantite: 45, unite: "g" },
+      { id: "golden-syrup", quantite: 100, unite: "g", ou: { id: "miel", quantite: 100, unite: "g" } },
+      { id: "melasse", quantite: 45, unite: "g" },
+      { id: "cassonade", quantite: 45, unite: "g", ou: { id: "sucre", quantite: 45, unite: "g" } },
       { id: "flocons-d-avoine", quantite: 50, unite: "g" },
       { id: "farine", quantite: 125, unite: "g" },
       { id: "levure-chimique", quantite: 6, unite: "g" },
-      { id: "gingembre", quantite: 10, unite: "g" },
+      { id: "gingembre-en-poudre", quantite: 5, unite: "g", ou: { id: "gingembre", quantite: 10, unite: "g" } },
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "lait", quantite: 30, unite: "ml" }
     ],
-    etapes: ["Préchauffer le four à 160 °C, beurrer et chemiser un petit moule carré (environ 18 cm).", "Battre l'œuf avec le lait à la fourchette.", "Faire fondre doucement le miel (du golden syrup à l'origine), la mélasse, le sucre (roux si possible) et le beurre jusqu'à ce que le sucre soit dissous. Retirer du feu.", "Mélanger les flocons d'avoine (mixés grossièrement), la farine, la levure et le gingembre râpé (ou 1 cuillère à café de gingembre en poudre), les verser dans le sirop, puis ajouter l'œuf battu.", "Verser dans le moule et cuire 40 à 50 min, jusqu'à ce que le dessus soit ferme. Laisser refroidir, puis emballer : il devient plus moelleux et collant après 2 ou 3 jours."]
+    etapes: ["Préchauffer le four à 160 °C, beurrer et chemiser un petit moule carré (environ 18 cm).", "Battre l'œuf avec le lait à la fourchette.", "Faire fondre doucement le golden syrup (ou du miel), la mélasse, la cassonade et le beurre jusqu'à ce que le sucre soit dissous. Retirer du feu.", "Mélanger les flocons d'avoine (mixés grossièrement), la farine, la levure et le gingembre en poudre (ou 10 g de gingembre frais râpé), les verser dans le sirop, puis ajouter l'œuf battu.", "Verser dans le moule et cuire 40 à 50 min, jusqu'à ce que le dessus soit ferme. Laisser refroidir, puis emballer : il devient plus moelleux et collant après 2 ou 3 jours."]
   },
   {
     id: "saumon-four-fenouil-tomates-cerises", nom: "Saumon au four, fenouil et tomates cerises", cuisine: "britannique",
@@ -936,9 +963,9 @@ ajouterRecettes([
       { id: "barres-chocolatees", quantite: 3, unite: "pièce" },
       { id: "beurre", quantite: 75, unite: "g" },
       { id: "riz-souffle", quantite: 60, unite: "g" },
-      { id: "chocolat-noir", quantite: 75, unite: "g" }
+      { id: "chocolat-au-lait", quantite: 75, unite: "g", ou: { id: "chocolat-noir", quantite: 75, unite: "g" } }
     ],
-    etapes: ["Chemiser de papier cuisson un petit moule carré (environ 15 cm).", "Faire fondre au bain-marie les barres chocolatées au caramel (type Mars) coupées en morceaux avec le beurre, en fouettant jusqu'à ce que ce soit lisse.", "Verser sur le riz soufflé (type Rice Krispies) et bien mélanger, puis tasser dans le moule.", "Faire fondre le chocolat (au lait de préférence) et l'étaler sur le dessus.", "Laisser prendre au frais environ 1 h, puis couper en carrés."]
+    etapes: ["Chemiser de papier cuisson un petit moule carré (environ 15 cm).", "Faire fondre au bain-marie les barres chocolatées au caramel (type Mars) coupées en morceaux avec le beurre, en fouettant jusqu'à ce que ce soit lisse.", "Verser sur le riz soufflé (type Rice Krispies) et bien mélanger, puis tasser dans le moule.", "Faire fondre le chocolat au lait et l'étaler sur le dessus.", "Laisser prendre au frais environ 1 h, puis couper en carrés."]
   },
   {
     id: "christmas-pudding", nom: "Christmas pudding (pudding de Noël aux fruits secs)", cuisine: "britannique",
@@ -951,12 +978,13 @@ ajouterRecettes([
       { id: "amandes", quantite: 15, unite: "g" },
       { id: "farine", quantite: 35, unite: "g" },
       { id: "chapelure", quantite: 25, unite: "g" },
-      { id: "sucre", quantite: 25, unite: "g" },
+      { id: "cassonade", quantite: 25, unite: "g", ou: { id: "sucre", quantite: 25, unite: "g" } },
       { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "cognac", quantite: 10, unite: "ml", optionnel: true, ou: { id: "rhum", quantite: 10, unite: "ml" } },
       { id: "beurre", quantite: 60, unite: "g" },
       { id: "noix-de-muscade", quantite: 3, unite: "g" }
     ],
-    etapes: ["Hacher grossièrement les amandes. Éplucher la pomme, l'épépiner et la hacher. Hacher finement les fruits confits (écorces confites à l'origine).", "Dans un saladier, mélanger les amandes, la pomme, les fruits confits, la muscade râpée, les raisins secs, la farine, la chapelure, le sucre (roux si possible), l'œuf battu et 1 cuillère à soupe de cognac ou de rhum si vous en avez.", "Râper le beurre froid au-dessus du saladier et remuer 3 à 4 min.", "Tasser dans un bol beurré d'environ 600 ml, couvrir d'un disque de papier cuisson puis d'aluminium bien serré avec une ficelle.", "Cuire 4 h à la vapeur (bol posé dans une grande casserole d'eau frémissante à mi-hauteur, couvercle fermé), en rajoutant de l'eau bouillante régulièrement. Se garde au frais et se réchauffe 1 h à la vapeur le jour de Noël."]
+    etapes: ["Hacher grossièrement les amandes. Éplucher la pomme, l'épépiner et la hacher. Hacher finement les fruits confits (écorces confites à l'origine).", "Dans un saladier, mélanger les amandes, la pomme, les fruits confits, la muscade râpée, les raisins secs, la farine, la chapelure, la cassonade, l'œuf battu et le cognac (ou du rhum).", "Râper le beurre froid au-dessus du saladier et remuer 3 à 4 min.", "Tasser dans un bol beurré d'environ 600 ml, couvrir d'un disque de papier cuisson puis d'aluminium bien serré avec une ficelle.", "Cuire 4 h à la vapeur (bol posé dans une grande casserole d'eau frémissante à mi-hauteur, couvercle fermé), en rajoutant de l'eau bouillante régulièrement. Se garde au frais et se réchauffe 1 h à la vapeur le jour de Noël."]
   },
   {
     id: "christmas-cake", nom: "Christmas cake (gâteau de Noël aux fruits secs)", cuisine: "britannique",
@@ -964,20 +992,22 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52990",
     ingredients: [
       { id: "beurre", quantite: 100, unite: "g" },
-      { id: "sucre", quantite: 100, unite: "g" },
+      { id: "cassonade", quantite: 100, unite: "g", ou: { id: "sucre", quantite: 100, unite: "g" } },
       { id: "farine", quantite: 100, unite: "g" },
       { id: "oeuf", quantite: 2, unite: "pièce" },
       { id: "poudre-d-amandes", quantite: 25, unite: "g", ou: { id: "amandes", quantite: 25, unite: "g" } },
-      { id: "orange", quantite: 1, unite: "pièce" },
-      { id: "fruits-confits", quantite: 85, unite: "g" },
+      { id: "xeres", quantite: 50, unite: "ml", ou: { id: "orange", quantite: 1, unite: "pièce" } },
+      { id: "fruits-confits", quantite: 45, unite: "g" },
+      { id: "cerises-confites", quantite: 40, unite: "g" },
       { id: "raisins-secs", quantite: 250, unite: "g" },
-      { id: "noix", quantite: 50, unite: "g", optionnel: true },
+      { id: "noix-de-pecan", quantite: 50, unite: "g", ou: { id: "noix", quantite: 50, unite: "g" } },
       { id: "citron", quantite: 1, unite: "pièce" },
-      { id: "cannelle", quantite: 3, unite: "g" },
-      { id: "noix-de-muscade", quantite: 1, unite: "g" },
+      { id: "quatre-epices", quantite: 4, unite: "g", ou: { id: "cannelle", quantite: 4, unite: "g" } },
+      { id: "eau-de-rose", quantite: 10, unite: "ml", optionnel: true },
+      { id: "extrait-de-vanille", quantite: 1, unite: "ml", optionnel: true },
       { id: "levure-chimique", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 150 °C. Chemiser le fond et les bords d'un moule rond d'environ 15 cm.", "Battre le beurre et le sucre (roux si possible) 1 à 2 min jusqu'à ce que ce soit très crémeux. Ajouter en alternant la farine et les œufs battus, un quart à la fois, puis la poudre d'amandes.", "Ajouter le jus de l'orange (à la place du xérès), les fruits confits, les raisins secs, les noix (pécan à l'origine) hachées, le zeste de citron, la cannelle, la muscade et un peu de vanille. Mélanger, puis ajouter la levure.", "Verser dans le moule, lisser en creusant légèrement le centre, et cuire environ 1 h 45 ; une lame doit ressortir sèche.", "Laisser refroidir dans le moule. Il se garde plusieurs semaines bien emballé : un gâteau entier, pour toutes les fêtes."]
+    etapes: ["Préchauffer le four à 150 °C. Chemiser le fond et les bords d'un moule rond d'environ 15 cm.", "Battre le beurre et la cassonade 1 à 2 min jusqu'à ce que ce soit très crémeux. Ajouter en alternant la farine et les œufs battus, un quart à la fois, puis la poudre d'amandes.", "Ajouter le xérès (ou le jus d'une orange), les fruits confits, les cerises confites, les raisins secs, les noix de pécan hachées, le zeste de citron, les quatre-épices, l'eau de rose et la vanille. Mélanger, puis ajouter la levure.", "Verser dans le moule, lisser en creusant légèrement le centre, et cuire environ 1 h 45 ; une lame doit ressortir sèche.", "Laisser refroidir dans le moule. Il se garde plusieurs semaines bien emballé : un gâteau entier, pour toutes les fêtes."]
   },
   {
     id: "mince-pies-maison", nom: "Mince pies (tartelettes de Noël aux fruits secs épicés)", cuisine: "britannique",
@@ -992,9 +1022,10 @@ ajouterRecettes([
       { id: "fruits-confits", quantite: 20, unite: "g", optionnel: true },
       { id: "cannelle", quantite: 2, unite: "g" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "sucre-glace", quantite: 10, unite: "g", optionnel: true },
       { id: "sel", quantite: 1, unite: "g" }
     ],
-    etapes: ["Garniture (à la place du « mincemeat » tout prêt) : mélanger la pomme râpée, les raisins secs, les fruits confits hachés, 15 g de sucre, la cannelle et 15 g de beurre fondu.", "Pâte : sabler la farine avec 115 g de beurre froid, ajouter 50 g de sucre et une pincée de sel, puis pétrir brièvement en boule, sans liquide.", "Préchauffer le four à 200 °C. Foncer 9 empreintes d'un moule à muffins avec des boules de pâte de la taille d'une noix pressées au fond et sur les bords.", "Garnir de fruits, couvrir d'un petit disque de pâte aplati entre les mains et souder les bords. Dorer à l'œuf battu.", "Cuire 20 min, jusqu'à ce que ce soit doré. Laisser tiédir, démouler et saupoudrer de sucre glace si vous en avez."]
+    etapes: ["Garniture (à la place du « mincemeat » tout prêt) : mélanger la pomme râpée, les raisins secs, les fruits confits hachés, 15 g de sucre, la cannelle et 15 g de beurre fondu.", "Pâte : sabler la farine avec 115 g de beurre froid, ajouter 50 g de sucre et une pincée de sel, puis pétrir brièvement en boule, sans liquide.", "Préchauffer le four à 200 °C. Foncer 9 empreintes d'un moule à muffins avec des boules de pâte de la taille d'une noix pressées au fond et sur les bords.", "Garnir de fruits, couvrir d'un petit disque de pâte aplati entre les mains et souder les bords. Dorer à l'œuf battu.", "Cuire 20 min, jusqu'à ce que ce soit doré. Laisser tiédir, démouler et saupoudrer de sucre glace."]
   },
   {
     id: "tourte-fraises-rhubarbe", nom: "Tourte fraises-rhubarbe", cuisine: "britannique",
@@ -1008,8 +1039,8 @@ ajouterRecettes([
       { id: "rhubarbe", quantite: 225, unite: "g", ou: { id: "pomme", quantite: 2, unite: "pièce" } },
       { id: "fraises", quantite: 225, unite: "g" },
       { id: "fecule", quantite: 12, unite: "g" },
-      { id: "cannelle", quantite: 1, unite: "g", optionnel: true },
-      { id: "citron", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "cannelle", quantite: 1, unite: "g" },
+      { id: "citron", quantite: 1, unite: "pièce" },
       { id: "lait", quantite: 15, unite: "ml" },
       { id: "sel", quantite: 1, unite: "g" }
     ],
@@ -1053,21 +1084,38 @@ ajouterRecettes([
       { id: "pomme-de-terre", quantite: 400, unite: "g" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 1, unite: "pièce" },
-      { id: "celeri-branche", quantite: 1, unite: "pièce", optionnel: true },
+      { id: "celeri-branche", quantite: 1, unite: "pièce" },
       { id: "laurier", quantite: 2, unite: "pièce" },
       { id: "thym", quantite: 2, unite: "g", ou: { id: "herbes-de-provence", quantite: 2, unite: "g" } },
       { id: "farine", quantite: 15, unite: "g" },
-      { id: "sauce-tomate", quantite: 30, unite: "g" },
-      { id: "sauce-worcestershire", quantite: 15, unite: "ml", optionnel: true },
+      { id: "concentre-de-tomates", quantite: 30, unite: "g", ou: { id: "sauce-tomate", quantite: 30, unite: "g" } },
+      { id: "sauce-worcestershire", quantite: 15, unite: "ml" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 300, unite: "ml" },
       { id: "cheddar", quantite: 15, unite: "g", ou: { id: "fromage-rape", quantite: 15, unite: "g" } },
-      { id: "parmesan", quantite: 15, unite: "g", optionnel: true },
+      { id: "parmesan", quantite: 15, unite: "g" },
       { id: "beurre", quantite: 20, unite: "g" },
       { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 160 °C. Dans une cocotte, faire suer 10 min le céleri, l'oignon et la carotte hachés avec le laurier, un peu de thym, l'huile et 10 g de beurre.", "Ajouter la farine, puis la sauce tomate, la sauce Worcestershire et le bouillon cube émietté. Verser peu à peu l'eau chaude, ajouter le bœuf en gros cubes et porter à frémissement.", "Couvrir et cuire 2 h 30 au four, puis découvrir et cuire encore 30 min, jusqu'à ce que la viande soit très tendre et la sauce épaissie.", "Pendant ce temps, cuire les pommes de terre à l'eau aux trois quarts, puis les couper en rondelles de 1 cm.", "Verser la viande dans un plat, couvrir de pommes de terre, arroser du reste de beurre fondu, parsemer de cheddar et de parmesan râpés et de thym. Monter le four à 200 °C et gratiner 20 à 30 min."]
+    etapes: ["Préchauffer le four à 160 °C. Dans une cocotte, faire suer 10 min le céleri, l'oignon et la carotte hachés avec le laurier, un peu de thym, l'huile et 10 g de beurre.", "Ajouter la farine, puis le concentré de tomates, la sauce Worcestershire et le bouillon cube émietté. Verser peu à peu l'eau chaude, ajouter le bœuf en gros cubes et porter à frémissement.", "Couvrir et cuire 2 h 30 au four, puis découvrir et cuire encore 30 min, jusqu'à ce que la viande soit très tendre et la sauce épaissie.", "Pendant ce temps, cuire les pommes de terre à l'eau aux trois quarts, puis les couper en rondelles de 1 cm.", "Verser la viande dans un plat, couvrir de pommes de terre, arroser du reste de beurre fondu, parsemer de cheddar et de parmesan râpés et de thym. Monter le four à 200 °C et gratiner 20 à 30 min."]
+  },
+  {
+    id: "trifle-christmas-pudding-oranges", nom: "Trifle au Christmas pudding et aux oranges", cuisine: "britannique",
+    difficulte: "facile", tempsMinutes: 30, portions: 2,
+    source: "TheMealDB", idSource: "52989",
+    ingredients: [
+      { id: "pudding-de-noel", quantite: 150, unite: "g" },
+      { id: "orange", quantite: 2, unite: "pièce" },
+      { id: "cassonade", quantite: 8, unite: "g", ou: { id: "sucre", quantite: 8, unite: "g" } },
+      { id: "liqueur-d-orange", quantite: 15, unite: "ml", optionnel: true },
+      { id: "creme-anglaise", quantite: 250, unite: "ml" },
+      { id: "mascarpone", quantite: 125, unite: "g" },
+      { id: "creme-fraiche", quantite: 140, unite: "ml" },
+      { id: "amandes", quantite: 15, unite: "g" },
+      { id: "chocolat-noir", quantite: 10, unite: "g" }
+    ],
+    etapes: ["Peler les oranges à vif avec un couteau (sans la peau blanche), les couper en tranches très fines et les étaler sur une assiette. Saupoudrer de cassonade et arroser de liqueur d'orange (type Grand Marnier).", "Émietter le Christmas pudding en gros morceaux au fond d'un saladier ou de 2 coupes. Couvrir des oranges et de leur jus.", "Battre le mascarpone jusqu'à ce qu'il soit lisse, puis y mélanger la crème anglaise. Étaler sur les oranges.", "Fouetter légèrement la crème (liquide entière) et l'étaler par-dessus.", "Parsemer d'amandes effilées et de chocolat râpé. Peut se préparer la veille et se garder au frais."]
   }
 ]);
