@@ -172,20 +172,22 @@ ajouterRecettes([
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "huile-d-olive", quantite: 20, unite: "ml" },
       { id: "cumin", quantite: 2, unite: "g" },
+      { id: "piment-de-la-jamaique", quantite: 1, unite: "g", optionnel: true },
+      { id: "clous-de-girofle", quantite: 2, unite: "pièce", optionnel: true },
       { id: "cannelle", quantite: 1, unite: "g" },
       { id: "laurier", quantite: 1, unite: "pièce" },
       { id: "origan", quantite: 1, unite: "g", ou: { id: "herbes-de-provence", quantite: 1, unite: "g" } },
-      { id: "piment-en-poudre", quantite: 2, unite: "g" },
+      { id: "piment-ancho", quantite: 1, unite: "pièce", ou: { id: "piment-en-poudre", quantite: 2, unite: "g" } },
       { id: "vinaigre-balsamique", quantite: 15, unite: "ml", ou: { id: "vinaigre", quantite: 10, unite: "ml" } },
-      { id: "sauce-tomate", quantite: 270, unite: "g" },
+      { id: "tomates-concassees", quantite: 270, unite: "g", ou: { id: "sauce-tomate", quantite: 270, unite: "g" } },
       { id: "ketchup", quantite: 10, unite: "g" },
-      { id: "sucre", quantite: 10, unite: "g" },
-      { id: "haricots-rouges-en-boite", quantite: 1, unite: "boîte" },
+      { id: "cassonade", quantite: 10, unite: "g", ou: { id: "sucre", quantite: 10, unite: "g" } },
+      { id: "haricots-borlotti-en-boite", quantite: 1, unite: "boîte", ou: { id: "haricots-rouges-en-boite", quantite: 1, unite: "boîte" } },
       { id: "eau", quantite: 150, unite: "ml" },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 120 °C. Sortir la viande du réfrigérateur et la couper en gros morceaux. Hacher finement l'oignon et l'ail.", "Dans une cocotte allant au four, dorer la viande de tous les côtés dans la moitié de l'huile, puis la réserver.", "Ajouter le reste d'huile et faire dorer le chorizo en rondelles, puis le réserver.", "Dans la même huile, faire revenir l'oignon, l'ail, le cumin, la cannelle, le laurier, l'origan et le piment jusqu'à ce que l'oignon soit tendre. Saler et poivrer.", "Ajouter le vinaigre, la sauce tomate, le ketchup et le sucre, remettre la viande et le chorizo, puis verser l'eau. Porter à frémissement, couvrir et enfourner 2 h.", "Ajouter les haricots égouttés et cuire encore 1 h au four. Juste avant de servir, effilocher la viande avec deux fourchettes."]
+    etapes: ["Préchauffer le four à 120 °C. Sortir la viande du réfrigérateur et la couper en gros morceaux. Hacher finement l'oignon et l'ail.", "Dans une cocotte allant au four, dorer la viande de tous les côtés dans la moitié de l'huile, puis la réserver.", "Ajouter le reste d'huile et faire dorer le chorizo en rondelles, puis le réserver.", "Dans la même huile, faire revenir l'oignon, l'ail, le cumin, le piment de la Jamaïque, les clous de girofle, la cannelle, le laurier, l'origan et le piment ancho émietté jusqu'à ce que l'oignon soit tendre. Saler et poivrer.", "Ajouter le vinaigre, les tomates, le ketchup et la cassonade, remettre la viande et le chorizo, puis verser l'eau. Porter à frémissement, couvrir et enfourner 2 h.", "Ajouter les haricots égouttés et cuire encore 1 h au four. Juste avant de servir, effilocher la viande avec deux fourchettes."]
   },
   {
     id: "tacos-de-poisson-epices-cajun", nom: "Tacos de poisson aux épices cajun", cuisine: "mexicaine",
@@ -193,22 +195,21 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52819",
     ingredients: [
       { id: "poisson-blanc", quantite: 250, unite: "g" },
-      { id: "paprika", quantite: 4, unite: "g" },
-      { id: "piment-en-poudre", quantite: 1, unite: "g" },
-      { id: "ail-en-poudre", quantite: 1, unite: "g", optionnel: true },
+      { id: "epices-cajun", quantite: 7, unite: "g", ou: { id: "paprika", quantite: 7, unite: "g" } },
+      { id: "piment-de-cayenne", quantite: 1, unite: "g", ou: { id: "piment-en-poudre", quantite: 1, unite: "g" } },
       { id: "huile-de-tournesol", quantite: 10, unite: "ml" },
       { id: "tortilla-de-ble", quantite: 4, unite: "pièce" },
       { id: "avocat", quantite: 1, unite: "pièce" },
-      { id: "salade-verte", quantite: 1, unite: "pièce" },
+      { id: "sucrine", quantite: 1, unite: "pièce", ou: { id: "salade-verte", quantite: 1, unite: "pièce" } },
       { id: "oignon-nouveau", quantite: 2, unite: "pièce", ou: { id: "oignon-rouge", quantite: 1, unite: "pièce" } },
       { id: "sauce-salsa", quantite: 150, unite: "ml", ou: { id: "tomate", quantite: 2, unite: "pièce" } },
-      { id: "creme-fraiche", quantite: 75, unite: "ml" },
+      { id: "creme-aigre", quantite: 75, unite: "ml", ou: { id: "creme-fraiche", quantite: 75, unite: "ml" } },
       { id: "citron", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "sel", quantite: 1, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Mélanger le paprika, le piment, l'ail en poudre, le sel et le poivre (ou utiliser 10 g d'épices cajun toutes prêtes), et en enrober le poisson.", "Cuire le poisson dans l'huile à feu moyen jusqu'à ce qu'il soit doré, puis baisser le feu et poursuivre environ 10 min, jusqu'à ce qu'il soit cuit à cœur.", "Pendant ce temps, préparer la sauce : mélanger la crème, le jus du citron et l'ail haché finement, saler et poivrer.", "Réchauffer les tortillas quelques secondes au micro-ondes ou à la poêle.", "Garnir les tortillas d'avocat en tranches, de salade et d'oignon nouveau émincés, d'une cuillerée de salsa (ou de tomates en dés), puis de gros morceaux de poisson. Arroser de sauce et servir."]
+    etapes: ["Mélanger les épices cajun, le piment de Cayenne, le sel et le poivre, et en enrober le poisson.", "Cuire le poisson dans l'huile à feu moyen jusqu'à ce qu'il soit doré, puis baisser le feu et poursuivre environ 10 min, jusqu'à ce qu'il soit cuit à cœur.", "Pendant ce temps, préparer la sauce : mélanger la crème, le jus du citron et l'ail haché finement, saler et poivrer.", "Réchauffer les tortillas quelques secondes au micro-ondes ou à la poêle.", "Garnir les tortillas d'avocat en tranches, de salade et d'oignon nouveau émincés, d'une cuillerée de salsa (ou de tomates en dés), puis de gros morceaux de poisson. Arroser de sauce et servir."]
   },
   {
     id: "gratin-d-enchiladas-au-poulet", nom: "Gratin d'enchiladas au poulet", cuisine: "mexicaine",
@@ -216,15 +217,11 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52765",
     ingredients: [
       { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
-      { id: "sauce-tomate", quantite: 250, unite: "g" },
-      { id: "cumin", quantite: 2, unite: "g" },
-      { id: "piment-en-poudre", quantite: 1, unite: "g" },
-      { id: "ail-en-poudre", quantite: 1, unite: "g", optionnel: true, ou: { id: "ail", quantite: 1, unite: "gousse" } },
+      { id: "sauce-enchilada", quantite: 250, unite: "g", ou: { id: "sauce-tomate", quantite: 250, unite: "g" } },
       { id: "tortilla-de-mais", quantite: 4, unite: "pièce", ou: { id: "tortilla-de-ble", quantite: 4, unite: "pièce" } },
-      { id: "fromage-rape", quantite: 150, unite: "g", ou: { id: "cheddar", quantite: 150, unite: "g" } },
-      { id: "sel", quantite: 1, unite: "g" }
+      { id: "fromage-rape", quantite: 150, unite: "g", ou: { id: "cheddar", quantite: 150, unite: "g" } }
     ],
-    etapes: ["Sauce enchilada : mélanger la sauce tomate avec le cumin, le piment, l'ail et le sel (ou utiliser 250 g de sauce enchilada toute prête).", "Couper chaque blanc de poulet en 3 morceaux, les mettre dans une petite casserole avec la sauce, couvrir et cuire 20 min à feu doux à moyen en remuant de temps en temps. Préchauffer le four à 190 °C.", "Sortir le poulet et l'effilocher avec deux fourchettes.", "Dans un plat à four, étaler un peu de sauce, poser 2 tortillas, puis la moitié du poulet, de la sauce et du fromage. Recommencer avec le reste.", "Cuire 20 à 30 min au four, jusqu'à ce que ça bouillonne et que le fromage soit doré. Servir chaud."]
+    etapes: ["Si on n'a pas de sauce enchilada : relever la sauce tomate avec 2 g de cumin, une pincée de piment en poudre, un peu d'ail et du sel.", "Couper chaque blanc de poulet en 3 morceaux, les mettre dans une petite casserole avec la sauce, couvrir et cuire 20 min à feu doux à moyen en remuant de temps en temps. Préchauffer le four à 190 °C.", "Sortir le poulet et l'effilocher avec deux fourchettes.", "Dans un plat à four, étaler un peu de sauce, poser 2 tortillas, puis la moitié du poulet, de la sauce et du fromage. Recommencer avec le reste.", "Cuire 20 à 30 min au four, jusqu'à ce que ça bouillonne et que le fromage soit doré. Servir chaud."]
   },
   {
     id: "fajitas-aux-pois-chiches-rotis", nom: "Fajitas aux pois chiches rôtis", cuisine: "mexicaine",
@@ -236,10 +233,10 @@ ajouterRecettes([
       { id: "paprika", quantite: 1, unite: "g" },
       { id: "tomate", quantite: 2, unite: "pièce" },
       { id: "oignon-rouge", quantite: 1, unite: "pièce", ou: { id: "oignon", quantite: 1, unite: "pièce" } },
-      { id: "vinaigre", quantite: 10, unite: "ml" },
+      { id: "vinaigre-de-vin-rouge", quantite: 10, unite: "ml", ou: { id: "vinaigre", quantite: 10, unite: "ml" } },
       { id: "avocat", quantite: 1, unite: "pièce" },
       { id: "citron-vert", quantite: 2, unite: "pièce" },
-      { id: "creme-fraiche", quantite: 100, unite: "ml" },
+      { id: "creme-aigre", quantite: 100, unite: "ml", ou: { id: "creme-fraiche", quantite: 100, unite: "ml" } },
       { id: "harissa", quantite: 10, unite: "g", ou: { id: "piment-en-poudre", quantite: 2, unite: "g" } },
       { id: "tortilla-de-mais", quantite: 4, unite: "pièce", ou: { id: "tortilla-de-ble", quantite: 4, unite: "pièce" } },
       { id: "coriandre", quantite: 5, unite: "g", optionnel: true },
@@ -253,25 +250,24 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52830",
     ingredients: [
       { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
-      { id: "huile-d-olive", quantite: 30, unite: "ml" },
-      { id: "vinaigre", quantite: 15, unite: "ml" },
-      { id: "cumin", quantite: 5, unite: "g" },
-      { id: "paprika", quantite: 3, unite: "g" },
+      { id: "vinaigrette", quantite: 120, unite: "ml", ou: { id: "huile-d-olive", quantite: 60, unite: "ml" } },
+      { id: "cumin", quantite: 4, unite: "g" },
+      { id: "paprika-fume", quantite: 3, unite: "g", ou: { id: "paprika", quantite: 3, unite: "g" } },
       { id: "ail", quantite: 1, unite: "gousse" },
-      { id: "eau", quantite: 100, unite: "ml" },
-      { id: "haricots-rouges-en-boite", quantite: 1, unite: "boîte" },
-      { id: "tortilla-de-mais", quantite: 6, unite: "pièce", ou: { id: "tortilla-de-ble", quantite: 6, unite: "pièce" } },
+      { id: "eau", quantite: 50, unite: "ml" },
+      { id: "haricots-refrits-en-boite", quantite: 1, unite: "boîte", ou: { id: "haricots-rouges-en-boite", quantite: 1, unite: "boîte" } },
+      { id: "coquilles-a-tacos", quantite: 6, unite: "pièce", ou: { id: "tortilla-de-mais", quantite: 6, unite: "pièce" } },
       { id: "fromage-rape", quantite: 100, unite: "g", ou: { id: "cheddar", quantite: 100, unite: "g" } },
       { id: "tomates-cerises", quantite: 100, unite: "g" },
       { id: "piment-frais", quantite: 1, unite: "pièce", optionnel: true },
       { id: "avocat", quantite: 1, unite: "pièce" },
-      { id: "citron-vert", quantite: 1, unite: "pièce" },
-      { id: "creme-fraiche", quantite: 50, unite: "ml" },
+      { id: "salsa-verde", quantite: 15, unite: "ml", ou: { id: "sauce-salsa", quantite: 15, unite: "ml" } },
+      { id: "creme-aigre", quantite: 45, unite: "ml", ou: { id: "creme-fraiche", quantite: 45, unite: "ml" } },
       { id: "lait", quantite: 15, unite: "ml" },
       { id: "coriandre", quantite: 5, unite: "g", optionnel: true },
       { id: "sel", quantite: 1, unite: "g" }
     ],
-    etapes: ["Mettre le poulet dans une cocotte avec l'huile, le vinaigre, le cumin, le paprika, l'ail écrasé, le sel et l'eau. Couvrir et cuire 35 à 40 min à feu doux (ou 4 h en mijoteuse).", "Sortir le poulet, l'effilocher avec deux fourchettes et l'arroser de presque tout le jus de cuisson. Préchauffer le four à 230 °C.", "Égoutter les haricots et les écraser à la fourchette avec un peu de jus de cuisson.", "Plier les tortillas en deux (ou utiliser des coquilles à tacos), les ranger debout dans un plat à four et les garnir de haricots écrasés, de poulet et de fromage. Cuire 10 à 15 min, jusqu'à ce que le fromage bouillonne.", "Pendant ce temps, écraser l'avocat avec le jus du citron vert, et délayer la crème avec le lait.", "À la sortie du four, garnir les tacos de tomates cerises coupées en deux, de piment en rondelles et de coriandre, puis arroser de crème d'avocat et de crème."]
+    etapes: ["Mettre le poulet dans une cocotte avec la vinaigrette, le cumin, le paprika fumé, l'ail écrasé, le sel et l'eau. Couvrir et cuire 35 à 40 min à feu doux (ou 4 h en mijoteuse).", "Sortir le poulet, l'effilocher avec deux fourchettes et l'arroser de presque tout le jus de cuisson. Préchauffer le four à 230 °C.", "Réchauffer les haricots refrits (ou écraser à la fourchette des haricots rouges égouttés avec un peu de jus de cuisson).", "Ranger les coquilles à tacos (ou des tortillas pliées en deux) debout dans un plat à four et les garnir de haricots écrasés, de poulet et de fromage. Cuire 10 à 15 min, jusqu'à ce que le fromage bouillonne.", "Pendant ce temps, écraser l'avocat avec la salsa verde, et délayer la crème avec le lait.", "À la sortie du four, garnir les tacos de tomates cerises coupées en deux, de piment en rondelles et de coriandre, puis arroser de crème d'avocat et de crème."]
   },
   {
     id: "poivrons-farcis-quinoa-haricots-noirs", nom: "Poivrons farcis au quinoa et aux haricots noirs", cuisine: "mexicaine",
@@ -282,18 +278,18 @@ ajouterRecettes([
       { id: "quinoa", quantite: 80, unite: "g", ou: { id: "riz", quantite: 80, unite: "g" } },
       { id: "haricots-noirs-en-boite", quantite: 1, unite: "boîte", ou: { id: "haricots-rouges-en-boite", quantite: 1, unite: "boîte" } },
       { id: "mais-en-boite", quantite: 1, unite: "boîte" },
-      { id: "sauce-tomate", quantite: 200, unite: "g" },
+      { id: "tomates-concassees", quantite: 200, unite: "g", ou: { id: "sauce-tomate", quantite: 200, unite: "g" } },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "huile-d-olive", quantite: 10, unite: "ml" },
-      { id: "cumin", quantite: 2, unite: "g" },
+      { id: "cumin", quantite: 1, unite: "g" },
       { id: "piment-en-poudre", quantite: 1, unite: "g" },
-      { id: "paprika", quantite: 1, unite: "g" },
+      { id: "paprika-fume", quantite: 1, unite: "g", ou: { id: "paprika", quantite: 1, unite: "g" } },
       { id: "fromage-rape", quantite: 90, unite: "g" },
       { id: "coriandre", quantite: 5, unite: "g", optionnel: true },
       { id: "sel", quantite: 1, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Cuire le quinoa dans deux fois son volume d'eau salée, environ 12 min. Préchauffer le four à 190 °C et huiler légèrement un plat.", "Couper les poivrons en deux dans la longueur, retirer les graines, les poser dans le plat face coupée vers le haut et les cuire 15 à 20 min.", "Pendant ce temps, faire revenir l'oignon haché dans l'huile 3 à 4 min, ajouter l'ail haché et cuire 1 min.", "Ajouter le quinoa, la moitié des haricots égouttés et la moitié du maïs (garder le reste pour une autre fois), la sauce tomate, le cumin, le piment, le paprika, le sel et le poivre. Cuire 5 à 7 min, puis retirer du feu et ajouter les deux tiers du fromage.", "Garnir les demi-poivrons de farce, parsemer du reste de fromage et remettre 15 à 20 min au four.", "Laisser reposer 5 min et servir parsemé de coriandre."]
+    etapes: ["Cuire le quinoa dans deux fois son volume d'eau salée, environ 12 min. Préchauffer le four à 190 °C et huiler légèrement un plat.", "Couper les poivrons en deux dans la longueur, retirer les graines, les poser dans le plat face coupée vers le haut et les cuire 15 à 20 min.", "Pendant ce temps, faire revenir l'oignon haché dans l'huile 3 à 4 min, ajouter l'ail haché et cuire 1 min.", "Ajouter le quinoa, la moitié des haricots égouttés et la moitié du maïs (garder le reste pour une autre fois), les tomates, le cumin, le piment, le paprika, le sel et le poivre. Cuire 5 à 7 min, puis retirer du feu et ajouter les deux tiers du fromage.", "Garnir les demi-poivrons de farce, parsemer du reste de fromage et remettre 15 à 20 min au four.", "Laisser reposer 5 min et servir parsemé de coriandre."]
   }
 ]);

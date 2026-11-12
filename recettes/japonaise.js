@@ -92,30 +92,33 @@ ajouterRecettes([
     difficulte: "facile", tempsMinutes: 40, portions: 2,
     source: "TheMealDB", idSource: "53033",
     ingredients: [
-      { id: "riz", quantite: 150, unite: "g" },
+      { id: "riz-a-sushi", quantite: 150, unite: "g", ou: { id: "riz", quantite: 150, unite: "g" } },
       { id: "eau", quantite: 200, unite: "ml" },
-      { id: "mirin", quantite: 8, unite: "ml", optionnel: true, ou: { id: "vin-blanc", quantite: 8, unite: "ml" } },
+      { id: "mirin", quantite: 8, unite: "ml", ou: { id: "vin-blanc", quantite: 8, unite: "ml" } },
+      { id: "cornichons", quantite: 20, unite: "g", optionnel: true },
       { id: "oignon-nouveau", quantite: 1, unite: "pièce", optionnel: true, ou: { id: "ciboulette", quantite: 3, unite: "g" } }
     ],
-    etapes: ["Mettre le riz (rond de préférence) dans un saladier, le couvrir d'eau froide et le frotter entre les doigts : l'eau devient trouble. Vider et recommencer 5 ou 6 fois, jusqu'à ce que l'eau reste claire.", "Mettre le riz égoutté dans une casserole avec l'eau, porter à ébullition, puis baisser sur feu très doux, couvrir et cuire 15 min.", "Retirer du feu et laisser reposer 15 min sans ouvrir le couvercle.", "Ajouter le mirin, bien mélanger et servir, parsemé d'oignon nouveau émincé si on veut."]
+    etapes: ["Mettre le riz dans un saladier, le couvrir d'eau froide et le frotter entre les doigts : l'eau devient trouble. Vider et recommencer 5 ou 6 fois, jusqu'à ce que l'eau reste claire.", "Mettre le riz égoutté dans une casserole avec l'eau, porter à ébullition, puis baisser sur feu très doux, couvrir et cuire 15 min.", "Retirer du feu et laisser reposer 15 min sans ouvrir le couvercle.", "Ajouter le mirin, bien mélanger et servir, garni si on veut d'oignon nouveau émincé et d'un filet de jus de cornichons (ou de légumes marinés)."]
   },
   {
     id: "makis-thon-concombre", nom: "Makis thon-concombre (sushis)", cuisine: "japonaise",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "53065",
     ingredients: [
-      { id: "riz", quantite: 200, unite: "g" },
-      { id: "eau", quantite: 260, unite: "ml" },
-      { id: "vinaigre-de-riz", quantite: 40, unite: "ml", ou: { id: "vinaigre", quantite: 30, unite: "ml" } },
-      { id: "sucre", quantite: 15, unite: "g" },
+      { id: "riz-a-sushi", quantite: 250, unite: "g", ou: { id: "riz", quantite: 250, unite: "g" } },
+      { id: "eau", quantite: 320, unite: "ml" },
+      { id: "vinaigre-de-riz", quantite: 100, unite: "ml", ou: { id: "vinaigre", quantite: 60, unite: "ml" } },
+      { id: "sucre", quantite: 25, unite: "g" },
+      { id: "mayonnaise", quantite: 45, unite: "g" },
+      { id: "sauce-soja", quantite: 15, unite: "ml" },
+      { id: "concombre", quantite: 1, unite: "pièce" },
       { id: "algue-nori", quantite: 4, unite: "pièce" },
       { id: "thon-en-boite", quantite: 1, unite: "boîte" },
-      { id: "concombre", quantite: 1, unite: "pièce" },
-      { id: "mayonnaise", quantite: 40, unite: "g" },
-      { id: "sauce-soja", quantite: 20, unite: "ml" },
+      { id: "saumon-fume", quantite: 80, unite: "g", optionnel: true },
+      { id: "crevettes", quantite: 60, unite: "g", optionnel: true },
       { id: "sel", quantite: 2, unite: "g" }
     ],
-    etapes: ["Rincer le riz plusieurs fois jusqu'à ce que l'eau reste claire, puis le cuire à couvert dans l'eau 15 min à feu très doux et le laisser reposer 10 min hors du feu.", "Mélanger le vinaigre de riz, le sucre et le sel, verser sur le riz chaud et mélanger délicatement. Laisser tiédir.", "Couper le concombre en bâtonnets et égoutter le thon.", "Poser une feuille de nori sur une natte (ou un torchon couvert de film alimentaire), face brillante dessous. Avec les mains mouillées, étaler une couche de riz de 1 cm, en laissant le bord du fond libre sur 2 cm.", "Étaler un trait de mayonnaise au milieu du riz, puis y poser du thon et des bâtonnets de concombre.", "Rouler bien serré en s'aidant de la natte, mouiller le bord libre pour le coller. Recommencer avec les autres feuilles.", "Couper chaque rouleau en 6 à 8 tranches avec un couteau mouillé et servir avec la sauce soja."]
+    etapes: ["Rincer le riz plusieurs fois jusqu'à ce que l'eau reste claire, puis le cuire à couvert dans l'eau 15 min à feu très doux et le laisser reposer 10 min hors du feu.", "Garder 1 cuillère à soupe de vinaigre de riz. Mélanger le reste avec le sucre et le sel, verser sur le riz chaud et mélanger délicatement. Laisser tiédir.", "Mélanger la mayonnaise avec la cuillère de vinaigre gardée et la sauce soja (mayonnaise « à la japonaise »). Couper le concombre en bâtonnets et égoutter le thon.", "Rouleaux : poser une feuille de nori sur une natte (ou un torchon couvert de film alimentaire), face brillante dessous. Avec les mains mouillées, étaler une couche de riz de 1 cm, en laissant le bord du fond libre sur 2 cm.", "Étaler un trait de mayonnaise au milieu du riz, puis y poser du thon et des bâtonnets de concombre.", "Rouler bien serré en s'aidant de la natte, mouiller le bord libre pour le coller. Envelopper dans du film alimentaire, couper en tranches épaisses avec un couteau mouillé, puis retirer le film.", "Si on a du saumon fumé (sushi pressé) : tapisser un petit moule à cake de film alimentaire, y poser une fine couche de saumon fumé, couvrir de 3 cm de riz et bien tasser. Démouler et couper en bâtonnets.", "Si on a des crevettes ou du saumon fumé (boules de sushi) : poser un morceau sur un carré de film alimentaire, ajouter une boule de riz de la taille d'une noix, refermer en tournant le film pour serrer, puis déballer."]
   },
   {
     id: "gratin-de-poulet-teriyaki-au-riz", nom: "Gratin de poulet teriyaki au riz", cuisine: "japonaise",
@@ -123,18 +126,16 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "52772",
     ingredients: [
       { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
-      { id: "riz", quantite: 150, unite: "g" },
-      { id: "sauce-soja", quantite: 70, unite: "ml" },
-      { id: "eau", quantite: 70, unite: "ml" },
-      { id: "sucre", quantite: 25, unite: "g" },
-      { id: "gingembre", quantite: 5, unite: "g" },
+      { id: "riz-complet", quantite: 150, unite: "g", ou: { id: "riz", quantite: 150, unite: "g" } },
+      { id: "sauce-soja", quantite: 90, unite: "ml" },
+      { id: "eau", quantite: 90, unite: "ml" },
+      { id: "cassonade", quantite: 25, unite: "g", ou: { id: "sucre", quantite: 25, unite: "g" } },
+      { id: "gingembre-en-poudre", quantite: 1, unite: "g", ou: { id: "gingembre", quantite: 5, unite: "g" } },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "fecule", quantite: 15, unite: "g", ou: { id: "farine", quantite: 15, unite: "g" } },
-      { id: "brocoli", quantite: 1, unite: "pièce", ou: { id: "haricots-verts", quantite: 200, unite: "g" } },
-      { id: "carotte", quantite: 1, unite: "pièce" },
-      { id: "poivron", quantite: 1, unite: "pièce", optionnel: true }
+      { id: "legumes-pour-wok", quantite: 200, unite: "g", ou: { id: "brocoli", quantite: 1, unite: "pièce" } }
     ],
-    etapes: ["Préchauffer le four à 180 °C et cuire le riz.", "Sauce : dans une petite casserole, porter à ébullition la sauce soja, l'eau, le sucre (roux si possible), le gingembre râpé et l'ail écrasé, puis laisser bouillir 1 min.", "Délayer la fécule dans 2 cuillères à soupe d'eau froide, la verser dans la sauce en remuant et cuire jusqu'à ce qu'elle épaississe. Retirer du feu.", "Mettre les blancs de poulet dans un plat à four, les napper d'un tiers de la sauce et cuire 30 min. Pendant ce temps, cuire les légumes coupés en petits morceaux à la vapeur ou à l'eau 8 min.", "Sortir le plat et effilocher le poulet avec deux fourchettes. Ajouter le riz, les légumes et presque toute la sauce restante, mélanger.", "Remettre 15 min au four, laisser reposer 5 min, puis servir arrosé du reste de sauce."]
+    etapes: ["Préchauffer le four à 180 °C et cuire le riz.", "Sauce : dans une petite casserole, porter à ébullition la sauce soja, l'eau, la cassonade, le gingembre et l'ail écrasé, puis laisser bouillir 1 min.", "Délayer la fécule dans 2 cuillères à soupe d'eau froide, la verser dans la sauce en remuant et cuire jusqu'à ce qu'elle épaississe. Retirer du feu.", "Mettre les blancs de poulet dans un plat à four, les napper d'un tiers de la sauce et cuire 30 min. Pendant ce temps, cuire les légumes pour wok comme indiqué sur le paquet (ou le brocoli en petits bouquets 8 min à la vapeur).", "Sortir le plat et effilocher le poulet avec deux fourchettes. Ajouter le riz, les légumes et presque toute la sauce restante, mélanger.", "Remettre 15 min au four, laisser reposer 5 min, puis servir arrosé du reste de sauce."]
   },
   {
     id: "porc-pane-japonais-tonkatsu", nom: "Porc pané japonais (tonkatsu)", cuisine: "japonaise",
@@ -144,12 +145,12 @@ ajouterRecettes([
       { id: "cote-de-porc", quantite: 2, unite: "pièce" },
       { id: "farine", quantite: 50, unite: "g" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
-      { id: "chapelure", quantite: 60, unite: "g" },
+      { id: "chapelure", quantite: 50, unite: "g" },
       { id: "huile-de-tournesol", quantite: 200, unite: "ml" },
       { id: "ketchup", quantite: 15, unite: "g" },
       { id: "sauce-worcestershire", quantite: 15, unite: "ml" },
       { id: "sauce-huitre", quantite: 8, unite: "ml", ou: { id: "sauce-soja", quantite: 8, unite: "ml" } },
-      { id: "sucre", quantite: 8, unite: "g" },
+      { id: "sucre", quantite: 12, unite: "g" },
       { id: "sel", quantite: 1, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
