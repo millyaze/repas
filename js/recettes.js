@@ -298,8 +298,8 @@ function creerCarteRecette(analyse) {
     const ligne = creer("li", manque ? "manquant" : "");
     let texte = (manque ? "✗ " : info.etat === "optionnel-absent" ? "– " : "✓ ")
       + info.nom + " : " + ecrireQuantite(info.quantite, info.unite);
-    // Remplaçant : proposé entre parenthèses, ou signalé quand c'est lui qui sert
-    if (info.ou && info.remplace) texte += " — remplacé par " + info.ou;
+    // Remplaçant : proposé entre parenthèses, ou signalé quand c'est lui qui sert (celui du stock)
+    if (info.ou && info.remplace) texte += " — ou " + info.ou + " (dans ton stock)";
     else if (info.ou) texte += " (ou " + info.ou + ")";
     if (info.etat === "optionnel") texte += " (facultatif)";
     if (info.etat === "optionnel-absent") texte += " (facultatif, pas dans le stock)";
