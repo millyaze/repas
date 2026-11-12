@@ -172,6 +172,8 @@ input, select, button {
   width: 100%;
   min-width: 0;
 }
+/* Texte des champs en taille normale : en dessous, Safari sur iPhone zoome tout seul quand on touche un champ */
+input, select { font-size: 1rem; }
 button { width: auto; cursor: pointer; background: var(--bouton); border-color: var(--bordure-bouton); }
 button:hover { background: var(--bouton-survol); }
 button.principal { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); font-weight: 600; }
