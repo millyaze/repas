@@ -3,8 +3,9 @@
 // et la note dans l'historique des recettes cuisinées.
 // Chargé AVANT js/recettes.js, qui affiche le bouton et le récapitulatif.
 // Utilise : stock, historique, sauvegarder, afficher, montrerMessage, element,
-//           arrondir, joursRestants (js/stock.js), dateDuJour (js/memoire.js),
-//           ligneDuStock, preparerIndexStock, ingredientDeReference, besoinRetenu, convertir, ecrireQuantite, creer,
+//           joursRestants (js/stock.js), dateDuJour (js/memoire.js),
+//           arrondir, convertir, ecrireQuantite, ingredientDeReference, trouverLigne, ajouterQuantite (js/ingredient.js),
+//           ligneDuStock, preparerIndexStock, besoinRetenu, creer,
 //           afficherRecettes (js/recettes.js), RECETTES (recettes/toutes.js).
 // ============================================================
 
@@ -19,9 +20,6 @@ const HISTORIQUE_MAX = 50;
 let idEnCuisine = null;
 
 // ---------- Outils ----------
-
-// Arrondi au millième, pour ne pas perdre de grammes quand le stock est en kg ou en l
-function auMillieme(nombre) { return Math.round(nombre * 1000) / 1000; }
 
 // Nom d'une recette à partir de son identifiant
 function nomDeRecette(id) {
@@ -212,10 +210,12 @@ function validerCuisine(recette, lignes, zoneErreur) {
     const avant = ligne.enStock.quantite;
     const reste = Math.max(0, ligne.maximum - retraits[i]);
     const resteEnStock = convertir(reste, ligne.unite, ligne.enStock.unite);
-    ligne.enStock.quantite = Math.max(0, auMillieme(resteEnStock));
-    const retire = auMillieme(avant - ligne.enStock.quantite);
+    ligne.enStock.quantite = Math.max(0, arrondir(resteEnStock));
+    const retire = arrondir(avant - ligne.enStock.quantite);
     if (retire > 0) {
-      retires.push({ id: ligne.enStock.id, nom: ligne.enStock.nom, quantite: retire, unite: ligne.enStock.unite });
+      // La date de péremption est gardée : l'annulation pourra la remettre
+      retires.push({ id: ligne.enStock.id, nom: ligne.enStock.nom, quantite: retire, unite: ligne.enStock.unite,
+        peremption: ligne.enStock.peremption || null });
     }
   });
 
@@ -241,18 +241,17 @@ function annulerCuisine(entree) {
 
   const aLaMain = []; // ce qui n'a pas pu être remis automatiquement
   entree.retraits.forEach(function (retrait) {
-    const ligne = stock.find(function (l) { return l.id === retrait.id; });
+    // Date d'origine (absente pour les recettes cuisinées avant la version 29)
+    const date = retrait.peremption || null;
+    const ligne = trouverLigne(stock, retrait.nom);
     if (!ligne) {
-      // La ligne a été supprimée entre-temps : on la recrée (sans date de péremption)
-      stock.push({ id: retrait.id, nom: retrait.nom, quantite: retrait.quantite, unite: retrait.unite, peremption: null });
+      // La ligne a été supprimée entre-temps : on la recrée, avec sa date d'origine
+      stock.push({ id: retrait.id, nom: retrait.nom, quantite: retrait.quantite, unite: retrait.unite, peremption: date });
       return;
     }
-    const aRemettre = convertir(retrait.quantite, retrait.unite, ligne.unite);
-    if (aRemettre === null) {
+    if (!ajouterQuantite(ligne, retrait.quantite, retrait.unite, date)) {
       // L'unité de la ligne a été changée entre-temps : impossible de calculer
       aLaMain.push(retrait.nom + " (" + ecrireQuantite(retrait.quantite, retrait.unite) + ")");
-    } else {
-      ligne.quantite = auMillieme(ligne.quantite + aRemettre);
     }
   });
 

@@ -7,8 +7,9 @@
 // Les favoris (étoile) sont enregistrés et synchronisés avec le stock.
 // « Cuisiner » et l'historique sont dans js/cuisiner.js, la liste de courses dans js/courses.js
 // (tous deux chargés avant ce fichier).
-// Utilise : stock, favoris, sauvegarder, element, joursRestants, JOURS_ALERTE, arrondir, creerId (js/stock.js),
-//           INGREDIENTS (data/ingredients.js), RECETTES (recettes/toutes.js).
+// Utilise : stock, favoris, sauvegarder, element, joursRestants, JOURS_ALERTE (js/stock.js),
+//           creerId, convertir, ecrireQuantite, ingredientDeReference, indexerLignes (js/ingredient.js),
+//           RECETTES (recettes/toutes.js).
 // ============================================================
 
 // % minimum pour qu'une recette incomplète soit proposée : valeur de départ du curseur
@@ -28,44 +29,19 @@ function lireSeuilCompletion() {
 }
 // Choix proposés dans le filtre « Temps » (en minutes)
 const TEMPS_PROPOSES = [15, 20, 30, 45, 60];
-// Conversions discrètes : chaque unité ramenée à une unité commune
-const CONVERSIONS = {
-  g: { famille: "poids", facteur: 1 },
-  kg: { famille: "poids", facteur: 1000 },
-  ml: { famille: "volume", facteur: 1 },
-  l: { famille: "volume", facteur: 1000 }
-};
-// Unités qui prennent un « s » au pluriel
-const UNITES_AU_PLURIEL = ["pièce", "tranche", "gousse", "boîte", "sachet"];
 
 // Recettes actuellement dépliées (pour les garder ouvertes quand la liste se rafraîchit)
 const recettesOuvertes = {};
 
 // ---------- Outils ----------
 
-// ---------- Index rapides ----------
-// Comme l'index au dos d'un livre : on retrouve un ingrédient d'un coup, sans parcourir toute la liste.
+// ---------- Index rapide du stock ----------
+// Comme l'index au dos d'un livre : on retrouve un ingrédient d'un coup, sans parcourir tout le stock.
 // Indispensable quand il y a beaucoup de recettes (1 000 recettes : 160 ms -> moins de 2 ms).
-
-// Index de la liste de référence (fixe : préparé une seule fois)
-const indexIngredients = new Map();
-INGREDIENTS.forEach(function (ingredient) { indexIngredients.set(ingredient.id, ingredient); });
-
-// Index du stock : refait par preparerIndexStock() avant chaque calcul (le stock change souvent)
+// Refait par preparerIndexStock() avant chaque calcul (le stock change souvent).
 let indexStock = new Map();
 function preparerIndexStock() {
-  indexStock = new Map();
-  stock.forEach(function (l) {
-    // Une ligne se retrouve par son identifiant ET par son nom simplifié (la première ligne gagne)
-    [l.id, creerId(l.nom)].forEach(function (cle) {
-      if (!indexStock.has(cle)) indexStock.set(cle, l);
-    });
-  });
-}
-
-// Retrouve un ingrédient de la liste de référence
-function ingredientDeReference(id) {
-  return indexIngredients.get(id);
+  indexStock = indexerLignes(stock); // js/ingredient.js : même règle « même ingrédient » partout
 }
 
 // Retrouve la ligne du stock correspondant à un ingrédient de recette (null si absente ou à zéro).
@@ -73,22 +49,6 @@ function ingredientDeReference(id) {
 function ligneDuStock(id) {
   const ligne = indexStock.get(id);
   return ligne && ligne.quantite > 0 ? ligne : null;
-}
-
-// Convertit une quantité du stock dans l'unité de la recette.
-// Renvoie null si les deux unités ne sont pas comparables (ex. « pièce » et « g »).
-function convertir(quantite, uniteDepart, uniteArrivee) {
-  if (uniteDepart === uniteArrivee) return quantite;
-  const depart = CONVERSIONS[uniteDepart];
-  const arrivee = CONVERSIONS[uniteArrivee];
-  if (!depart || !arrivee || depart.famille !== arrivee.famille) return null;
-  return quantite * depart.facteur / arrivee.facteur;
-}
-
-// Écrit une quantité : « 100 g », « 2 pièces »
-function ecrireQuantite(quantite, unite) {
-  const pluriel = quantite > 1 && UNITES_AU_PLURIEL.indexOf(unite) !== -1 ? "s" : "";
-  return arrondir(quantite) + " " + unite + pluriel;
 }
 
 // Écrit un délai de péremption : « demain », « dans 2 jours »

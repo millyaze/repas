@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 28;
+    const VERSION = 29;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
     // Mode clair ou sombre, choisi avant l'affichage (voir js/apparence.js)
     document.write('<script src="js/apparence.js?v=' + VERSION + '"><\/script>');
@@ -253,7 +253,7 @@
 
     // FICHIERS : tout ce que la page charge, dans l'ordre (l'ordre compte).
     const FICHIERS = [].concat(
-      ["data/ingredients.js", "data/stock-test.js", "js/memoire.js", "js/stock.js", "js/scan.js", "js/synchro.js"],
+      ["data/ingredients.js", "js/ingredient.js", "data/stock-test.js", "js/memoire.js", "js/stock.js", "js/scan.js", "js/synchro.js"],
       ["recettes/toutes.js"], // prépare la liste des recettes, avant les cuisines
       CUISINES.map(function (nom) { return "recettes/" + nom + ".js"; }),
       ["js/cuisiner.js", "js/courses.js", "js/recettes.js", "js/onglets.js"]

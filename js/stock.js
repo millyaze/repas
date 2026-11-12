@@ -1,10 +1,10 @@
 // ============================================================
 // STOCK : affiche la liste, ajoute, modifie, supprime.
 // Les données sont lues et enregistrées via js/memoire.js.
+// Reconnaître un ingrédient, les unités et les quantités : js/ingredient.js
+// (UNITES, creerId, arrondir, reconnaitre, trouverLigne, ajouterQuantite).
 // ============================================================
 
-// Unités proposées dans le formulaire
-const UNITES = ["g", "kg", "ml", "l", "pièce", "tranche", "gousse", "boîte", "sachet"];
 // De combien les boutons + et − changent la quantité, selon l'unité
 const PAS_PAR_UNITE = { g: 50, ml: 50, kg: 0.5, l: 0.5 };
 // Nombre de jours avant péremption à partir duquel on alerte (orange)
@@ -47,8 +47,7 @@ function demarrer() {
   });
   // Quand le nom tapé est un ingrédient connu, l'unité habituelle est choisie toute seule
   element("champ-nom").addEventListener("input", function () {
-    const idTape = creerId(element("champ-nom").value);
-    const connu = INGREDIENTS.find(function (ingredient) { return ingredient.id === idTape; });
+    const connu = reconnaitre(element("champ-nom").value);
     if (connu) element("champ-unite").value = connu.unite;
   });
 
@@ -91,18 +90,6 @@ function demarrer() {
 }
 
 // ---------- Outils ----------
-
-// Transforme un nom en identifiant simple : « Crème fraîche » -> « creme-fraiche »
-function creerId(nom) {
-  return nom.toLowerCase()
-    .replace(/œ/g, "oe").replace(/æ/g, "ae")
-    .normalize("NFD").replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-// Évite les nombres du genre 0.30000000000000004
-function arrondir(nombre) { return Math.round(nombre * 100) / 100; }
 
 // Nombre de jours entre aujourd'hui et une date AAAA-MM-JJ (négatif = dépassé)
 function joursRestants(date) {
@@ -162,14 +149,6 @@ function montrerMessage(texte, estErreur) {
 function cacherMessage() {
   clearTimeout(minuterieMessage);
   element("message").hidden = true;
-}
-
-// Recherche une ligne du stock portant le même nom (accents et majuscules ignorés)
-function trouverParNom(nom) {
-  const idCherche = creerId(nom);
-  return stock.find(function (ligne) {
-    return ligne.id === idCherche || creerId(ligne.nom) === idCherche;
-  });
 }
 
 // ---------- Affichage ----------
@@ -263,20 +242,27 @@ function creerBouton(texte, description, action) {
 // Bouton « Ajouter » ou « Enregistrer » du formulaire
 function validerFormulaire(evenement) {
   evenement.preventDefault();
-  const nom = element("champ-nom").value.trim();
+  const nomTape = element("champ-nom").value.trim();
   const quantite = arrondir(Number(element("champ-quantite").value));
   const unite = element("champ-unite").value;
   const peremption = element("champ-peremption").value || null;
 
-  if (!nom || !creerId(nom) || !(quantite >= 0)) {
+  if (!nomTape || !creerId(nomTape) || !(quantite >= 0)) {
     montrerMessage("Vérifie le nom et la quantité.", true);
     return;
   }
 
+  // Ingrédient connu (nom tapé en entier, ou un de ses autres noms) : on prend son nom habituel.
+  // « spaghetti » est rangé sous « Pâtes ».
+  const connu = reconnaitre(nomTape);
+  const nom = connu ? connu.nom : nomTape;
+  const range = connu && simplifier(nomTape) !== simplifier(connu.nom)
+    ? "« " + nomTape + " » rangé sous « " + connu.nom + " ». " : "";
+
   if (idEnModification) {
     // --- Modification d'une ligne existante ---
     const ligne = stock.find(function (l) { return l.id === idEnModification; });
-    const autre = trouverParNom(nom);
+    const autre = trouverLigne(stock, nom);
     if (autre && autre !== ligne) {
       montrerMessage("« " + autre.nom + " » existe déjà dans le stock.", true);
       return;
@@ -287,25 +273,21 @@ function validerFormulaire(evenement) {
     ligne.quantite = quantite;
     ligne.unite = unite;
     ligne.peremption = peremption;
-    montrerMessage("« " + nom + " » modifié.");
+    montrerMessage(range + "« " + nom + " » modifié.");
     fermerFormulaire();
   } else {
     // --- Ajout ---
-    const existante = trouverParNom(nom);
-    if (existante && existante.unite !== unite) {
-      montrerMessage("« " + existante.nom + " » existe déjà en « " + existante.unite + " ». Utilise la même unité ou modifie la ligne existante.", true);
-      return;
-    }
+    const existante = trouverLigne(stock, nom);
     if (existante) {
-      // Même ingrédient : on additionne.
-      // Stock épuisé (à 0) : la nouvelle date remplace l'ancienne. Sinon on garde la date la plus proche.
-      if (existante.quantite === 0) existante.peremption = peremption;
-      else if (peremption && (!existante.peremption || peremption < existante.peremption)) existante.peremption = peremption;
-      existante.quantite = arrondir(existante.quantite + quantite);
-      montrerMessage("Quantité ajoutée à « " + existante.nom + " » (total : " + existante.quantite.toLocaleString("fr-FR") + " " + existante.unite + ").");
+      // Même ingrédient : on additionne (200 g s'ajoutent à une ligne en kg)
+      if (!ajouterQuantite(existante, quantite, unite, peremption)) {
+        montrerMessage("« " + existante.nom + " » existe déjà en « " + existante.unite + " », qui ne se convertit pas en « " + unite + " ». Utilise la même unité ou modifie la ligne existante.", true);
+        return;
+      }
+      montrerMessage(range + "Quantité ajoutée à « " + existante.nom + " » (total : " + existante.quantite.toLocaleString("fr-FR") + " " + existante.unite + ").");
     } else {
       stock.push({ id: creerId(nom), nom: nom, quantite: quantite, unite: unite, peremption: peremption });
-      montrerMessage("« " + nom + " » ajouté.");
+      montrerMessage(range + "« " + nom + " » ajouté.");
     }
     // Si l'ajout vient d'un scan, on retient à quoi correspond ce code-barre
     if (codeEnAttente) codes[codeEnAttente] = { nom: nom, quantite: quantite, unite: unite };

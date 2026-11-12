@@ -2,7 +2,7 @@
 // SCAN : lit un code-barre (caméra ou numéro tapé), cherche le produit
 // sur Open Food Facts (gratuit, sans compte) et préremplit le formulaire
 // d'ajout du stock. Rien n'est ajouté sans validation de l'utilisateur.
-// Utilise : INGREDIENTS (data/ingredients.js), creerId, codes,
+// Utilise : reconnaitre, reconnaitreDansTexte, arrondir (js/ingredient.js), codes,
 // preremplirFormulaire, montrerMessage (js/stock.js).
 // ============================================================
 
@@ -107,62 +107,15 @@ function chercherCode(texte) {
 
 // ---------- Correspondance produit -> ingrédient ----------
 
-// Simplifie un texte et retire les pluriels simples : « Tomates pelées » -> « tomate-pelee »
-function simplifier(texte) {
-  return creerId(texte || "").split("-").map(function (mot) {
-    // « pâtes » garde son s : sinon « pâte à tartiner » serait pris pour des pâtes
-    if (mot === "pates") return mot;
-    return mot.length > 3 ? mot.replace(/[sx]$/, "") : mot;
-  }).join("-");
-}
-
-// Autres mots courants sur les emballages -> id de l'ingrédient de référence.
-// Pour en ajouter : "mot sur l'emballage": "id de data/ingredients.js"
-const AUTRES_NOMS = {
-  "spaghetti": "pates", "penne": "pates", "coquillettes": "pates", "fusilli": "pates",
-  "tagliatelles": "pates", "macaroni": "pates", "torsades": "pates", "pâtes alimentaires": "pates",
-  "thon": "thon-en-boite", "maïs doux": "mais-en-boite", "pois chiches": "pois-chiches-en-boite",
-  "haricots rouges": "haricots-rouges-en-boite", "emmental râpé": "fromage-rape", "gruyère râpé": "fromage-rape",
-  "nouilles": "nouilles-chinoises", "tortillas": "tortilla-de-ble", "coulis de tomate": "sauce-tomate",
-  "tomates pelées": "sauce-tomate", "tomates concassées": "sauce-tomate", "purée de tomate": "sauce-tomate",
-  "steak haché": "boeuf-hache", "filet de poulet": "blanc-de-poulet", "crème liquide": "creme-fraiche",
-  "crème entière": "creme-fraiche", "crème légère": "creme-fraiche", "champignon de paris": "champignons"
-};
-
-// Liste de tous les mots reconnus : noms de référence + autres noms, sous forme simplifiée
-let motsReconnus = null;
-function listerMotsReconnus() {
-  if (motsReconnus) return motsReconnus;
-  motsReconnus = INGREDIENTS.map(function (ingredient) {
-    return { mot: simplifier(ingredient.nom), ingredient: ingredient };
-  });
-  Object.keys(AUTRES_NOMS).forEach(function (autreNom) {
-    const ingredient = INGREDIENTS.find(function (i) { return i.id === AUTRES_NOMS[autreNom]; });
-    if (ingredient) motsReconnus.push({ mot: simplifier(autreNom), ingredient: ingredient });
-  });
-  return motsReconnus;
-}
-
-// Cherche dans un texte (nom du produit) l'ingrédient dont le mot reconnu est le plus long
-function trouverIngredient(texte) {
-  const cherche = "-" + simplifier(texte) + "-";
-  let meilleur = null;
-  listerMotsReconnus().forEach(function (candidat) {
-    if (cherche.indexOf("-" + candidat.mot + "-") !== -1 && (!meilleur || candidat.mot.length > meilleur.mot.length)) {
-      meilleur = candidat;
-    }
-  });
-  return meilleur ? meilleur.ingredient : null;
-}
+// Les noms reconnus et les autres noms (AUTRES_NOMS) sont dans js/ingredient.js.
 
 // Cherche dans les catégories du produit, de la plus précise à la plus générale.
-// Ici la catégorie doit être exactement un mot reconnu (« Laits » oui, « Pâtes à tartiner » non).
+// Ici la catégorie doit être exactement un nom reconnu (« Laits » oui, « Pâtes à tartiner » non).
 function trouverParCategories(categories) {
   const liste = String(categories || "").split(",").reverse();
   for (let i = 0; i < liste.length; i++) {
-    const categorie = simplifier(liste[i]);
-    const candidat = listerMotsReconnus().find(function (c) { return c.mot === categorie; });
-    if (candidat) return candidat.ingredient;
+    const ingredient = reconnaitre(liste[i]);
+    if (ingredient) return ingredient;
   }
   return null;
 }
@@ -172,7 +125,7 @@ function analyserProduit(produit) {
   const nomProduit = (produit.product_name_fr || produit.product_name || produit.generic_name_fr || "").trim();
 
   // 1) On cherche d'abord dans le nom du produit, 2) sinon dans ses catégories
-  const ingredient = trouverIngredient(nomProduit + " " + (produit.generic_name_fr || ""))
+  const ingredient = reconnaitreDansTexte(nomProduit + " " + (produit.generic_name_fr || ""))
     || trouverParCategories(produit.categories);
 
   // Quantité de l'emballage, ramenée en g ou en ml

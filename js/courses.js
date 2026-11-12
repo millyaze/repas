@@ -4,9 +4,9 @@
 // les ingrédients tombés à zéro dans le stock, ou un ajout à la main.
 // Au magasin on coche ; « Ranger les courses » ajoute les articles cochés au stock.
 // Chargé AVANT js/recettes.js, qui affiche le bouton « Ajouter ce qui manque ».
-// Utilise : stock, courses, sauvegarder, afficher, montrerMessage, element, creerId,
-//           UNITES (js/stock.js), INGREDIENTS (data/ingredients.js), auMillieme, nomDeRecette (js/cuisiner.js),
-//           convertir, ecrireQuantite, creer (js/recettes.js).
+// Utilise : stock, courses, sauvegarder, afficher, montrerMessage, element (js/stock.js),
+//           UNITES, creerId, arrondir, convertir, ecrireQuantite, reconnaitre, cleIngredient, trouverLigne,
+//           ajouterQuantite (js/ingredient.js), nomDeRecette (js/cuisiner.js), creer (js/recettes.js).
 // ============================================================
 
 // true quand le récapitulatif « Ranger les courses » est ouvert
@@ -14,11 +14,9 @@ let rangementOuvert = false;
 
 // ---------- Outils ----------
 
-// Retrouve la ligne de la liste pour un ingrédient (même identifiant, unité compatible)
+// Retrouve la ligne de la liste pour un ingrédient (même ingrédient, unité compatible)
 function ligneDeCourses(id, unite) {
-  return courses.find(function (ligne) {
-    return ligne.id === id && convertir(1, unite, ligne.unite) !== null;
-  });
+  return trouverLigne(courses, id, unite);
 }
 
 // Ajoute un article à la liste, ou augmente sa quantité s'il y est déjà.
@@ -29,7 +27,7 @@ function ajouterAuxCourses(id, nom, quantite, unite, idRecette) {
   if (ligne) {
     ligne.recettes = ligne.recettes || [];
     if (idRecette && ligne.recettes.indexOf(idRecette) !== -1) return false;
-    ligne.quantite = auMillieme(ligne.quantite + convertir(quantite, unite, ligne.unite));
+    ligne.quantite = arrondir(ligne.quantite + convertir(quantite, unite, ligne.unite));
     ligne.coche = false;
   } else {
     ligne = { id: id, nom: nom, quantite: quantite, unite: unite, coche: false, recettes: [] };
@@ -48,7 +46,7 @@ function fusionnerCourses(autres) {
 
 // Retrouve la ligne du stock d'un article de la liste (même à zéro)
 function stockDeLArticle(article) {
-  return stock.find(function (l) { return l.id === article.id || creerId(l.nom) === article.id; });
+  return trouverLigne(stock, article.nom);
 }
 
 // ---------- Depuis une recette ----------
@@ -57,7 +55,7 @@ function stockDeLArticle(article) {
 function recetteDansCourses(analyse) {
   return analyse.manquants.every(function (manquant) {
     return courses.some(function (ligne) {
-      return ligne.id === manquant.id && (ligne.recettes || []).indexOf(analyse.recette.id) !== -1;
+      return cleIngredient(ligne.nom) === cleIngredient(manquant.id) && (ligne.recettes || []).indexOf(analyse.recette.id) !== -1;
     });
   });
 }
@@ -71,7 +69,7 @@ function creerBoutonCourses(analyse) {
   bouton.disabled = dejaLa;
   bouton.addEventListener("click", function () {
     analyse.manquants.forEach(function (manquant) {
-      ajouterAuxCourses(manquant.id, manquant.nom, auMillieme(manquant.quantite), manquant.unite, analyse.recette.id);
+      ajouterAuxCourses(manquant.id, manquant.nom, arrondir(manquant.quantite), manquant.unite, analyse.recette.id);
     });
     sauvegarder();
     afficher(); // rafraîchit tout (stock, recettes, courses)
@@ -148,8 +146,7 @@ function afficherIngredientsAZero() {
   const liste = element("liste-zero");
   liste.textContent = "";
   const aZero = stock.filter(function (ligne) {
-    const id = creerId(ligne.nom);
-    return ligne.quantite === 0 && !courses.some(function (a) { return a.id === ligne.id || a.id === id; });
+    return ligne.quantite === 0 && !trouverLigne(courses, ligne.nom);
   });
   aZero.forEach(function (ligne) {
     const li = creer("li", "");
@@ -158,7 +155,7 @@ function afficherIngredientsAZero() {
     bouton.type = "button";
     bouton.setAttribute("aria-label", "Ajouter " + ligne.nom + " à la liste de courses");
     bouton.addEventListener("click", function () {
-      ajouterAuxCourses(creerId(ligne.nom), ligne.nom, 0, ligne.unite);
+      ajouterAuxCourses(ligne.id, ligne.nom, 0, ligne.unite);
       sauvegarder();
       afficher();
     });
@@ -173,14 +170,14 @@ function afficherIngredientsAZero() {
 function validerFormulaireCourses(evenement) {
   evenement.preventDefault();
   const nom = element("courses-nom").value.trim();
-  const quantite = auMillieme(Number(element("courses-quantite").value || 0));
+  const quantite = arrondir(Number(element("courses-quantite").value || 0));
   if (!nom || !creerId(nom) || !(quantite >= 0)) {
     montrerMessage("Vérifie le nom et la quantité.", true);
     return;
   }
-  // Si l'article est un ingrédient connu, on reprend son nom exact
-  const connu = INGREDIENTS.find(function (ingredient) { return ingredient.id === creerId(nom); });
-  ajouterAuxCourses(creerId(nom), connu ? connu.nom : nom, quantite, element("courses-unite").value);
+  // Si l'article est un ingrédient connu (ou un de ses autres noms), on reprend son nom habituel
+  const connu = reconnaitre(nom);
+  ajouterAuxCourses(connu ? connu.id : creerId(nom), connu ? connu.nom : nom, quantite, element("courses-unite").value);
   element("courses-nom").value = "";
   element("courses-quantite").value = "";
   sauvegarder();
@@ -274,12 +271,10 @@ function validerRangement(lignes, zoneErreur) {
     const date = ligne.date.value || null;
     const enStock = ligne.enStock;
     if (enStock) {
-      // Stock épuisé : la nouvelle date remplace l'ancienne. Sinon on garde la date la plus proche.
-      if (enStock.quantite === 0) enStock.peremption = date;
-      else if (date && (!enStock.peremption || date < enStock.peremption)) enStock.peremption = date;
-      enStock.quantite = auMillieme(enStock.quantite + convertir(quantites[i], ligne.unite, enStock.unite));
+      // Unité toujours compatible ici (voir creerPanneauRangement) ; règle de la date : js/ingredient.js
+      ajouterQuantite(enStock, quantites[i], ligne.unite, date);
     } else {
-      stock.push({ id: ligne.article.id, nom: ligne.article.nom, quantite: auMillieme(quantites[i]), unite: ligne.unite, peremption: date });
+      stock.push({ id: ligne.article.id, nom: ligne.article.nom, quantite: arrondir(quantites[i]), unite: ligne.unite, peremption: date });
     }
     ajoutes++;
   });
@@ -303,8 +298,7 @@ function demarrerCourses() {
   element("courses-unite").value = "pièce";
   // Quand le nom tapé est un ingrédient connu, l'unité habituelle est choisie toute seule
   element("courses-nom").addEventListener("input", function () {
-    const idTape = creerId(element("courses-nom").value);
-    const connu = INGREDIENTS.find(function (ingredient) { return ingredient.id === idTape; });
+    const connu = reconnaitre(element("courses-nom").value);
     if (connu) element("courses-unite").value = connu.unite;
   });
   element("formulaire-courses").addEventListener("submit", validerFormulaireCourses);
