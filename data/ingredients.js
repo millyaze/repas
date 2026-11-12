@@ -342,6 +342,16 @@ const INGREDIENTS = [
   { id: "rhum",                 nom: "Rhum",                 unite: "ml" },
   { id: "queue-de-boeuf",       nom: "Queue de bœuf",        unite: "g" },
   { id: "viande-de-chevre",     nom: "Viande de chèvre",     unite: "g" },
+  { id: "piment-antillais",     nom: "Piment antillais",     unite: "pièce" },
+  { id: "sauce-piquante",       nom: "Sauce piquante",       unite: "ml" },
+  { id: "haricots-rouges-secs", nom: "Haricots rouges secs", unite: "g" },
+  { id: "vivaneau",             nom: "Vivaneau",             unite: "g" },
+  { id: "gingembre-en-poudre",  nom: "Gingembre en poudre",  unite: "g" },
+  { id: "assaisonnement-tout-usage", nom: "Assaisonnement tout usage", unite: "g" },
+  { id: "roucou",               nom: "Roucou",               unite: "g" },
+  { id: "cranberries-sechees",  nom: "Cranberries séchées",  unite: "g" },
+  { id: "cerises-sechees",      nom: "Cerises séchées",      unite: "g" },
+  { id: "callaloo",             nom: "Callaloo",             unite: "g" },
   // --- Ajoutés pour : moyen-orient ---
   // (cuisines saoudienne, syrienne et grecque)
   { id: "cardamome",            nom: "Cardamome",            unite: "g" },
