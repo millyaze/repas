@@ -16,13 +16,13 @@ ajouterRecettes([
       { id: "tahini", quantite: 25, unite: "g" },
       { id: "huile-d-olive", quantite: 20, unite: "ml" },
       { id: "yaourt-grec", quantite: 15, unite: "g", ou: { id: "yaourt-nature", quantite: 1, unite: "pièce" } },
-      { id: "piment-en-poudre", quantite: 1, unite: "g", optionnel: true },
-      { id: "menthe", quantite: 2, unite: "g", optionnel: true },
+      { id: "piment-de-cayenne", quantite: 1, unite: "g", ou: { id: "piment-en-poudre", quantite: 1, unite: "g" } },
+      { id: "menthe", quantite: 1, unite: "g" },
       { id: "persil", quantite: 5, unite: "g" },
       { id: "pain-pita", quantite: 2, unite: "pièce", optionnel: true },
       { id: "sel", quantite: 4, unite: "g" }
     ],
-    etapes: ["Piquer la peau des aubergines à plusieurs endroits avec la pointe d'un couteau. Les griller au barbecue, sous le gril du four ou directement sur la flamme du gaz, en les retournant souvent, 25 à 30 min, jusqu'à ce que la peau soit noircie et la chair très molle.", "Les mettre dans un saladier, couvrir de papier aluminium et laisser tiédir 15 min.", "Couper les aubergines en deux, racler la chair à la cuillère et la laisser égoutter 5 à 10 min dans une passoire.", "Écraser la chair avec l'ail écrasé et le sel, en gardant un peu de texture. Incorporer le jus de citron, le tahini, l'huile et le piment, puis le yaourt.", "Couvrir et mettre au frais jusqu'à ce que ce soit bien froid. Ajouter la menthe et le persil hachés, goûter et rectifier l'assaisonnement. Servir avec du pain pita."]
+    etapes: ["Piquer la peau des aubergines à plusieurs endroits avec la pointe d'un couteau. Les griller au barbecue, sous le gril du four ou directement sur la flamme du gaz, en les retournant souvent, 25 à 30 min, jusqu'à ce que la peau soit noircie et la chair très molle.", "Les mettre dans un saladier, couvrir de papier aluminium et laisser tiédir 15 min.", "Couper les aubergines en deux, racler la chair à la cuillère et la laisser égoutter 5 à 10 min dans une passoire.", "Écraser la chair avec l'ail écrasé et le sel, en gardant un peu de texture. Incorporer le jus de citron, le tahini, l'huile et le piment de Cayenne, puis le yaourt.", "Couvrir et mettre au frais jusqu'à ce que ce soit bien froid. Ajouter la menthe et le persil hachés, goûter et rectifier l'assaisonnement. Servir avec du pain pita."]
   },
   {
     id: "sandwich-falafel-sauce-tahini", nom: "Sandwich pita aux falafels, sauce tahini", cuisine: "syrienne",
@@ -80,7 +80,7 @@ ajouterRecettes([
     ingredients: [
       { id: "beurre", quantite: 40, unite: "g" },
       { id: "boeuf-hache", quantite: 250, unite: "g", ou: { id: "agneau-hache", quantite: 250, unite: "g" } },
-      { id: "piment-de-la-jamaique", quantite: 1, unite: "g", optionnel: true },
+      { id: "piment-de-la-jamaique", quantite: 1, unite: "g" },
       { id: "cannelle", quantite: 1, unite: "g" },
       { id: "riz", quantite: 150, unite: "g" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
@@ -97,12 +97,13 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "53093",
     ingredients: [
       { id: "pates", quantite: 200, unite: "g" },
-      { id: "sauce-tomate", quantite: 200, unite: "g" },
+      { id: "sauce-tomate", quantite: 100, unite: "g" },
+      { id: "concentre-de-tomate", quantite: 75, unite: "g", ou: { id: "sauce-tomate", quantite: 100, unite: "g" } },
       { id: "cannelle", quantite: 2, unite: "g" },
       { id: "huile-de-tournesol", quantite: 30, unite: "ml" },
       { id: "sel", quantite: 3, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 175 °C et huiler un petit plat à gratin.", "Cuire les spaghetti 8 à 10 min dans une grande casserole d'eau salée, jusqu'à ce qu'ils soient al dente, et les égoutter.", "Les mélanger avec la sauce tomate, la cannelle, l'huile, le sel et le poivre.", "Verser dans le plat et cuire 1 h au four, jusqu'à ce que le dessus soit croustillant."]
+    etapes: ["Préchauffer le four à 175 °C et huiler un petit plat à gratin.", "Cuire les spaghetti 8 à 10 min dans une grande casserole d'eau salée, jusqu'à ce qu'ils soient al dente, et les égoutter.", "Les mélanger avec la sauce tomate, le concentré de tomate, la cannelle, l'huile, le sel et le poivre.", "Verser dans le plat et cuire 1 h au four, jusqu'à ce que le dessus soit croustillant."]
   }
 ]);

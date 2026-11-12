@@ -38,7 +38,7 @@ ajouterRecettes([
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "persil", quantite: 5, unite: "g" },
       { id: "vin-blanc", quantite: 120, unite: "ml" },
-      { id: "tomate", quantite: 3, unite: "pièce", ou: { id: "sauce-tomate", quantite: 200, unite: "g" } },
+      { id: "tomates-concassees", quantite: 200, unite: "g", ou: { id: "tomate", quantite: 3, unite: "pièce" } },
       { id: "ail", quantite: 1, unite: "gousse" },
       { id: "feta", quantite: 100, unite: "g" },
       { id: "pain", quantite: 4, unite: "tranche", optionnel: true },
@@ -49,14 +49,14 @@ ajouterRecettes([
   },
   {
     id: "gigantes-plaki", nom: "Gigantes plaki (haricots blancs au four à la tomate)", cuisine: "grecque",
-    difficulte: "facile", tempsMinutes: 75, portions: 2,
+    difficulte: "facile", tempsMinutes: 125, portions: 2,
     source: "TheMealDB", idSource: "53012",
     ingredients: [
-      { id: "haricots-blancs-en-boite", quantite: 2, unite: "boîte" },
+      { id: "haricots-blancs-secs", quantite: 200, unite: "g", ou: { id: "haricots-blancs-en-boite", quantite: 2, unite: "boîte" } },
       { id: "huile-d-olive", quantite: 30, unite: "ml" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
-      { id: "sauce-tomate", quantite: 30, unite: "g" },
+      { id: "concentre-de-tomate", quantite: 15, unite: "g", ou: { id: "sauce-tomate", quantite: 30, unite: "g" } },
       { id: "tomate", quantite: 4, unite: "pièce" },
       { id: "sucre", quantite: 6, unite: "g" },
       { id: "origan", quantite: 2, unite: "g", ou: { id: "herbes-de-provence", quantite: 2, unite: "g" } },
@@ -65,7 +65,7 @@ ajouterRecettes([
       { id: "sel", quantite: 3, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 180 °C. Égoutter et rincer les haricots blancs (la recette d'origine utilise des gros haricots secs trempés une nuit puis cuits 50 min).", "Faire chauffer l'huile dans une grande poêle et y faire fondre l'oignon et l'ail hachés 10 min à feu moyen, sans qu'ils brunissent.", "Ajouter la sauce tomate et cuire 1 min, puis les tomates en dés, le sucre, l'origan et la cannelle. Laisser mijoter 2 à 3 min, saler, poivrer généreusement et ajouter les haricots.", "Verser dans un plat à four et cuire environ 45 min sans couvrir et sans remuer : les haricots s'imprègnent de la sauce, qui épaissit.", "Laisser tiédir, parsemer de persil haché et arroser d'un filet d'huile d'olive avant de servir."]
+    etapes: ["La veille, faire tremper les haricots secs (des gros, type « gigantes », si possible) dans beaucoup d'eau. Les égoutter, les rincer, les couvrir d'eau froide, porter à ébullition et laisser frémir environ 50 min : ils doivent être un peu tendres mais pas mous. Égoutter. (Avec des haricots en boîte : juste les égoutter et les rincer.)", "Préchauffer le four à 180 °C. Faire chauffer l'huile dans une grande poêle et y faire fondre l'oignon et l'ail hachés 10 min à feu moyen, sans qu'ils brunissent.", "Ajouter le concentré de tomate et cuire 1 min, puis les tomates en dés, le sucre, l'origan et la cannelle. Laisser mijoter 2 à 3 min, saler, poivrer généreusement et ajouter les haricots.", "Verser dans un plat à four et cuire environ 45 min sans couvrir et sans remuer : les haricots s'imprègnent de la sauce, qui épaissit.", "Laisser tiédir, parsemer de persil haché et arroser d'un filet d'huile d'olive avant de servir."]
   },
   {
     id: "cheesecake-au-yaourt-et-au-miel", nom: "Cheesecake grec au yaourt et au miel", cuisine: "grecque",
@@ -80,7 +80,8 @@ ajouterRecettes([
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "citron", quantite: 1, unite: "pièce" },
       { id: "orange", quantite: 1, unite: "pièce", optionnel: true },
-      { id: "miel", quantite: 90, unite: "g" }
+      { id: "miel", quantite: 90, unite: "g" },
+      { id: "fruits-rouges", quantite: 100, unite: "g", optionnel: true }
     ],
     etapes: ["Préchauffer le four à 160 °C (140 °C en chaleur tournante). Écraser les biscuits et la plupart des amandes dans un sac congélation avec un rouleau à pâtisserie.", "Mélanger avec le beurre fondu et tasser au fond de 2 grands ramequins (ou d'un petit plat). Cuire 10 min jusqu'à ce que le fond soit croustillant.", "Mélanger le yaourt et le mascarpone, puis ajouter l'œuf en fouettant. Ajouter les zestes du citron et de l'orange, puis les deux tiers du miel.", "Verser sur le fond de biscuits, couvrir de papier aluminium sans serrer et cuire 35 min. Retirer l'aluminium et cuire encore 10 min, jusqu'à ce que le dessus soit légèrement doré et ferme, avec juste un léger tremblement au centre.", "Laisser refroidir (se garde 2 jours au frais). Servir parsemé du reste des amandes, arrosé du reste de miel, avec des fruits frais."]
   },
@@ -107,7 +108,7 @@ ajouterRecettes([
       { id: "boulgour", quantite: 15, unite: "g", ou: { id: "semoule", quantite: 15, unite: "g" } },
       { id: "agneau-hache", quantite: 250, unite: "g", ou: { id: "boeuf-hache", quantite: 250, unite: "g" } },
       { id: "cumin", quantite: 1, unite: "g" },
-      { id: "graines-de-coriandre", quantite: 1, unite: "g" },
+      { id: "coriandre-moulue", quantite: 1, unite: "g", ou: { id: "graines-de-coriandre", quantite: 1, unite: "g" } },
       { id: "paprika", quantite: 1, unite: "g" },
       { id: "ail", quantite: 1, unite: "gousse", optionnel: true },
       { id: "huile-d-olive", quantite: 10, unite: "ml" },
@@ -133,12 +134,12 @@ ajouterRecettes([
       { id: "oeuf", quantite: 1, unite: "pièce" },
       { id: "parmesan", quantite: 20, unite: "g", ou: { id: "fromage-rape", quantite: 20, unite: "g" } },
       { id: "tomate", quantite: 2, unite: "pièce" },
-      { id: "sauce-tomate", quantite: 60, unite: "g" },
+      { id: "concentre-de-tomate", quantite: 30, unite: "g", ou: { id: "sauce-tomate", quantite: 60, unite: "g" } },
       { id: "pomme-de-terre", quantite: 175, unite: "g" },
       { id: "sel", quantite: 3, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Cuire les pommes de terre en dés 10 min à l'eau bouillante salée (la recette d'origine utilise des pommes de terre déjà cuites), puis les égoutter. Allumer le gril du four.", "Faire dorer le bœuf 5 min à feu vif dans une poêle profonde qui va au four.", "Pendant ce temps, piquer l'aubergine à la fourchette et la cuire 3 à 5 min au micro-ondes à pleine puissance, jusqu'à ce qu'elle soit tendre.", "Mélanger le yaourt, l'œuf et le parmesan, saler et poivrer légèrement.", "Ajouter au bœuf les tomates en dés, la sauce tomate et les pommes de terre, saler, poivrer et bien réchauffer. Lisser la surface avec le dos d'une cuillère.", "Couper l'aubergine en tranches et les disposer sur la viande. Verser la crème au yaourt par-dessus, l'étaler, puis passer sous le gril jusqu'à ce que le dessus soit pris et doré."]
+    etapes: ["Cuire les pommes de terre en dés 10 min à l'eau bouillante salée (la recette d'origine utilise des pommes de terre déjà cuites), puis les égoutter. Allumer le gril du four.", "Faire dorer le bœuf 5 min à feu vif dans une poêle profonde qui va au four.", "Pendant ce temps, piquer l'aubergine à la fourchette et la cuire 3 à 5 min au micro-ondes à pleine puissance, jusqu'à ce qu'elle soit tendre.", "Mélanger le yaourt, l'œuf et le parmesan, saler et poivrer légèrement.", "Ajouter au bœuf les tomates en dés, le concentré de tomate et les pommes de terre, saler, poivrer et bien réchauffer. Lisser la surface avec le dos d'une cuillère.", "Couper l'aubergine en tranches et les disposer sur la viande. Verser la crème au yaourt par-dessus, l'étaler, puis passer sous le gril jusqu'à ce que le dessus soit pris et doré."]
   },
   {
     id: "tomates-farcies-a-l-agneau", nom: "Tomates farcies à l'agneau, au riz et aux herbes", cuisine: "grecque",
@@ -152,16 +153,16 @@ ajouterRecettes([
       { id: "ail", quantite: 2, unite: "gousse" },
       { id: "agneau-hache", quantite: 200, unite: "g", ou: { id: "boeuf-hache", quantite: 200, unite: "g" } },
       { id: "cannelle", quantite: 3, unite: "g" },
-      { id: "sauce-tomate", quantite: 30, unite: "g" },
+      { id: "concentre-de-tomate", quantite: 30, unite: "g", ou: { id: "sauce-tomate", quantite: 60, unite: "g" } },
       { id: "riz", quantite: 50, unite: "g" },
       { id: "bouillon-cube", quantite: 1, unite: "pièce" },
       { id: "eau", quantite: 145, unite: "ml" },
-      { id: "aneth", quantite: 10, unite: "g", optionnel: true },
+      { id: "aneth", quantite: 10, unite: "g" },
       { id: "persil", quantite: 8, unite: "g" },
       { id: "menthe", quantite: 4, unite: "g" },
       { id: "sel", quantite: 3, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Préchauffer le four à 180 °C. Choisir 4 grosses tomates, couper leur chapeau et le garder. Les vider à la petite cuillère sans percer la peau ; hacher finement la pulpe en gardant le jus.", "Saupoudrer l'intérieur des tomates d'un peu de sucre (pour enlever l'acidité) et les poser sur une plaque.", "Faire chauffer 2 cuillères à soupe d'huile dans une grande poêle et y faire fondre doucement l'oignon et l'ail hachés environ 10 min, sans qu'ils colorent.", "Ajouter l'agneau, la cannelle et la sauce tomate, monter le feu et faire dorer la viande. Ajouter la pulpe et le jus des tomates, le riz, 100 ml d'eau et le bouillon cube émietté. Saler et poivrer généreusement.", "Porter à ébullition puis laisser mijoter 15 min, jusqu'à ce que le riz soit tendre et le liquide absorbé. Laisser tiédir un peu et ajouter l'aneth, le persil et la menthe hachés.", "Remplir les tomates à ras bord, remettre les chapeaux, arroser du reste d'huile et verser 3 cuillères à soupe d'eau dans la plaque. Cuire 35 min. Servir chaud ou froid, avec une salade et du pain croustillant."]
+    etapes: ["Préchauffer le four à 180 °C. Choisir 4 grosses tomates, couper leur chapeau et le garder. Les vider à la petite cuillère sans percer la peau ; hacher finement la pulpe en gardant le jus.", "Saupoudrer l'intérieur des tomates d'un peu de sucre (pour enlever l'acidité) et les poser sur une plaque.", "Faire chauffer 2 cuillères à soupe d'huile dans une grande poêle et y faire fondre doucement l'oignon et l'ail hachés environ 10 min, sans qu'ils colorent.", "Ajouter l'agneau, la cannelle et le concentré de tomate, monter le feu et faire dorer la viande. Ajouter la pulpe et le jus des tomates, le riz, 100 ml d'eau et le bouillon cube émietté. Saler et poivrer généreusement.", "Porter à ébullition puis laisser mijoter 15 min, jusqu'à ce que le riz soit tendre et le liquide absorbé. Laisser tiédir un peu et ajouter l'aneth, le persil et la menthe hachés.", "Remplir les tomates à ras bord, remettre les chapeaux, arroser du reste d'huile et verser 3 cuillères à soupe d'eau dans la plaque. Cuire 35 min. Servir chaud ou froid, avec une salade et du pain croustillant."]
   }
 ]);
