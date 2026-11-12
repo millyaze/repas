@@ -49,7 +49,15 @@ const AUTRES_NOMS = {
   "nouilles": "nouilles-chinoises", "tortillas": "tortilla-de-ble", "coulis de tomate": "sauce-tomate",
   "tomates pelées": "sauce-tomate", "purée de tomate": "sauce-tomate",
   "steak haché": "boeuf-hache", "filet de poulet": "blanc-de-poulet",
-  "crème entière": "creme-fraiche", "crème légère": "creme-fraiche", "champignon de paris": "champignons"
+  "crème entière": "creme-fraiche", "crème légère": "creme-fraiche", "champignon de paris": "champignons",
+  // Ajoutés pour les recettes de Wikilivres (validés par moi)
+  "muscade": "noix-de-muscade", "branche de céleri": "celeri-branche",
+  "sauce soya": "sauce-soja", "sauce de soja": "sauce-soja",
+  "nuoc-mâm": "sauce-poisson", "nuoc mam": "sauce-poisson", "sauce de poisson": "sauce-poisson",
+  "cube de bouillon": "bouillon-cube", "cube d'assaisonnement": "bouillon-cube", "tablette de bouillon": "bouillon-cube",
+  "maïzena": "fecule", "curry": "curry-en-poudre", "poudre de curry": "curry-en-poudre",
+  "laitue": "salade-verte", "arachides": "cacahuetes", "fleur d'oranger": "eau-de-fleur-d-oranger",
+  "lime": "citron-vert", "escalope de poulet": "blanc-de-poulet", "lard fumé": "poitrine-fumee"
 };
 
 // ---------- Outils de base ----------

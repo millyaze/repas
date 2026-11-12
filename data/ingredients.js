@@ -483,6 +483,27 @@ const INGREDIENTS = [
   { id: "petit-pain",           nom: "Petit pain",           unite: "pièce" },
   { id: "graines-de-pavot",     nom: "Graines de pavot",     unite: "g" },
 
+  // --- Ajoutés pour : Wikilivres --- (les plus fréquents parmi les recettes manquantes, validés par moi)
+  { id: "huile-d-arachide",   nom: "Huile d'arachide",   unite: "ml" },
+  { id: "bouquet-garni",      nom: "Bouquet garni",      unite: "pièce" },
+  { id: "comte",              nom: "Comté",              unite: "g" },
+  { id: "gruyere",            nom: "Gruyère",            unite: "g" },
+  { id: "levure-maltee",      nom: "Levure maltée",      unite: "g" },
+  { id: "pate-a-pizza",       nom: "Pâte à pizza",       unite: "pièce" },
+  { id: "capres",             nom: "Câpres",             unite: "g" },
+  { id: "fromage-blanc",      nom: "Fromage blanc",      unite: "g" },
+  { id: "poitrine-fumee",     nom: "Poitrine fumée",     unite: "g" },
+  { id: "gombo",              nom: "Gombo",              unite: "g" },
+  { id: "piment-d-espelette", nom: "Piment d'Espelette", unite: "g" },
+  { id: "miso",               nom: "Miso",               unite: "g" },
+  { id: "sauce-hoisin",       nom: "Sauce hoisin",       unite: "ml" },
+  { id: "manioc",             nom: "Manioc",             unite: "g" },
+  { id: "lapin",              nom: "Lapin",              unite: "g" },
+  { id: "magret-de-canard",   nom: "Magret de canard",   unite: "pièce" },
+  { id: "feuille-de-brick",   nom: "Feuille de brick",   unite: "pièce" },
+  { id: "escalope-de-veau",   nom: "Escalope de veau",   unite: "pièce" },
+  { id: "fumet-de-poisson",   nom: "Fumet de poisson",   unite: "ml" },
+
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },
   { id: "poivre", nom: "Poivre", unite: "g",  base: true },
