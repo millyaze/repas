@@ -135,6 +135,16 @@ function creerBoutonCuisiner(recette) {
   return bouton;
 }
 
+// Unité écrite à côté d'un champ de quantité, accordée à ce qu'on tape (« 1 tranche », « 4 tranches »).
+// Sert aussi au rangement des courses (js/courses.js).
+function creerUniteSuivie(champ, unite) {
+  const texte = creer("span", "cuisiner-unite");
+  function accorder() { texte.textContent = ecrireUnite(Number(champ.value) || 0, unite); }
+  champ.addEventListener("input", accorder);
+  accorder();
+  return texte;
+}
+
 // Fabrique le récapitulatif : quantités modifiables, puis Valider / Annuler
 function creerPanneauCuisiner(recette) {
   const lignes = lignesACuisiner(recette);
@@ -154,7 +164,7 @@ function creerPanneauCuisiner(recette) {
     champ.value = String(arrondir(ligne.valeur));
     ligne.champ = champ;
     rangee.appendChild(champ);
-    rangee.appendChild(creer("span", "cuisiner-unite", ligne.unite));
+    rangee.appendChild(creerUniteSuivie(champ, ligne.unite));
     rangee.appendChild(creer("span", "cuisiner-stock",
       "en stock : " + ecrireQuantite(ligne.enStock.quantite, ligne.enStock.unite)
       + (ligne.note ? " — " + ligne.note : "")));

@@ -76,6 +76,8 @@ header, main {
   margin: 0 auto;
   padding: 0 16px;
 }
+/* Place libre en bas de page : le message vert du bas ne cache jamais le dernier élément */
+main { padding-bottom: 72px; }
 
 /* En-tête (titre + onglets) collé en haut de l'écran : les onglets restent visibles en descendant */
 header {
@@ -174,6 +176,8 @@ input, select, button {
 }
 /* Texte des champs en taille normale : en dessous, Safari sur iPhone zoome tout seul quand on touche un champ */
 input, select { font-size: 1rem; }
+/* Textes d'exemple (« ex. Tomate ») : assez lisibles, surtout en mode sombre */
+::placeholder { color: var(--texte-discret); opacity: 1; }
 button { width: auto; cursor: pointer; background: var(--bouton); border-color: var(--bordure-bouton); }
 button:hover { background: var(--bouton-survol); }
 button.principal { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); font-weight: 600; }
@@ -227,7 +231,8 @@ button.bouton-modifier:hover { background: var(--bouton-survol); }
 
 /* Onglets (Stock, Recettes) */
 .onglets { display: flex; gap: 8px; margin: 8px 0 10px; }
-.onglet { flex: 1; font-weight: 600; padding: 10px 4px; min-width: 0; }
+/* nowrap : « Courses (12) » reste sur une seule ligne */
+.onglet { flex: 1; font-weight: 600; padding: 10px 4px; min-width: 0; white-space: nowrap; }
 .onglet.actif { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); }
 
 /* Recettes */
@@ -296,6 +301,14 @@ button.afficher-plus { width: 100%; margin-top: 8px; }
 .recette-source { margin: 10px 0 0; font-size: 0.8rem; color: var(--texte-discret); }
 .recette-source a { color: inherit; }
 .recette-ingredients li.manquant { color: var(--manque); }
+/* ✓ vert (présent) et ✗ rouge (manque) au début des lignes d'ingrédients */
+.signe { font-weight: 700; }
+.signe.ok { color: var(--accent-lien); }
+.signe.manque { color: var(--rouge); }
+/* Bouton « Ajouter ce qui manque à la liste de courses », en haut de la recette dépliée */
+button.bouton-courses { width: 100%; margin: 0 0 8px; }
+/* Rangement des courses : quantité oubliée, signalée en rouge */
+input.a-remplir { border-color: var(--rouge); box-shadow: 0 0 0 1px var(--rouge); }
 .recette-etapes { margin: 0; padding-left: 22px; }
 .recette-etapes li { padding: 2px 0; }
 
@@ -334,16 +347,35 @@ button.afficher-plus { width: 100%; margin-top: 8px; }
   #formulaire { grid-template-columns: 1fr 1fr; }
   /* « Scanner » et « + Ajouter à la main » côte à côte, le champ du numéro en dessous */
   #bouton-scanner, #bouton-ajouter-main { flex: 1 1 40%; }
-  .onglets { gap: 4px; }
-  .onglet { font-size: 0.9rem; }
+  /* Onglets collés en bas de l'écran, sous le pouce ; titre retiré pour gagner de la place */
+  h1 { display: none; }
+  header { position: static; padding-top: 0; border-bottom: none; margin-bottom: 12px; }
+  h2, #message { scroll-margin-top: 12px; }
+  .onglets {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: 0;
+    gap: 4px;
+    padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+    background: var(--fond);
+    border-top: 1px solid var(--bordure);
+  }
+  .onglet { font-size: 0.85rem; padding: 10px 2px; }
+  /* Place pour la barre d'onglets en bas */
+  main { padding-bottom: 96px; }
+  /* Message du bas : au-dessus de la barre d'onglets */
+  .message { bottom: calc(72px + env(safe-area-inset-bottom)); }
   .champ:nth-of-type(4) { grid-column: 1 / -1; }
   .entete-liste { flex-direction: column; align-items: stretch; }
   .entete-liste input { max-width: none; }
-  /* Ligne du stock : tout sur une rangée, en un peu plus serré */
-  .ligne { gap: 6px; padding: 8px 6px 8px 8px; }
+  /* Ligne du stock sur 2 rangées : nom + date sur toute la largeur, puis « − quantité + » et ✎ */
+  .ligne { flex-wrap: wrap; gap: 6px; padding: 8px 6px 8px 8px; }
+  .ligne-texte { flex: 1 1 100%; flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 10px; }
   .ligne-quantite { gap: 4px; }
-  button.rond { width: 40px; }
-  .valeur { min-width: 60px; font-size: 0.95rem; }
+  .bouton-modifier { margin-left: auto; }
   .boutons-sauvegarde button { flex: 1 1 100%; }
 }
 

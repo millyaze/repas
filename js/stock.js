@@ -200,7 +200,7 @@ function creerLigne(ligne) {
   moins.classList.add("rond");
   const valeur = document.createElement("span");
   valeur.className = "valeur";
-  valeur.textContent = ligne.quantite.toLocaleString("fr-FR") + " " + ligne.unite;
+  valeur.textContent = ligne.quantite.toLocaleString("fr-FR") + " " + ecrireUnite(ligne.quantite, ligne.unite); // « 4 tranches »
   const plus = creerBouton("+", "Augmenter " + ligne.nom, function () { changerQuantite(ligne.id, 1); });
   plus.classList.add("rond");
   quantite.appendChild(moins);

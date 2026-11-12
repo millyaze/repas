@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 34;
+    const VERSION = 35;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
     // Mode clair ou sombre, choisi avant l'affichage (voir js/apparence.js)
     document.write('<script src="js/apparence.js?v=' + VERSION + '"><\/script>');
@@ -41,7 +41,7 @@
         <!-- Déplie le formulaire ci-dessous (voir ouvrirFormulaire dans js/stock.js) -->
         <button type="button" id="bouton-ajouter-main" aria-label="Ajouter un ingrédient à la main">+ À la main</button>
         <form id="formulaire-code" class="scan-code">
-          <input type="text" id="champ-code" inputmode="numeric" autocomplete="off" placeholder="ou taper son numéro" aria-label="Numéro du code-barre">
+          <input type="text" id="champ-code" inputmode="numeric" autocomplete="off" placeholder="ou numéro du code-barre" aria-label="Numéro du code-barre">
           <button type="submit">Chercher</button>
         </form>
         <div id="zone-scan" hidden>
@@ -166,7 +166,7 @@
 
       <section class="bloc">
         <h2 id="titre-realisables">Réalisables maintenant</h2>
-        <p class="aide">Tu as tout ce qu'il faut. Celles qui utilisent un ingrédient qui périme bientôt sont en premier.</p>
+        <p class="aide">Tu as tout ce qu'il faut. Celles qui utilisent un ingrédient à utiliser vite sont en premier.</p>
         <div id="liste-realisables"></div>
         <p id="vide-realisables" class="vide" hidden></p>
       </section>

@@ -14,6 +14,7 @@
 //   arrondir(nombre)                        arrondi unique (3 chiffres après la virgule)
 //   convertir(quantite, de, vers)           nombre, ou null si unités pas de la même famille
 //   ecrireQuantite(quantite, unite)         « 100 g », « 2 pièces »
+//   ecrireUnite(quantite, unite)            « pièce » ou « pièces » selon la quantité
 //   ingredientDeReference(id)               ingrédient de référence, ou undefined
 //   reconnaitre(nom)                        ingrédient de référence pour un nom tapé en entier, ou null
 //   reconnaitreDansTexte(texte)             pareil, mais cherche à l'intérieur d'un texte (scan)
@@ -96,10 +97,14 @@ function convertir(quantite, uniteDepart, uniteArrivee) {
   return quantite * depart.facteur / arrivee.facteur;
 }
 
+// Écrit une unité accordée à la quantité : « tranche » pour 1, « tranches » pour 4
+function ecrireUnite(quantite, unite) {
+  return unite + (quantite > 1 && UNITES_AU_PLURIEL.indexOf(unite) !== -1 ? "s" : "");
+}
+
 // Écrit une quantité : « 100 g », « 2 pièces »
 function ecrireQuantite(quantite, unite) {
-  const pluriel = quantite > 1 && UNITES_AU_PLURIEL.indexOf(unite) !== -1 ? "s" : "";
-  return arrondir(quantite) + " " + unite + pluriel;
+  return arrondir(quantite) + " " + ecrireUnite(quantite, unite);
 }
 
 // ---------- Reconnaître un ingrédient ----------

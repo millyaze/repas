@@ -137,6 +137,12 @@ function basculerFavori(id) {
 
 // ---------- Affichage ----------
 
+// Jours avant la péremption la plus proche, sans compter les ingrédients déjà périmés (Infinity = rien d'urgent)
+function joursAvantPeremption(analyse) {
+  const bientot = analyse.urgents.filter(function (u) { return u.jours >= 0; });
+  return bientot.length ? bientot[0].jours : Infinity;
+}
+
 // Rafraîchit les deux listes (appelé au démarrage, quand un filtre ou le stock change)
 function afficherRecettes() {
   preparerIndexStock(stock); // le stock a pu changer : on refait son index avant le calcul
@@ -151,8 +157,9 @@ function afficherRecettes() {
     .sort(function (a, b) {
       const recent = cuisineeRecemment(a.recette.id) - cuisineeRecemment(b.recette.id);
       if (recent !== 0) return recent; // cuisinées récemment : en bas de la liste
-      const urgenceA =a.urgents.length ? a.urgents[0].jours : Infinity;
-      const urgenceB = b.urgents.length ? b.urgents[0].jours : Infinity;
+      // Seuls les ingrédients pas encore périmés font monter une recette (un périmé est à vérifier, pas à utiliser en priorité)
+      const urgenceA = joursAvantPeremption(a);
+      const urgenceB = joursAvantPeremption(b);
       if (urgenceA !== urgenceB) return urgenceA - urgenceB;
       return a.recette.tempsMinutes - b.recette.tempsMinutes;
     });
@@ -262,10 +269,16 @@ function creerCarteRecette(analyse) {
     resume.appendChild(creer("span", "recette-infos", "Cuisinée " + ecrireDepuis(joursDepuisCuisine(recette.id))));
   }
 
-  if (analyse.urgents.length > 0) {
-    const noms = analyse.urgents.map(function (u) { return u.nom.toLowerCase() + " (" + ecrireDelai(u.jours) + ")"; });
-    const perime = analyse.urgents[0].jours < 0;
-    resume.appendChild(creer("span", "etiquette " + (perime ? "perime" : "bientot"), "Utilise : " + noms.join(", ")));
+  // Péremption : « à utiliser vite » (pas encore périmé) et « périmé : à vérifier » séparés
+  const bientot = analyse.urgents.filter(function (u) { return u.jours >= 0; });
+  const perimes = analyse.urgents.filter(function (u) { return u.jours < 0; });
+  if (bientot.length > 0) {
+    const noms = bientot.map(function (u) { return u.nom.toLowerCase() + " (" + ecrireDelai(u.jours) + ")"; });
+    resume.appendChild(creer("span", "etiquette bientot", "À utiliser vite : " + noms.join(", ")));
+  }
+  if (perimes.length > 0) {
+    const noms = perimes.map(function (u) { return u.nom.toLowerCase(); });
+    resume.appendChild(creer("span", "etiquette bientot", "Périmé, à vérifier : " + noms.join(", ")));
   }
 
   if (analyse.pourcent < 100) {
@@ -287,6 +300,9 @@ function creerCarteRecette(analyse) {
 
   // --- Partie dépliée : ingrédients et étapes ---
   const contenu = creer("div", "recette-contenu");
+  // Recette incomplète : bouton pour mettre ce qui manque dans la liste de courses (js/courses.js),
+  // en premier, juste sous « Manque : … »
+  if (analyse.pourcent < 100) contenu.appendChild(creerBoutonCourses(analyse));
   const boutonFavori = creer("button", "bouton-favori", estFavori ? "★ Retirer des favoris" : "☆ Ajouter aux favoris");
   boutonFavori.type = "button";
   boutonFavori.addEventListener("click", function () { basculerFavori(recette.id); });
@@ -296,15 +312,17 @@ function creerCarteRecette(analyse) {
   analyse.lignes.forEach(function (info) {
     const manque = info.etat === "manque";
     const ligne = creer("li", manque ? "manquant" : "");
-    let texte = (manque ? "✗ " : info.etat === "optionnel-absent" ? "– " : "✓ ")
-      + info.nom + " : " + ecrireQuantite(info.quantite, info.unite);
+    // Signe en couleur au début de la ligne : ✓ vert (présent), ✗ rouge (manque), – (facultatif absent)
+    const signe = manque ? "manque" : info.etat === "optionnel-absent" ? "" : "ok";
+    let texte = info.nom + " : " + ecrireQuantite(info.quantite, info.unite);
     // Remplaçant : proposé entre parenthèses, ou signalé quand c'est lui qui sert (celui du stock)
     if (info.ou && info.remplace) texte += " — ou " + info.ou + " (dans ton stock)";
     else if (info.ou) texte += " (ou " + info.ou + ")";
     if (info.etat === "optionnel") texte += " (facultatif)";
     if (info.etat === "optionnel-absent") texte += " (facultatif, pas dans le stock)";
     if (info.note) texte += " — " + info.note;
-    ligne.textContent = texte;
+    ligne.appendChild(creer("span", "signe " + signe, manque ? "✗ " : signe === "ok" ? "✓ " : "– "));
+    ligne.appendChild(document.createTextNode(texte));
     if (info.peremption) {
       ligne.appendChild(document.createTextNode(" "));
       ligne.appendChild(creer("span", "etiquette " + info.peremption,
@@ -322,9 +340,6 @@ function creerCarteRecette(analyse) {
   // Recette réalisable : bouton « J'ai cuisiné », ou son récapitulatif s'il est ouvert (js/cuisiner.js)
   if (analyse.pourcent === 100) {
     contenu.appendChild(idEnCuisine === recette.id ? creerPanneauCuisiner(recette) : creerBoutonCuisiner(recette));
-  } else {
-    // Recette incomplète : bouton pour mettre ce qui manque dans la liste de courses (js/courses.js)
-    contenu.appendChild(creerBoutonCourses(analyse));
   }
 
   // Recette reprise d'une source libre (Wikilivres) : la licence oblige à citer la page d'origine

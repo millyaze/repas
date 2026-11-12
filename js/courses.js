@@ -61,9 +61,10 @@ function recetteDansCourses(analyse) {
 }
 
 // Bouton « Ajouter ce qui manque à la liste de courses » d'une recette incomplète
+// (placé en haut de la recette dépliée, juste sous « Manque : … », en vert tant qu'il sert)
 function creerBoutonCourses(analyse) {
   const dejaLa = recetteDansCourses(analyse);
-  const bouton = creer("button", "bouton-cuisiner",
+  const bouton = creer("button", "bouton-courses" + (dejaLa ? "" : " principal"),
     dejaLa ? "✓ Ce qui manque est dans la liste de courses" : "Ajouter ce qui manque à la liste de courses");
   bouton.type = "button";
   bouton.disabled = dejaLa;
@@ -193,7 +194,7 @@ function creerPanneauRangement() {
   panneau.noValidate = true;
   panneau.appendChild(creer("h3", "", "Ce qui sera ajouté au stock"));
   panneau.appendChild(creer("p", "aide",
-    "Corrige les quantités achetées et mets une date de péremption si tu veux. Laisse 0 ou vide pour ne pas ajouter un article au stock."));
+    "Corrige les quantités achetées et mets une date de péremption si tu veux. Mets 0 pour ne pas ajouter un article au stock."));
 
   const lignes = courses.filter(function (a) { return a.coche === true; }).map(function (article) {
     const enStock = stockDeLArticle(article);
@@ -209,9 +210,12 @@ function creerPanneauRangement() {
     ligne.champ.step = "any";
     ligne.champ.inputMode = "decimal";
     ligne.champ.value = incompatible || !(article.quantite > 0) ? "" : String(article.quantite);
+    ligne.champ.placeholder = "quantité ?";
+    // Champ vide : signalé en rouge dès qu'on le remplit plus (voir validerRangement)
+    ligne.champ.addEventListener("input", function () { ligne.champ.classList.remove("a-remplir"); });
     ligne.champ.setAttribute("aria-label", "Quantité achetée de " + article.nom);
     rangee.appendChild(ligne.champ);
-    rangee.appendChild(creer("span", "cuisiner-unite", ligne.unite));
+    rangee.appendChild(creerUniteSuivie(ligne.champ, ligne.unite)); // js/cuisiner.js
     ligne.date = document.createElement("input");
     ligne.date.type = "date";
     ligne.date.setAttribute("aria-label", "Date de péremption de " + article.nom);
@@ -252,6 +256,16 @@ function creerPanneauRangement() {
 // Ajoute au stock les articles cochés, puis les retire de la liste
 function validerRangement(lignes, zoneErreur) {
   // 1) On vérifie d'abord tous les champs : rien n'est ajouté si l'un d'eux est incorrect
+  // Champ vide = oubli probable : on le signale en rouge au lieu de sauter l'article sans prévenir
+  const vides = lignes.filter(function (ligne) { return ligne.champ.value.trim() === ""; });
+  lignes.forEach(function (ligne) { ligne.champ.classList.toggle("a-remplir", vides.indexOf(ligne) !== -1); });
+  if (vides.length > 0) {
+    zoneErreur.textContent = "Quantité manquante pour « " + vides.map(function (l) { return l.article.nom; }).join(" », « ") +
+      " » : mets la quantité achetée, ou 0 pour ne pas l'ajouter au stock.";
+    zoneErreur.hidden = false;
+    vides[0].champ.focus();
+    return;
+  }
   const quantites = [];
   for (let i = 0; i < lignes.length; i++) {
     const valeur = Number(lignes[i].champ.value || 0);
