@@ -1,5 +1,6 @@
 // ============================================================
-// RECETTES : compare les recettes au stock et les affiche.
+// RECETTES : affiche les recettes comparées au stock.
+// Le calcul (comparer une recette au stock) est dans js/analyse.js : ce fichier ne fait qu'afficher.
 // - « Réalisables maintenant » : tout est dans le stock.
 // - « Presque réalisables » : au moins seuilCompletion % des ingrédients
 //   (réglé par le curseur « Complétion minimum », retenu sur l'appareil).
@@ -7,8 +8,9 @@
 // Les favoris (étoile) sont enregistrés et synchronisés avec le stock.
 // « Cuisiner » et l'historique sont dans js/cuisiner.js, la liste de courses dans js/courses.js
 // (tous deux chargés avant ce fichier).
-// Utilise : stock, favoris, sauvegarder, element, joursRestants, JOURS_ALERTE (js/stock.js),
-//           creerId, convertir, ecrireQuantite, ingredientDeReference, indexerLignes (js/ingredient.js),
+// Utilise : stock, favoris, sauvegarder, element (js/stock.js),
+//           creerId, ecrireQuantite (js/ingredient.js),
+//           preparerIndexStock, analyserRecette, nomIngredient, ecrireDelai (js/analyse.js),
 //           RECETTES (recettes/toutes.js).
 // ============================================================
 
@@ -32,137 +34,6 @@ const TEMPS_PROPOSES = [15, 20, 30, 45, 60];
 
 // Recettes actuellement dépliées (pour les garder ouvertes quand la liste se rafraîchit)
 const recettesOuvertes = {};
-
-// ---------- Outils ----------
-
-// ---------- Index rapide du stock ----------
-// Comme l'index au dos d'un livre : on retrouve un ingrédient d'un coup, sans parcourir tout le stock.
-// Indispensable quand il y a beaucoup de recettes (1 000 recettes : 160 ms -> moins de 2 ms).
-// Refait par preparerIndexStock() avant chaque calcul (le stock change souvent).
-let indexStock = new Map();
-function preparerIndexStock() {
-  indexStock = indexerLignes(stock); // js/ingredient.js : même règle « même ingrédient » partout
-}
-
-// Retrouve la ligne du stock correspondant à un ingrédient de recette (null si absente ou à zéro).
-// Attention : appeler preparerIndexStock() avant, si le stock a pu changer.
-function ligneDuStock(id) {
-  const ligne = indexStock.get(id);
-  return ligne && ligne.quantite > 0 ? ligne : null;
-}
-
-// Écrit un délai de péremption : « demain », « dans 2 jours »
-function ecrireDelai(jours) {
-  if (jours < 0) return "périmé";
-  if (jours === 0) return "aujourd'hui";
-  if (jours === 1) return "demain";
-  return "dans " + jours + " jours";
-}
-
-// ---------- Calcul ----------
-
-// Nom d'un ingrédient à partir de son identifiant
-function nomIngredient(id) {
-  const reference = ingredientDeReference(id);
-  return reference ? reference.nom : id;
-}
-
-// Regarde ce que le stock contient pour un ingrédient de recette.
-// Renvoie : enStock (la ligne du stock, ou null), manque (quantité qui manque, dans l'unité
-// de la recette), incomparable (vrai si les unités ne se comparent pas, ex. « sachet » et « g »).
-function disponibilite(besoin) {
-  const enStock = ligneDuStock(besoin.id);
-  if (!enStock) return { enStock: null, manque: besoin.quantite, incomparable: false };
-  const quantiteEnStock = convertir(enStock.quantite, enStock.unite, besoin.unite);
-  if (quantiteEnStock === null) return { enStock: enStock, manque: 0, incomparable: true };
-  return { enStock: enStock, manque: Math.max(0, besoin.quantite - quantiteEnStock), incomparable: false };
-}
-
-// Ingrédient avec remplaçant, écrit dans la recette avec « ou » :
-//   { id: "sake", quantite: 15, unite: "ml", ou: { id: "vin-blanc", quantite: 15, unite: "ml" } }
-// Renvoie celui des deux qui compte : l'ingrédient d'origine d'abord ; le remplaçant
-// seulement si l'origine manque et que le stock a assez du remplaçant.
-function besoinRetenu(besoin) {
-  if (!besoin.ou) return besoin;
-  if (disponibilite(besoin).manque === 0) return besoin;
-  return disponibilite(besoin.ou).manque === 0 ? besoin.ou : besoin;
-}
-
-// Compare une recette au stock.
-// Renvoie : pourcent, lignes (détail par ingrédient), manquants, urgents (à utiliser vite), aVerifier.
-function analyserRecette(recette) {
-  let obligatoires = 0;
-  let disponibles = 0;
-  const lignes = [];
-  const manquants = [];
-  const urgents = [];
-  let aVerifier = false;
-
-  recette.ingredients.forEach(function (origine) {
-    // Ingrédient avec remplaçant : « besoin » est celui des deux qui compte (voir besoinRetenu)
-    const besoin = besoinRetenu(origine);
-    const reference = ingredientDeReference(origine.id);
-    const nom = reference ? reference.nom : origine.id;
-    const info = { nom: nom, quantite: origine.quantite, unite: origine.unite, etat: "ok", note: "" };
-    if (origine.ou) {
-      info.ou = nomIngredient(origine.ou.id).toLowerCase() + " : " + ecrireQuantite(origine.ou.quantite, origine.ou.unite);
-      info.remplace = besoin !== origine; // vrai = c'est le remplaçant du stock qui sert
-    }
-    lignes.push(info);
-
-    // Sel, poivre, eau : toujours considérés comme présents
-    if (reference && reference.base) {
-      info.etat = "base";
-      return;
-    }
-
-    const dispo = disponibilite(besoin);
-    const enStock = dispo.enStock;
-    const manque = dispo.manque; // quantité qui manque, dans l'unité de la recette
-    if (dispo.incomparable) {
-      // Unités non comparables : on fait confiance, mais on le signale
-      info.note = "quantité à vérifier (stock : " + ecrireQuantite(enStock.quantite, enStock.unite) + ")";
-      aVerifier = true;
-    }
-
-    if (origine.optionnel) {
-      // Un ingrédient optionnel ne rend jamais la recette incomplète
-      info.etat = manque > 0 ? "optionnel-absent" : "optionnel";
-    } else {
-      obligatoires++;
-      if (manque > 0) {
-        info.etat = "manque";
-        info.note = enStock ? "il manque " + ecrireQuantite(manque, besoin.unite) : "pas dans le stock";
-        manquants.push({
-          id: besoin.id, nom: nom, quantite: manque, unite: besoin.unite,
-          ou: origine.ou ? nomIngredient(origine.ou.id).toLowerCase() : ""
-        });
-      } else {
-        disponibles++;
-      }
-    }
-
-    // Ingrédient du stock périmé ou qui périme bientôt
-    if (enStock && enStock.peremption && info.etat !== "optionnel-absent") {
-      const jours = joursRestants(enStock.peremption);
-      if (jours <= JOURS_ALERTE) {
-        info.peremption = jours < 0 ? "perime" : "bientot";
-        info.delai = ecrireDelai(jours);
-        urgents.push({ nom: nomIngredient(besoin.id), jours: jours });
-      }
-    }
-  });
-
-  urgents.sort(function (a, b) { return a.jours - b.jours; });
-  return {
-    recette: recette,
-    pourcent: obligatoires === 0 ? 100 : Math.floor(disponibles / obligatoires * 100),
-    lignes: lignes,
-    manquants: manquants,
-    urgents: urgents,
-    aVerifier: aVerifier
-  };
-}
 
 // ---------- Filtres ----------
 
@@ -268,7 +139,7 @@ function basculerFavori(id) {
 
 // Rafraîchit les deux listes (appelé au démarrage, quand un filtre ou le stock change)
 function afficherRecettes() {
-  preparerIndexStock(); // le stock a pu changer : on refait son index avant le calcul
+  preparerIndexStock(stock); // le stock a pu changer : on refait son index avant le calcul
   const analyses = RECETTES.filter(passeLesFiltres).map(analyserRecette);
   // Pendant une recherche, le curseur est mis de côté : toutes les recettes trouvées s'affichent
   const enRecherche = motsRecherches().length > 0;

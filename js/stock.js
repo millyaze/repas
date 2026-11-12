@@ -3,12 +3,11 @@
 // Les données sont lues et enregistrées via js/memoire.js.
 // Reconnaître un ingrédient, les unités et les quantités : js/ingredient.js
 // (UNITES, creerId, arrondir, reconnaitre, trouverLigne, ajouterQuantite).
+// Dates de péremption (joursRestants, JOURS_ALERTE) : js/analyse.js
 // ============================================================
 
 // De combien les boutons + et − changent la quantité, selon l'unité
 const PAS_PAR_UNITE = { g: 50, ml: 50, kg: 0.5, l: 0.5 };
-// Nombre de jours avant péremption à partir duquel on alerte (orange)
-const JOURS_ALERTE = 3;
 
 // Le stock affiché (liste d'ingrédients)
 let stock = [];
@@ -90,15 +89,6 @@ function demarrer() {
 }
 
 // ---------- Outils ----------
-
-// Nombre de jours entre aujourd'hui et une date AAAA-MM-JJ (négatif = dépassé)
-function joursRestants(date) {
-  const p = date.split("-");
-  const cible = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
-  const maintenant = new Date();
-  const aujourdhui = new Date(maintenant.getFullYear(), maintenant.getMonth(), maintenant.getDate());
-  return Math.round((cible - aujourdhui) / 86400000);
-}
 
 // Texte et couleur à afficher pour une date de péremption
 function infoPeremption(date) {
