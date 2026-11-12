@@ -62,7 +62,7 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 140, portions: 2,
     source: "TheMealDB", idSource: "53056",
     ingredients: [
-      { id: "gigot-d-agneau", quantite: 400, unite: "g" },
+      { id: "epaule-d-agneau", quantite: 400, unite: "g", ou: { id: "gigot-d-agneau", quantite: 400, unite: "g" } },
       { id: "pomme-de-terre", quantite: 300, unite: "g" },
       { id: "courgette", quantite: 1, unite: "pièce" },
       { id: "carotte", quantite: 1, unite: "pièce" },
@@ -70,11 +70,12 @@ ajouterRecettes([
       { id: "aubergine", quantite: 1, unite: "pièce" },
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "ail", quantite: 2, unite: "gousse" },
-      { id: "sauce-tomate", quantite: 15, unite: "g" },
+      { id: "concentre-de-tomate", quantite: 8, unite: "g", ou: { id: "sauce-tomate", quantite: 15, unite: "g" } },
       { id: "huile-d-olive", quantite: 50, unite: "ml" },
       { id: "vin-blanc", quantite: 125, unite: "ml" },
       { id: "thym", quantite: 2, unite: "g", ou: { id: "herbes-de-provence", quantite: 2, unite: "g" } },
       { id: "romarin", quantite: 2, unite: "g", optionnel: true },
+      { id: "sauge", quantite: 2, unite: "g", optionnel: true },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
@@ -130,7 +131,7 @@ ajouterRecettes([
       { id: "eau", quantite: 700, unite: "ml" },
       { id: "creme-fraiche", quantite: 50, unite: "ml" },
       { id: "farine", quantite: 5, unite: "g" },
-      { id: "vinaigre", quantite: 5, unite: "ml", optionnel: true },
+      { id: "vinaigre-de-vin-blanc", quantite: 5, unite: "ml", optionnel: true, ou: { id: "vinaigre", quantite: 5, unite: "ml" } },
       { id: "persil", quantite: 5, unite: "g", optionnel: true },
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
@@ -143,7 +144,9 @@ ajouterRecettes([
     source: "TheMealDB", idSource: "53062",
     ingredients: [
       { id: "farine", quantite: 225, unite: "g" },
-      { id: "sucre", quantite: 70, unite: "g" },
+      { id: "sucre", quantite: 25, unite: "g" },
+      { id: "sucre-roux", quantite: 45, unite: "g" },
+      { id: "sucre-glace", quantite: 10, unite: "g", optionnel: true },
       { id: "levure-de-boulanger", quantite: 7, unite: "g" },
       { id: "lait", quantite: 100, unite: "ml" },
       { id: "oeuf", quantite: 1, unite: "pièce" },
