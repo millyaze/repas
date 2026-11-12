@@ -11,7 +11,7 @@ ajouterRecettes([
     difficulte: "moyen", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "53317",
     ingredients: [
-      { id: "beurre", quantite: 25, unite: "g" },
+      { id: "saindoux", quantite: 25, unite: "g", ou: { id: "beurre", quantite: 25, unite: "g" } },
       { id: "eau", quantite: 140, unite: "ml" },
       { id: "farine", quantite: 250, unite: "g" },
       { id: "origan", quantite: 3, unite: "g", ou: { id: "herbes-de-provence", quantite: 3, unite: "g" } },
@@ -29,7 +29,7 @@ ajouterRecettes([
       { id: "sel", quantite: 4, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Pâte : mélanger le beurre fondu (ou du saindoux), l'eau tiède et une pincée de sel. Ajouter la farine et 1 g d'origan, et pétrir 5 min. Couvrir et laisser reposer au moins 30 min (ou une nuit au frais).", "Garniture : plonger la tomate 30 secondes dans l'eau bouillante, la peler et la couper en dés. Faire fondre 1 gousse d'ail écrasée et l'oignon rouge en dés dans un peu d'huile, puis les retirer.", "Dans la même poêle à feu vif, dorer la viande coupée en petits dés (ou hachée). Ajouter 1 g d'origan, le paprika, le piment, un peu de persil, puis remettre l'oignon, l'ail, les oignons nouveaux émincés et la tomate. Laisser mijoter quelques minutes, saler, poivrer. Cuire 1 œuf dur, le couper en dés et l'ajouter.", "Préchauffer le four à 200 °C. Étaler la pâte finement et découper des disques de 12 cm. Mettre 2 à 3 cuillères à café de garniture au centre, mouiller le bord, replier en demi-lune et souder à la fourchette.", "Poser sur une plaque avec du papier cuisson, badigeonner avec l'autre œuf battu et cuire environ 25 min, jusqu'à ce que ce soit doré.", "Chimichurri : mélanger le reste du persil haché, la dernière gousse d'ail hachée, le reste d'origan, le vinaigre, le reste d'huile, une pincée de sel et de piment. Servir les empanadas tièdes avec cette sauce."]
+    etapes: ["Pâte : mélanger le saindoux fondu (ou du beurre), l'eau tiède et une pincée de sel. Ajouter la farine et 1 g d'origan, et pétrir 5 min. Couvrir et laisser reposer au moins 30 min (ou une nuit au frais).", "Garniture : plonger la tomate 30 secondes dans l'eau bouillante, la peler et la couper en dés. Faire fondre 1 gousse d'ail écrasée et l'oignon rouge en dés dans un peu d'huile, puis les retirer.", "Dans la même poêle à feu vif, dorer la viande coupée en petits dés (ou hachée). Ajouter 1 g d'origan, le paprika, le piment, un peu de persil, puis remettre l'oignon, l'ail, les oignons nouveaux émincés et la tomate. Laisser mijoter quelques minutes, saler, poivrer. Cuire 1 œuf dur, le couper en dés et l'ajouter.", "Préchauffer le four à 200 °C. Étaler la pâte finement et découper des disques de 12 cm. Mettre 2 à 3 cuillères à café de garniture au centre, mouiller le bord, replier en demi-lune et souder à la fourchette.", "Poser sur une plaque avec du papier cuisson, badigeonner avec l'autre œuf battu et cuire environ 25 min, jusqu'à ce que ce soit doré.", "Chimichurri : mélanger le reste du persil haché, la dernière gousse d'ail hachée, le reste d'origan, le vinaigre, le reste d'huile, une pincée de sel et de piment. Servir les empanadas tièdes avec cette sauce."]
   },
   {
     id: "chivito-pain-brioche-maison", nom: "Chivito au pain brioché maison (sandwich steak, jambon, œuf)", cuisine: "uruguayenne",
@@ -47,7 +47,7 @@ ajouterRecettes([
       { id: "oignon", quantite: 1, unite: "pièce" },
       { id: "steak-de-boeuf", quantite: 250, unite: "g" },
       { id: "ail", quantite: 1, unite: "gousse" },
-      { id: "lardons", quantite: 60, unite: "g" },
+      { id: "bacon", quantite: 2, unite: "tranche", ou: { id: "lardons", quantite: 60, unite: "g" } },
       { id: "jambon", quantite: 2, unite: "tranche" },
       { id: "mozzarella", quantite: 60, unite: "g" },
       { id: "tomate", quantite: 1, unite: "pièce" },
@@ -64,13 +64,13 @@ ajouterRecettes([
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "TheMealDB", idSource: "53063",
     ingredients: [
-      { id: "steak-de-boeuf", quantite: 250, unite: "g" },
+      { id: "poitrine-de-boeuf", quantite: 250, unite: "g", ou: { id: "steak-de-boeuf", quantite: 250, unite: "g" } },
       { id: "pain-a-burger", quantite: 2, unite: "pièce", ou: { id: "baguette", quantite: 1, unite: "pièce" } },
       { id: "salade-verte", quantite: 1, unite: "pièce" },
       { id: "tomate", quantite: 1, unite: "pièce" },
       { id: "jambon", quantite: 2, unite: "tranche" },
       { id: "mozzarella", quantite: 100, unite: "g" },
-      { id: "lardons", quantite: 100, unite: "g" },
+      { id: "bacon", quantite: 4, unite: "tranche", ou: { id: "lardons", quantite: 100, unite: "g" } },
       { id: "oeuf", quantite: 2, unite: "pièce" },
       { id: "oignon", quantite: 1, unite: "pièce", optionnel: true },
       { id: "poivron", quantite: 1, unite: "pièce", optionnel: true },
@@ -78,7 +78,7 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" },
       { id: "poivre", quantite: 1, unite: "g" }
     ],
-    etapes: ["Aplatir les steaks au rouleau entre deux feuilles de papier cuisson pour qu'ils soient très fins, puis les saisir sur une plaque ou une poêle très chaude, 1 à 2 min de chaque côté. Saler, poivrer.", "Dans une autre poêle, faire revenir l'oignon et le poivron en lamelles avec un peu d'huile, puis cuire le bacon (ou les lardons), le jambon et les œufs au plat.", "Couper les pains en deux. Garnir avec le steak, l'œuf, le bacon, le jambon, la mozzarella en tranches, l'oignon et le poivron, la tomate en rondelles et la salade.", "Refermer avec l'autre moitié du pain et servir aussitôt."]
+    etapes: ["Couper la poitrine de bœuf en 2 tranches fines (ou prendre 2 steaks) et les aplatir au rouleau entre deux feuilles de papier cuisson pour qu'ils soient très fins, puis les saisir sur une plaque ou une poêle très chaude, 1 à 2 min de chaque côté. Saler, poivrer.", "Dans une autre poêle, faire revenir l'oignon et le poivron en lamelles avec un peu d'huile, puis cuire le bacon (ou les lardons), le jambon et les œufs au plat.", "Couper les pains en deux. Garnir avec le steak, l'œuf, le bacon, le jambon, la mozzarella en tranches, l'oignon et le poivron, la tomate en rondelles et la salade.", "Refermer avec l'autre moitié du pain et servir aussitôt."]
   },
   {
     id: "alfajores-au-chocolat", nom: "Alfajores au chocolat (biscuits fourrés à la confiture de lait)", cuisine: "uruguayenne",
@@ -92,19 +92,20 @@ ajouterRecettes([
       { id: "farine", quantite: 90, unite: "g" },
       { id: "fecule", quantite: 40, unite: "g" },
       { id: "cacao-en-poudre", quantite: 15, unite: "g" },
-      { id: "levure-chimique", quantite: 5, unite: "g" },
+      { id: "levure-chimique", quantite: 3, unite: "g" },
+      { id: "bicarbonate-de-soude", quantite: 2, unite: "g", optionnel: true },
       { id: "confiture-de-lait", quantite: 200, unite: "g" },
-      { id: "chocolat-noir", quantite: 250, unite: "g" },
+      { id: "chocolat-au-lait", quantite: 250, unite: "g", ou: { id: "chocolat-noir", quantite: 250, unite: "g" } },
       { id: "orange", quantite: 1, unite: "pièce", optionnel: true }
     ],
-    etapes: ["Biscuits : travailler 75 g de beurre mou avec le sucre quelques minutes. Ajouter l'œuf et le miel, bien mélanger, puis la farine, la fécule, le cacao et la levure, jusqu'à obtenir une pâte. Filmer et mettre au frais au moins 30 min.", "Préchauffer le four à 200 °C et couvrir deux plaques de papier cuisson.", "Étaler la pâte à 2 mm d'épaisseur et découper des ronds de 5 à 6 cm (avec un verre). On obtient une vingtaine de biscuits. Cuire 8 à 10 min, une plaque à la fois, et laisser refroidir.", "Assembler les biscuits deux par deux avec une cuillère à café de confiture de lait.", "Faire fondre doucement le chocolat haché avec le reste du beurre (50 g) et le zeste d'orange. Tremper chaque biscuit fourré dans le chocolat et laisser durcir sur du papier cuisson. Environ 5 alfajores par personne, ils se gardent quelques jours dans une boîte."]
+    etapes: ["Biscuits : travailler 75 g de beurre mou avec le sucre quelques minutes. Ajouter l'œuf et le miel, bien mélanger, puis la farine, la fécule, le cacao, la levure et le bicarbonate, jusqu'à obtenir une pâte. Filmer et mettre au frais au moins 30 min.", "Préchauffer le four à 200 °C et couvrir deux plaques de papier cuisson.", "Étaler la pâte à 2 mm d'épaisseur et découper des ronds de 5 à 6 cm (avec un verre). On obtient une vingtaine de biscuits. Cuire 8 à 10 min, une plaque à la fois, et laisser refroidir.", "Assembler les biscuits deux par deux avec une cuillère à café de confiture de lait.", "Faire fondre doucement le chocolat haché avec le reste du beurre (50 g) et le zeste d'orange. Tremper chaque biscuit fourré dans le chocolat et laisser durcir sur du papier cuisson. Environ 5 alfajores par personne, ils se gardent quelques jours dans une boîte."]
   },
   {
     id: "empanadas-chocolat-confiture-de-lait", nom: "Empanadas au chocolat et à la confiture de lait", cuisine: "uruguayenne",
-    difficulte: "moyen", tempsMinutes: 70, portions: 2,
+    difficulte: "moyen", tempsMinutes: 220, portions: 2,
     source: "TheMealDB", idSource: "53324",
     ingredients: [
-      { id: "confiture-de-lait", quantite: 200, unite: "g" },
+      { id: "lait-concentre-sucre", quantite: 200, unite: "g", ou: { id: "confiture-de-lait", quantite: 200, unite: "g" } },
       { id: "farine", quantite: 125, unite: "g" },
       { id: "cacao-en-poudre", quantite: 12, unite: "g" },
       { id: "beurre", quantite: 80, unite: "g" },
@@ -114,7 +115,7 @@ ajouterRecettes([
       { id: "cannelle", quantite: 1, unite: "g" },
       { id: "sel", quantite: 1, unite: "g" }
     ],
-    etapes: ["Garniture : utiliser de la confiture de lait toute prête (ou faire bouillir une boîte fermée de lait concentré sucré, bien couverte d'eau, pendant 2 h 30, puis la laisser refroidir avant de l'ouvrir).", "Pâte : mélanger la farine, le cacao et le sel. Ajouter 65 g de beurre froid en petits morceaux et sabler du bout des doigts. Ajouter la moitié de l'œuf battu et former une pâte, en ajoutant du lait cuillère par cuillère si elle est trop sèche. Filmer et mettre au frais au moins 30 min.", "Préchauffer le four à 180 °C et couvrir une plaque de papier cuisson.", "Étaler la pâte finement sur le plan légèrement fariné et découper des disques de 12 cm. Mettre 2 à 3 cuillères à café de confiture de lait au centre, mouiller le bord avec un peu de lait, plier en demi-lune et souder à la fourchette.", "Poser sur la plaque, badigeonner avec le reste d'œuf battu et cuire 20 à 25 min.", "À la sortie du four, badigeonner aussitôt avec le reste du beurre fondu et saupoudrer du sucre mélangé à la cannelle. À déguster tiède (attention, la garniture est brûlante) ou froid."]
+    etapes: ["Garniture : poser une boîte fermée de lait concentré sucré dans une grande casserole, la couvrir entièrement d'eau et faire bouillir 2 h 30 en rajoutant de l'eau de temps en temps. La laisser refroidir complètement avant de l'ouvrir : le lait est devenu de la confiture de lait (on en utilise la moitié). Plus rapide : prendre de la confiture de lait toute prête.", "Pâte : mélanger la farine, le cacao et le sel. Ajouter 65 g de beurre froid en petits morceaux et sabler du bout des doigts. Ajouter la moitié de l'œuf battu et former une pâte, en ajoutant du lait cuillère par cuillère si elle est trop sèche. Filmer et mettre au frais au moins 30 min.", "Préchauffer le four à 180 °C et couvrir une plaque de papier cuisson.", "Étaler la pâte finement sur le plan légèrement fariné et découper des disques de 12 cm. Mettre 2 à 3 cuillères à café de confiture de lait au centre, mouiller le bord avec un peu de lait, plier en demi-lune et souder à la fourchette.", "Poser sur la plaque, badigeonner avec le reste d'œuf battu et cuire 20 à 25 min.", "À la sortie du four, badigeonner aussitôt avec le reste du beurre fondu et saupoudrer du sucre mélangé à la cannelle. À déguster tiède (attention, la garniture est brûlante) ou froid."]
   },
   {
     id: "flan-au-caramel", nom: "Flan au caramel (et confiture de lait)", cuisine: "uruguayenne",
@@ -123,12 +124,12 @@ ajouterRecettes([
     ingredients: [
       { id: "sucre", quantite: 75, unite: "g" },
       { id: "lait", quantite: 175, unite: "ml" },
-      { id: "extrait-de-vanille", quantite: 3, unite: "ml", optionnel: true },
+      { id: "gousse-de-vanille", quantite: 1, unite: "pièce", optionnel: true, ou: { id: "extrait-de-vanille", quantite: 3, unite: "ml" } },
       { id: "oeuf", quantite: 3, unite: "pièce" },
       { id: "eau", quantite: 500, unite: "ml" },
       { id: "confiture-de-lait", quantite: 40, unite: "g", optionnel: true }
     ],
-    etapes: ["Caramel : faire fondre 50 g de sucre à sec dans une poêle à feu moyen, sans remuer à la cuillère mais en faisant tourner la poêle. Quand il est ambré et entièrement fondu, le verser vite au fond de 2 ramequins (il durcit tout de suite).", "Préchauffer le four à 150 °C et prendre un plat dans lequel les ramequins tiennent.", "Chauffer le lait avec le reste du sucre et la vanille (une gousse fendue si on en a), sans le faire bouillir. Mélanger doucement 1 œuf entier et 2 jaunes sans faire de mousse, puis verser le lait dessus en remuant doucement.", "Verser dans les ramequins, les poser dans le plat et verser de l'eau bouillante dans le plat jusqu'à mi-hauteur des ramequins, sans en mettre dans les flans.", "Cuire 35 à 40 min au milieu du four : la pointe d'un couteau doit ressortir propre. Laisser refroidir 1 h, puis mettre une nuit au réfrigérateur.", "Passer un couteau sur le bord et retourner sur une assiette. Servir avec un peu de confiture de lait à côté."]
+    etapes: ["Caramel : faire fondre 50 g de sucre à sec dans une poêle à feu moyen, sans remuer à la cuillère mais en faisant tourner la poêle. Quand il est ambré et entièrement fondu, le verser vite au fond de 2 ramequins (il durcit tout de suite).", "Préchauffer le four à 150 °C et prendre un plat dans lequel les ramequins tiennent.", "Chauffer le lait avec le reste du sucre et la gousse de vanille fendue et grattée (la retirer après quelques minutes), sans le faire bouillir. Mélanger doucement 1 œuf entier et 2 jaunes sans faire de mousse, puis verser le lait dessus en remuant doucement.", "Verser dans les ramequins, les poser dans le plat et verser de l'eau bouillante dans le plat jusqu'à mi-hauteur des ramequins, sans en mettre dans les flans.", "Cuire 35 à 40 min au milieu du four : la pointe d'un couteau doit ressortir propre. Laisser refroidir 1 h, puis mettre une nuit au réfrigérateur.", "Passer un couteau sur le bord et retourner sur une assiette. Servir avec un peu de confiture de lait à côté."]
   },
   {
     id: "postre-chaja", nom: "Postre chajá (gâteau meringué aux pêches, crème et confiture de lait)", cuisine: "uruguayenne",
