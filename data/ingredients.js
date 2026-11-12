@@ -295,9 +295,19 @@ const INGREDIENTS = [
   // Cuisines australienne, philippine et malaisienne
   { id: "noix-de-coco-rapee",   nom: "Noix de coco râpée",   unite: "g" },
   { id: "betterave-cuite",      nom: "Betterave cuite",      unite: "g" },
-  { id: "fruits-rouges",        nom: "Fruits rouges",        unite: "g" },
   { id: "asperges",             nom: "Asperges",             unite: "g" },
   { id: "romarin",              nom: "Romarin",              unite: "g" },
+  { id: "golden-syrup",         nom: "Golden syrup",         unite: "g" },
+  { id: "bicarbonate",          nom: "Bicarbonate",          unite: "g" },
+  { id: "pain-naan",            nom: "Pain naan",            unite: "pièce" },
+  { id: "creme-aigre",          nom: "Crème aigre",          unite: "ml" },
+  { id: "creme-liquide",        nom: "Crème liquide",        unite: "ml" },
+  { id: "concentre-de-tomate",  nom: "Concentré de tomate",  unite: "g" },
+  { id: "chips-de-tortilla",    nom: "Chips de tortilla",    unite: "g" },
+  { id: "creme-de-coco",        nom: "Crème de coco",        unite: "ml" },
+  { id: "graines-de-fenouil",   nom: "Graines de fenouil",   unite: "g" },
+  { id: "brocoli-chinois",      nom: "Brocoli chinois",      unite: "g" },
+  { id: "piments-seches",       nom: "Piments séchés",       unite: "g" },
 
   // --- Ajoutés pour : canadienne ---
   { id: "cassonade",            nom: "Cassonade",            unite: "g" },
