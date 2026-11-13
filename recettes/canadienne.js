@@ -6,7 +6,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "queues-de-castor", nom: "Queues de castor (beignets plats cannelle-sucre)", cuisine: "canadienne",
+    id: "queues-de-castor", nom: "Queues de castor (beignets plats cannelle-sucre)", cuisine: "canadienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 130, portions: 2,
     source: "TheMealDB", idSource: "52928",
     ingredients: [
@@ -25,7 +25,7 @@ ajouterRecettes([
     etapes: ["Dans un grand saladier, mélanger l'eau tiède, une pincée de sucre et la levure. Laisser reposer 5 à 10 min, jusqu'à ce que ça mousse.", "Ajouter 50 g de sucre, le lait tiède, le beurre fondu, l'œuf et le sel, et fouetter. Ajouter la farine petit à petit en mélangeant jusqu'à obtenir une pâte lisse, un peu collante.", "Couvrir et laisser lever 1 h 30 dans un endroit tiède.", "Couper la pâte en 6 morceaux et étaler chacun en ovale allongé de 5 mm d'épaisseur (la forme d'une queue de castor).", "Chauffer l'huile à 175 °C dans une casserole profonde (un petit morceau de pâte doit dorer en 30 secondes). Cuire les queues de castor une par une, 30 à 45 secondes de chaque côté, jusqu'à ce qu'elles soient dorées. Égoutter sur du papier absorbant.", "Mélanger le reste du sucre avec la cannelle et y rouler les beignets encore chauds. Servir avec un filet de citron si on aime (ou de la pâte à tartiner et des amandes grillées)."]
   },
   {
-    id: "pommes-de-terre-sautees-bacon-erable", nom: "Pommes de terre sautées au bacon et au sirop d'érable", cuisine: "canadienne",
+    id: "pommes-de-terre-sautees-bacon-erable", nom: "Pommes de terre sautées au bacon et au sirop d'érable", cuisine: "canadienne", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     source: "TheMealDB", idSource: "52965",
     ingredients: [
@@ -43,7 +43,7 @@ ajouterRecettes([
     etapes: ["Laver les pommes de terre et les couper en dés moyens. Les garder dans un bol d'eau froide le temps de chauffer la poêle.", "Chauffer l'huile dans une grande poêle à feu moyen-vif. Égoutter les pommes de terre, les mettre dans la poêle, saler, poivrer et ajouter une pincée de piment de la Jamaïque. Cuire 10 min en remuant souvent, jusqu'à ce qu'elles dorent.", "Ajouter le bacon coupé en petits morceaux (plus facile à couper s'il sort du congélateur) : son gras finit de cuire les pommes de terre. Cuire 5 à 6 min, jusqu'à ce qu'il soit croustillant.", "Baisser le feu, ajouter l'ail haché et le persil, et cuire 1 min.", "Juste avant de servir, arroser de sirop d'érable et remuer 1 min pour caraméliser. Servir chaud avec un œuf au plat par personne."]
   },
   {
-    id: "tartelettes-au-beurre", nom: "Tartelettes au beurre (butter tarts)", cuisine: "canadienne",
+    id: "tartelettes-au-beurre", nom: "Tartelettes au beurre (butter tarts)", cuisine: "canadienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     source: "TheMealDB", idSource: "52923",
     ingredients: [
@@ -59,7 +59,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 190 °C (170 °C chaleur tournante).", "Étaler la pâte un peu plus finement, y découper une dizaine de ronds de 7 à 8 cm et en garnir un moule à tartelettes (ou à muffins, sans trop remonter sur les bords).", "Dans une casserole, battre l'œuf puis ajouter le sucre muscovado, les raisins, le beurre, la crème et la vanille. Cuire 3 à 4 min à feu doux en remuant sans arrêt, jusqu'à ce que le beurre fonde et que le mélange épaississe et nappe la cuillère (attention, ça brûle vite).", "Retirer du feu et ajouter les noix concassées. Remplir les fonds de tarte à ras bord.", "Cuire 15 à 18 min, jusqu'à ce que la garniture soit prise et dorée. Laisser tiédir quelques minutes avant de démouler. Se mangent tièdes ou froides (une dizaine de tartelettes, pour plusieurs goûters)."]
   },
   {
-    id: "tourtiere", nom: "Tourtière (tourte à la viande du Québec)", cuisine: "canadienne",
+    id: "tourtiere", nom: "Tourtière (tourte à la viande du Québec)", cuisine: "canadienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "53343",
     ingredients: [
@@ -83,7 +83,7 @@ ajouterRecettes([
     etapes: ["Dans une grande poêle, chauffer l'huile et faire revenir l'oignon et l'ail hachés 5 min.", "Ajouter le bœuf, le porc (sans porc : 450 g de bœuf en tout), la sarriette (ou du thym), les clous de girofle écrasés en poudre, la muscade et le laurier. Cuire jusqu'à ce que la viande soit dorée.", "Ajouter l'eau et le bouillon cube émietté, porter à frémissement puis baisser le feu. Râper la pomme de terre directement dans la poêle et mélanger. Cuire environ 15 min, jusqu'à ce que le liquide soit presque absorbé.", "Retirer le laurier, saler, poivrer et laisser refroidir complètement (la garniture froide donne une pâte plus croustillante).", "Préchauffer le four à 190 °C. Garnir un moule à tarte de 20 cm avec une pâte, ajouter la viande et l'étaler. Couvrir avec la seconde pâte, souder les bords en les pinçant et faire un trou au centre pour la vapeur.", "Badigeonner d'œuf battu et cuire environ 45 min, jusqu'à ce que la pâte soit bien dorée. Laisser reposer 15 min avant de couper (4 parts : les restes se mangent froids le lendemain)."]
   },
   {
-    id: "carres-aux-dattes", nom: "Carrés aux dattes", cuisine: "canadienne",
+    id: "carres-aux-dattes", nom: "Carrés aux dattes", cuisine: "canadienne", type: "dessert",
     difficulte: "facile", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "53338",
     ingredients: [
@@ -100,7 +100,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 180 °C et beurrer un petit plat carré (environ 15 cm) ou un moule à cake.", "Garniture : dans une casserole, porter à ébullition les dattes dénoyautées coupées et l'eau, puis cuire 6 à 8 min à feu doux en remuant, jusqu'à obtenir une purée épaisse. Ajouter la vanille et laisser tiédir.", "Pâte : mélanger les flocons d'avoine, la farine, la cassonade, la levure et le sel. Ajouter le beurre mou en morceaux et l'écraser du bout des doigts jusqu'à obtenir des miettes de la taille de petits pois.", "Tasser la moitié des miettes au fond du plat, étaler la purée de dattes par-dessus, puis couvrir avec le reste des miettes en appuyant légèrement.", "Cuire 30 à 35 min, jusqu'à ce que le dessus soit doré. Laisser refroidir complètement dans le plat avant de couper en carrés (se gardent une semaine au frais)."]
   },
   {
-    id: "figgy-duff", nom: "Figgy duff (pudding aux raisins et à la mélasse)", cuisine: "canadienne",
+    id: "figgy-duff", nom: "Figgy duff (pudding aux raisins et à la mélasse)", cuisine: "canadienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "53342",
     ingredients: [
@@ -118,7 +118,7 @@ ajouterRecettes([
     etapes: ["Dans un saladier, mélanger la farine, la cassonade, la levure et les épices (cannelle, gingembre en poudre, piment de la Jamaïque). Ajouter les raisins et bien les enrober de farine.", "Ajouter le beurre fondu, la mélasse et l'eau, et mélanger à la cuillère en bois jusqu'à former une boule.", "Mettre la boule dans un torchon propre fariné, fermer avec une ficelle en laissant 2 à 3 cm de jeu pour qu'elle gonfle (ou la mettre dans un bol beurré couvert de papier aluminium bien serré).", "Plonger dans une grande casserole d'eau frémissante (le bol, lui, à mi-hauteur d'eau, couvercle posé) et cuire 1 h 15 à 1 h 30, en rajoutant de l'eau chaude si besoin, jusqu'à ce que le pudding soit ferme.", "Laisser tiédir avant de retirer le torchon. Couper en tranches comme un gâteau et servir chaud, nappé de mélasse tiède ou d'une sauce beurre-mélasse (mélasse, beurre et un peu d'eau chauffés ensemble)."]
   },
   {
-    id: "tarte-flapper", nom: "Tarte flapper (crème vanille et meringue)", cuisine: "canadienne",
+    id: "tarte-flapper", nom: "Tarte flapper (crème vanille et meringue)", cuisine: "canadienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 70, portions: 2,
     source: "TheMealDB", idSource: "53341",
     ingredients: [
@@ -136,7 +136,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 180 °C. Fond : écraser les biscuits en miettes fines et les mélanger avec le beurre fondu, 25 g de sucre et la cannelle. Garder 2 cuillères à soupe de miettes de côté et tasser le reste au fond et sur les bords d'un petit moule à tarte (18 cm). Cuire 10 min.", "Crème : séparer les blancs des jaunes. Dans une casserole, mélanger le lait, 70 g de sucre, la fécule, les jaunes, la vanille et le sel. Cuire à feu moyen en remuant sans arrêt jusqu'à ce que ça bouillonne et épaississe comme un flan. Laisser tiédir.", "Meringue : monter les blancs en neige ferme avec la crème de tartre (ou quelques gouttes de jus de citron), puis ajouter le reste du sucre petit à petit en battant jusqu'à ce qu'elle soit brillante.", "Verser la crème sur le fond, couvrir d'une épaisse couche de meringue en formant des petites pointes, et parsemer des miettes gardées de côté.", "Cuire environ 10 min en surveillant, jusqu'à ce que la meringue soit dorée. Mettre au frais et manger dans les heures qui suivent (la meringue ramollit ensuite)."]
   },
   {
-    id: "hodge-podge", nom: "Hodge podge (légumes nouveaux mijotés au lait)", cuisine: "canadienne",
+    id: "hodge-podge", nom: "Hodge podge (légumes nouveaux mijotés au lait)", cuisine: "canadienne", type: "plat",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "TheMealDB", idSource: "53340",
     ingredients: [
@@ -155,7 +155,7 @@ ajouterRecettes([
     etapes: ["Couper les pommes de terre (des nouvelles, si possible) et les carottes en morceaux.", "Les cuire 5 min dans une grande casserole d'eau salée bouillante, jusqu'à ce qu'elles soient juste tendres. Ajouter les haricots verts coupés et les petits pois pour 1 min, puis égoutter.", "Dans une cocotte, faire fondre le beurre à feu moyen, ajouter les légumes et les réchauffer en remuant.", "Ajouter le lait et la crème et porter à ébullition, puis baisser le feu. Saler, poivrer, ajouter la ciboulette et l'aneth ciselés et laisser mijoter au moins 10 min. Servir chaud, en assiette creuse."]
   },
   {
-    id: "biscuits-jam-jam", nom: "Biscuits jam-jam (biscuits à la mélasse fourrés à la confiture)", cuisine: "canadienne",
+    id: "biscuits-jam-jam", nom: "Biscuits jam-jam (biscuits à la mélasse fourrés à la confiture)", cuisine: "canadienne", type: "dessert",
     difficulte: "facile", tempsMinutes: 45, portions: 2,
     source: "TheMealDB", idSource: "53339",
     ingredients: [
@@ -174,7 +174,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 180 °C et couvrir une plaque de papier cuisson.", "Battre le beurre mou, le sucre et l'œuf jusqu'à ce que ce soit homogène, puis ajouter la mélasse et la vanille. Ajouter l'eau et mélanger encore 1 min.", "Dans un autre bol, mélanger la farine, la levure, la cannelle et le sel. Les ajouter petit à petit à la préparation : la pâte doit se façonner facilement.", "Former des petites boules, les poser sur la plaque et les aplatir avec un verre fariné. Cuire 10 à 12 min, puis laisser refroidir au moins 10 min.", "Assembler les biscuits deux par deux avec 2 cuillères à café de confiture au milieu. Parfait avec une tasse de thé (une douzaine de biscuits)."]
   },
   {
-    id: "jiggs-dinner", nom: "Jiggs dinner (bœuf bouilli, purée de pois cassés et légumes)", cuisine: "canadienne",
+    id: "jiggs-dinner", nom: "Jiggs dinner (bœuf bouilli, purée de pois cassés et légumes)", cuisine: "canadienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 170, portions: 2,
     source: "TheMealDB", idSource: "53335",
     ingredients: [
@@ -192,7 +192,7 @@ ajouterRecettes([
     etapes: ["À Terre-Neuve, on utilise du bœuf salé qu'on dessale une nuit dans l'eau froide. Avec du bœuf demi-sel (ou du petit salé), le faire tremper aussi ; avec du bœuf frais, saler simplement l'eau de cuisson. Les pois cassés n'ont pas besoin de trempage.", "Mettre la viande en gros morceaux dans une grande marmite, couvrir largement d'eau, porter à ébullition puis laisser frémir 2 h.", "Pendant ce temps, cuire les pois cassés à part 45 min dans une petite casserole, couverts d'une louche de bouillon de la marmite et d'eau, jusqu'à ce qu'ils se défassent. Égoutter et écraser avec le beurre et du poivre : c'est le « pease pudding ».", "Ajouter le chou coupé en quartiers dans la marmite et cuire 20 min. Ajouter les carottes, le navet et les pommes de terre en morceaux et cuire encore 20 min, jusqu'à ce que les légumes soient tendres.", "Servir la viande tranchée avec les légumes et la purée de pois. Le bouillon se boit tel quel ou se fait réduire en sauce pour napper l'assiette."]
   },
   {
-    id: "feves-au-lard-a-la-melasse", nom: "Fèves au lard à la mélasse", cuisine: "canadienne",
+    id: "feves-au-lard-a-la-melasse", nom: "Fèves au lard à la mélasse", cuisine: "canadienne", type: "plat",
     difficulte: "facile", tempsMinutes: 240, portions: 2,
     source: "TheMealDB", idSource: "53336",
     ingredients: [
@@ -210,7 +210,7 @@ ajouterRecettes([
     etapes: ["La veille, faire tremper les haricots secs dans un grand volume d'eau froide toute la nuit.", "Égoutter, couvrir largement d'eau fraîche et cuire 30 min : ils doivent être tendres mais encore fermes. Égoutter en gardant l'eau de cuisson. (Avec des haricots en boîte : simplement les rincer et sauter cette étape.)", "Préchauffer le four à 160 °C. Dans une cocotte qui va au four, faire dorer le bacon coupé en morceaux à feu moyen-vif jusqu'à ce qu'il rende son gras, puis ajouter l'oignon émincé et cuire jusqu'à ce qu'il soit tendre.", "Ajouter les haricots, la mélasse, la cassonade, le vinaigre de cidre, la moutarde, le sel, le poivre et 300 ml d'eau de cuisson des haricots (ou d'eau). Bien mélanger.", "Enfourner sans couvercle 3 h (1 h 30 avec des haricots en boîte), en remuant de temps en temps, jusqu'à ce que la sauce soit épaisse et caramélisée sur les bords. Rajouter un peu d'eau si ça sèche."]
   },
   {
-    id: "barres-nanaimo", nom: "Barres Nanaimo (chocolat, coco et crème vanillée)", cuisine: "canadienne",
+    id: "barres-nanaimo", nom: "Barres Nanaimo (chocolat, coco et crème vanillée)", cuisine: "canadienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "52924",
     ingredients: [
@@ -229,7 +229,7 @@ ajouterRecettes([
     etapes: ["Couche du bas : au bain-marie, faire fondre 65 g de beurre avec le sucre et le cacao en remuant. Ajouter l'œuf battu et fouetter 2 à 3 min jusqu'à ce que ça épaississe. Hors du feu, ajouter les biscuits écrasés en miettes, la noix de coco et les amandes hachées. Tasser dans un petit moule carré (15 cm) ou un moule à cake chemisé de papier cuisson. 10 min au frais.", "Couche du milieu : fouetter 50 g de beurre mou avec la crème et la poudre à crème anglaise (« custard powder » ; sinon de la fécule et quelques gouttes de vanille), puis ajouter le sucre glace petit à petit jusqu'à obtenir une crème légère. L'étaler sur la première couche et remettre au frais au moins 10 min.", "Couche du dessus : faire fondre le chocolat avec le reste du beurre (au micro-ondes ou au bain-marie) et l'étaler sur la crème.", "Laisser prendre au frais environ 2 h, puis démouler et couper en carrés (pour plusieurs goûters)."]
   },
   {
-    id: "pate-chinois", nom: "Pâté chinois (bœuf, maïs et purée gratinés)", cuisine: "canadienne",
+    id: "pate-chinois", nom: "Pâté chinois (bœuf, maïs et purée gratinés)", cuisine: "canadienne", type: "plat",
     difficulte: "facile", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "52930",
     ingredients: [
@@ -247,7 +247,7 @@ ajouterRecettes([
     etapes: ["Cuire les pommes de terre épluchées dans de l'eau salée jusqu'à ce qu'elles soient très tendres. Égoutter et écraser avec 15 g de beurre, puis ajouter 60 ml de lait pour faire une purée. Saler, poivrer.", "Préchauffer le four à 190 °C.", "Dans une poêle, faire dorer l'oignon haché dans le reste du beurre, ajouter la viande et cuire jusqu'à ce qu'elle soit dorée. Saler, poivrer.", "Égoutter le maïs et en mixer ou écraser la moitié avec le reste du lait (cela remplace le maïs en crème), puis mélanger avec le reste des grains.", "Dans un petit plat à gratin, tasser la viande, couvrir avec le maïs, puis avec la purée. Saupoudrer de paprika et de persil.", "Cuire environ 30 min, puis 2 à 3 min sous le gril pour dorer le dessus. Laisser reposer 10 min avant de servir."]
   },
   {
-    id: "pouding-chomeur", nom: "Pouding chômeur (gâteau au sirop d'érable)", cuisine: "canadienne",
+    id: "pouding-chomeur", nom: "Pouding chômeur (gâteau au sirop d'érable)", cuisine: "canadienne", type: "dessert",
     difficulte: "facile", tempsMinutes: 50, portions: 2,
     source: "TheMealDB", idSource: "52932",
     ingredients: [
@@ -265,7 +265,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 160 °C et beurrer un plat d'environ 20 cm.", "Pâte : battre 55 g de beurre mou avec le sucre jusqu'à ce que ce soit léger, puis ajouter l'œuf et la vanille. Mélanger la farine et la levure, puis les ajouter en alternant avec le lait. Verser dans le plat.", "Sauce : dans une casserole, porter à ébullition le sirop d'érable, la cassonade, la crème et le reste du beurre en remuant sans arrêt. Baisser le feu et cuire 2 min, jusqu'à ce que la sauce réduise un peu.", "Verser doucement la sauce chaude sur la pâte (elle va passer dessous en cuisant).", "Cuire environ 35 min, jusqu'à ce que le gâteau soit doré et qu'un cure-dent planté dans la partie gâteau ressorte propre. Servir tiède, avec la sauce au fond."]
   },
   {
-    id: "poutine", nom: "Poutine (frites, fromage et sauce brune)", cuisine: "canadienne",
+    id: "poutine", nom: "Poutine (frites, fromage et sauce brune)", cuisine: "canadienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     source: "TheMealDB", idSource: "52804",
     ingredients: [
@@ -283,7 +283,7 @@ ajouterRecettes([
     etapes: ["Sauce brune (elle remplace la sauce en boîte) : faire fondre le beurre dans une casserole, ajouter la farine et remuer 2 à 3 min jusqu'à ce qu'elle prenne une couleur noisette. Verser l'eau chaude avec le bouillon cube (de bœuf de préférence) émietté en fouettant, ajouter la sauce Worcestershire et du poivre, et laisser épaissir 5 min à feu doux. Garder au chaud.", "Éplucher les pommes de terre, les couper en frites fines, les rincer et bien les sécher.", "Chauffer l'huile à 185 °C dans une casserole profonde ou une friteuse. Cuire les frites en deux fois, environ 5 min, jusqu'à ce qu'elles soient dorées. Égoutter sur du papier absorbant et saler.", "Mettre les frites dans les assiettes, parsemer le fromage en petits morceaux (en grains au Québec ; ici cheddar ou mozzarella), puis napper de sauce bien chaude pour qu'il fonde un peu. Servir aussitôt."]
   },
   {
-    id: "rapure-acadienne", nom: "Râpure acadienne (gratin de pommes de terre râpées au poulet)", cuisine: "canadienne",
+    id: "rapure-acadienne", nom: "Râpure acadienne (gratin de pommes de terre râpées au poulet)", cuisine: "canadienne", type: "plat",
     difficulte: "difficile", tempsMinutes: 120, portions: 2,
     source: "TheMealDB", idSource: "52933",
     ingredients: [
@@ -299,7 +299,7 @@ ajouterRecettes([
     etapes: ["Faire fondre le beurre dans une poêle et y cuire l'oignon émincé 5 min, puis 30 min à feu doux en remuant de temps en temps, jusqu'à ce qu'il soit bien tendre et brun.", "Porter l'eau à ébullition avec les bouillons cubes, y plonger les blancs de poulet et les cuire 20 min à petit feu. Les retirer et garder le bouillon.", "Préchauffer le four à 200 °C et beurrer un plat à gratin.", "Éplucher et râper très finement les pommes de terre, puis les presser fort dans un torchon propre pour retirer le plus d'eau possible. Mettre la pulpe dans un saladier, saler, poivrer, et ajouter du bouillon chaud petit à petit en mélangeant jusqu'à obtenir la consistance d'un porridge épais.", "Étaler la moitié des pommes de terre dans le plat, couvrir avec le poulet coupé en morceaux et l'oignon, puis avec le reste des pommes de terre.", "Cuire environ 1 h, jusqu'à ce que le dessus soit bien doré et croustillant. Servir avec le reste du bouillon réchauffé, à verser dans l'assiette."]
   },
   {
-    id: "tarte-aux-petits-fruits-saskatoon", nom: "Tarte aux petits fruits (façon tarte aux baies de Saskatoon)", cuisine: "canadienne",
+    id: "tarte-aux-petits-fruits-saskatoon", nom: "Tarte aux petits fruits (façon tarte aux baies de Saskatoon)", cuisine: "canadienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 140, portions: 2,
     source: "TheMealDB", idSource: "53337",
     ingredients: [
@@ -317,7 +317,7 @@ ajouterRecettes([
     etapes: ["Pâte : mélanger la farine et le sel. Ajouter 75 g de beurre froid et la graisse végétale (type Végétaline ; sinon 75 g de beurre de plus) en dés, et les travailler du bout des doigts jusqu'à obtenir une semoule grossière avec quelques morceaux de la taille d'un petit pois.", "Battre 1 œuf avec le vinaigre et l'eau très froide, verser sur la farine et mélanger juste assez pour que la pâte se tienne. Partager en 2 boules aplaties, filmer et mettre 1 h au frais. (Pressé ? 2 rouleaux de pâte brisée toute prête.)", "Préchauffer le four à 180 °C, grille dans le bas du four, et poser une feuille de papier aluminium sur la plaque pour récupérer le jus.", "Étaler une boule et garnir un moule à tarte de 20 cm, en laissant la pâte dépasser des bords.", "Mélanger les myrtilles (fraîches ou surgelées, elles remplacent les baies de Saskatoon, introuvables en France) avec 70 g de sucre et la fécule. Verser dans le fond de tarte et parsemer du reste du beurre en petits morceaux.", "Étaler la seconde boule, la découper en larges bandes et les tresser en croisillons sur les fruits. Replier les bords de la pâte du fond par-dessus pour enfermer le jus.", "Badigeonner avec le second œuf battu avec 1 cuillère à soupe d'eau, saupoudrer du reste du sucre et cuire environ 1 h, jusqu'à ce que la pâte soit dorée et que le jus bouillonne. Servir tiède ou froid, avec de la crème fouettée ou une glace (6 parts : se garde 4 jours au frais)."]
   },
   {
-    id: "soupe-aux-pois-casses-et-jambon", nom: "Soupe aux pois cassés et au jambon", cuisine: "canadienne",
+    id: "soupe-aux-pois-casses-et-jambon", nom: "Soupe aux pois cassés et au jambon", cuisine: "canadienne", type: "soupe",
     difficulte: "facile", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "52925",
     ingredients: [
@@ -335,7 +335,7 @@ ajouterRecettes([
     etapes: ["Prendre un jambonneau (demi-sel si possible ; sinon un morceau de poitrine de porc). Si la viande est salée, la mettre dans une casserole d'eau froide, porter à ébullition et jeter cette eau.", "Mettre dans une grande casserole la viande, l'eau, les pois cassés rincés, l'oignon, la carotte et le céleri hachés, et le laurier. Porter à ébullition puis laisser mijoter 1 h 15 à 1 h 30, en rajoutant de l'eau si besoin, jusqu'à ce que la viande soit tendre.", "Sortir la viande, retirer la couenne et l'effilocher à la fourchette.", "Retirer le laurier, ajouter les petits pois et cuire 1 min, puis mixer la soupe jusqu'à ce qu'elle soit lisse (ajouter un peu d'eau si elle est trop épaisse). Goûter avant de saler : la viande apporte déjà du sel.", "Mélanger la soupe avec presque toute la viande, garder le reste pour le dessus. Servir avec du pain beurré."]
   },
   {
-    id: "tarte-au-sucre", nom: "Tarte au sucre (sans pâte)", cuisine: "canadienne",
+    id: "tarte-au-sucre", nom: "Tarte au sucre (sans pâte)", cuisine: "canadienne", type: "dessert",
     difficulte: "facile", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "52931",
     ingredients: [
@@ -350,7 +350,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 175 °C et beurrer un petit moule à tarte (environ 18 cm).", "Battre la cassonade et le beurre mou jusqu'à obtenir un mélange crémeux, sans grumeaux. Ajouter l'œuf, puis la vanille et le sel.", "Ajouter la farine petit à petit, puis le lait, pour obtenir une pâte crémeuse et liquide. Verser dans le moule.", "Cuire 30 min, puis couvrir le bord d'aluminium pour qu'il ne brûle pas et cuire encore 10 à 15 min, jusqu'à ce que le centre soit pris et que le dessus forme une croûte.", "Laisser refroidir, puis mettre au moins 1 h au frais avant de servir."]
   },
   {
-    id: "trous-de-beignes", nom: "Trous de beignes (petits beignets ronds au sucre)", cuisine: "canadienne",
+    id: "trous-de-beignes", nom: "Trous de beignes (petits beignets ronds au sucre)", cuisine: "canadienne", type: "dessert",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     source: "TheMealDB", idSource: "52929",
     ingredients: [

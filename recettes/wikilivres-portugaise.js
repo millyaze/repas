@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "caldo-verde", nom: "Caldo verde (soupe portugaise au chou et au chorizo)", cuisine: "portugaise",
+    id: "caldo-verde", nom: "Caldo verde (soupe portugaise au chou et au chorizo)", cuisine: "portugaise", type: "soupe",
     difficulte: "facile", tempsMinutes: 50, portions: 2,
     source: "Wikilivres", idSource: "Caldo Verde",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCaldo_Verde",

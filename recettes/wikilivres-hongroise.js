@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "goulash-hongrois", nom: "Goulash hongrois (soupe de bœuf au paprika)", cuisine: "hongroise",
+    id: "goulash-hongrois", nom: "Goulash hongrois (soupe de bœuf au paprika)", cuisine: "hongroise", type: "soupe",
     difficulte: "moyen", tempsMinutes: 150, portions: 2,
     source: "Wikilivres", idSource: "Goulash",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FGoulash",
@@ -32,7 +32,7 @@ ajouterRecettes([
     etapes: ["Couper 250 g de bœuf (jarret ou épaule) en dés, l'oignon et l'ail en petits morceaux.", "Faire fondre la graisse (ou chauffer l'huile) dans un faitout, y faire fondre l'oignon puis l'ail. Ajouter la viande et la faire revenir un peu.", "Ajouter le paprika en veillant à ce qu'il ne brûle pas, puis verser environ 1 l d'eau. Ajouter le cumin (en graines), le poivre et le sel.", "Couper la tomate et le poivron vert en dés et les ajouter. Pour plus de piquant, on peut plonger un piment entier dans la soupe.", "Laisser mijoter longtemps. Pendant la cuisson, ajouter la carotte, le céleri et le rutabaga coupés en morceaux, et le persil.", "Quand la viande est tendre, ajouter 300 g de pommes de terre en dés et cuire jusqu'à ce qu'elles soient fondantes."]
   },
   {
-    id: "porkolt", nom: "Pörkölt (ragoût de bœuf hongrois au paprika)", cuisine: "hongroise",
+    id: "porkolt", nom: "Pörkölt (ragoût de bœuf hongrois au paprika)", cuisine: "hongroise", type: "plat",
     difficulte: "moyen", tempsMinutes: 210, portions: 2,
     source: "Wikilivres", idSource: "Pörkölt",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FP%C3%B6rk%C3%B6lt",

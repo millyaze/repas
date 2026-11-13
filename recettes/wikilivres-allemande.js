@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "beetenbartsch", nom: "Beetenbartsch (soupe de betterave à la crème et aux lardons)", cuisine: "allemande",
+    id: "beetenbartsch", nom: "Beetenbartsch (soupe de betterave à la crème et aux lardons)", cuisine: "allemande", type: "soupe",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     source: "Wikilivres", idSource: "Beetenbartsch",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FBeetenbartsch",

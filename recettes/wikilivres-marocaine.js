@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "briouats-au-boeuf-et-a-la-coriandre", nom: "Briouats au bœuf et à la coriandre", cuisine: "marocaine",
+    id: "briouats-au-boeuf-et-a-la-coriandre", nom: "Briouats au bœuf et à la coriandre", cuisine: "marocaine", type: "entree",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     source: "Wikilivres", idSource: "Briouats de boeuf à la coriandre",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FBriouats_de_boeuf_%C3%A0_la_coriandre",
@@ -27,7 +27,7 @@ ajouterRecettes([
     etapes: ["Peler et hacher l'ail et l'oignon. Rincer la coriandre, la sécher dans du papier absorbant et la ciseler.", "Dans une poêle, chauffer l'huile d'olive et faire revenir l'ail et l'oignon.", "Quand ils colorent, ajouter la coriandre puis les œufs un par un, sans cesser de mélanger.", "Ajouter la viande et le cumin. Saler, poivrer et cuire encore 10 min en mélangeant bien.", "Couper les feuilles de brick en deux. Déposer une cuillerée de farce sur chaque moitié et rouler en forme de gros cigare.", "Chauffer l'huile de friture dans une poêle et frire les briouats jusqu'à ce qu'ils soient bien dorés. Les égoutter sur du papier absorbant avant de servir."]
   },
   {
-    id: "feves-au-cumin", nom: "Fèves au cumin", cuisine: "marocaine",
+    id: "feves-au-cumin", nom: "Fèves au cumin", cuisine: "marocaine", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 120, portions: 2,
     source: "Wikilivres", idSource: "Fèves au cumin",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FF%C3%A8ves_au_cumin",
@@ -43,7 +43,7 @@ ajouterRecettes([
     etapes: ["La veille : faire tremper les fèves sèches 24 h dans un grand volume d'eau.", "Égoutter, mettre les fèves dans une cocotte, les couvrir d'eau froide et cuire jusqu'à ce qu'elles soient tendres à cœur (vérifier avec une fourchette).", "Ajouter le sel, la moitié du cumin (en grains de préférence), le piment de Cayenne et 2 cuillères à café d'huile d'olive. Laisser cuire à petit feu au moins 45 min.", "Égoutter les fèves, les saupoudrer de paprika (doux ou piquant), du reste du cumin (en poudre) et d'un filet d'huile d'olive.", "Laisser refroidir et servir en petites coupelles, à l'apéritif."]
   },
   {
-    id: "maakouda", nom: "Maâkouda (beignets de pommes de terre aux herbes)", cuisine: "marocaine",
+    id: "maakouda", nom: "Maâkouda (beignets de pommes de terre aux herbes)", cuisine: "marocaine", type: "entree",
     difficulte: "moyen", tempsMinutes: 50, portions: 2,
     source: "Wikilivres", idSource: "Maâkouda",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FMa%C3%A2kouda",

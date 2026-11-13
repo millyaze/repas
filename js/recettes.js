@@ -29,6 +29,22 @@ function lireSeuilCompletion() {
   if (texte === null || texte === "" || isNaN(valeur) || valeur < 0 || valeur > 100) return SEUIL_INCOMPLET;
   return Math.round(valeur);
 }
+// Types de plat, dans l'ordre du menu (le « type » écrit dans chaque recette)
+const TYPES_DE_PLAT = [
+  { id: "entree", nom: "Entrée" },
+  { id: "soupe", nom: "Soupe" },
+  { id: "plat", nom: "Plat" },
+  { id: "accompagnement", nom: "Accompagnement" },
+  { id: "dessert", nom: "Dessert" },
+  { id: "petit-dejeuner", nom: "Petit-déjeuner" },
+  { id: "boisson", nom: "Boisson" },
+  { id: "sauce", nom: "Sauce" }
+];
+// Nom affiché d'un type : « petit-dejeuner » -> « Petit-déjeuner »
+function nomDuType(id) {
+  const type = TYPES_DE_PLAT.filter(function (t) { return t.id === id; })[0];
+  return type ? type.nom : "Plat";
+}
 // Choix proposés dans le filtre « Temps » (en minutes)
 const TEMPS_PROPOSES = [15, 20, 30, 45, 60];
 
@@ -47,7 +63,7 @@ function ajouterOption(liste, valeur, texte) {
 // Met une majuscule au début : « italienne » -> « Italienne »
 function majuscule(texte) { return texte.charAt(0).toUpperCase() + texte.slice(1); }
 
-// Remplit les trois listes de filtres à partir des recettes
+// Remplit les listes de filtres à partir des recettes
 function preparerFiltres() {
   const cuisines = [];
   const difficultes = [];
@@ -55,6 +71,16 @@ function preparerFiltres() {
     if (cuisines.indexOf(recette.cuisine) === -1) cuisines.push(recette.cuisine);
     if (difficultes.indexOf(recette.difficulte) === -1) difficultes.push(recette.difficulte);
   });
+
+  // Type de plat : seuls les types qui ont au moins une recette sont proposés, avec leur nombre
+  ajouterOption(element("filtre-type"), "", "Tous");
+  TYPES_DE_PLAT.forEach(function (type) {
+    const nombre = RECETTES.filter(function (r) { return r.type === type.id; }).length;
+    if (nombre) ajouterOption(element("filtre-type"), type.id, type.nom + " (" + nombre + ")");
+  });
+  // Régime : calculé d'après les ingrédients (js/regime.js)
+  ajouterOption(element("filtre-regime"), "", "Aucun");
+  REGIMES.forEach(function (regime) { ajouterOption(element("filtre-regime"), regime.id, regime.nom); });
 
   ajouterOption(element("filtre-cuisine"), "", "Toutes");
   cuisines.forEach(function (c) { ajouterOption(element("filtre-cuisine"), c, majuscule(c)); });
@@ -64,7 +90,7 @@ function preparerFiltres() {
   ajouterOption(element("filtre-temps"), "", "Peu importe");
   TEMPS_PROPOSES.forEach(function (t) { ajouterOption(element("filtre-temps"), String(t), t + " min ou moins"); });
 
-  ["filtre-cuisine", "filtre-difficulte", "filtre-temps"].forEach(function (id) {
+  ["filtre-type", "filtre-regime", "filtre-cuisine", "filtre-difficulte", "filtre-temps"].forEach(function (id) {
     element(id).addEventListener("change", changerFiltre);
   });
   // Recherche : les listes suivent pendant la frappe
@@ -80,7 +106,8 @@ function preparerFiltres() {
 
   // Bloc « Plus de filtres » : ouvert d'office si un de ses filtres est déjà réglé
   // (ex. curseur retenu à 30 %), pour ne pas cacher un filtre oublié
-  const filtreActif = element("filtre-cuisine").value || element("filtre-difficulte").value ||
+  const filtreActif = element("filtre-type").value || element("filtre-regime").value ||
+    element("filtre-cuisine").value || element("filtre-difficulte").value ||
     element("filtre-temps").value || element("filtre-favoris").checked ||
     seuilCompletion !== SEUIL_INCOMPLET;
   if (filtreActif) element("plus-filtres").open = true;
@@ -114,6 +141,10 @@ function motsRecherches() {
 function passeLesFiltres(recette) {
   const mots = motsRecherches();
   if (mots.length && !mots.every(function (mot) { return texteRecherche(recette).indexOf(mot) !== -1; })) return false;
+  const type = element("filtre-type").value;
+  const regime = element("filtre-regime").value;
+  if (type && recette.type !== type) return false;
+  if (regime && !recetteConvientAuRegime(recette, regime)) return false;
   const cuisine = element("filtre-cuisine").value;
   const difficulte = element("filtre-difficulte").value;
   const temps = element("filtre-temps").value;
@@ -262,7 +293,7 @@ function creerCarteRecette(analyse) {
   const resume = creer("summary", "recette-resume");
   resume.appendChild(creer("span", "recette-nom", (estFavori ? "★ " : "") + recette.nom));
   resume.appendChild(creer("span", "recette-infos",
-    majuscule(recette.cuisine) + " · " + recette.difficulte + " · " + recette.tempsMinutes + " min"));
+    nomDuType(recette.type) + " · " + majuscule(recette.cuisine) + " · " + recette.difficulte + " · " + recette.tempsMinutes + " min"));
 
   // Recette cuisinée récemment (js/cuisiner.js)
   if (cuisineeRecemment(recette.id)) {

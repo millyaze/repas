@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "calmars-a-l-encre", nom: "Calmars dans leur encre (chipirones en su tinta)", cuisine: "espagnole",
+    id: "calmars-a-l-encre", nom: "Calmars dans leur encre (chipirones en su tinta)", cuisine: "espagnole", type: "plat",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     source: "Wikilivres", idSource: "Calmars cuits en leur encre",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCalmars_cuits_en_leur_encre",
@@ -24,7 +24,7 @@ ajouterRecettes([
     etapes: ["Nettoyer 300 g de petits calmars frais : retirer les poches d'encre et les garder (si vos calmars sont déjà nettoyés, on trouve de l'encre en sachet chez le poissonnier). Séparer les ailes et les tentacules des corps.", "Hacher les ailes et les tentacules. Dans un bol, mixer l'encre avec un peu d'eau et une pincée de sel.", "Hacher l'ail et 5 échalotes, et les faire revenir dans une poêle avec un peu d'huile d'olive.", "Quand ils commencent à dorer, ajouter les ailes et tentacules hachés, les corps des calmars et environ 1 cuillère à soupe et demie de farine de maïs. Remuer et cuire encore un peu.", "Verser l'encre mixée et 150 ml de vin blanc, puis cuire à feu moyen 10 à 15 min."]
   },
   {
-    id: "dattes-au-chorizo-et-au-bacon", nom: "Dattes au chorizo et au bacon", cuisine: "espagnole",
+    id: "dattes-au-chorizo-et-au-bacon", nom: "Dattes au chorizo et au bacon", cuisine: "espagnole", type: "entree",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     source: "Wikilivres", idSource: "Dattes au chorizo et au bacon",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FDattes_au_chorizo_et_au_bacon",
@@ -36,7 +36,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 210 °C.", "Couper le chorizo en tranches, puis chaque tranche en deux. Le faire revenir à la poêle jusqu'à ce qu'il soit croustillant, puis le réserver.", "Ouvrir les 8 dattes en deux, retirer le noyau, mettre deux morceaux de chorizo au centre et refermer.", "Couper les tranches de bacon en deux. Enrouler chaque datte d'un morceau de bacon et maintenir avec une pique en bois.", "Cuire environ 5 min sur une plaque au four, jusqu'à ce que le bacon soit croustillant."]
   },
   {
-    id: "ensaladilla", nom: "Ensaladilla (salade de pommes de terre au thon)", cuisine: "espagnole",
+    id: "ensaladilla", nom: "Ensaladilla (salade de pommes de terre au thon)", cuisine: "espagnole", type: "entree",
     difficulte: "facile", tempsMinutes: 40, portions: 2,
     source: "Wikilivres", idSource: "Salade de thon et légumes ou Ensaladilla",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSalade_de_thon_et_l%C3%A9gumes_ou_Ensaladilla",
@@ -52,7 +52,7 @@ ajouterRecettes([
     etapes: ["Cuire les pommes de terre dans leur peau à l'eau, les laisser refroidir, les éplucher et les couper en tout petits cubes.", "Éplucher la carotte, la couper de la même taille et la cuire à l'eau salée avec les petits pois.", "Couper un quart du poivron rouge en petits dés.", "Mélanger les légumes refroidis, le thon émietté et la mayonnaise."]
   },
   {
-    id: "escalivada", nom: "Escalivada (légumes grillés à la catalane)", cuisine: "espagnole",
+    id: "escalivada", nom: "Escalivada (légumes grillés à la catalane)", cuisine: "espagnole", type: "entree",
     difficulte: "facile", tempsMinutes: 120, portions: 2,
     source: "Wikilivres", idSource: "Escalivada",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FEscalivada",
@@ -69,7 +69,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 200 °C. Laver et sécher les légumes.", "Couper l'aubergine et les oignons en deux dans la longueur. Envelopper chaque tomate et chaque oignon dans du papier aluminium.", "Enfourner tous les légumes. Retirer les tomates après 25 min, les poivrons et l'aubergine après 35 min, les oignons après 50 min (la peau doit être brunie et cloquée).", "Ouvrir les papillotes et laisser refroidir. Peler les tomates et couper tomates et oignons en rondelles.", "Peler et épépiner les poivrons et l'aubergine, les couper en lanières.", "Mettre les légumes dans un plat, saler, poivrer, arroser d'huile d'olive et parsemer d'ail en petits morceaux.", "Laisser mariner 1 h en remuant de temps en temps. Servir froid ou tiède, en accompagnement ou avec du pain."]
   },
   {
-    id: "gazpacho", nom: "Gazpacho", cuisine: "espagnole",
+    id: "gazpacho", nom: "Gazpacho", cuisine: "espagnole", type: "soupe",
     difficulte: "facile", tempsMinutes: 160, portions: 2,
     source: "Wikilivres", idSource: "Gazpacho",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FGazpacho",
@@ -89,7 +89,7 @@ ajouterRecettes([
     etapes: ["Faire des croûtons avec un peu du pain et les réserver.", "Piler l'ail avec une pincée de sel (ou le mixer). Émietter le reste du pain et l'ajouter.", "Verser l'huile peu à peu en remuant pour obtenir une pâte homogène. Laisser reposer 30 min.", "Laver ou éplucher les légumes (tomates, concombre, oignon, poivron rouge et vert), les épépiner si besoin. Couper un tiers des légumes en petits dés et les réserver.", "Écraser ou mixer le reste des légumes avec la pâte. Passer au chinois et allonger avec le vinaigre (de xérès de préférence) et 250 ml d'eau.", "Laisser au moins 2 h au réfrigérateur.", "Bien remuer, saler, poivrer et servir avec les croûtons et les dés de légumes."]
   },
   {
-    id: "paella-valencienne", nom: "Paella valencienne (poulet et lapin)", cuisine: "espagnole",
+    id: "paella-valencienne", nom: "Paella valencienne (poulet et lapin)", cuisine: "espagnole", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "Wikilivres", idSource: "Paella",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPaella",
@@ -110,7 +110,7 @@ ajouterRecettes([
     etapes: ["Nettoyer les moules (facultatives). Couper le poulet et le lapin en petits morceaux et bien les saler.", "Chauffer un filet d'huile d'olive dans un plat à paella, y mettre le poulet et le lapin. Après quelques minutes, ajouter la tomate coupée en morceaux.", "Quand la viande est cuite, ajouter le poivron (rouge ou vert) en lanières et les haricots verts, baisser le feu et ajouter le paprika.", "Verser 500 ml d'eau et porter à ébullition. Ajouter les moules et le safran, et laisser quelques minutes.", "Ajouter le riz (rond de préférence) et baisser le feu. Servir quand le riz est cuit."]
   },
   {
-    id: "salade-de-piquillos-au-thon", nom: "Salade de piquillos au thon", cuisine: "espagnole",
+    id: "salade-de-piquillos-au-thon", nom: "Salade de piquillos au thon", cuisine: "espagnole", type: "entree",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
     source: "Wikilivres", idSource: "Salade de piquillo",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSalade_de_piquillo",
@@ -124,7 +124,7 @@ ajouterRecettes([
     etapes: ["Couper l'oignon en fines lamelles et en faire un petit tas au centre de chaque assiette.", "Disposer les poivrons piquillos autour.", "Poser les morceaux de thon à l'huile d'olive (ventrèche de thon de préférence) sur l'oignon.", "Saupoudrer d'un peu de sel et arroser d'un filet d'huile d'olive vierge extra."]
   },
   {
-    id: "thon-a-la-catalane", nom: "Thon à la catalane", cuisine: "espagnole",
+    id: "thon-a-la-catalane", nom: "Thon à la catalane", cuisine: "espagnole", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     source: "Wikilivres", idSource: "Thon à la catalane",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FThon_%C3%A0_la_catalane",

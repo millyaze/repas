@@ -4,7 +4,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "riz-saute-aux-oeufs-et-legumes", nom: "Riz sauté aux œufs et légumes", cuisine: "asiatique",
+    id: "riz-saute-aux-oeufs-et-legumes", nom: "Riz sauté aux œufs et légumes", cuisine: "asiatique", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     ingredients: [
       { id: "riz", quantite: 150, unite: "g" },
@@ -18,7 +18,7 @@ ajouterRecettes([
     etapes: ["Cuire le riz et le laisser refroidir un peu.", "Faire revenir l'oignon et la carotte en petits dés dans l'huile 5 min, ajouter les petits pois.", "Pousser les légumes sur le côté, brouiller les œufs dans la poêle.", "Ajouter le riz et la sauce soja, faire sauter 3 min à feu vif."]
   },
   {
-    id: "poulet-saute-au-brocoli", nom: "Poulet sauté au brocoli", cuisine: "asiatique",
+    id: "poulet-saute-au-brocoli", nom: "Poulet sauté au brocoli", cuisine: "asiatique", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     ingredients: [
       { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
@@ -32,7 +32,7 @@ ajouterRecettes([
     etapes: ["Cuire le riz.", "Couper le poulet en lamelles et le brocoli en petits bouquets.", "Faire sauter le poulet dans l'huile 5 min, ajouter l'ail et le gingembre hachés.", "Ajouter le brocoli et la sauce soja, couvrir et cuire 6 min.", "Servir avec le riz."]
   },
   {
-    id: "curry-de-poulet-au-lait-de-coco", nom: "Curry de poulet au lait de coco", cuisine: "asiatique",
+    id: "curry-de-poulet-au-lait-de-coco", nom: "Curry de poulet au lait de coco", cuisine: "asiatique", type: "plat",
     difficulte: "moyen", tempsMinutes: 35, portions: 2,
     ingredients: [
       { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
@@ -47,7 +47,7 @@ ajouterRecettes([
     etapes: ["Cuire le riz.", "Faire revenir l'oignon émincé et la pâte de curry dans l'huile 2 min.", "Ajouter le poulet en morceaux et le poivron en lamelles, cuire 5 min.", "Verser le lait de coco et mijoter 15 min.", "Servir avec le riz, parsemé de coriandre si tu en as."]
   },
   {
-    id: "nouilles-sautees-aux-legumes", nom: "Nouilles sautées aux légumes", cuisine: "asiatique",
+    id: "nouilles-sautees-aux-legumes", nom: "Nouilles sautées aux légumes", cuisine: "asiatique", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     ingredients: [
       { id: "nouilles-chinoises", quantite: 150, unite: "g" },
@@ -61,7 +61,7 @@ ajouterRecettes([
     etapes: ["Cuire les nouilles comme indiqué sur le paquet, égoutter.", "Couper les légumes en fins bâtonnets.", "Les faire sauter dans l'huile avec l'ail 6 min à feu vif.", "Ajouter les nouilles et la sauce soja, mélanger 2 min."]
   },
   {
-    id: "nouilles-sautees-aux-crevettes", nom: "Nouilles sautées aux crevettes", cuisine: "asiatique",
+    id: "nouilles-sautees-aux-crevettes", nom: "Nouilles sautées aux crevettes", cuisine: "asiatique", type: "plat",
     difficulte: "moyen", tempsMinutes: 25, portions: 2,
     ingredients: [
       { id: "nouilles-chinoises", quantite: 150, unite: "g" },
@@ -77,7 +77,7 @@ ajouterRecettes([
     etapes: ["Cuire les nouilles, égoutter.", "Faire sauter les crevettes décortiquées et l'ail dans l'huile 3 min.", "Ajouter l'œuf battu et le brouiller.", "Ajouter les nouilles, la sauce soja et le jus du citron vert, mélanger 2 min.", "Servir avec les cacahuètes concassées (et la coriandre si tu en as)."]
   },
   {
-    id: "tofu-saute-sauce-soja-et-miel", nom: "Tofu sauté sauce soja et miel", cuisine: "asiatique",
+    id: "tofu-saute-sauce-soja-et-miel", nom: "Tofu sauté sauce soja et miel", cuisine: "asiatique", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     ingredients: [
       { id: "tofu", quantite: 250, unite: "g" },
@@ -91,7 +91,7 @@ ajouterRecettes([
     etapes: ["Cuire le riz.", "Couper le tofu en dés et le dorer dans l'huile 8 min.", "Ajouter l'ail et le gingembre hachés, puis la sauce soja et le miel.", "Laisser réduire 2 min et servir avec le riz."]
   },
   {
-    id: "saumon-teriyaki", nom: "Saumon teriyaki", cuisine: "asiatique",
+    id: "saumon-teriyaki", nom: "Saumon teriyaki", cuisine: "asiatique", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     ingredients: [
       { id: "saumon", quantite: 300, unite: "g" },
@@ -104,7 +104,7 @@ ajouterRecettes([
     etapes: ["Cuire le riz.", "Mélanger la sauce soja, le miel et le gingembre râpé.", "Cuire le saumon 3 min par face dans une poêle chaude.", "Verser la sauce, laisser épaissir 2 min en arrosant le poisson.", "Servir avec le riz, parsemé de graines de sésame si tu en as."]
   },
   {
-    id: "soupe-de-nouilles-au-poulet", nom: "Soupe de nouilles au poulet", cuisine: "asiatique",
+    id: "soupe-de-nouilles-au-poulet", nom: "Soupe de nouilles au poulet", cuisine: "asiatique", type: "soupe",
     difficulte: "moyen", tempsMinutes: 30, portions: 2,
     ingredients: [
       { id: "nouilles-chinoises", quantite: 120, unite: "g" },
@@ -119,7 +119,7 @@ ajouterRecettes([
     etapes: ["Porter l'eau à ébullition avec le bouillon cube et le gingembre en tranches.", "Ajouter le poulet en fines lamelles, la carotte en rondelles et les champignons émincés, cuire 10 min.", "Ajouter les nouilles et cuire le temps indiqué sur le paquet.", "Assaisonner avec la sauce soja."]
   },
   {
-    id: "curry-de-legumes", nom: "Curry de légumes", cuisine: "asiatique",
+    id: "curry-de-legumes", nom: "Curry de légumes", cuisine: "asiatique", type: "plat",
     difficulte: "moyen", tempsMinutes: 35, portions: 2,
     ingredients: [
       { id: "pomme-de-terre", quantite: 200, unite: "g" },
@@ -135,7 +135,7 @@ ajouterRecettes([
     etapes: ["Cuire le riz.", "Faire revenir l'oignon haché et le curry dans l'huile 2 min.", "Ajouter les pommes de terre et les carottes en dés, puis le lait de coco et le sel.", "Couvrir et mijoter 20 min, ajouter les petits pois 5 min avant la fin.", "Servir avec le riz."]
   },
   {
-    id: "riz-au-boeuf-hache-sauce-soja", nom: "Riz au bœuf haché sauce soja", cuisine: "asiatique",
+    id: "riz-au-boeuf-hache-sauce-soja", nom: "Riz au bœuf haché sauce soja", cuisine: "asiatique", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     ingredients: [
       { id: "boeuf-hache", quantite: 250, unite: "g" },

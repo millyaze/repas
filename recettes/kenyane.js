@@ -6,7 +6,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "mandazi-beignets-kenyans", nom: "Mandazi (beignets kényans)", cuisine: "kényane",
+    id: "mandazi-beignets-kenyans", nom: "Mandazi (beignets kényans)", cuisine: "kényane", type: "dessert",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     source: "TheMealDB", idSource: "52967",
     ingredients: [
@@ -21,7 +21,7 @@ ajouterRecettes([
     etapes: ["Mélanger la farine à levure incorporée (ou la farine ordinaire avec la levure chimique), le sucre et la cannelle dans un saladier.", "Dans un bol, battre l'œuf avec le lait.", "Creuser un puits dans la farine, y verser le mélange œuf-lait et mélanger doucement jusqu'à former une pâte (ajouter un peu de lait si elle est trop sèche).", "Pétrir 3 à 4 min jusqu'à ce que la pâte soit lisse et ne colle plus. Couvrir d'un torchon humide et laisser reposer 15 min.", "Étaler la pâte sur 1 cm d'épaisseur sur le plan de travail fariné et la couper en triangles ou en carrés.", "Chauffer l'huile dans une casserole et y cuire les morceaux quelques-uns à la fois, jusqu'à ce qu'ils soient dorés d'un côté, puis de l'autre. Égoutter sur du papier absorbant et servir tiède ou froid."]
   },
   {
-    id: "curry-de-boeuf-kenyan", nom: "Curry de bœuf kényan", cuisine: "kényane",
+    id: "curry-de-boeuf-kenyan", nom: "Curry de bœuf kényan", cuisine: "kényane", type: "plat",
     difficulte: "moyen", tempsMinutes: 100, portions: 2,
     source: "TheMealDB", idSource: "53112",
     ingredients: [
@@ -43,7 +43,7 @@ ajouterRecettes([
     etapes: ["Porter l'eau à ébullition dans une cocotte, ajouter le bœuf en cubes, l'ail écrasé et le gingembre. Couvrir et cuire 20 min à petit frémissement, en retirant l'écume si besoin.", "Égoutter la viande en gardant l'eau de cuisson.", "Dans la cocotte, chauffer l'huile et faire revenir l'oignon émincé 5 à 7 min. Ajouter les tomates en morceaux et cuire 3 à 5 min, jusqu'à ce qu'elles se défassent.", "Ajouter la viande et cuire 5 min en remuant, puis le paprika, le poivre, le curry, le concentré de tomate et le sel.", "Verser l'eau de cuisson gardée (et un peu plus si besoin pour couvrir), porter à ébullition, puis laisser mijoter à découvert environ 1 h, jusqu'à ce que la viande soit tendre et la sauce épaisse. Rajouter de l'eau si ça attache.", "Goûter, rectifier l'assaisonnement et servir parsemé de piment frais et de coriandre."]
   },
   {
-    id: "mbuzi-choma-ugali-kachumbari", nom: "Mbuzi choma (chèvre grillée, ugali et kachumbari)", cuisine: "kényane",
+    id: "mbuzi-choma-ugali-kachumbari", nom: "Mbuzi choma (chèvre grillée, ugali et kachumbari)", cuisine: "kényane", type: "plat",
     difficulte: "moyen", tempsMinutes: 70, portions: 2,
     source: "TheMealDB", idSource: "52968",
     ingredients: [
@@ -59,7 +59,7 @@ ajouterRecettes([
     etapes: ["Viande de chèvre (ou d'agneau, plus facile à trouver) : la couper en gros morceaux et la griller environ 50 min à feu moyen (barbecue ou four en position gril), en la retournant et en la salant à chaque fois.", "Ugali : porter l'eau salée à ébullition dans une casserole à fond épais. Verser la farine de maïs en pluie en remuant.", "Baisser le feu et remuer sans arrêt en écrasant les grumeaux, environ 10 min, jusqu'à ce que la pâte soit très épaisse et se détache des bords.", "Retirer du feu, laisser tiédir, puis former une boule avec les mains mouillées.", "Kachumbari : mélanger les tomates en dés, l'oignon émincé finement, le piment haché et la coriandre ciselée, saler.", "Servir la viande avec l'ugali et le kachumbari."]
   },
   {
-    id: "sukuma-wiki-chou-kale-a-la-creme", nom: "Sukuma wiki (chou kale à la crème)", cuisine: "kényane",
+    id: "sukuma-wiki-chou-kale-a-la-creme", nom: "Sukuma wiki (chou kale à la crème)", cuisine: "kényane", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "TheMealDB", idSource: "53113",
     ingredients: [
@@ -72,7 +72,7 @@ ajouterRecettes([
     etapes: ["Chauffer l'huile dans une grande poêle à feu moyen et faire revenir l'oignon émincé 5 à 7 min, jusqu'à ce qu'il soit tendre.", "Ajouter le chou kale coupé en fines lanières, bien mélanger, baisser le feu, couvrir et cuire 5 min.", "Retirer le couvercle, saler, ajouter la crème et cuire encore 5 min à découvert en remuant de temps en temps : la crème épaissit légèrement.", "Servir avec un ragoût kényan et de l'ugali."]
   },
   {
-    id: "ugali-pate-de-mais", nom: "Ugali (pâte de maïs kényane)", cuisine: "kényane",
+    id: "ugali-pate-de-mais", nom: "Ugali (pâte de maïs kényane)", cuisine: "kényane", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     source: "TheMealDB", idSource: "53114",
     ingredients: [

@@ -5,7 +5,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "poulet-miel-balsamique-brocoli-et-pommes-de-terre", nom: "Poulet miel-balsamique, brocoli et pommes de terre", cuisine: "américaine",
+    id: "poulet-miel-balsamique-brocoli-et-pommes-de-terre", nom: "Poulet miel-balsamique, brocoli et pommes de terre", cuisine: "américaine", type: "plat",
     difficulte: "facile", tempsMinutes: 40, portions: 2,
     source: "TheMealDB", idSource: "52993",
     ingredients: [
@@ -26,7 +26,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 220 °C. Couper les pommes de terre en quartiers, les mélanger sur une plaque avec un filet d'huile de tournesol, du sel et du poivre, et les enfourner 5 min.", "Mélanger le brocoli en petits bouquets avec l'huile d'olive, la moitié de l'ail haché, du sel et du poivre. L'ajouter sur la plaque et rôtir encore 15 à 20 min.", "Saler et poivrer le poulet, le cuire à la poêle dans le reste d'huile de tournesol 5 à 6 min de chaque côté, puis le réserver.", "Dans la même poêle, faire revenir 30 secondes le reste d'ail, puis ajouter le vinaigre balsamique, le miel et le bouillon cube dissous dans l'eau chaude. Laisser réduire 2 à 3 min.", "Hors du feu, ajouter le beurre, remettre le poulet et le retourner dans la sauce.", "Servir le poulet avec le brocoli et les pommes de terre, nappé du reste de sauce."]
   },
   {
-    id: "macaronis-cremeux-au-poulet-et-au-fromage", nom: "Macaronis crémeux au poulet et au fromage", cuisine: "américaine",
+    id: "macaronis-cremeux-au-poulet-et-au-fromage", nom: "Macaronis crémeux au poulet et au fromage", cuisine: "américaine", type: "plat",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "TheMealDB", idSource: "52818",
     ingredients: [
@@ -47,7 +47,7 @@ ajouterRecettes([
     etapes: ["Faire revenir dans l'huile l'oignon, le poivron et l'ail coupés en petits dés, jusqu'à ce qu'ils soient tendres.", "Pousser les légumes sur les bords, ajouter le poulet coupé en dés, les épices à fajitas et le sel, et laisser colorer.", "Ajouter la crème, le bouillon cube dissous dans l'eau chaude et les pâtes.", "Cuire 20 min à feu doux en remuant de temps en temps, jusqu'à ce que les pâtes soient cuites.", "Ajouter le cheddar râpé, mélanger et parsemer de persil haché."]
   },
   {
-    id: "pain-de-viande-puree-et-carottes-roties", nom: "Pain de viande, purée et carottes rôties", cuisine: "américaine",
+    id: "pain-de-viande-puree-et-carottes-roties", nom: "Pain de viande, purée et carottes rôties", cuisine: "américaine", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     source: "TheMealDB", idSource: "52992",
     ingredients: [
@@ -72,7 +72,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 220 °C. Émietter le pain de mie dans l'eau et l'écraser en pâte.", "Y mélanger le bœuf, le blanc de l'oignon nouveau haché, la moitié de l'ail haché, la sriracha, du sel et du poivre. Former deux petits pains de viande et les poser sur une plaque.", "Ajouter à côté les carottes en rondelles épaisses, mélangées avec l'huile, du sel et du poivre. Cuire 20 min au four.", "Cuire les pommes de terre en dés 12 à 15 min dans l'eau bouillante salée. Garder un peu d'eau de cuisson, puis égoutter.", "Mélanger le ketchup, la sauce soja, le sucre et l'ail en poudre. En napper les pains de viande avec la moitié et remettre au four 5 min.", "Faire fondre le beurre avec le reste d'ail, ajouter les pommes de terre et le wasabi, écraser en purée en ajoutant un peu d'eau de cuisson.", "Servir avec le vert de l'oignon nouveau émincé et le reste de sauce."]
   },
   {
-    id: "burger-maison-sauce-speciale", nom: "Burger maison, sauce spéciale", cuisine: "américaine",
+    id: "burger-maison-sauce-speciale", nom: "Burger maison, sauce spéciale", cuisine: "américaine", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "TheMealDB", idSource: "53013",
     ingredients: [

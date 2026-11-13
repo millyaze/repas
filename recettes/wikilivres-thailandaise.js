@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "khao-soi", nom: "Khao soi (nouilles au curry jaune et lait de coco)", cuisine: "thaïlandaise",
+    id: "khao-soi", nom: "Khao soi (nouilles au curry jaune et lait de coco)", cuisine: "thaïlandaise", type: "soupe",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "Wikilivres", idSource: "Khao soy",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FKhao_soy",

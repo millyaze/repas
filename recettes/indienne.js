@@ -10,7 +10,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "poulet-tandoori", nom: "Poulet tandoori", cuisine: "indienne",
+    id: "poulet-tandoori", nom: "Poulet tandoori", cuisine: "indienne", type: "plat",
     difficulte: "facile", tempsMinutes: 90, portions: 2,
     source: "TheMealDB", idSource: "52806",
     ingredients: [
@@ -30,7 +30,7 @@ ajouterRecettes([
     etapes: ["Entailler le poulet, le mélanger avec le jus du citron, le paprika et l'oignon haché, laisser reposer 10 min.", "Mélanger le yaourt, le gingembre râpé, l'ail écrasé, le garam masala, le cumin, le piment et le curcuma, puis en enrober le poulet.", "Couvrir et laisser mariner 1 h au frais.", "Poser le poulet sur une grille, le badigeonner d'huile et le cuire sous le gril du four 8 min de chaque côté, jusqu'à ce qu'il soit bien cuit."]
   },
   {
-    id: "curry-de-haricots-rouges", nom: "Curry de haricots rouges", cuisine: "indienne",
+    id: "curry-de-haricots-rouges", nom: "Curry de haricots rouges", cuisine: "indienne", type: "plat",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     source: "TheMealDB", idSource: "52868",
     ingredients: [
@@ -50,7 +50,7 @@ ajouterRecettes([
     etapes: ["Faire revenir doucement l'oignon haché dans l'huile avec le sel, jusqu'à ce qu'il soit tendre.", "Ajouter l'ail, le gingembre râpé et les tiges de coriandre hachées, cuire 2 min.", "Ajouter le cumin, le paprika et le garam masala, cuire 1 min.", "Verser la sauce tomate et les haricots avec leur jus, porter à ébullition puis laisser mijoter 15 min.", "Pendant ce temps, cuire le riz. Servir le curry sur le riz avec les feuilles de coriandre."]
   },
   {
-    id: "aubergine-epicee-baingan-bharta", nom: "Aubergine épicée (baingan bharta)", cuisine: "indienne",
+    id: "aubergine-epicee-baingan-bharta", nom: "Aubergine épicée (baingan bharta)", cuisine: "indienne", type: "plat",
     difficulte: "facile", tempsMinutes: 50, portions: 2,
     source: "TheMealDB", idSource: "52807",
     ingredients: [
@@ -67,7 +67,7 @@ ajouterRecettes([
     etapes: ["Huiler légèrement l'aubergine et la cuire entière sous le gril du four environ 30 min en la retournant, jusqu'à ce qu'elle soit très tendre.", "La laisser tiédir, retirer la peau et hacher ou écraser la chair.", "Faire revenir l'oignon et l'ail hachés dans l'huile sans les colorer.", "Ajouter le piment frais haché, les tomates coupées en dés et le piment en poudre, cuire jusqu'à obtenir une sauce épaisse.", "Ajouter l'aubergine et le sel, cuire encore 5 min en remuant, puis parsemer de coriandre. Servir avec du pain ou du riz."]
   },
   {
-    id: "curry-de-poulet-aux-cacahuetes", nom: "Curry de poulet aux cacahuètes", cuisine: "indienne",
+    id: "curry-de-poulet-aux-cacahuetes", nom: "Curry de poulet aux cacahuètes", cuisine: "indienne", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "TheMealDB", idSource: "52851",
     ingredients: [

@@ -5,7 +5,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "chili-con-carne", nom: "Chili con carne", cuisine: "mexicaine",
+    id: "chili-con-carne", nom: "Chili con carne", cuisine: "mexicaine", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     ingredients: [
       { id: "boeuf-hache", quantite: 250, unite: "g" },
@@ -23,7 +23,7 @@ ajouterRecettes([
     etapes: ["Faire revenir l'oignon, l'ail et le poivron hachés dans l'huile 5 min.", "Ajouter le bœuf et le dorer 5 min, puis le cumin, le piment et le sel.", "Ajouter la sauce tomate et les haricots égouttés, mijoter 25 min.", "Cuire le riz et servir avec le chili."]
   },
   {
-    id: "quesadillas-au-fromage", nom: "Quesadillas au fromage", cuisine: "mexicaine",
+    id: "quesadillas-au-fromage", nom: "Quesadillas au fromage", cuisine: "mexicaine", type: "plat",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "tortilla-de-ble", quantite: 4, unite: "pièce" },
@@ -35,7 +35,7 @@ ajouterRecettes([
     etapes: ["Faire revenir le poivron et l'oignon émincés dans l'huile 5 min.", "Garnir deux tortillas de fromage et de légumes, couvrir avec les deux autres.", "Dorer chaque quesadilla 2 min par face dans une poêle sèche.", "Couper en quartiers."]
   },
   {
-    id: "fajitas-au-poulet", nom: "Fajitas au poulet", cuisine: "mexicaine",
+    id: "fajitas-au-poulet", nom: "Fajitas au poulet", cuisine: "mexicaine", type: "plat",
     difficulte: "moyen", tempsMinutes: 30, portions: 2,
     ingredients: [
       { id: "tortilla-de-ble", quantite: 4, unite: "pièce" },
@@ -52,7 +52,7 @@ ajouterRecettes([
     etapes: ["Couper le poulet en lamelles, le mélanger avec le paprika, le cumin, le sel et le jus du citron vert.", "Faire sauter les poivrons et l'oignon émincés dans l'huile 6 min. Réserver.", "Cuire le poulet 6 min à feu vif, remettre les légumes.", "Réchauffer les tortillas et les garnir (avec un peu de crème fraîche si tu en as)."]
   },
   {
-    id: "guacamole-et-tortillas-grillees", nom: "Guacamole et tortillas grillées", cuisine: "mexicaine",
+    id: "guacamole-et-tortillas-grillees", nom: "Guacamole et tortillas grillées", cuisine: "mexicaine", type: "entree",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
     ingredients: [
       { id: "avocat", quantite: 2, unite: "pièce" },
@@ -66,7 +66,7 @@ ajouterRecettes([
     etapes: ["Écraser les avocats à la fourchette avec le jus du citron vert et le sel.", "Ajouter la tomate en petits dés, la moitié de l'oignon haché finement et la coriandre.", "Couper les tortillas en triangles et les griller 2 min à la poêle.", "Servir ensemble."]
   },
   {
-    id: "tacos-au-boeuf", nom: "Tacos au bœuf", cuisine: "mexicaine",
+    id: "tacos-au-boeuf", nom: "Tacos au bœuf", cuisine: "mexicaine", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     ingredients: [
       { id: "tortilla-de-ble", quantite: 4, unite: "pièce" },
@@ -83,7 +83,7 @@ ajouterRecettes([
     etapes: ["Faire revenir l'oignon haché dans l'huile, ajouter le bœuf, le cumin, le paprika et le sel, cuire 8 min.", "Couper la tomate en dés et quelques feuilles de salade en lanières.", "Réchauffer les tortillas.", "Les garnir de viande, salade, tomate et fromage."]
   },
   {
-    id: "riz-a-la-mexicaine", nom: "Riz à la mexicaine", cuisine: "mexicaine",
+    id: "riz-a-la-mexicaine", nom: "Riz à la mexicaine", cuisine: "mexicaine", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     ingredients: [
       { id: "riz", quantite: 150, unite: "g" },
@@ -99,7 +99,7 @@ ajouterRecettes([
     etapes: ["Faire revenir l'oignon et le poivron en dés dans l'huile 4 min.", "Ajouter le riz et le cumin, remuer 1 min.", "Verser la sauce tomate, l'eau et le sel, couvrir et cuire 18 min à feu doux.", "Ajouter le maïs égoutté et mélanger."]
   },
   {
-    id: "burritos-haricots-et-riz", nom: "Burritos haricots et riz", cuisine: "mexicaine",
+    id: "burritos-haricots-et-riz", nom: "Burritos haricots et riz", cuisine: "mexicaine", type: "plat",
     difficulte: "moyen", tempsMinutes: 30, portions: 2,
     ingredients: [
       { id: "tortilla-de-ble", quantite: 2, unite: "pièce" },
@@ -113,7 +113,7 @@ ajouterRecettes([
     etapes: ["Cuire le riz.", "Réchauffer les haricots et le maïs égouttés avec la sauce tomate et le cumin 5 min.", "Répartir le riz, le mélange et le fromage au centre des tortillas.", "Rouler en repliant les bords et dorer 1 min par face à la poêle."]
   },
   {
-    id: "huevos-rancheros", nom: "Huevos rancheros", cuisine: "mexicaine",
+    id: "huevos-rancheros", nom: "Huevos rancheros", cuisine: "mexicaine", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     ingredients: [
       { id: "oeuf", quantite: 4, unite: "pièce" },
@@ -128,7 +128,7 @@ ajouterRecettes([
     etapes: ["Faire revenir l'oignon haché dans la moitié de l'huile, ajouter la sauce tomate, le piment et le sel, mijoter 8 min.", "Cuire les œufs au plat dans le reste de l'huile.", "Réchauffer les tortillas.", "Poser les œufs sur les tortillas, napper de sauce et parsemer de coriandre."]
   },
   {
-    id: "salade-mexicaine", nom: "Salade mexicaine", cuisine: "mexicaine",
+    id: "salade-mexicaine", nom: "Salade mexicaine", cuisine: "mexicaine", type: "entree",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "salade-verte", quantite: 1, unite: "pièce" },
@@ -143,7 +143,7 @@ ajouterRecettes([
     etapes: ["Laver la salade et la couper en lanières.", "Égoutter et rincer le maïs et les haricots rouges.", "Couper les tomates et l'avocat en dés.", "Mélanger le tout avec le jus du citron vert, l'huile et le sel."]
   },
   {
-    id: "soupe-mexicaine-au-poulet", nom: "Soupe mexicaine au poulet", cuisine: "mexicaine",
+    id: "soupe-mexicaine-au-poulet", nom: "Soupe mexicaine au poulet", cuisine: "mexicaine", type: "soupe",
     difficulte: "moyen", tempsMinutes: 35, portions: 2,
     ingredients: [
       { id: "blanc-de-poulet", quantite: 1, unite: "pièce" },
@@ -162,7 +162,7 @@ ajouterRecettes([
   // --- Importées de TheMealDB (themealdb.com), traduites et adaptées par Claude ---
   // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
   {
-    id: "chili-de-boeuf-mijote-au-chorizo", nom: "Chili de bœuf mijoté au chorizo", cuisine: "mexicaine",
+    id: "chili-de-boeuf-mijote-au-chorizo", nom: "Chili de bœuf mijoté au chorizo", cuisine: "mexicaine", type: "plat",
     difficulte: "moyen", tempsMinutes: 200, portions: 2,
     source: "TheMealDB", idSource: "52826",
     ingredients: [
@@ -190,7 +190,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 120 °C. Sortir la viande du réfrigérateur et la couper en gros morceaux. Hacher finement l'oignon et l'ail.", "Dans une cocotte allant au four, dorer la viande de tous les côtés dans la moitié de l'huile, puis la réserver.", "Ajouter le reste d'huile et faire dorer le chorizo en rondelles, puis le réserver.", "Dans la même huile, faire revenir l'oignon, l'ail, le cumin, le piment de la Jamaïque, les clous de girofle, la cannelle, le laurier, l'origan et le piment ancho émietté jusqu'à ce que l'oignon soit tendre. Saler et poivrer.", "Ajouter le vinaigre, les tomates, le ketchup et la cassonade, remettre la viande et le chorizo, puis verser l'eau. Porter à frémissement, couvrir et enfourner 2 h.", "Ajouter les haricots égouttés et cuire encore 1 h au four. Juste avant de servir, effilocher la viande avec deux fourchettes."]
   },
   {
-    id: "tacos-de-poisson-epices-cajun", nom: "Tacos de poisson aux épices cajun", cuisine: "mexicaine",
+    id: "tacos-de-poisson-epices-cajun", nom: "Tacos de poisson aux épices cajun", cuisine: "mexicaine", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "TheMealDB", idSource: "52819",
     ingredients: [
@@ -212,7 +212,7 @@ ajouterRecettes([
     etapes: ["Mélanger les épices cajun, le piment de Cayenne, le sel et le poivre, et en enrober le poisson.", "Cuire le poisson dans l'huile à feu moyen jusqu'à ce qu'il soit doré, puis baisser le feu et poursuivre environ 10 min, jusqu'à ce qu'il soit cuit à cœur.", "Pendant ce temps, préparer la sauce : mélanger la crème, le jus du citron et l'ail haché finement, saler et poivrer.", "Réchauffer les tortillas quelques secondes au micro-ondes ou à la poêle.", "Garnir les tortillas d'avocat en tranches, de salade et d'oignon nouveau émincés, d'une cuillerée de salsa (ou de tomates en dés), puis de gros morceaux de poisson. Arroser de sauce et servir."]
   },
   {
-    id: "gratin-d-enchiladas-au-poulet", nom: "Gratin d'enchiladas au poulet", cuisine: "mexicaine",
+    id: "gratin-d-enchiladas-au-poulet", nom: "Gratin d'enchiladas au poulet", cuisine: "mexicaine", type: "plat",
     difficulte: "facile", tempsMinutes: 55, portions: 2,
     source: "TheMealDB", idSource: "52765",
     ingredients: [
@@ -224,7 +224,7 @@ ajouterRecettes([
     etapes: ["Si on n'a pas de sauce enchilada : relever la sauce tomate avec 2 g de cumin, une pincée de piment en poudre, un peu d'ail et du sel.", "Couper chaque blanc de poulet en 3 morceaux, les mettre dans une petite casserole avec la sauce, couvrir et cuire 20 min à feu doux à moyen en remuant de temps en temps. Préchauffer le four à 190 °C.", "Sortir le poulet et l'effilocher avec deux fourchettes.", "Dans un plat à four, étaler un peu de sauce, poser 2 tortillas, puis la moitié du poulet, de la sauce et du fromage. Recommencer avec le reste.", "Cuire 20 à 30 min au four, jusqu'à ce que ça bouillonne et que le fromage soit doré. Servir chaud."]
   },
   {
-    id: "fajitas-aux-pois-chiches-rotis", nom: "Fajitas aux pois chiches rôtis", cuisine: "mexicaine",
+    id: "fajitas-aux-pois-chiches-rotis", nom: "Fajitas aux pois chiches rôtis", cuisine: "mexicaine", type: "plat",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "TheMealDB", idSource: "52870",
     ingredients: [
@@ -245,7 +245,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 200 °C. Égoutter les pois chiches, les sécher, les mélanger avec l'huile et le paprika sur une plaque couverte de papier aluminium et les rôtir 20 à 25 min en secouant à mi-cuisson.", "Pendant ce temps, mélanger les tomates en morceaux et l'oignon émincé finement avec le vinaigre et laisser mariner.", "Écraser l'avocat à la fourchette en laissant quelques morceaux, ajouter le jus d'un citron vert et saler.", "Mélanger la crème avec la harissa.", "Griller les tortillas une par une dans une poêle très chaude, de chaque côté.", "À table, chacun tartine sa tortilla de crème à la harissa, puis ajoute les pois chiches, l'avocat, les tomates marinées et la coriandre. Servir avec l'autre citron vert en quartiers."]
   },
   {
-    id: "tacos-au-poulet-gratines-au-four", nom: "Tacos au poulet gratinés au four", cuisine: "mexicaine",
+    id: "tacos-au-poulet-gratines-au-four", nom: "Tacos au poulet gratinés au four", cuisine: "mexicaine", type: "plat",
     difficulte: "moyen", tempsMinutes: 75, portions: 2,
     source: "TheMealDB", idSource: "52830",
     ingredients: [
@@ -270,7 +270,7 @@ ajouterRecettes([
     etapes: ["Mettre le poulet dans une cocotte avec la vinaigrette, le cumin, le paprika fumé, l'ail écrasé, le sel et l'eau. Couvrir et cuire 35 à 40 min à feu doux (ou 4 h en mijoteuse).", "Sortir le poulet, l'effilocher avec deux fourchettes et l'arroser de presque tout le jus de cuisson. Préchauffer le four à 230 °C.", "Réchauffer les haricots refrits (ou écraser à la fourchette des haricots rouges égouttés avec un peu de jus de cuisson).", "Ranger les coquilles à tacos (ou des tortillas pliées en deux) debout dans un plat à four et les garnir de haricots écrasés, de poulet et de fromage. Cuire 10 à 15 min, jusqu'à ce que le fromage bouillonne.", "Pendant ce temps, écraser l'avocat avec la salsa verde, et délayer la crème avec le lait.", "À la sortie du four, garnir les tacos de tomates cerises coupées en deux, de piment en rondelles et de coriandre, puis arroser de crème d'avocat et de crème."]
   },
   {
-    id: "poivrons-farcis-quinoa-haricots-noirs", nom: "Poivrons farcis au quinoa et aux haricots noirs", cuisine: "mexicaine",
+    id: "poivrons-farcis-quinoa-haricots-noirs", nom: "Poivrons farcis au quinoa et aux haricots noirs", cuisine: "mexicaine", type: "plat",
     difficulte: "facile", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "53067",
     ingredients: [

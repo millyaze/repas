@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "kluski-na-parze", nom: "Kluski na parze (petits pains vapeur polonais)", cuisine: "polonaise",
+    id: "kluski-na-parze", nom: "Kluski na parze (petits pains vapeur polonais)", cuisine: "polonaise", type: "accompagnement",
     difficulte: "moyen", tempsMinutes: 150, portions: 2,
     source: "Wikilivres", idSource: "Kluski na parze",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FKluski_na_parze",

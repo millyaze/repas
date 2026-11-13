@@ -6,7 +6,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "fofos-de-poisson", nom: "Fofos de poisson (croquettes épicées panées)", cuisine: "portugaise",
+    id: "fofos-de-poisson", nom: "Fofos de poisson (croquettes épicées panées)", cuisine: "portugaise", type: "entree",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "53043",
     ingredients: [
@@ -30,7 +30,7 @@ ajouterRecettes([
     etapes: ["Cuire les pommes de terre épluchées à l'eau salée et les écraser. Mettre l'églefin dans une casserole, le couvrir d'eau, porter à frémissement et le pocher 10 min à couvert à feu doux. Égoutter et l'émietter.", "Dans un saladier, mélanger le poisson, les pommes de terre, le piment haché, les deux tiers de la coriandre hachée, le cumin, le poivre, l'ail et le gingembre râpés. Saler, ajouter la farine et 1 œuf, et bien mélanger.", "Partager en 8 petits boudins. Battre l'autre œuf dans une assiette creuse, mettre la chapelure dans une autre. Passer chaque fofo dans l'œuf puis dans la chapelure. Mettre 20 min au frais.", "Chauffer 1 cm d'huile dans une grande poêle à feu moyen. Frire les fofos en plusieurs fois, 2 min de chaque côté, en les tournant doucement pour qu'ils dorent partout. Égoutter sur du papier absorbant.", "Salade : mélanger l'oignon rouge en fines lamelles, le reste de coriandre, le jus de citron et une pincée de sel. Servir avec les fofos et le chutney de mangue."]
   },
   {
-    id: "sardines-grillees-a-la-portugaise", nom: "Sardines grillées à la portugaise", cuisine: "portugaise",
+    id: "sardines-grillees-a-la-portugaise", nom: "Sardines grillées à la portugaise", cuisine: "portugaise", type: "plat",
     difficulte: "facile", tempsMinutes: 45, portions: 2,
     source: "TheMealDB", idSource: "53041",
     ingredients: [
@@ -47,7 +47,7 @@ ajouterRecettes([
     etapes: ["Dans un plat, mélanger 2 cuillères à soupe d'huile, l'ail haché, presque tout le paprika, le jus d'un demi-citron, le romarin, le piment émincé, le sel et le poivre.", "Ajouter les sardines (vidées) et bien les enrober. Couvrir et laisser mariner au frais au moins 30 min (quelques heures, c'est encore mieux).", "Chauffer très fort un barbecue ou une poêle-gril. Cuire les sardines 4 à 5 min de chaque côté, jusqu'à ce qu'elles soient bien dorées et légèrement grillées.", "Servir arrosé d'un filet d'huile, saupoudré du reste de paprika, avec le reste du citron en quartiers."]
   },
   {
-    id: "poulet-piri-piri-et-salade-de-chou", nom: "Poulet piri-piri et salade de chou", cuisine: "portugaise",
+    id: "poulet-piri-piri-et-salade-de-chou", nom: "Poulet piri-piri et salade de chou", cuisine: "portugaise", type: "plat",
     difficulte: "facile", tempsMinutes: 120, portions: 2,
     source: "TheMealDB", idSource: "53039",
     ingredients: [
@@ -73,7 +73,7 @@ ajouterRecettes([
     etapes: ["Marinade : mixer les piments, l'ail, le gingembre, l'origan, la coriandre moulue, le paprika, la moitié du vinaigre, l'huile et une pincée de sel. En frotter le poulet (un petit poulet d'environ 1 kg, les restes se mangent froids) et laisser 1 h à température ambiante.", "Préchauffer le four à 190 °C. Cuire le poulet dans un plat 1 h à 1 h 20 (45 min seulement avec des cuisses), jusqu'à ce qu'il soit bien doré et que le jus soit clair. Laisser reposer 10 min sous une feuille d'aluminium.", "Salade de chou : pendant ce temps, mélanger l'oignon rouge en fines lamelles, la carotte râpée, le chou très finement émincé et la betterave crue râpée avec la mayonnaise, le yaourt, le reste du vinaigre et le cumin. Saler et poivrer.", "Servir le poulet avec la salade de chou (et des frites si on veut)."]
   },
   {
-    id: "febras-assadas-porc-et-frites", nom: "Febras assadas (escalopes de porc marinées au vin blanc et frites)", cuisine: "portugaise",
+    id: "febras-assadas-porc-et-frites", nom: "Febras assadas (escalopes de porc marinées au vin blanc et frites)", cuisine: "portugaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "53044",
     ingredients: [
@@ -91,7 +91,7 @@ ajouterRecettes([
     etapes: ["Couper le filet mignon en 4 morceaux. Glisser chaque morceau dans un sac de congélation et l'aplatir au rouleau à pâtisserie en une grande escalope fine.", "Mélanger le vin blanc, le paprika, le sel, le poivre et le jus d'un demi-citron, y mettre le porc et laisser mariner 20 à 30 min.", "Frites : couper les pommes de terre en bâtonnets de 1 cm, les laisser tremper 10 min dans l'eau froide (changer l'eau à mi-temps), puis bien les sécher dans un torchon.", "Chauffer l'huile à 130 °C dans une casserole profonde et y précuire les frites 8 à 10 min, en plusieurs fois. Égoutter. Monter l'huile à 180 °C et les refrire 3 min, jusqu'à ce qu'elles soient bien dorées et croustillantes. Égoutter et saler.", "Sortir le porc de la marinade, le frotter d'huile d'olive et le cuire 1 min de chaque côté sur un barbecue, une poêle-gril ou une poêle très chaude (en 2 fois).", "Servir les frites avec le porc par-dessus en versant le jus de cuisson sur les frites. Ajouter une cuillerée de mayonnaise et un quartier de citron."]
   },
   {
-    id: "pasteis-de-nata", nom: "Pastéis de nata (petits flans pâtissiers portugais)", cuisine: "portugaise",
+    id: "pasteis-de-nata", nom: "Pastéis de nata (petits flans pâtissiers portugais)", cuisine: "portugaise", type: "dessert",
     difficulte: "difficile", tempsMinutes: 75, portions: 2,
     source: "TheMealDB", idSource: "53046",
     ingredients: [
@@ -110,7 +110,7 @@ ajouterRecettes([
     etapes: ["Pâte : saupoudrer le plan de travail de farine mélangée à la moitié du sucre glace. Étaler la pâte feuilletée en rectangle, puis la rouler sur elle-même dans la longueur en un long boudin. Le couper en 12 rondelles de 1 à 2 cm.", "Aplatir légèrement chaque rondelle au rouleau, puis la presser avec les doigts dans un moule à muffins ou à tartelettes (12 empreintes) pour former des fonds très fins. Mettre au frais.", "Sirop : préchauffer le four à 220 °C. Porter à ébullition le sucre avec l'eau, 2 zestes de citron et la cannelle (un bâton si possible). Laisser réduire jusqu'à obtenir un sirop, puis laisser tiédir et retirer zestes et cannelle.", "Crème : dans une casserole, fouetter 1 œuf entier, 2 jaunes d'œufs et la fécule jusqu'à ce que ce soit lisse. Chauffer le lait avec les graines de la gousse de vanille jusqu'à frémissement, le verser petit à petit sur les œufs en fouettant, puis cuire à feu doux sans cesser de fouetter.", "Ajouter le sirop tiède et fouetter jusqu'à ce que la crème épaississe légèrement. La passer au tamis et la verser dans les fonds de pâte.", "Cuire 15 min, jusqu'à ce que la pâte soit dorée et la crème tachée de brun. Laisser refroidir dans le moule, puis saupoudrer du reste de sucre glace et d'un peu de cannelle. Environ 6 tartelettes par personne."]
   },
   {
-    id: "caldeirada-ragout-de-poissons", nom: "Caldeirada (ragoût portugais de poissons et fruits de mer)", cuisine: "portugaise",
+    id: "caldeirada-ragout-de-poissons", nom: "Caldeirada (ragoût portugais de poissons et fruits de mer)", cuisine: "portugaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 55, portions: 2,
     source: "TheMealDB", idSource: "53045",
     ingredients: [
@@ -138,7 +138,7 @@ ajouterRecettes([
     etapes: ["Dans une grande sauteuse profonde, faire revenir l'oignon haché et le poivron (rouge de préférence) en dés dans un filet d'huile, à feu moyen, jusqu'à ce qu'ils soient tendres sans colorer.", "Hacher finement les tiges de coriandre (garder les feuilles pour la fin) et les ajouter avec le piment et 1 gousse d'ail hachés. Cuire quelques minutes. Verser le vin, ajouter le safran et le laurier, et laisser réduire de moitié.", "Ajouter les pommes de terre en petits morceaux, les tomates coupées et l'eau. Porter à petite ébullition et cuire 20 à 25 min en écrasant les tomates, jusqu'à ce que les pommes de terre soient juste tendres.", "Saler et poivrer. Enfoncer le cabillaud en gros morceaux dans la sauce, puis poser dessus le calmar en anneaux, les crevettes, les moules et les palourdes. Couvrir et cuire 6 à 8 min, jusqu'à ce que les coquillages s'ouvrent (jeter ceux qui restent fermés).", "Pendant ce temps, faire griller des tranches de baguette, les frotter avec la gousse d'ail restante coupée en deux et les arroser d'un filet d'huile.", "Servir le ragoût parsemé de feuilles de coriandre, avec les tartines pour tremper."]
   },
   {
-    id: "prego-sandwich-steak-piri-piri-vert", nom: "Prego (sandwich au steak) et sauce piri-piri verte", cuisine: "portugaise",
+    id: "prego-sandwich-steak-piri-piri-vert", nom: "Prego (sandwich au steak) et sauce piri-piri verte", cuisine: "portugaise", type: "plat",
     difficulte: "facile", tempsMinutes: 90, portions: 2,
     source: "TheMealDB", idSource: "53042",
     ingredients: [
@@ -160,7 +160,7 @@ ajouterRecettes([
     etapes: ["Frotter les 2 steaks avec 1 gousse d'ail coupée en deux, puis les mettre dans un sac de congélation avec l'huile, 1 cuillère à soupe de vinaigre (de xérès si possible) et les tiges de persil. Bien mélanger, taper quelques coups de rouleau sur les steaks pour les aplatir et laisser mariner 1 à 2 h.", "Sauce piri-piri verte : mixer les feuilles de persil, le basilic, le piment (type jalapeño), les oignons nouveaux, la moitié de l'autre gousse d'ail, le reste du vinaigre, le sucre et l'eau jusqu'à ce que ce soit le plus lisse possible. (Elle se garde une semaine au frais dans un bocal.)", "Chauffer très fort une poêle ou une poêle-gril. Retirer l'ail et le persil des steaks, saler, poivrer et les saisir 2 min de chaque côté. Les laisser reposer sur une assiette.", "Couper les ciabattas en deux (ou 2 morceaux de baguette), les faire griller côté mie, puis le poser mie en dessous sur l'assiette pour qu'il absorbe le jus.", "Trancher les steaks et les glisser dans le pain avec la sauce verte et la roquette."]
   },
   {
-    id: "empanadas-crevettes-oignons-nouveaux", nom: "Empanadas aux crevettes, oignons nouveaux et feta", cuisine: "portugaise",
+    id: "empanadas-crevettes-oignons-nouveaux", nom: "Empanadas aux crevettes, oignons nouveaux et feta", cuisine: "portugaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 85, portions: 2,
     source: "TheMealDB", idSource: "53040",
     ingredients: [

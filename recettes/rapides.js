@@ -4,7 +4,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "pates-au-thon-et-a-la-creme", nom: "Pâtes au thon et à la crème", cuisine: "plats rapides",
+    id: "pates-au-thon-et-a-la-creme", nom: "Pâtes au thon et à la crème", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "pates", quantite: 200, unite: "g" },
@@ -16,7 +16,7 @@ ajouterRecettes([
     etapes: ["Cuire les pâtes dans l'eau bouillante salée.", "Réchauffer le thon égoutté avec la crème 2 min.", "Ajouter un peu de jus de citron et le poivre.", "Mélanger avec les pâtes égouttées."]
   },
   {
-    id: "omelette-au-fromage", nom: "Omelette au fromage", cuisine: "plats rapides",
+    id: "omelette-au-fromage", nom: "Omelette au fromage", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
     ingredients: [
       { id: "oeuf", quantite: 4, unite: "pièce" },
@@ -28,7 +28,7 @@ ajouterRecettes([
     etapes: ["Battre les œufs avec le sel et le poivre.", "Faire fondre le beurre dans une poêle, verser les œufs.", "Quand l'omelette commence à prendre, ajouter le fromage et plier."]
   },
   {
-    id: "pates-a-l-ail-et-a-l-huile-d-olive", nom: "Pâtes à l'ail et à l'huile d'olive", cuisine: "plats rapides",
+    id: "pates-a-l-ail-et-a-l-huile-d-olive", nom: "Pâtes à l'ail et à l'huile d'olive", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "pates", quantite: 200, unite: "g" },
@@ -41,7 +41,7 @@ ajouterRecettes([
     etapes: ["Cuire les pâtes dans l'eau bouillante salée.", "Faire dorer doucement l'ail émincé et le piment dans l'huile, sans brûler.", "Mélanger les pâtes égouttées à l'huile parfumée et ajouter le persil haché."]
   },
   {
-    id: "tartines-avocat-et-oeuf", nom: "Tartines avocat et œuf", cuisine: "plats rapides",
+    id: "tartines-avocat-et-oeuf", nom: "Tartines avocat et œuf", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
     ingredients: [
       { id: "pain", quantite: 4, unite: "tranche" },
@@ -54,7 +54,7 @@ ajouterRecettes([
     etapes: ["Griller le pain.", "Écraser l'avocat avec un peu de jus de citron et le sel, tartiner.", "Cuire les œufs au plat et les poser sur les tartines, poivrer."]
   },
   {
-    id: "wrap-poulet-crudites", nom: "Wrap poulet-crudités", cuisine: "plats rapides",
+    id: "wrap-poulet-crudites", nom: "Wrap poulet-crudités", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "tortilla-de-ble", quantite: 2, unite: "pièce" },
@@ -69,7 +69,7 @@ ajouterRecettes([
     etapes: ["Couper le poulet en lamelles et le cuire 6 min dans l'huile, saler.", "Mélanger le yaourt et la moutarde pour la sauce.", "Garnir les tortillas de quelques feuilles de salade, tomate en tranches, poulet et sauce.", "Rouler serré et couper en deux."]
   },
   {
-    id: "salade-de-pates-au-thon", nom: "Salade de pâtes au thon", cuisine: "plats rapides",
+    id: "salade-de-pates-au-thon", nom: "Salade de pâtes au thon", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "pates", quantite: 150, unite: "g" },
@@ -83,7 +83,7 @@ ajouterRecettes([
     etapes: ["Cuire les pâtes, les égoutter et les passer sous l'eau froide.", "Ajouter le thon émietté, les tomates en dés et le maïs égoutté.", "Assaisonner avec l'huile, le vinaigre et le sel."]
   },
   {
-    id: "oeufs-brouilles-aux-tomates", nom: "Œufs brouillés aux tomates", cuisine: "plats rapides",
+    id: "oeufs-brouilles-aux-tomates", nom: "Œufs brouillés aux tomates", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
     ingredients: [
       { id: "oeuf", quantite: 4, unite: "pièce" },
@@ -96,7 +96,7 @@ ajouterRecettes([
     etapes: ["Couper les tomates en dés et les faire revenir 3 min dans le beurre.", "Ajouter les œufs battus, saler, poivrer.", "Remuer doucement 2 à 3 min à feu doux.", "Servir avec le pain grillé."]
   },
   {
-    id: "pates-courgette-et-lardons", nom: "Pâtes courgette et lardons", cuisine: "plats rapides",
+    id: "pates-courgette-et-lardons", nom: "Pâtes courgette et lardons", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     ingredients: [
       { id: "pates", quantite: 200, unite: "g" },
@@ -108,7 +108,7 @@ ajouterRecettes([
     etapes: ["Cuire les pâtes dans l'eau bouillante salée.", "Faire dorer les lardons, ajouter la courgette en petits dés et cuire 8 min.", "Ajouter la crème et le poivre.", "Mélanger avec les pâtes égouttées."]
   },
   {
-    id: "semoule-express-aux-pois-chiches", nom: "Semoule express aux pois chiches", cuisine: "plats rapides",
+    id: "semoule-express-aux-pois-chiches", nom: "Semoule express aux pois chiches", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "semoule", quantite: 120, unite: "g" },
@@ -122,7 +122,7 @@ ajouterRecettes([
     etapes: ["Verser l'eau bouillante salée sur la semoule, couvrir 5 min puis égrainer.", "Faire sauter la courgette en dés dans l'huile avec le cumin 6 min.", "Ajouter les pois chiches égouttés, réchauffer 2 min.", "Mélanger avec la semoule."]
   },
   {
-    id: "sandwich-chaud-thon-fromage", nom: "Sandwich chaud thon-fromage", cuisine: "plats rapides",
+    id: "sandwich-chaud-thon-fromage", nom: "Sandwich chaud thon-fromage", cuisine: "plats rapides", type: "plat",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
     ingredients: [
       { id: "pain-de-mie", quantite: 4, unite: "tranche" },

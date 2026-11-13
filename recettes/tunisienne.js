@@ -8,7 +8,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "gateau-tunisien-a-l-orange", nom: "Gâteau tunisien à l'orange entière et à l'huile d'olive", cuisine: "tunisienne",
+    id: "gateau-tunisien-a-l-orange", nom: "Gâteau tunisien à l'orange entière et à l'huile d'olive", cuisine: "tunisienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 70, portions: 2,
     source: "TheMealDB", idSource: "52970",
     ingredients: [
@@ -23,7 +23,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 190 °C et huiler un petit moule rond (18 cm environ).", "Couper les deux bouts de l'orange, la couper en tranches et retirer les pépins. La mixer entière, avec la peau, en purée.", "Ajouter un tiers du sucre et l'huile d'olive, et mixer encore jusqu'à ce que ce soit bien mélangé.", "Tamiser ensemble la farine et la levure. Fouetter les œufs avec le reste du sucre au moins 5 min au batteur, jusqu'à ce que le mélange blanchisse et double de volume.", "Incorporer délicatement la moitié de la farine, puis la purée d'orange et la vanille, puis le reste de la farine, sans trop mélanger.", "Verser dans le moule et cuire 20 min, puis baisser le four à 160 °C et cuire encore 20 à 25 min, jusqu'à ce que le gâteau soit doré et qu'une pique en ressorte sèche. Laisser refroidir sur une grille."]
   },
   {
-    id: "kafteji", nom: "Kafteji (légumes frits hachés aux œufs)", cuisine: "tunisienne",
+    id: "kafteji", nom: "Kafteji (légumes frits hachés aux œufs)", cuisine: "tunisienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "52971",
     ingredients: [
@@ -40,7 +40,7 @@ ajouterRecettes([
     etapes: ["Éplucher les pommes de terre et les couper en cubes de 3 cm. Les faire frire dans 1 cm d'huile bien chaude environ 20 min, en les retournant, jusqu'à ce qu'elles soient dorées. Égoutter sur du papier absorbant.", "Couper le poivron (vert de préférence) en deux, l'épépiner, le frotter d'un peu d'huile et le passer sous le gril du four, côté peau vers le haut, jusqu'à ce que la peau noircisse. L'enfermer 15 min dans un sac, puis le peler.", "Dans une autre poêle, faire dorer les oignons en fines rondelles dans un peu d'huile 15 min en remuant souvent. Ajouter le ras el hanout à la fin.", "Faire frire le potiron en cubes dans la poêle des pommes de terre 10 à 15 min, jusqu'à ce qu'il soit tendre et un peu doré. Égoutter.", "Vider l'huile de la poêle, y remettre tous les légumes, verser les œufs battus par-dessus et couvrir quelques minutes, le temps que les œufs prennent.", "Verser le tout sur une grande planche, saler, poivrer et hacher grossièrement au couteau en mélangeant. Servir avec du pain."]
   },
   {
-    id: "soupe-tunisienne-agneau-pois-chiches", nom: "Soupe tunisienne à l'agneau, pois chiches et pâtes", cuisine: "tunisienne",
+    id: "soupe-tunisienne-agneau-pois-chiches", nom: "Soupe tunisienne à l'agneau, pois chiches et pâtes", cuisine: "tunisienne", type: "soupe",
     difficulte: "facile", tempsMinutes: 50, portions: 2,
     source: "TheMealDB", idSource: "52972",
     ingredients: [
@@ -62,7 +62,7 @@ ajouterRecettes([
     etapes: ["Dans une cocotte, faire dorer la viande hachée à feu vif. La retirer et garder 1 cuillère à soupe de gras dans la cocotte.", "À feu moyen, faire revenir l'ail et l'oignon hachés avec les épinards environ 5 min, jusqu'à ce que l'oignon soit translucide et les épinards fondus.", "Remettre la viande, puis ajouter le concentré de tomate, le cumin, la harissa, l'eau avec le bouillon cube, les pois chiches égouttés, le jus d'un demi-citron, le sel et le poivre. Laisser mijoter 20 min à feu doux.", "Ajouter les pâtes (des macaronis) et cuire environ 15 min, jusqu'à ce qu'elles soient cuites. Ajouter un peu d'eau si la soupe épaissit trop."]
   },
   {
-    id: "lablabi-soupe-de-pois-chiches", nom: "Lablabi (soupe de pois chiches à l'ail et au cumin)", cuisine: "tunisienne",
+    id: "lablabi-soupe-de-pois-chiches", nom: "Lablabi (soupe de pois chiches à l'ail et au cumin)", cuisine: "tunisienne", type: "soupe",
     difficulte: "facile", tempsMinutes: 75, portions: 2,
     source: "TheMealDB", idSource: "52973",
     ingredients: [
@@ -82,7 +82,7 @@ ajouterRecettes([
     etapes: ["La veille, faire tremper les pois chiches secs dans beaucoup d'eau froide.", "Dans une casserole, faire revenir l'oignon haché dans l'huile jusqu'à ce qu'il soit translucide.", "Ajouter les pois chiches égouttés, l'eau et le bouillon cube. Porter à ébullition, puis couvrir et laisser frémir 30 min (15 min avec des pois chiches en boîte).", "Pendant ce temps, faire griller le cumin quelques secondes dans une petite poêle sans matière grasse, puis l'écraser au mortier avec l'ail et le sel pour faire une pâte.", "Ajouter cette pâte et la harissa à la soupe et laisser frémir encore 30 min, jusqu'à ce que les pois chiches soient tendres.", "Assaisonner avec le poivre, le jus de citron vert et du sel si besoin. Servir bien chaud, versé sur des morceaux de pain rassis si on aime, avec un filet d'huile d'olive."]
   },
   {
-    id: "kalia-zaara-agneau-au-safran", nom: "Kalia zaara (agneau au safran et au persil)", cuisine: "tunisienne",
+    id: "kalia-zaara-agneau-au-safran", nom: "Kalia zaara (agneau au safran et au persil)", cuisine: "tunisienne", type: "plat",
     difficulte: "facile", tempsMinutes: 55, portions: 2,
     source: "TheMealDB", idSource: "52974",
     ingredients: [
@@ -100,7 +100,7 @@ ajouterRecettes([
     etapes: ["Couper l'agneau en petits cubes. Le faire dorer dans l'huile chaude à feu moyen-vif, environ 5 min, sur toutes les faces.", "Assaisonner avec le safran, le sel et le poivre. Ajouter l'oignon haché, en gardant 1 cuillère à soupe pour la fin, puis l'eau.", "Porter à ébullition, couvrir et laisser mijoter à feu moyen-doux 30 à 40 min, jusqu'à ce que l'agneau soit tendre (ajouter un peu d'eau si besoin).", "Découvrir, ajouter le beurre et laisser réduire la sauce 5 à 10 min.", "Rectifier l'assaisonnement, verser dans un plat, parsemer de l'oignon gardé et du persil haché, et servir avec des quartiers de citron."]
   },
   {
-    id: "briks-au-thon-et-epinards", nom: "Briks au thon, aux épinards et à l'œuf", cuisine: "tunisienne",
+    id: "briks-au-thon-et-epinards", nom: "Briks au thon, aux épinards et à l'œuf", cuisine: "tunisienne", type: "entree",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     source: "TheMealDB", idSource: "52975",
     ingredients: [
@@ -121,7 +121,7 @@ ajouterRecettes([
     etapes: ["Faire revenir les oignons nouveaux émincés dans 1 cuillère à café d'huile, à feu doux, 3 min. Ajouter les épinards, couvrir et cuire 2 à 3 min jusqu'à ce qu'ils soient fondus. Égoutter et laisser refroidir.", "Découper dans la pâte filo 12 disques d'environ 12 cm (une soucoupe sert de modèle) et les garder sous un film pour qu'ils ne sèchent pas.", "Bien presser les épinards refroidis pour retirer l'eau, puis les mélanger avec le thon égoutté, l'œuf battu, la sauce piquante, du sel et du poivre.", "Préchauffer le four à 200 °C. Superposer 3 disques de filo en badigeonnant chacun d'un peu d'huile. Mettre une grosse cuillerée de farce au centre, replier en demi-lune et pincer les bords en les tordant pour fermer. Faire 4 briks.", "Les poser sur une plaque, les badigeonner du reste d'huile et cuire 12 à 15 min, jusqu'à ce qu'ils soient croustillants et dorés.", "Pendant ce temps, couper les tomates et un morceau de concombre en dés, arroser de jus de citron, saler et poivrer. Servir les briks chauds avec cette salade et la confiture d'abricots."]
   },
   {
-    id: "ghriba-aux-noix-de-cajou", nom: "Ghriba aux noix de cajou (biscuits tunisiens)", cuisine: "tunisienne",
+    id: "ghriba-aux-noix-de-cajou", nom: "Ghriba aux noix de cajou (biscuits tunisiens)", cuisine: "tunisienne", type: "dessert",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "TheMealDB", idSource: "52976",
     ingredients: [

@@ -5,7 +5,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "poulet-pane-au-curry-katsu", nom: "Poulet pané au curry (katsu)", cuisine: "japonaise",
+    id: "poulet-pane-au-curry-katsu", nom: "Poulet pané au curry (katsu)", cuisine: "japonaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     source: "TheMealDB", idSource: "52820",
     ingredients: [
@@ -31,7 +31,7 @@ ajouterRecettes([
     etapes: ["Sauce : faire revenir l'oignon et l'ail émincés dans 15 ml d'huile, ajouter la carotte en rondelles et cuire 10 min à feu doux.", "Ajouter la moitié de la farine et le curry, cuire 1 min, puis verser petit à petit le bouillon cube dissous dans l'eau chaude.", "Ajouter le miel, la sauce soja et le laurier, laisser mijoter 20 min jusqu'à ce que la sauce épaississe, puis ajouter le garam masala.", "Poulet : aplatir les blancs à 1 cm d'épaisseur, saler et poivrer, les passer dans le reste de farine, puis dans l'œuf battu, puis dans la chapelure.", "Les cuire dans le reste d'huile bien chaude, 3 à 4 min de chaque côté, puis les égoutter sur du papier absorbant.", "Napper le poulet de sauce et servir, avec du riz si on veut."]
   },
   {
-    id: "poulet-frit-karaage", nom: "Poulet frit japonais (karaage)", cuisine: "japonaise",
+    id: "poulet-frit-karaage", nom: "Poulet frit japonais (karaage)", cuisine: "japonaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 90, portions: 2,
     source: "TheMealDB", idSource: "52831",
     ingredients: [
@@ -48,7 +48,7 @@ ajouterRecettes([
     etapes: ["Mélanger le gingembre râpé, l'ail écrasé, la sauce soja, le saké et le sucre.", "Ajouter le poulet coupé en morceaux, bien l'enrober, couvrir et laisser mariner 1 h au frais.", "Chauffer l'huile dans une casserole à fond épais (environ 180 °C).", "Rouler les morceaux de poulet dans la fécule.", "Les frire en plusieurs fois jusqu'à ce qu'ils soient bien dorés et cuits à cœur, puis les égoutter sur du papier absorbant.", "Servir avec des quartiers de citron."]
   },
   {
-    id: "bol-de-riz-au-porc-pane-katsudon", nom: "Bol de riz au porc pané (katsudon)", cuisine: "japonaise",
+    id: "bol-de-riz-au-porc-pane-katsudon", nom: "Bol de riz au porc pané (katsudon)", cuisine: "japonaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     source: "TheMealDB", idSource: "53034",
     ingredients: [
@@ -69,7 +69,7 @@ ajouterRecettes([
     etapes: ["Cuire le riz.", "Passer le porc (sans os) dans la farine, puis dans un œuf battu, puis dans la chapelure. Le frire dans l'huile chaude 3 à 4 min de chaque côté, l'égoutter et le couper en lanières.", "Dans une poêle avec un peu d'huile, faire dorer l'oignon émincé, puis poser le porc pané au milieu.", "Mélanger le bouillon cube dissous dans l'eau chaude, la sauce soja, le mirin et le sucre, en verser les trois quarts autour du porc et laisser frémir 2 min.", "Verser les 2 autres œufs battus autour du porc et cuire 2 à 3 min : l'œuf doit rester un peu coulant.", "Répartir le riz dans deux bols, poser dessus le porc et l'œuf, parsemer de ciboulette ciselée."]
   },
   {
-    id: "nouilles-sautees-aux-legumes-yaki-udon", nom: "Nouilles sautées aux légumes (yaki udon)", cuisine: "japonaise",
+    id: "nouilles-sautees-aux-legumes-yaki-udon", nom: "Nouilles sautées aux légumes (yaki udon)", cuisine: "japonaise", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     source: "TheMealDB", idSource: "52871",
     ingredients: [
@@ -88,7 +88,7 @@ ajouterRecettes([
   },
   // --- Lot « compléments » : 4 recettes de plus ---
   {
-    id: "riz-japonais-gohan", nom: "Riz japonais (gohan)", cuisine: "japonaise",
+    id: "riz-japonais-gohan", nom: "Riz japonais (gohan)", cuisine: "japonaise", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 40, portions: 2,
     source: "TheMealDB", idSource: "53033",
     ingredients: [
@@ -101,7 +101,7 @@ ajouterRecettes([
     etapes: ["Mettre le riz dans un saladier, le couvrir d'eau froide et le frotter entre les doigts : l'eau devient trouble. Vider et recommencer 5 ou 6 fois, jusqu'à ce que l'eau reste claire.", "Mettre le riz égoutté dans une casserole avec l'eau, porter à ébullition, puis baisser sur feu très doux, couvrir et cuire 15 min.", "Retirer du feu et laisser reposer 15 min sans ouvrir le couvercle.", "Ajouter le mirin, bien mélanger et servir, garni si on veut d'oignon nouveau émincé et d'un filet de jus de cornichons (ou de légumes marinés)."]
   },
   {
-    id: "makis-thon-concombre", nom: "Makis thon-concombre (sushis)", cuisine: "japonaise",
+    id: "makis-thon-concombre", nom: "Makis thon-concombre (sushis)", cuisine: "japonaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "53065",
     ingredients: [
@@ -121,7 +121,7 @@ ajouterRecettes([
     etapes: ["Rincer le riz plusieurs fois jusqu'à ce que l'eau reste claire, puis le cuire à couvert dans l'eau 15 min à feu très doux et le laisser reposer 10 min hors du feu.", "Garder 1 cuillère à soupe de vinaigre de riz. Mélanger le reste avec le sucre et le sel, verser sur le riz chaud et mélanger délicatement. Laisser tiédir.", "Mélanger la mayonnaise avec la cuillère de vinaigre gardée et la sauce soja (mayonnaise « à la japonaise »). Couper le concombre en bâtonnets et égoutter le thon.", "Rouleaux : poser une feuille de nori sur une natte (ou un torchon couvert de film alimentaire), face brillante dessous. Avec les mains mouillées, étaler une couche de riz de 1 cm, en laissant le bord du fond libre sur 2 cm.", "Étaler un trait de mayonnaise au milieu du riz, puis y poser du thon et des bâtonnets de concombre.", "Rouler bien serré en s'aidant de la natte, mouiller le bord libre pour le coller. Envelopper dans du film alimentaire, couper en tranches épaisses avec un couteau mouillé, puis retirer le film.", "Si on a du saumon fumé (sushi pressé) : tapisser un petit moule à cake de film alimentaire, y poser une fine couche de saumon fumé, couvrir de 3 cm de riz et bien tasser. Démouler et couper en bâtonnets.", "Si on a des crevettes ou du saumon fumé (boules de sushi) : poser un morceau sur un carré de film alimentaire, ajouter une boule de riz de la taille d'une noix, refermer en tournant le film pour serrer, puis déballer."]
   },
   {
-    id: "gratin-de-poulet-teriyaki-au-riz", nom: "Gratin de poulet teriyaki au riz", cuisine: "japonaise",
+    id: "gratin-de-poulet-teriyaki-au-riz", nom: "Gratin de poulet teriyaki au riz", cuisine: "japonaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 70, portions: 2,
     source: "TheMealDB", idSource: "52772",
     ingredients: [
@@ -138,7 +138,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 180 °C et cuire le riz.", "Sauce : dans une petite casserole, porter à ébullition la sauce soja, l'eau, la cassonade, le gingembre et l'ail écrasé, puis laisser bouillir 1 min.", "Délayer la fécule dans 2 cuillères à soupe d'eau froide, la verser dans la sauce en remuant et cuire jusqu'à ce qu'elle épaississe. Retirer du feu.", "Mettre les blancs de poulet dans un plat à four, les napper d'un tiers de la sauce et cuire 30 min. Pendant ce temps, cuire les légumes pour wok comme indiqué sur le paquet (ou le brocoli en petits bouquets 8 min à la vapeur).", "Sortir le plat et effilocher le poulet avec deux fourchettes. Ajouter le riz, les légumes et presque toute la sauce restante, mélanger.", "Remettre 15 min au four, laisser reposer 5 min, puis servir arrosé du reste de sauce."]
   },
   {
-    id: "porc-pane-japonais-tonkatsu", nom: "Porc pané japonais (tonkatsu)", cuisine: "japonaise",
+    id: "porc-pane-japonais-tonkatsu", nom: "Porc pané japonais (tonkatsu)", cuisine: "japonaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 35, portions: 2,
     source: "TheMealDB", idSource: "53032",
     ingredients: [

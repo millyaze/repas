@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "kibbe", nom: "Kibbé (boulettes de boulgour farcies à la viande)", cuisine: "libanaise",
+    id: "kibbe", nom: "Kibbé (boulettes de boulgour farcies à la viande)", cuisine: "libanaise", type: "entree",
     difficulte: "difficile", tempsMinutes: 210, portions: 2,
     source: "Wikilivres", idSource: "Kibbé",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FKibb%C3%A9",
@@ -23,7 +23,7 @@ ajouterRecettes([
     etapes: ["Faire tremper le boulgour 2 à 3 h dans beaucoup d'eau.", "Mixer la moitié de l'oignon avec 100 g de viande, saler et ajouter le quatre-épices (ou du poivre).", "Presser le boulgour pour bien l'égoutter, l'ajouter à la viande et mixer encore. Réserver au frais.", "Farce : hacher le reste de l'oignon et le faire revenir 2 min avec les pignons dans 1 cuillère à soupe d'huile. Ajouter les 60 g de viande restants, assaisonner et cuire 10 min.", "Avec la pâte de boulgour, former de petites boules ovales et les creuser avec un doigt pour obtenir des parois fines.", "Farcir, refermer et donner une forme allongée, pointue aux deux bouts.", "Faire frire les kibbés 5 min dans le reste de l'huile bien chaude, en les retournant."]
   },
   {
-    id: "mjadra", nom: "Mjadra (lentilles au riz et oignons dorés)", cuisine: "libanaise",
+    id: "mjadra", nom: "Mjadra (lentilles au riz et oignons dorés)", cuisine: "libanaise", type: "plat",
     difficulte: "facile", tempsMinutes: 50, portions: 2,
     source: "Wikilivres", idSource: "Mjadra",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FMjadra",

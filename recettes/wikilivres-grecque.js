@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "fakes", nom: "Fakès (soupe de lentilles grecque)", cuisine: "grecque",
+    id: "fakes", nom: "Fakès (soupe de lentilles grecque)", cuisine: "grecque", type: "soupe",
     difficulte: "facile", tempsMinutes: 55, portions: 2,
     source: "Wikilivres", idSource: "Soupe de lentilles grecque",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSoupe_de_lentilles_grecque",
@@ -24,7 +24,7 @@ ajouterRecettes([
     etapes: ["Mettre les lentilles dans une casserole, les couvrir d'eau, faire bouillir 5 min et égoutter.", "Faire suer l'oignon haché dans l'huile, puis ajouter les lentilles, 500 ml d'eau, l'ail et la tomate coupée.", "Cuire 40 min. Saler et poivrer."]
   },
   {
-    id: "penne-rigate-a-la-grecque", nom: "Penne rigate à la grecque (tomates, olives et chèvre)", cuisine: "grecque",
+    id: "penne-rigate-a-la-grecque", nom: "Penne rigate à la grecque (tomates, olives et chèvre)", cuisine: "grecque", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "Wikilivres", idSource: "Penne rigate à la grecque",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPenne_rigate_%C3%A0_la_grecque",
@@ -40,7 +40,7 @@ ajouterRecettes([
     etapes: ["Peler et épépiner les tomates, puis les couper en dés. Couper les olives noires (à la grecque) en morceaux et le chèvre (une demi-bûche) en gros dés.", "Chauffer presque toute l'huile d'olive dans une poêle, ajouter les tomates et les olives et les faire revenir 3 min à feu vif. Verser le vin blanc.", "Ajouter la moitié du chèvre, couvrir et éteindre le feu.", "Cuire les penne al dente, les égoutter et les verser sur les tomates. Bien remuer, couvrir et réchauffer 2 min.", "Servir parsemé du reste du chèvre et du basilic en fines lanières, avec un filet d'huile d'olive."]
   },
   {
-    id: "spanakopita", nom: "Spanakopita (tourte grecque aux épinards et à la feta)", cuisine: "grecque",
+    id: "spanakopita", nom: "Spanakopita (tourte grecque aux épinards et à la feta)", cuisine: "grecque", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "Wikilivres", idSource: "Spanakopita",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSpanakopita",

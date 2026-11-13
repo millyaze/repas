@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "chicken-supreme", nom: "Chicken supreme (poulet au miel, à la moutarde et au curry)", cuisine: "américaine",
+    id: "chicken-supreme", nom: "Chicken supreme (poulet au miel, à la moutarde et au curry)", cuisine: "américaine", type: "plat",
     difficulte: "facile", tempsMinutes: 55, portions: 2,
     source: "Wikilivres", idSource: "Chicken supreme",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FChicken_supreme",
@@ -21,7 +21,7 @@ ajouterRecettes([
     etapes: ["Dans une poêle, mélanger le beurre fondu, le miel, la moutarde et le curry.", "Ajouter les blancs de poulet (ou de dinde) et bien les enrober de sauce.", "Cuire 45 min à feu moyen en arrosant régulièrement et en retournant la viande à mi-cuisson.", "Servir avec une salade et des pommes de terre sautées."]
   },
   {
-    id: "galettes-de-tofu", nom: "Galettes de tofu (hamburger végétal)", cuisine: "américaine",
+    id: "galettes-de-tofu", nom: "Galettes de tofu (hamburger végétal)", cuisine: "américaine", type: "plat",
     difficulte: "facile", tempsMinutes: 45, portions: 2,
     source: "Wikilivres", idSource: "Hamburger au Tofu (2)",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FHamburger_au_Tofu_(2)",
@@ -42,7 +42,7 @@ ajouterRecettes([
     etapes: ["Cuire 2 pommes de terre (environ 300 g) à l'eau, puis les éplucher.", "Mixer ensemble le tofu (200 g), la gousse d'ail, 2 cl de jus de citron (environ ½ citron), l'oignon, les pommes de terre, les 4 tranches de pain, la levure maltée (20 g), le concentré de tomates (10 g), du sel, du poivre et du curry.", "Modeler de petites galettes avec la préparation.", "Les cuire quelques minutes de chaque côté dans l'huile chaude."]
   },
   {
-    id: "sandwich-au-beurre-de-cacahuete-et-a-la-banane", nom: "Sandwich au beurre de cacahuète et à la banane", cuisine: "américaine",
+    id: "sandwich-au-beurre-de-cacahuete-et-a-la-banane", nom: "Sandwich au beurre de cacahuète et à la banane", cuisine: "américaine", type: "petit-dejeuner",
     difficulte: "facile", tempsMinutes: 5, portions: 2,
     source: "Wikilivres", idSource: "Sandwich au beurre d’arachide et à la banane",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSandwich_au_beurre_d%E2%80%99arachide_et_%C3%A0_la_banane",

@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "pieds-de-porc-au-vinaigre-et-gingembre", nom: "Pieds de porc au vinaigre noir et au gingembre", cuisine: "chinoise",
+    id: "pieds-de-porc-au-vinaigre-et-gingembre", nom: "Pieds de porc au vinaigre noir et au gingembre", cuisine: "chinoise", type: "plat",
     difficulte: "difficile", tempsMinutes: 120, portions: 2,
     source: "Wikilivres", idSource: "Pieds de porc au vinaigre et au gingembre",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPieds_de_porc_au_vinaigre_et_au_gingembre",
@@ -22,7 +22,7 @@ ajouterRecettes([
     etapes: ["Faire cuire 6 œufs durs et réserver.", "Éplucher 250 g de gingembre, le couper en tranches fines et l'écraser légèrement avec le plat du couteau. Le faire frire 5 min à feu vif avec l'huile et un peu de sel, puis réserver.", "Brûler les poils des 2 pieds de porc au-dessus d'une flamme et les gratter au couteau. Les blanchir dans une casserole d'eau bouillante jusqu'à ce que la peau se rétracte et change de couleur, puis égoutter et sécher.", "Couper les pieds aux articulations puis dans la longueur, et les frotter de sel. Les faire dorer dans un wok ou une poêle chaude, sans huile.", "Mettre le gingembre et les pieds de porc dans une marmite en terre cuite émaillée (le vinaigre attaque les casseroles en métal) et couvrir de vinaigre noir sucré chinois (environ 1 l).", "Porter à ébullition, baisser le feu et laisser mijoter 20 min. Écaler les œufs, les ajouter et mijoter encore 10 min.", "Retirer du feu et laisser reposer une journée, en remettant 2 ou 3 fois sur feu doux quelques minutes avant de laisser refroidir à nouveau : le ragoût prend en gelée. Servir chaud mais pas bouillant."]
   },
   {
-    id: "porc-laque-char-siu", nom: "Porc laqué (char siu)", cuisine: "chinoise",
+    id: "porc-laque-char-siu", nom: "Porc laqué (char siu)", cuisine: "chinoise", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "Wikilivres", idSource: "Porc laqué",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPorc_laqu%C3%A9",
@@ -38,7 +38,7 @@ ajouterRecettes([
     etapes: ["Couper 500 g d'épaule de porc en longues bandes épaisses, pour qu'elles gardent leur forme à la cuisson.", "Piquer la viande à la fourchette : elle sera plus tendre et prendra mieux la marinade.", "Mélanger la sauce soja (moitié foncée, moitié ordinaire si possible), la sauce d'huître, le vin de Shaoxing (ou du xérès), le miel, la sauce hoisin et le cinq-épices.", "Enrober complètement la viande de cette marinade, couvrir et laisser au réfrigérateur plusieurs heures, idéalement toute une nuit.", "Préchauffer le four à 230 °C et couvrir un plat de papier aluminium. Suspendre la viande si possible, ou poser les morceaux sur le plat sans les entasser.", "Rôtir environ 20 min, jusqu'à ce que la viande soit bien cuite, en la badigeonnant au moins deux fois de marinade pour former une croûte rouge caramélisée.", "Laisser refroidir la viande suspendue ou sur une grille, puis servir."]
   },
   {
-    id: "riz-cantonais", nom: "Riz cantonais", cuisine: "chinoise",
+    id: "riz-cantonais", nom: "Riz cantonais", cuisine: "chinoise", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     source: "Wikilivres", idSource: "Riz cantonais",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FRiz_cantonais",

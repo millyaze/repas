@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "fondue-fribourgeoise", nom: "Fondue fribourgeoise (fondue au vacherin)", cuisine: "suisse",
+    id: "fondue-fribourgeoise", nom: "Fondue fribourgeoise (fondue au vacherin)", cuisine: "suisse", type: "plat",
     difficulte: "moyen", tempsMinutes: 30, portions: 2,
     source: "Wikilivres", idSource: "Fondue fribourgeoise",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FFondue_fribourgeoise",
@@ -21,7 +21,7 @@ ajouterRecettes([
     etapes: ["Couper le fromage en dés et les mettre dans un caquelon métallique ou une casserole (pas de caquelon en terre).", "Ajouter environ 50 ml d'eau tiède et l'ail écrasé, puis chauffer à feu doux, juste assez pour faire fondre le fromage.", "Remuer lentement et sans arrêt avec une spatule, en partant du fond. Ne jamais dépasser 50 °C, sinon la fondue « tranche » et se sépare.", "Ajouter un peu d'eau tiède au fur et à mesure que le fromage fond, pour obtenir une texture crémeuse (on peut remplacer une partie de l'eau par un peu de vin blanc ou de kirsch).", "Quand tout est fondu, poivrer et chauffer un tout petit peu plus fort, jusqu'à une très légère vapeur. Servir aussitôt sur un réchaud à bougie, avec des morceaux de pain ou des pommes de terre cuites à l'eau."]
   },
   {
-    id: "papet-vaudois", nom: "Papet vaudois (poireaux, pommes de terre et saucisse aux choux)", cuisine: "suisse",
+    id: "papet-vaudois", nom: "Papet vaudois (poireaux, pommes de terre et saucisse aux choux)", cuisine: "suisse", type: "plat",
     difficulte: "facile", tempsMinutes: 60, portions: 2,
     source: "Wikilivres", idSource: "Papet vaudois",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPapet_vaudois",

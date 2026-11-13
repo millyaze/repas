@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 36;
+    const VERSION = 37;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
     // Mode clair ou sombre, choisi avant l'affichage (voir js/apparence.js)
     document.write('<script src="js/apparence.js?v=' + VERSION + '"><\/script>');
@@ -142,6 +142,12 @@
         <details id="plus-filtres" class="plus-filtres">
         <summary>Plus de filtres</summary>
         <div class="filtres">
+          <label class="champ">Type de plat
+            <select id="filtre-type"></select>
+          </label>
+          <label class="champ">Régime
+            <select id="filtre-regime"></select>
+          </label>
           <label class="champ">Cuisine
             <select id="filtre-cuisine"></select>
           </label>
@@ -258,7 +264,7 @@
       ["data/ingredients.js", "js/ingredient.js", "js/analyse.js", "data/stock-test.js", "js/memoire.js", "js/stock.js", "js/scan.js", "js/synchro.js"],
       ["recettes/toutes.js"], // prépare la liste des recettes, avant les cuisines
       CUISINES.map(function (nom) { return "recettes/" + nom + ".js"; }),
-      ["js/cuisiner.js", "js/courses.js", "js/recettes.js", "js/onglets.js"]
+      ["js/regime.js", "js/cuisiner.js", "js/courses.js", "js/recettes.js", "js/onglets.js"]
     );
 
     // Chargement de chaque fichier avec le numéro de version

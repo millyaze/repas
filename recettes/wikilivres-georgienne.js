@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "khinkali", nom: "Khinkali (raviolis géorgiens à la viande)", cuisine: "géorgienne",
+    id: "khinkali", nom: "Khinkali (raviolis géorgiens à la viande)", cuisine: "géorgienne", type: "plat",
     difficulte: "difficile", tempsMinutes: 90, portions: 2,
     source: "Wikilivres", idSource: "Khinkali",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FKhinkali",

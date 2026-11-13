@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "thon-cru-a-la-tahitienne", nom: "Thon cru à la tahitienne (poisson cru au citron vert et lait de coco)", cuisine: "tahitienne",
+    id: "thon-cru-a-la-tahitienne", nom: "Thon cru à la tahitienne (poisson cru au citron vert et lait de coco)", cuisine: "tahitienne", type: "plat",
     difficulte: "facile", tempsMinutes: 50, portions: 2,
     source: "Wikilivres", idSource: "Thon cru à la tahitienne",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FThon_cru_%C3%A0_la_tahitienne",

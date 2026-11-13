@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "cabillaud-au-nuoc-mam", nom: "Cabillaud au nuoc-mâm", cuisine: "vietnamienne",
+    id: "cabillaud-au-nuoc-mam", nom: "Cabillaud au nuoc-mâm", cuisine: "vietnamienne", type: "plat",
     difficulte: "facile", tempsMinutes: 45, portions: 2,
     source: "Wikilivres", idSource: "Cabillaud au Nước mắm",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCabillaud_au_N%C6%B0%E1%BB%9Bc_m%E1%BA%AFm",

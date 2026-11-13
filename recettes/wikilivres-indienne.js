@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "curry-d-aubergine-a-la-poele", nom: "Curry d'aubergine à la poêle", cuisine: "indienne",
+    id: "curry-d-aubergine-a-la-poele", nom: "Curry d'aubergine à la poêle", cuisine: "indienne", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     source: "Wikilivres", idSource: "Curry d'aubergines",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCurry_d'aubergines",

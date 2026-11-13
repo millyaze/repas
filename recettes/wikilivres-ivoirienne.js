@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "claclo", nom: "Claclo (beignets de banane plantain)", cuisine: "ivoirienne",
+    id: "claclo", nom: "Claclo (beignets de banane plantain)", cuisine: "ivoirienne", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "Wikilivres", idSource: "Claclo",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FClaclo",

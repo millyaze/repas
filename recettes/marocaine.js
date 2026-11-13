@@ -5,7 +5,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "couscous-au-poulet", nom: "Couscous au poulet", cuisine: "marocaine",
+    id: "couscous-au-poulet", nom: "Couscous au poulet", cuisine: "marocaine", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     source: "TheMealDB", idSource: "52850",
     ingredients: [
@@ -24,7 +24,7 @@ ajouterRecettes([
     etapes: ["Faire revenir l'oignon haché 2 min dans l'huile.", "Ajouter le poulet coupé en morceaux et le cuire 7 à 10 min, jusqu'à ce qu'il soit doré et bien cuit.", "Ajouter le gingembre râpé et la harissa, mélanger et cuire 1 min.", "Ajouter les abricots, les pois chiches égouttés et la semoule, verser le bouillon cube dissous dans l'eau bouillante et remuer une fois.", "Couvrir et laisser gonfler 5 min hors du feu.", "Égrener la semoule à la fourchette et parsemer de coriandre."]
   },
   {
-    id: "soupe-de-carottes-au-cumin", nom: "Soupe de carottes au cumin", cuisine: "marocaine",
+    id: "soupe-de-carottes-au-cumin", nom: "Soupe de carottes au cumin", cuisine: "marocaine", type: "soupe",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     source: "TheMealDB", idSource: "53047",
     ingredients: [
@@ -42,7 +42,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 180 °C.", "Mélanger les carottes en rondelles, l'oignon émincé, l'ail, le cumin, les graines de coriandre, le sel et l'huile, puis étaler sur une plaque.", "Rôtir 10 à 12 min au four, jusqu'à ce que les carottes soient tendres.", "Mixer avec un peu d'eau jusqu'à obtenir une purée lisse.", "Verser dans une casserole avec le reste de l'eau, porter à ébullition et ajouter le garam masala.", "Hors du feu, ajouter un peu de jus de citron et servir chaud."]
   },
   {
-    id: "salade-de-pommes-de-terre-a-la-harissa", nom: "Salade de pommes de terre à la harissa", cuisine: "marocaine",
+    id: "salade-de-pommes-de-terre-a-la-harissa", nom: "Salade de pommes de terre à la harissa", cuisine: "marocaine", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     source: "TheMealDB", idSource: "52797",
     ingredients: [
@@ -61,7 +61,7 @@ ajouterRecettes([
     etapes: ["Cuire les pommes de terre 20 min dans l'eau bouillante, jusqu'à ce qu'un couteau les traverse facilement.", "Fouetter la harissa, l'huile, le jus d'un demi-citron, le sel et le poivre.", "Égoutter les pommes de terre, les couper en deux, les mélanger avec la sauce et les oignons nouveaux émincés.", "Disposer la roquette dans un saladier, ajouter les pommes de terre et mélanger.", "Ajouter la feta émiettée, la menthe ciselée et les pignons de pin."]
   },
   {
-    id: "lentilles-au-tahini", nom: "Lentilles au tahini", cuisine: "marocaine",
+    id: "lentilles-au-tahini", nom: "Lentilles au tahini", cuisine: "marocaine", type: "plat",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "TheMealDB", idSource: "52869",
     ingredients: [
@@ -82,7 +82,7 @@ ajouterRecettes([
   },
   // --- Ajoutées pour : afrique-nord ---
   {
-    id: "feuilles-de-vigne-farcies-agneau", nom: "Feuilles de vigne farcies à l'agneau, sauce tomate au gingembre", cuisine: "marocaine",
+    id: "feuilles-de-vigne-farcies-agneau", nom: "Feuilles de vigne farcies à l'agneau, sauce tomate au gingembre", cuisine: "marocaine", type: "plat",
     difficulte: "difficile", tempsMinutes: 120, portions: 2,
     source: "TheMealDB", idSource: "52782",
     ingredients: [
@@ -108,7 +108,7 @@ ajouterRecettes([
     etapes: ["Feuilles de vigne en saumure : les égoutter, les plonger 10 min dans l'eau bouillante, puis les laisser sécher sur un torchon. Retirer les queues ; recouper les grandes feuilles à environ 12 cm. (Sans feuilles de vigne : utiliser des feuilles de chou blanchies 3 min.)", "Farce : mélanger la viande, l'oignon haché, la pomme de terre râpée, le riz, la moitié du persil et de la coriandre hachés, 1 gousse d'ail écrasée, la cannelle, le clou de girofle écrasé et 1 cuillère à soupe de jus de citron. Râper 1 tomate dans le bol (jeter la peau), saler, poivrer et mélanger. Avant de l'utiliser, presser la farce et jeter le jus.", "Sauce : chauffer l'huile, faire revenir le gingembre haché et l'autre gousse d'ail 1 à 2 min sans brûler, puis ajouter les 4 autres tomates pelées et hachées, 2 cuillères à soupe de jus de citron et le sucre. Saler, poivrer et laisser mijoter 20 min.", "Tapisser le fond d'une large casserole des feuilles abîmées, puis de tranches de fenouil de 5 mm pour couvrir tout le fond.", "Poser une feuille, nervures vers le haut, mettre 2 cuillères à café de farce en bas, rabattre les côtés et rouler serré en cigare. Ranger les rouleaux serrés les uns contre les autres dans la casserole, fermeture en dessous.", "Verser la sauce par-dessus (ajouter de l'eau juste à hauteur si besoin), poser une assiette dessus pour les maintenir, couvrir et cuire 70 min à très petit frémissement : presque tout le liquide doit s'évaporer.", "Laisser tiédir un peu et servir avec des tranches de fenouil, le jus de cuisson et le reste de coriandre, avec du riz ou de la semoule."]
   },
   {
-    id: "tajine-d-agneau-abricots-courge", nom: "Tajine d'agneau aux abricots et à la courge", cuisine: "marocaine",
+    id: "tajine-d-agneau-abricots-courge", nom: "Tajine d'agneau aux abricots et à la courge", cuisine: "marocaine", type: "plat",
     difficulte: "moyen", tempsMinutes: 150, portions: 2,
     source: "TheMealDB", idSource: "52843",
     ingredients: [

@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "frita", nom: "Frita (poivrons et tomates confits, côtes poêlées)", cuisine: "algérienne",
+    id: "frita", nom: "Frita (poivrons et tomates confits, côtes poêlées)", cuisine: "algérienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "Wikilivres", idSource: "Frita",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FFrita",
@@ -26,7 +26,7 @@ ajouterRecettes([
     etapes: ["Ébouillanter les tomates, les peler, puis les épépiner en les pressant entre les mains pour retirer l'eau. Les couper en morceaux.", "Griller les poivrons (un rouge, un vert), retirer la peau et les couper grossièrement en lamelles.", "Dans une grande poêle, chauffer l'huile d'olive. Ajouter les poivrons, l'ail écrasé, le thym et le laurier. Saler, poivrer et cuire 10 min à feu moyen.", "Ajouter les tomates et cuire à couvert, à feu doux et sans remuer, jusqu'à ce que le mélange épaississe et ait la consistance d'une compote. Parsemer de persil haché.", "Pendant ce temps, cuire les côtes de porc (ou d'agneau) à feu vif dans une autre poêle, à point.", "Servir la viande nappée de frita, très chaude."]
   },
   {
-    id: "karantika", nom: "Karantika (flan de pois chiches au cumin)", cuisine: "algérienne",
+    id: "karantika", nom: "Karantika (flan de pois chiches au cumin)", cuisine: "algérienne", type: "entree",
     difficulte: "facile", tempsMinutes: 50, portions: 2,
     source: "Wikilivres", idSource: "Karantika",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FKarantika",
@@ -40,7 +40,7 @@ ajouterRecettes([
     etapes: ["Dans un grand saladier, verser la farine de pois chiches (non grillée), puis l'œuf battu, le beurre fondu, le cumin et enfin l'eau tiède.", "Mélanger au fouet et laisser reposer 10 min pour qu'il n'y ait plus de grumeaux.", "Verser dans un moule antiadhésif et cuire environ 30 min au four (180 °C), en surveillant.", "La karantika doit être ferme dessus et moelleuse au centre : vérifier avec la pointe d'un couteau.", "Passer 5 min sous le gril pour dorer le dessus."]
   },
   {
-    id: "salade-juive", nom: "Salade juive (poivrons grillés et tomates)", cuisine: "algérienne",
+    id: "salade-juive", nom: "Salade juive (poivrons grillés et tomates)", cuisine: "algérienne", type: "entree",
     difficulte: "facile", tempsMinutes: 40, portions: 2,
     source: "Wikilivres", idSource: "Salade juive",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSalade_juive",

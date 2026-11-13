@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "poulet-yassa", nom: "Poulet yassa (poulet aux oignons et à la moutarde)", cuisine: "sénégalaise",
+    id: "poulet-yassa", nom: "Poulet yassa (poulet aux oignons et à la moutarde)", cuisine: "sénégalaise", type: "plat",
     difficulte: "moyen", tempsMinutes: 120, portions: 2,
     source: "Wikilivres", idSource: "Poulet yassa",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPoulet_yassa",

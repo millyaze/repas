@@ -4,7 +4,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "salade-grecque", nom: "Salade grecque", cuisine: "méditerranéenne",
+    id: "salade-grecque", nom: "Salade grecque", cuisine: "méditerranéenne", type: "entree",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
     ingredients: [
       { id: "tomate", quantite: 2, unite: "pièce" },
@@ -18,7 +18,7 @@ ajouterRecettes([
     etapes: ["Couper les tomates et le concombre en morceaux, l'oignon en fines lamelles.", "Ajouter la feta en dés et les olives.", "Arroser d'huile d'olive, saler légèrement et mélanger."]
   },
   {
-    id: "taboule", nom: "Taboulé", cuisine: "méditerranéenne",
+    id: "taboule", nom: "Taboulé", cuisine: "méditerranéenne", type: "entree",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     ingredients: [
       { id: "semoule", quantite: 120, unite: "g" },
@@ -34,7 +34,7 @@ ajouterRecettes([
     etapes: ["Verser l'eau bouillante salée sur la semoule, couvrir 5 min puis égrainer à la fourchette.", "Couper les tomates et le concombre en petits dés, hacher la menthe et le persil.", "Mélanger le tout avec le jus du citron et l'huile d'olive.", "Laisser reposer au frais avant de servir."]
   },
   {
-    id: "chakchouka", nom: "Chakchouka", cuisine: "méditerranéenne",
+    id: "chakchouka", nom: "Chakchouka", cuisine: "méditerranéenne", type: "plat",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     ingredients: [
       { id: "oeuf", quantite: 4, unite: "pièce" },
@@ -51,7 +51,7 @@ ajouterRecettes([
     etapes: ["Faire revenir l'oignon et les poivrons émincés dans l'huile 8 min.", "Ajouter l'ail, les tomates en dés, le cumin, le paprika et le sel, mijoter 10 min.", "Creuser 4 trous dans la sauce et y casser les œufs.", "Couvrir et cuire 5 min, jusqu'à ce que les blancs soient pris. Parsemer de coriandre si tu en as."]
   },
   {
-    id: "houmous-et-pain-grille", nom: "Houmous et pain grillé", cuisine: "méditerranéenne",
+    id: "houmous-et-pain-grille", nom: "Houmous et pain grillé", cuisine: "méditerranéenne", type: "entree",
     difficulte: "facile", tempsMinutes: 10, portions: 2,
     ingredients: [
       { id: "pois-chiches-en-boite", quantite: 1, unite: "boîte" },
@@ -66,7 +66,7 @@ ajouterRecettes([
     etapes: ["Égoutter et rincer les pois chiches.", "Les mixer avec le jus du citron, l'ail, l'huile, le cumin et le sel (et le tahini si tu en as). Ajouter un peu d'eau si c'est trop épais.", "Servir avec le pain grillé."]
   },
   {
-    id: "poulet-au-citron-et-aux-olives", nom: "Poulet au citron et aux olives", cuisine: "méditerranéenne",
+    id: "poulet-au-citron-et-aux-olives", nom: "Poulet au citron et aux olives", cuisine: "méditerranéenne", type: "plat",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     ingredients: [
       { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
@@ -83,7 +83,7 @@ ajouterRecettes([
     etapes: ["Dorer le poulet en morceaux dans l'huile 5 min.", "Ajouter l'oignon émincé, l'ail et le cumin, cuire 3 min.", "Ajouter le citron en fines tranches, les olives, 100 ml d'eau et le sel, couvrir et mijoter 20 min.", "Verser 120 ml d'eau bouillante sur la semoule, couvrir 5 min, égrainer et servir avec le poulet."]
   },
   {
-    id: "couscous-de-legumes", nom: "Couscous de légumes", cuisine: "méditerranéenne",
+    id: "couscous-de-legumes", nom: "Couscous de légumes", cuisine: "méditerranéenne", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     ingredients: [
       { id: "semoule", quantite: 150, unite: "g" },
@@ -100,7 +100,7 @@ ajouterRecettes([
     etapes: ["Faire revenir l'oignon émincé dans l'huile avec le cumin.", "Ajouter les carottes et la courgette en gros morceaux, la sauce tomate, 500 ml d'eau et le bouillon cube.", "Cuire 25 min, ajouter les pois chiches égouttés 5 min avant la fin.", "Verser 150 ml d'eau bouillante sur la semoule, couvrir 5 min, égrainer.", "Servir la semoule avec les légumes et leur bouillon."]
   },
   {
-    id: "salade-nicoise", nom: "Salade niçoise", cuisine: "méditerranéenne",
+    id: "salade-nicoise", nom: "Salade niçoise", cuisine: "méditerranéenne", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     ingredients: [
       { id: "thon-en-boite", quantite: 1, unite: "boîte" },
@@ -117,7 +117,7 @@ ajouterRecettes([
     etapes: ["Cuire les œufs 10 min à l'eau bouillante et les haricots verts 8 min. Refroidir.", "Laver la salade, couper les tomates et les œufs en quartiers.", "Disposer salade, tomates, haricots, thon émietté, œufs et olives (et les anchois si tu en as).", "Assaisonner avec l'huile, le vinaigre et le sel."]
   },
   {
-    id: "courgettes-farcies-au-boeuf", nom: "Courgettes farcies au bœuf", cuisine: "méditerranéenne",
+    id: "courgettes-farcies-au-boeuf", nom: "Courgettes farcies au bœuf", cuisine: "méditerranéenne", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     ingredients: [
       { id: "courgette", quantite: 2, unite: "pièce" },
@@ -133,7 +133,7 @@ ajouterRecettes([
     etapes: ["Couper les courgettes en deux dans la longueur et les creuser. Garder la chair.", "Faire revenir l'oignon haché, le bœuf et la chair de courgette dans l'huile 8 min.", "Ajouter la sauce tomate, les herbes, le sel et le poivre.", "Remplir les courgettes, parsemer de fromage.", "Cuire 25 min au four à 190 °C."]
   },
   {
-    id: "saumon-au-four-citron-et-pommes-de-terre", nom: "Saumon au four, citron et pommes de terre", cuisine: "méditerranéenne",
+    id: "saumon-au-four-citron-et-pommes-de-terre", nom: "Saumon au four, citron et pommes de terre", cuisine: "méditerranéenne", type: "plat",
     difficulte: "facile", tempsMinutes: 40, portions: 2,
     ingredients: [
       { id: "saumon", quantite: 300, unite: "g" },
@@ -147,7 +147,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 200 °C.", "Couper les pommes de terre en petits quartiers, les mélanger avec l'huile, le sel et les herbes, enfourner 20 min.", "Ajouter le saumon et le citron en tranches dans le plat, poivrer.", "Cuire encore 12 à 15 min."]
   },
   {
-    id: "riz-aux-epinards-et-a-la-feta", nom: "Riz aux épinards et à la feta", cuisine: "méditerranéenne",
+    id: "riz-aux-epinards-et-a-la-feta", nom: "Riz aux épinards et à la feta", cuisine: "méditerranéenne", type: "plat",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     ingredients: [
       { id: "riz", quantite: 150, unite: "g" },

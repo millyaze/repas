@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "omelette-aux-champignons", nom: "Omelette aux champignons", cuisine: "française",
+    id: "omelette-aux-champignons", nom: "Omelette aux champignons", cuisine: "française", type: "plat",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "oeuf", quantite: 4, unite: "pièce" },
@@ -20,7 +20,7 @@ ajouterRecettes([
     etapes: ["Émincer les champignons et les faire dorer 5 min dans le beurre.", "Battre les œufs avec le sel et le poivre, verser sur les champignons.", "Cuire 3 min à feu moyen, parsemer de persil haché et plier l'omelette."]
   },
   {
-    id: "gratin-dauphinois", nom: "Gratin dauphinois", cuisine: "française",
+    id: "gratin-dauphinois", nom: "Gratin dauphinois", cuisine: "française", type: "accompagnement",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     ingredients: [
       { id: "pomme-de-terre", quantite: 500, unite: "g" },
@@ -34,7 +34,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 180 °C. Frotter un plat avec l'ail puis le beurrer.", "Éplucher les pommes de terre et les couper en fines rondelles.", "Les ranger dans le plat, saler, poivrer, verser la crème mélangée au lait.", "Cuire 45 min, jusqu'à ce que le dessus soit doré."]
   },
   {
-    id: "poulet-a-la-creme-et-aux-champignons", nom: "Poulet à la crème et aux champignons", cuisine: "française",
+    id: "poulet-a-la-creme-et-aux-champignons", nom: "Poulet à la crème et aux champignons", cuisine: "française", type: "plat",
     difficulte: "moyen", tempsMinutes: 35, portions: 2,
     ingredients: [
       { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
@@ -48,7 +48,7 @@ ajouterRecettes([
     etapes: ["Couper le poulet en morceaux et le dorer dans le beurre 5 min. Réserver.", "Dans la même poêle, faire revenir l'oignon émincé puis les champignons 8 min.", "Remettre le poulet, ajouter la crème, saler, poivrer.", "Laisser mijoter 10 min à feu doux."]
   },
   {
-    id: "hachis-parmentier", nom: "Hachis parmentier", cuisine: "française",
+    id: "hachis-parmentier", nom: "Hachis parmentier", cuisine: "française", type: "plat",
     difficulte: "moyen", tempsMinutes: 50, portions: 2,
     ingredients: [
       { id: "boeuf-hache", quantite: 250, unite: "g" },
@@ -63,7 +63,7 @@ ajouterRecettes([
     etapes: ["Cuire les pommes de terre épluchées 20 min à l'eau bouillante salée.", "Les écraser avec le lait chaud et le beurre pour faire une purée.", "Faire revenir l'oignon haché puis le bœuf 8 min, saler, poivrer.", "Dans un plat : la viande, la purée, le fromage. Gratiner 15 min à 200 °C."]
   },
   {
-    id: "ratatouille", nom: "Ratatouille", cuisine: "française",
+    id: "ratatouille", nom: "Ratatouille", cuisine: "française", type: "plat",
     difficulte: "moyen", tempsMinutes: 50, portions: 2,
     ingredients: [
       { id: "aubergine", quantite: 1, unite: "pièce" },
@@ -80,7 +80,7 @@ ajouterRecettes([
     etapes: ["Couper tous les légumes en dés.", "Faire revenir l'oignon et l'ail dans l'huile 3 min.", "Ajouter aubergine et poivron, cuire 10 min, puis courgette et tomates.", "Ajouter les herbes, saler, poivrer, couvrir et mijoter 25 min."]
   },
   {
-    id: "croque-monsieur", nom: "Croque-monsieur", cuisine: "française",
+    id: "croque-monsieur", nom: "Croque-monsieur", cuisine: "française", type: "plat",
     difficulte: "facile", tempsMinutes: 15, portions: 2,
     ingredients: [
       { id: "pain-de-mie", quantite: 4, unite: "tranche" },
@@ -91,7 +91,7 @@ ajouterRecettes([
     etapes: ["Beurrer les tranches de pain de mie.", "Garnir deux tranches de jambon et de la moitié du fromage, refermer.", "Parsemer le reste du fromage dessus.", "Cuire 8 à 10 min au four à 200 °C, jusqu'à ce que ce soit doré."]
   },
   {
-    id: "soupe-poireaux-pommes-de-terre", nom: "Soupe poireaux-pommes de terre", cuisine: "française",
+    id: "soupe-poireaux-pommes-de-terre", nom: "Soupe poireaux-pommes de terre", cuisine: "française", type: "soupe",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     ingredients: [
       { id: "poireau", quantite: 2, unite: "pièce" },
@@ -106,7 +106,7 @@ ajouterRecettes([
     etapes: ["Laver et émincer les poireaux, couper les pommes de terre et l'oignon en morceaux.", "Mettre le tout dans une casserole avec l'eau et le bouillon cube.", "Cuire 25 min à petits bouillons.", "Mixer, ajouter la crème, saler et poivrer."]
   },
   {
-    id: "saucisses-aux-lentilles", nom: "Saucisses aux lentilles", cuisine: "française",
+    id: "saucisses-aux-lentilles", nom: "Saucisses aux lentilles", cuisine: "française", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     ingredients: [
       { id: "saucisse", quantite: 2, unite: "pièce" },
@@ -120,7 +120,7 @@ ajouterRecettes([
     etapes: ["Dorer les saucisses 5 min dans une cocotte. Réserver.", "Faire revenir l'oignon haché et la carotte en rondelles 3 min.", "Ajouter les lentilles rincées, l'eau et le bouillon cube.", "Remettre les saucisses, couvrir et cuire 30 min. Poivrer."]
   },
   {
-    id: "crepes-jambon-fromage", nom: "Crêpes jambon-fromage", cuisine: "française",
+    id: "crepes-jambon-fromage", nom: "Crêpes jambon-fromage", cuisine: "française", type: "plat",
     difficulte: "moyen", tempsMinutes: 30, portions: 2,
     ingredients: [
       { id: "farine", quantite: 125, unite: "g" },
@@ -134,7 +134,7 @@ ajouterRecettes([
     etapes: ["Mélanger la farine, le sel et les œufs, puis verser le lait petit à petit.", "Cuire 4 crêpes dans une poêle beurrée, 1 à 2 min par face.", "Garnir chaque crêpe d'une demi-tranche de jambon et de fromage.", "Plier et réchauffer 1 min dans la poêle pour faire fondre le fromage."]
   },
   {
-    id: "poelee-de-pommes-de-terre-aux-lardons", nom: "Poêlée de pommes de terre aux lardons", cuisine: "française",
+    id: "poelee-de-pommes-de-terre-aux-lardons", nom: "Poêlée de pommes de terre aux lardons", cuisine: "française", type: "plat",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     ingredients: [
       { id: "pomme-de-terre", quantite: 500, unite: "g" },

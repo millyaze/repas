@@ -6,7 +6,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "shawarma-de-poulet-sauce-yaourt-ail", nom: "Shawarma de poulet, sauce yaourt à l'ail et aux herbes", cuisine: "saoudienne",
+    id: "shawarma-de-poulet-sauce-yaourt-ail", nom: "Shawarma de poulet, sauce yaourt à l'ail et aux herbes", cuisine: "saoudienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 50, portions: 2,
     source: "TheMealDB", idSource: "53218",
     ingredients: [
@@ -34,7 +34,7 @@ ajouterRecettes([
     etapes: ["Couper le poulet en fines lamelles. Le mélanger dans un saladier avec 1 gousse d'ail écrasée, la coriandre moulue, 3 g de cumin, la cardamome, le piment de Cayenne, le paprika fumé, le jus d'un demi-citron, 2 cuillères à soupe d'huile, le sel et le poivre. Laisser mariner au frais au moins 1 h (une nuit, c'est encore mieux).", "Frites : couper les pommes de terre en bâtonnets, les mélanger avec 1 cuillère à soupe d'huile et une pincée de sel, et les cuire 25 à 30 min au four à 220 °C en les retournant à mi-cuisson.", "Sauce : mélanger le yaourt avec la deuxième gousse d'ail écrasée, la menthe et le persil hachés, le reste du cumin, un filet de jus de citron et une pincée de sel.", "Faire chauffer une poêle à feu vif avec un filet d'huile et y saisir le poulet en 2 fois, 5 à 8 min, jusqu'à ce qu'il soit bien doré et cuit à cœur.", "Réchauffer les pains pita à la poêle. Les tartiner de sauce, garnir de salade, d'oignon et de tomate en lamelles, de frites, de poulet et de feta émiettée, puis remettre un peu de sauce. Servir tout de suite."]
   },
   {
-    id: "kabsa-au-poulet", nom: "Kabsa (riz épicé au poulet et aux légumes)", cuisine: "saoudienne",
+    id: "kabsa-au-poulet", nom: "Kabsa (riz épicé au poulet et aux légumes)", cuisine: "saoudienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "TheMealDB", idSource: "53220",
     ingredients: [
@@ -56,7 +56,7 @@ ajouterRecettes([
     etapes: ["Dans une cocotte, faire dorer le poulet dans 1 cuillère à soupe d'huile, puis le couvrir d'environ 500 ml d'eau, ajouter le bouillon cube et laisser cuire 30 min à petits bouillons.", "Pendant ce temps, dans une autre cocotte, faire revenir dans le reste d'huile les poivrons, les carottes et les champignons coupés en petits morceaux, 10 min, jusqu'à ce qu'ils soient tendres et un peu dorés.", "Ajouter aux légumes le riz rincé, les raisins secs, le maïs égoutté, le curcuma, les épices kabsa (en épicerie orientale ; sinon du ras el hanout), le sel et le poivre. Remuer 1 min.", "Verser 450 ml du bouillon de cuisson du poulet (compléter avec de l'eau si besoin), couvrir et cuire 15 min à feu doux, jusqu'à ce que le riz ait tout absorbé.", "Poser le poulet sur le riz et passer le tout 10 min au four à 200 °C pour dorer la peau. Servir dans un grand plat."]
   },
   {
-    id: "knafeh", nom: "Knafeh (gâteau de cheveux d'ange au fromage et au sirop)", cuisine: "saoudienne",
+    id: "knafeh", nom: "Knafeh (gâteau de cheveux d'ange au fromage et au sirop)", cuisine: "saoudienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 50, portions: 2,
     source: "TheMealDB", idSource: "53216",
     ingredients: [
@@ -75,7 +75,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 200 °C. Couper grossièrement la pâte kadaïf (ou la pâte filo en fines lanières) et la mélanger à la main avec le beurre fondu et une pincée de colorant jaune.", "Crème au fromage : dans une casserole, mélanger le lait, le fromage frais, 15 g de sucre et la fécule. Faire chauffer en remuant jusqu'à ce que ça épaississe, couper le feu, laisser tiédir puis ajouter la mozzarella coupée en petits morceaux.", "Tasser la moitié de la pâte au fond d'un petit plat, étaler la crème au fromage par-dessus, puis couvrir avec le reste de pâte en appuyant doucement.", "Cuire 20 à 25 min au four, jusqu'à ce que le dessus soit doré et croustillant.", "Sirop : pendant la cuisson, faire bouillir l'eau avec le reste du sucre 4 à 5 min, jusqu'à ce qu'il épaississe un peu. Ajouter quelques gouttes de jus de citron et l'eau de rose.", "Verser le sirop sur le knafeh dès la sortie du four et servir tiède."]
   },
   {
-    id: "maamoul-biscuits-aux-dattes", nom: "Maamoul (biscuits de l'Aïd fourrés aux dattes)", cuisine: "saoudienne",
+    id: "maamoul-biscuits-aux-dattes", nom: "Maamoul (biscuits de l'Aïd fourrés aux dattes)", cuisine: "saoudienne", type: "dessert",
     difficulte: "moyen", tempsMinutes: 120, portions: 2,
     source: "TheMealDB", idSource: "53221",
     ingredients: [
@@ -92,7 +92,7 @@ ajouterRecettes([
     etapes: ["Pâte : travailler 60 g de beurre mou avec le sucre glace jusqu'à ce que ce soit crémeux. Ajouter l'huile, la farine et la semoule et mélanger, puis le lait tiède, sans trop pétrir. Couvrir et laisser reposer jusqu'à 1 h.", "Farce : dénoyauter les dattes et les écraser en pâte. Faire griller les graines de sésame à sec dans une poêle, ajouter le reste du beurre puis la pâte de dattes, et mélanger avec un peu d'eau jusqu'à obtenir une pâte souple (pas trop molle).", "Laisser refroidir la farce, la façonner en petites boules d'environ 15 g et les mettre 30 min au frais.", "Préchauffer le four à 180 °C. Façonner la pâte en boules de 30 g, les creuser, y mettre une boule de dattes et refermer. Aplatir légèrement (dessiner des stries à la fourchette si on n'a pas de moule à maamoul).", "Cuire 20 min, jusqu'à ce que le dessous soit doré et le dessus à peine coloré. Laisser refroidir avant de les manipuler."]
   },
   {
-    id: "mutabbaq", nom: "Mutabbaq (chaussons croustillants à la viande hachée)", cuisine: "saoudienne",
+    id: "mutabbaq", nom: "Mutabbaq (chaussons croustillants à la viande hachée)", cuisine: "saoudienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     source: "TheMealDB", idSource: "53223",
     ingredients: [
@@ -116,7 +116,7 @@ ajouterRecettes([
     etapes: ["Faire chauffer un peu d'huile dans une poêle, y faire revenir l'ail et le gingembre écrasés 1 min, puis ajouter la viande et toutes les épices (paprika, cumin, piment de la Jamaïque, curcuma, sucre, sel, poivre). Cuire jusqu'à ce que la viande soit bien cuite, puis laisser refroidir.", "Dans un saladier, mélanger la viande refroidie avec l'œuf battu, la tomate et les oignons nouveaux hachés.", "Superposer 2 feuilles de pâte filo badigeonnées de beurre fondu, mettre une portion de farce au centre et replier en carré bien fermé. Beurrer la soudure. Recommencer avec le reste (4 chaussons environ).", "Cuire les chaussons à la poêle dans un peu d'huile, sur les deux faces et les bords, jusqu'à ce qu'ils soient bien dorés (ou les badigeonner de beurre et les cuire 10 à 15 min au four à 180 °C). Servir chaud."]
   },
   {
-    id: "chakchouka-feta-epinards", nom: "Chakchouka à la feta et aux épinards", cuisine: "saoudienne",
+    id: "chakchouka-feta-epinards", nom: "Chakchouka à la feta et aux épinards", cuisine: "saoudienne", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "TheMealDB", idSource: "53219",
     ingredients: [
@@ -137,7 +137,7 @@ ajouterRecettes([
     etapes: ["Faire chauffer l'huile dans une poêle à feu moyen-vif. Ajouter l'échalote, l'ail, le céleri et le poivron hachés, et faire revenir 5 min en remuant.", "Ajouter le cumin, le sel, le poivre et la sauce tomate, et laisser cuire encore 7 min.", "Creuser 4 trous dans la sauce, y casser les œufs, couvrir et laisser cuire 8 min.", "À la fin, ajouter les épinards frais et la feta émiettée. Servir avec du pain frais."]
   },
   {
-    id: "pain-a-shawarma", nom: "Pain à shawarma (galettes à la poêle)", cuisine: "saoudienne",
+    id: "pain-a-shawarma", nom: "Pain à shawarma (galettes à la poêle)", cuisine: "saoudienne", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 45, portions: 2,
     source: "TheMealDB", idSource: "53226",
     ingredients: [
@@ -151,7 +151,7 @@ ajouterRecettes([
     etapes: ["Tamiser la farine et la mélanger avec la levure chimique, le sel, le sucre et l'huile.", "Ajouter l'eau petit à petit et pétrir 10 min, jusqu'à obtenir une pâte souple.", "Couvrir et laisser reposer 20 min.", "Partager la pâte en 2 ou 3 boules et les étaler en disques fins (on peut s'aider d'une assiette pour faire un beau rond).", "Cuire chaque galette dans une poêle bien chaude, sans matière grasse : quand elle gonfle, la retourner et cuire l'autre face 1 à 2 min. Garder les galettes au chaud dans un torchon : elles restent souples et forment une poche."]
   },
   {
-    id: "wrap-shawarma-de-boeuf-confit", nom: "Wraps shawarma au bœuf confit aux épices", cuisine: "saoudienne",
+    id: "wrap-shawarma-de-boeuf-confit", nom: "Wraps shawarma au bœuf confit aux épices", cuisine: "saoudienne", type: "plat",
     difficulte: "facile", tempsMinutes: 210, portions: 2,
     source: "TheMealDB", idSource: "53217",
     ingredients: [
@@ -177,7 +177,7 @@ ajouterRecettes([
     etapes: ["Dans une cocotte, mélanger toutes les épices (cumin, paprika, gingembre en poudre, curcuma, piment de Cayenne, cannelle, coriandre moulue, clou de girofle écrasé), le sel, l'eau, le bouillon cube émietté et le jus du citron.", "Ajouter le bœuf en gros morceaux et bien l'enrober de sauce. Couvrir et cuire 3 h au four à 150 °C (ou 8 h à la mijoteuse en position douce), jusqu'à ce que la viande s'effiloche toute seule.", "Sortir la viande, l'effilocher avec deux fourchettes en retirant le gras. Dégraisser le jus de cuisson et y remettre la viande effilochée. Garder au chaud.", "Sauce à l'ail : mélanger le yaourt avec l'ail écrasé et une pincée de sel.", "Tartiner les pains de sauce, garnir de bœuf, de tomate et de salade, rouler comme un burrito puis faire griller le wrap 1 à 2 min de chaque côté dans une poêle chaude."]
   },
   {
-    id: "lahsa-yemenite", nom: "Lahsa yéménite (œufs brouillés à la tomate et au fromage)", cuisine: "saoudienne",
+    id: "lahsa-yemenite", nom: "Lahsa yéménite (œufs brouillés à la tomate et au fromage)", cuisine: "saoudienne", type: "plat",
     difficulte: "facile", tempsMinutes: 20, portions: 2,
     source: "TheMealDB", idSource: "53225",
     ingredients: [

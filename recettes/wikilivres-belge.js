@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "carbonade-flamande", nom: "Carbonade flamande (bœuf à la bière)", cuisine: "belge",
+    id: "carbonade-flamande", nom: "Carbonade flamande (bœuf à la bière)", cuisine: "belge", type: "plat",
     difficulte: "moyen", tempsMinutes: 135, portions: 2,
     source: "Wikilivres", idSource: "Carbonade flamande",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCarbonade_flamande",
@@ -28,7 +28,7 @@ ajouterRecettes([
     etapes: ["Couper la viande (joue ou paleron de bœuf, ou porc à braiser) en gros cubes et les rouler dans la farine.", "Chauffer le saindoux (ou le beurre) dans une cocotte et y dorer les morceaux de viande.", "Ajouter l'oignon haché, le thym et le laurier (en petit bouquet), saler et poivrer. Couvrir avec 110 ml de bière brune et ajouter le sucre roux (idéalement de la cassonade blonde).", "Couvrir et laisser mijoter à feu doux 1 h 30 (plus longtemps si vous avez le temps, en rallongeant avec un peu d'eau ou de bière).", "Tartiner le pain d'épices de moutarde, l'émietter dans la sauce pour l'épaissir et cuire encore quelques minutes.", "Servir avec des frites ou des pommes de terre vapeur."]
   },
   {
-    id: "salade-liegeoise", nom: "Salade liégeoise (haricots verts, pommes de terre et lard fumé)", cuisine: "belge",
+    id: "salade-liegeoise", nom: "Salade liégeoise (haricots verts, pommes de terre et lard fumé)", cuisine: "belge", type: "plat",
     difficulte: "facile", tempsMinutes: 40, portions: 2,
     source: "Wikilivres", idSource: "Salade liégeoise",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSalade_li%C3%A9geoise",
@@ -47,7 +47,7 @@ ajouterRecettes([
     etapes: ["Cuire 500 g de pommes de terre nouvelles (rattes de préférence) avec la peau dans l'eau salée. Séparément, cuire 500 g de haricots verts fins (ou haricots princesse) dans l'eau salée en les gardant fermes.", "Frotter un grand saladier avec la gousse d'ail. Y mettre les haricots égouttés, puis les pommes de terre épluchées et coupées en cubes ou en rondelles.", "Couper 125 g de lard fumé en dés, les faire revenir à la poêle et les ajouter au saladier.", "Parsemer de persil haché et d'oignon coupé en fines rondelles (ou faire d'abord blondir l'oignon dans le gras du lard).", "Déglacer la poêle avec 2 cuillères à soupe de vinaigre (et, si on le souhaite, la moutarde à l'ancienne), laisser réduire 2 à 3 min. Verser ce vinaigre chaud dans le saladier, saler, poivrer et bien mélanger."]
   },
   {
-    id: "tourteline", nom: "Tourteline (tarte aux poireaux et à la truite)", cuisine: "belge",
+    id: "tourteline", nom: "Tourteline (tarte aux poireaux et à la truite)", cuisine: "belge", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "Wikilivres", idSource: "Tourteline",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FTourteline",

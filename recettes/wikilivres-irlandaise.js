@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "coddle", nom: "Coddle (ragoût dublinois de saucisses, bacon et pommes de terre)", cuisine: "irlandaise",
+    id: "coddle", nom: "Coddle (ragoût dublinois de saucisses, bacon et pommes de terre)", cuisine: "irlandaise", type: "plat",
     difficulte: "facile", tempsMinutes: 90, portions: 2,
     source: "Wikilivres", idSource: "Coddle",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCoddle",

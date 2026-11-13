@@ -7,7 +7,7 @@
 // ============================================================
 ajouterRecettes([
   {
-    id: "calzone-aux-aubergines", nom: "Calzone aux aubergines", cuisine: "italienne",
+    id: "calzone-aux-aubergines", nom: "Calzone aux aubergines", cuisine: "italienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,
     source: "Wikilivres", idSource: "Pizza Calzone aux aubergines",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPizza_Calzone_aux_aubergines",
@@ -25,7 +25,7 @@ ajouterRecettes([
     etapes: ["Couper l'aubergine en petits dés, les mettre dans une passoire, les saupoudrer de sel et les laisser dégorger 20 min. Les rincer.", "Faire revenir l'oignon émincé et l'ail haché dans l'huile d'olive. Ajouter l'aubergine, les tomates séchées en lamelles, l'origan et le poivre, et laisser mijoter une vingtaine de minutes.", "Préchauffer le four à 235 °C. Couper la pâte (environ 250 g de pâte à pain) en deux et étaler chaque morceau en cercle au rouleau.", "Mettre la garniture sur une moitié de chaque cercle, rabattre la pâte et souder les bords en appuyant.", "Poser les calzones sur une plaque huilée et cuire 20 min."]
   },
   {
-    id: "gnocchi-de-pommes-de-terre", nom: "Gnocchi de pommes de terre", cuisine: "italienne",
+    id: "gnocchi-de-pommes-de-terre", nom: "Gnocchi de pommes de terre", cuisine: "italienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 70, portions: 2,
     source: "Wikilivres", idSource: "Gnocchi",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FGnocchi",
@@ -40,7 +40,7 @@ ajouterRecettes([
     etapes: ["Cuire 700 g de pommes de terre avec la peau dans l'eau bouillante (ou au four, pour une pâte moins humide et moins collante), puis les éplucher et les écraser au presse-purée.", "Mélanger la purée avec 140 g de farine (1/5 du poids des pommes de terre), l'œuf et un filet d'huile d'olive.", "Former une grosse boule, puis façonner de petits cylindres d'environ 2 cm de long et les poser côte à côte.", "Écraser légèrement chaque cylindre avec une fourchette pour lui donner sa forme.", "Cuire les gnocchis dans une grande casserole d'eau salée : ils sont cuits quand ils remontent à la surface."]
   },
   {
-    id: "pates-au-thon-a-la-tomate", nom: "Pâtes au thon à la tomate", cuisine: "italienne",
+    id: "pates-au-thon-a-la-tomate", nom: "Pâtes au thon à la tomate", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "Wikilivres", idSource: "Pâtes au thon",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FP%C3%A2tes_au_thon",
@@ -58,7 +58,7 @@ ajouterRecettes([
     etapes: ["Émincer finement l'oignon. Le faire fondre à feu doux dans l'huile d'olive jusqu'à ce qu'il soit transparent.", "Ajouter le piment de Cayenne émietté, puis le thon (à l'huile d'olive de préférence). Cuire 3 min, puis ajouter la sauce tomate et laisser mijoter à feu doux.", "Pendant ce temps, cuire les pâtes (penne de préférence) selon le paquet et les égoutter.", "Mélanger les pâtes et la sauce, assaisonner de sel, de poivre du moulin et de parmesan. Servir aussitôt."]
   },
   {
-    id: "pates-aux-poivrons", nom: "Pâtes aux poivrons", cuisine: "italienne",
+    id: "pates-aux-poivrons", nom: "Pâtes aux poivrons", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "Wikilivres", idSource: "Pâtes aux poivrons",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FP%C3%A2tes_aux_poivrons",
@@ -73,7 +73,7 @@ ajouterRecettes([
     etapes: ["Faire revenir l'ail haché dans l'huile d'olive, ajouter les poivrons (jaune, orange, rouge) en fines lamelles, saler et poivrer.", "Laisser mijoter à couvert pour garder le jus des poivrons.", "Pendant ce temps, cuire les pâtes selon le paquet, les égoutter et les mélanger aux poivrons. Servir aussitôt."]
   },
   {
-    id: "pizza-au-chevre-et-aux-lardons", nom: "Pizza au chèvre et aux lardons", cuisine: "italienne",
+    id: "pizza-au-chevre-et-aux-lardons", nom: "Pizza au chèvre et aux lardons", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     source: "Wikilivres", idSource: "Pizza au chèvre et aux lardons",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPizza_au_ch%C3%A8vre_et_aux_lardons",
@@ -87,7 +87,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 200 °C.", "Étaler la pâte à pizza et la couvrir de tomates concassées.", "Répartir les lardons crus.", "Couper la bûche de chèvre en rondelles et les répartir régulièrement (environ 3 rondelles par quart de pizza). Râper le parmesan par-dessus.", "Cuire environ 15 min au four."]
   },
   {
-    id: "pizza-au-thon-et-au-comte", nom: "Pizza au thon et au comté", cuisine: "italienne",
+    id: "pizza-au-thon-et-au-comte", nom: "Pizza au thon et au comté", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
     source: "Wikilivres", idSource: "Pizza au thon",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPizza_au_thon",
@@ -100,7 +100,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 200 °C.", "Étaler la pâte dans un plat et la garnir de tomates concassées.", "Émietter le thon égoutté à la fourchette et le répartir sur la pizza.", "Râper le comté et en saupoudrer la pizza.", "Cuire 20 min au four."]
   },
   {
-    id: "pizza-au-tofu-et-aux-champignons", nom: "Pizza au tofu et aux champignons", cuisine: "italienne",
+    id: "pizza-au-tofu-et-aux-champignons", nom: "Pizza au tofu et aux champignons", cuisine: "italienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 120, portions: 2,
     source: "Wikilivres", idSource: "Pizza au tofu et aux champignons",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPizza_au_tofu_et_aux_champignons",
@@ -120,7 +120,7 @@ ajouterRecettes([
     etapes: ["Quelques heures à l'avance, faire mariner le tofu écrasé avec les tomates en morceaux et un peu d'origan.", "Pâte : mélanger la farine, 20 ml d'huile d'olive, 100 ml d'eau tiède, la levure et une pincée de sel. Pétrir jusqu'à obtenir une pâte lisse et élastique. Laisser lever 1 h au chaud sous un torchon.", "Faire revenir les champignons hachés dans le reste de l'huile d'olive. Saler, poivrer et réserver.", "Étaler la pâte dans un moule à pizza huilé, la napper des tomates au tofu, puis répartir les champignons et les tomates séchées (à l'huile) coupées en morceaux.", "Saupoudrer d'origan et cuire 15 min dans le four préchauffé à 220 °C."]
   },
   {
-    id: "pizza-aux-moules-et-au-curry", nom: "Pizza aux moules et au curry", cuisine: "italienne",
+    id: "pizza-aux-moules-et-au-curry", nom: "Pizza aux moules et au curry", cuisine: "italienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 50, portions: 2,
     source: "Wikilivres", idSource: "Pizza aux moules",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPizza_aux_moules",
@@ -138,7 +138,7 @@ ajouterRecettes([
     etapes: ["Gratter les moules et les laver à grande eau.", "Les cuire dans une casserole avec l'échalote ciselée, le persil haché, le vin blanc et le curry, jusqu'à ce qu'elles s'ouvrent. Les décortiquer.", "Faire une sauce avec le jus de cuisson et la crème. Elle doit être épaisse : ajouter un peu de maïzena si besoin. Y verser les moules.", "Étaler la pâte dans une tourtière, répartir la sauce aux moules et ajouter la mozzarella en dés.", "Cuire 15 à 20 min au four à 220 °C."]
   },
   {
-    id: "pizza-aux-poivrons-et-au-chorizo", nom: "Pizza aux poivrons et au chorizo", cuisine: "italienne",
+    id: "pizza-aux-poivrons-et-au-chorizo", nom: "Pizza aux poivrons et au chorizo", cuisine: "italienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 55, portions: 2,
     source: "Wikilivres", idSource: "Pizza aux poivrons",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPizza_aux_poivrons",
@@ -155,7 +155,7 @@ ajouterRecettes([
     etapes: ["Couper les poivrons (un rouge, un jaune) et l'oignon en lanières. Garder 4 lanières de poivron jaune de côté.", "Faire mijoter le reste des poivrons et l'oignon 30 min à feu doux avec l'huile.", "Étaler la pâte à pizza dans un plat et la couvrir de tomates concassées et des légumes cuits.", "Ajouter la mozzarella en dés, le comté râpé et les 4 lanières de poivron gardées.", "Cuire 15 min au four à 220 °C. Au bout de 10 min, sortir la pizza pour y poser les 10 tranches de chorizo, puis finir la cuisson."]
   },
   {
-    id: "pizza-aux-poivrons-et-au-pesto", nom: "Pizza aux poivrons et au pesto", cuisine: "italienne",
+    id: "pizza-aux-poivrons-et-au-pesto", nom: "Pizza aux poivrons et au pesto", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "Wikilivres", idSource: "Pizza aux poivrons et au pesto",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPizza_aux_poivrons_et_au_pesto",
@@ -169,7 +169,7 @@ ajouterRecettes([
     etapes: ["Préchauffer le four à 235 °C. Étaler la pâte (environ 250 g de pâte à pain) dans un moule à pizza huilé.", "Couper les poivrons (de plusieurs couleurs) en lanières et les faire revenir dans l'huile d'olive.", "Étaler le pesto sur la pâte (ou, à défaut, du basilic mixé avec de l'huile d'olive et de l'ail), répartir les poivrons et saupoudrer largement d'origan.", "Cuire 20 min au four."]
   },
   {
-    id: "pizza-campagnarde", nom: "Pizza campagnarde (jambon, champignons, comté)", cuisine: "italienne",
+    id: "pizza-campagnarde", nom: "Pizza campagnarde (jambon, champignons, comté)", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "Wikilivres", idSource: "Pizza campagnarde",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPizza_campagnarde",
@@ -184,7 +184,7 @@ ajouterRecettes([
     etapes: ["Nettoyer les champignons, les couper en lamelles dans la longueur et les faire revenir 10 min dans une casserole pour qu'ils rendent leur eau.", "Couper le jambon en carrés et râper le comté.", "Fariner un plat, y étaler la pâte et la couvrir de tomates concassées, de jambon, de champignons et de comté.", "Cuire 10 à 15 min au four à 210 °C."]
   },
   {
-    id: "poisson-au-guazzetto", nom: "Poisson au guazzetto (poêlé au vin blanc et au citron)", cuisine: "italienne",
+    id: "poisson-au-guazzetto", nom: "Poisson au guazzetto (poêlé au vin blanc et au citron)", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "Wikilivres", idSource: "Poisson au guazzetto",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPoisson_au_guazzetto",
@@ -202,7 +202,7 @@ ajouterRecettes([
     etapes: ["Vider et nettoyer le poisson entier. Garnir l'intérieur d'un brin de romarin, d'une demi-gousse d'ail coupée dans la longueur, de sel et de poivre.", "Dans une poêle (ovale de préférence), faire revenir l'autre gousse d'ail et le persil hachés dans l'huile d'olive.", "Avant que l'ail ne dore, mettre le poisson dans la poêle et le saisir rapidement des deux côtés en salant et poivrant légèrement. Verser un quart de verre de vin blanc sec.", "Couvrir et cuire à feu doux 15 à 20 min selon la taille du poisson, pour garder le jus de cuisson (le « guazzetto ») ; ajouter un tout petit peu d'eau si besoin.", "Ajouter le jus de citron juste avant de retirer du feu."]
   },
   {
-    id: "risotto-au-parmesan", nom: "Risotto au parmesan (risotto blanc)", cuisine: "italienne",
+    id: "risotto-au-parmesan", nom: "Risotto au parmesan (risotto blanc)", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "Wikilivres", idSource: "Risotto",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FRisotto",
@@ -219,7 +219,7 @@ ajouterRecettes([
     etapes: ["Préparer 500 ml de bouillon chaud avec l'eau et le bouillon cube.", "Émincer l'oignon et le faire fondre dans l'huile d'olive.", "Ajouter 150 g de riz à risotto et le faire revenir jusqu'à ce qu'il soit translucide, puis arroser avec 50 ml de vin blanc sec.", "Quand le vin est réduit, ajouter le bouillon chaud louche par louche, en attendant que chaque louche soit absorbée. La cuisson prend environ 18 min.", "Hors du feu, incorporer la noix de beurre et le parmesan râpé, puis couvrir 2 min avant de servir : le risotto devient bien crémeux."]
   },
   {
-    id: "risotto-au-poulet", nom: "Risotto au poulet", cuisine: "italienne",
+    id: "risotto-au-poulet", nom: "Risotto au poulet", cuisine: "italienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     source: "Wikilivres", idSource: "Risotto au poulet",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FRisotto_au_poulet",
@@ -239,7 +239,7 @@ ajouterRecettes([
     etapes: ["Préparer 500 ml de bouillon de volaille chaud avec l'eau et le bouillon cube. Couper le blanc de poulet en fines lanières.", "Dans une casserole à fond épais, faire revenir l'oignon (ou l'échalote) haché dans l'huile. Dès qu'il commence à blondir, ajouter le poulet et le faire rissoler.", "Ajouter 125 ml de vin blanc et les tomates pelées coupées en morceaux, puis laisser cuire 10 min à feu doux.", "Ajouter 150 g de riz à risotto (arborio, carnaroli ou vialone nano), mélanger et cuire 2 min. Incorporer ensuite le bouillon chaud petit à petit, jusqu'à ce que le riz n'absorbe plus de liquide. Saler et poivrer.", "Servir dans un plat, saupoudré de persil haché."]
   },
   {
-    id: "risotto-au-saumon-et-au-parmesan", nom: "Risotto au saumon et au parmesan", cuisine: "italienne",
+    id: "risotto-au-saumon-et-au-parmesan", nom: "Risotto au saumon et au parmesan", cuisine: "italienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
     source: "Wikilivres", idSource: "Risotto de saumon",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FRisotto_de_saumon",
@@ -255,7 +255,7 @@ ajouterRecettes([
     etapes: ["Éplucher et hacher l'oignon, le faire revenir 5 min dans une poêle avec l'huile.", "Ajouter le riz (rond) et remuer jusqu'à ce qu'il devienne nacré.", "Verser le vin blanc et mélanger.", "Ajouter environ 100 ml de fumet de poisson chaud et remuer. Quand le riz a tout absorbé, en remettre, et ainsi de suite jusqu'à ce que le riz soit cuit.", "Ajouter la chair de saumon coupée en dés et cuire 5 min.", "Ajouter le parmesan râpé, laisser reposer quelques minutes et servir."]
   },
   {
-    id: "spaghetti-au-jambon-de-parme", nom: "Spaghetti au jambon de Parme", cuisine: "italienne",
+    id: "spaghetti-au-jambon-de-parme", nom: "Spaghetti au jambon de Parme", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "Wikilivres", idSource: "Spaghetti au jambon de Parme",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSpaghetti_au_jambon_de_Parme",
@@ -270,7 +270,7 @@ ajouterRecettes([
     etapes: ["Émincer les petits oignons et les faire roussir dans l'huile d'olive.", "Cuire les spaghettis dans une casserole d'eau bouillante.", "Couper le jambon blanc en dés, l'ajouter aux oignons et cuire 5 min.", "Ajouter les pâtes égouttées et le parmesan en copeaux, mélanger et couvrir avec les tranches de jambon de Parme. Mettre un couvercle et laisser 5 min hors du feu avant de servir."]
   },
   {
-    id: "spaghettis-au-basilic", nom: "Spaghettis au basilic", cuisine: "italienne",
+    id: "spaghettis-au-basilic", nom: "Spaghettis au basilic", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 135, portions: 2,
     source: "Wikilivres", idSource: "Spaghettis au basilic",
     lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSpaghettis_au_basilic",
