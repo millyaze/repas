@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine algérienne, reprises de Wikilivres (4 recettes, pour 2 personnes)
+// RECETTES : cuisine algérienne, reprises de Wikilivres (5 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
@@ -22,6 +22,21 @@ ajouterRecettes([
       { id: "lait", quantite: 20, unite: "ml" }
     ],
     etapes: ["Préchauffer le four à 180 °C. Mélanger la farine et le sucre, faire un puits.", "Y verser le beurre fondu, un œuf entier, le sel et la levure délayée dans un peu d'eau. Mélanger, puis ajouter 30 g de graines de sésame.", "Ajouter le lait tiédi et pétrir environ 15 minutes, jusqu'à obtenir une pâte élastique.", "Former des boules de la taille d'une mandarine (environ 5) et les poser sur une plaque beurrée.", "Badigeonner avec le second œuf battu et saupoudrer du reste de sésame.", "Laisser reposer une demi-heure, puis cuire 20 à 30 minutes."]
+  },
+  {
+    id: "cocas", nom: "Cocas (petits chaussons algériens)", cuisine: "algérienne", type: "entree",
+    difficulte: "moyen", tempsMinutes: 50, portions: 2,
+    source: "Wikilivres", idSource: "Cocas",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCocas",
+    ingredients: [
+      { id: "farine", quantite: 150, unite: "g" },
+      { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "beurre", quantite: 40, unite: "g" },
+      { id: "huile-de-tournesol", quantite: 15, unite: "ml" },
+      { id: "lait", quantite: 15, unite: "ml" },
+      { id: "sel", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Battre l'œuf. Mettre la farine dans un saladier avec du sel, ajouter l'huile, le beurre en petits morceaux et la moitié de l'œuf, puis mouiller avec le lait.", "Rouler la pâte en boule et la laisser reposer 30 minutes.", "L'étaler très finement sur un plan de travail fariné et découper des cercles de 15 cm.", "Garnir le centre de chaque cercle de frita (voir la recette), de soubressade ou de chakchouka.", "Refermer comme un chausson en appuyant bien sur les bords, puis dorer avec le reste de l'œuf battu.", "Poser les cocas sur une plaque couverte de papier aluminium et cuire 20 à 30 minutes au four chaud (environ 180 °C).", "Surveiller de près : les cocas ne doivent pas foncer, ni noircir en dessous. Dès que la coloration commence, les sortir et les laisser refroidir sur une grille.", "À manger froid ou légèrement tiède, dans les 24 heures."]
   },
   {
     id: "frita", nom: "Frita (poivrons et tomates confits, côtes poêlées)", cuisine: "algérienne", type: "plat",

@@ -25,24 +25,28 @@ const FAMILLES = {
   porc: ["jambon", "lardons", "saucisse", "cote-de-porc", "poitrine-de-porc", "filet-mignon-de-porc",
     "porc-hache", "chorizo", "jambon-cru", "bacon", "boudin-noir", "saindoux", "jambonneau", "kabanos",
     "spam-jambon-en-boite", "epaule-de-porc", "travers-de-porc", "kielbasa", "poitrine-fumee",
-    "saucisse-chinoise", "saucisse-aux-choux", "pied-de-porc", "mandu-raviolis-coreens", "feuille-de-gelatine"],
+    "saucisse-chinoise", "saucisse-aux-choux", "pied-de-porc", "mandu-raviolis-coreens", "feuille-de-gelatine",
+    "pancetta", "pansette", "saucisson-a-cuire", "greubons"],
 
   // Autres viandes (volaille comprise)
   viande: ["blanc-de-poulet", "boeuf-hache", "cuisse-de-poulet", "steak-de-boeuf", "cotes-de-boeuf-galbi",
     "poulet-entier", "pilons-de-poulet", "souris-d-agneau", "blanc-de-dinde", "agneau-hache", "gigot-d-agneau",
     "cotelettes-d-agneau", "boeuf-a-braiser", "rognons", "corned-beef", "filet-de-boeuf", "roti-de-boeuf",
     "epaule-d-agneau", "dinde-hachee", "jarret-de-veau", "cuisse-de-canard", "queue-de-boeuf",
-    "viande-de-chevre", "poitrine-de-boeuf", "lapin", "magret-de-canard", "escalope-de-veau"],
+    "viande-de-chevre", "poitrine-de-boeuf", "lapin", "magret-de-canard", "escalope-de-veau",
+    "mouton-hache", "canard-entier", "epaule-de-veau", "pintade", "collier-d-agneau", "caneton", "fond-de-veau"],
 
   // Poissons et produits qui en contiennent (le kimchi et la sauce Worcestershire en contiennent)
   poisson: ["saumon", "thon-en-boite", "anchois", "galettes-de-poisson", "anchois-seches", "poisson-blanc",
     "truite", "haddock-fume", "sardines", "cabillaud", "sardines-en-boite", "morue-salee", "vivaneau",
     "eglefin", "filets-de-hareng", "saumon-fume", "thon-frais", "bar", "thon-a-la-catalane-en-boite",
-    "sauce-poisson", "fumet-de-poisson", "sauce-worcestershire", "kimchi"],
+    "sauce-poisson", "fumet-de-poisson", "sauce-worcestershire", "kimchi",
+    "rouget-barbet", "hareng-frais", "anguille"],
 
   // Coquillages, crustacés, calmars
   fruitsDeMer: ["crevettes", "calmar", "moules", "palourdes", "fruits-de-mer-surgeles", "huitres",
-    "crevettes-sechees", "pate-de-crevettes", "sauce-huitre"],
+    "crevettes-sechees", "pate-de-crevettes", "sauce-huitre",
+    "noix-de-saint-jacques", "escargots"],
 
   // Lait et produits qui en contiennent
   laitage: ["lait", "beurre", "creme-fraiche", "yaourt-nature", "fromage-rape", "parmesan", "mozzarella",
@@ -51,17 +55,20 @@ const FAMILLES = {
     "confiture-de-lait", "lait-concentre-sucre", "pecorino", "comte", "gruyere", "fromage-blanc",
     "vacherin-fribourgeois", "brousse", "chocolat-au-lait", "glace-a-la-vanille", "barres-chocolatees",
     "pesto", "pain-naan", "pate-feuilletee", "pate-brisee", "biscuits-secs", "pudding-de-noel",
-    "lait-concentre-non-sucre", "lait-caille", "speculoos"],
+    "lait-concentre-non-sucre", "lait-caille", "speculoos",
+    "maroilles", "gorgonzola", "tomme-fraiche", "munster", "cancoillotte", "bleu-de-gex", "beaufort", "creme-double", "creme-catalane"],
 
   // Œufs et produits qui en contiennent
-  oeuf: ["oeuf", "mayonnaise", "meringues", "creme-anglaise", "glace-a-la-vanille", "pudding-de-noel"],
+  oeuf: ["oeuf", "mayonnaise", "meringues", "creme-anglaise", "glace-a-la-vanille", "pudding-de-noel",
+    "creme-catalane", "pate-a-rouleaux-imperiaux"],
 
   // Miel
   miel: ["miel", "pain-d-epices"],
 
   // Alcools (les vinaigres ne sont pas comptés)
   alcool: ["vin-blanc", "sake", "mirin", "vin-de-shaoxing", "vin-rouge", "biere", "cognac", "xeres",
-    "liqueur-d-orange", "rhum", "cidre", "pudding-de-noel", "biere-stout", "creme-de-menthe-blanche"],
+    "liqueur-d-orange", "rhum", "cidre", "pudding-de-noel", "biere-stout", "creme-de-menthe-blanche",
+    "vin-doux-muscat"],
 
   // Blé, orge, seigle, avoine et produits qui en contiennent
   gluten: ["pates", "feuilles-de-lasagne", "nouilles-chinoises", "semoule", "pain", "pain-de-mie",
@@ -72,10 +79,12 @@ const FAMILLES = {
     "cannelloni", "ciabatta", "farine-de-seigle", "petit-pain", "pate-a-pizza", "feuille-de-brick",
     "pain-d-epices", "farine-a-levure-incorporee", "biere", "pudding-de-noel", "barres-chocolatees",
     "pate-kadaif", "levure-maltee", "sauce-hoisin", "gochujang", "pate-de-haricots-noirs-chunjang",
-    "sauce-worcestershire", "galettes-de-poisson", "speculoos", "farine-complete", "biere-stout"],
+    "sauce-worcestershire", "galettes-de-poisson", "speculoos", "farine-complete", "biere-stout",
+    "seitan", "poudre-de-gluten", "corn-flakes", "pate-a-rouleaux-imperiaux", "fond-de-veau"],
 
   // Viandes interdites en casher, en plus du porc
-  nonCasher: ["lapin"]
+  nonCasher: ["lapin",
+    "anguille"]
 };
 
 // Les régimes proposés dans le filtre, dans l'ordre du menu.

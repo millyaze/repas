@@ -1,11 +1,29 @@
 // ============================================================
-// RECETTES : cuisine marocaine, reprises de Wikilivres (5 recettes, pour 2 personnes)
+// RECETTES : cuisine marocaine, reprises de Wikilivres (7 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
 // ============================================================
 ajouterRecettes([
+  {
+    id: "baghrir", nom: "Baghrir (crêpes mille trous à la semoule)", cuisine: "marocaine", type: "petit-dejeuner",
+    difficulte: "moyen", tempsMinutes: 30, portions: 2,
+    source: "Wikilivres", idSource: "Baghrir",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FBaghrir",
+    ingredients: [
+      { id: "semoule", quantite: 150, unite: "g" },
+      { id: "farine", quantite: 60, unite: "g" },
+      { id: "sel", quantite: 3, unite: "g" },
+      { id: "levure-chimique", quantite: 5, unite: "g" },
+      { id: "levure-de-boulanger", quantite: 5, unite: "g" },
+      { id: "sucre", quantite: 5, unite: "g" },
+      { id: "eau", quantite: 500, unite: "ml" },
+      { id: "miel", quantite: 20, unite: "g", optionnel: true },
+      { id: "beurre", quantite: 20, unite: "g", optionnel: true }
+    ],
+    etapes: ["Diluer la levure de boulanger dans un peu d'eau tiède avec le sucre.", "Dans un grand récipient, mélanger la semoule, la farine, le sel et la levure chimique.", "Mixer ce mélange avec le reste de l'eau tiède et la levure diluée, jusqu'à obtenir une pâte lisse.", "Laisser lever 1 heure.", "Juste avant la cuisson, remuer la pâte avec une louche.", "Verser une petite louche de pâte dans une poêle lisse bien chaude.", "Cuire la crêpe sur une seule face, sans la retourner, jusqu'à ce que des trous se forment et que le dessus soit sec.", "Servir chaud, avec du miel et du beurre fondu, ou selon les goûts du sirop à la fleur d'oranger ou un peu d'huile d'olive et de sucre."]
+  },
   {
     id: "batbout", nom: "Batbouts (petits pains marocains cuits à la poêle)", cuisine: "marocaine", type: "accompagnement",
     difficulte: "facile", tempsMinutes: 30, portions: 2,
@@ -56,6 +74,32 @@ ajouterRecettes([
       { id: "poivre", quantite: 1, unite: "g" }
     ],
     etapes: ["Peler et hacher l'ail et l'oignon. Rincer la coriandre, la sécher dans du papier absorbant et la ciseler.", "Dans une poêle, chauffer l'huile d'olive et faire revenir l'ail et l'oignon.", "Quand ils colorent, ajouter la coriandre puis les œufs un par un, sans cesser de mélanger.", "Ajouter la viande et le cumin. Saler, poivrer et cuire encore 10 min en mélangeant bien.", "Couper les feuilles de brick en deux. Déposer une cuillerée de farce sur chaque moitié et rouler en forme de gros cigare.", "Chauffer l'huile de friture dans une poêle et frire les briouats jusqu'à ce qu'ils soient bien dorés. Les égoutter sur du papier absorbant avant de servir."]
+  },
+  {
+    id: "couscous-a-l-agneau", nom: "Couscous à l'agneau et aux légumes", cuisine: "marocaine", type: "plat",
+    difficulte: "moyen", tempsMinutes: 110, portions: 2,
+    source: "Wikilivres", idSource: "Couscous",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCouscous",
+    ingredients: [
+      { id: "collier-d-agneau", quantite: 650, unite: "g", ou: { id: "epaule-d-agneau", quantite: 650, unite: "g" } },
+      { id: "semoule", quantite: 300, unite: "g" },
+      { id: "carotte", quantite: 2, unite: "pièce" },
+      { id: "courgette", quantite: 1, unite: "pièce" },
+      { id: "navet", quantite: 1, unite: "pièce" },
+      { id: "pomme-de-terre", quantite: 100, unite: "g" },
+      { id: "pois-chiches-en-boite", quantite: 1, unite: "boîte" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "concentre-de-tomates", quantite: 10, unite: "g" },
+      { id: "ras-el-hanout", quantite: 2, unite: "g" },
+      { id: "harissa", quantite: 5, unite: "g" },
+      { id: "raisins-secs", quantite: 20, unite: "g" },
+      { id: "huile-d-olive", quantite: 30, unite: "ml" },
+      { id: "persil", quantite: 10, unite: "g", optionnel: true },
+      { id: "coriandre", quantite: 10, unite: "g", optionnel: true },
+      { id: "eau", quantite: 700, unite: "ml" },
+      { id: "sel", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Dans un couscoussier (ou une grande marmite), dorer l'agneau dans un peu d'huile d'olive.", "Ajouter l'oignon émincé et le faire revenir, puis les raisins secs juste après.", "Ajouter le concentré de tomate, la harissa et 500 ml d'eau. Quand ça bout, remuer et remettre la viande.", "Laisser cuire 5 minutes, couvrir d'eau et cuire encore 20 minutes en écumant.", "Éplucher les légumes. Couper les carottes, le navet et les pommes de terre en 4 morceaux, puis les ajouter avec les pois chiches égouttés et le ras el hanout. Laisser bouillir 15 minutes.", "Étaler la semoule dans un grand plat, saler, huiler et mélanger. Ajouter un peu d'eau peu à peu en mélangeant pour qu'elle l'absorbe.", "Mettre la semoule dans la partie haute du couscoussier, sur la marmite, et fermer en nouant un linge mouillé autour. Cuire 30 minutes à partir du moment où la vapeur traverse la semoule. Sans couscoussier, la couvrir d'eau bouillante salée à hauteur, couvrir 5 minutes et l'égrainer à la fourchette.", "Étaler la semoule dans un plat, ajouter un peu d'huile et d'eau et l'égrainer, puis rectifier l'assaisonnement.", "Ajouter les courgettes coupées dans la sauce, avec le persil et la coriandre, et cuire encore une quinzaine de minutes pendant que la semoule termine sa cuisson à la vapeur.", "Servir la semoule avec la viande, les légumes et le bouillon."]
   },
   {
     id: "feves-au-cumin", nom: "Fèves au cumin", cuisine: "marocaine", type: "accompagnement",

@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine britannique, reprises de Wikilivres (5 recettes, pour 2 personnes)
+// RECETTES : cuisine britannique, reprises de Wikilivres (6 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
@@ -42,6 +42,21 @@ ajouterRecettes([
       { id: "eau", quantite: 200, unite: "ml" }
     ],
     etapes: ["Pressez le citron.", "Dans une casserole, chauffez doucement le rhum, le sucre, le jus de citron et l'eau (environ 10 cl par verre), sans faire bouillir.", "Versez dans deux verres à grog et servez très chaud."]
+  },
+  {
+    id: "pie-au-bacon-et-aux-oeufs", nom: "Pie au bacon et aux œufs", cuisine: "britannique", type: "plat",
+    difficulte: "moyen", tempsMinutes: 45, portions: 2,
+    source: "Wikilivres", idSource: "Pie anglaise",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPie_anglaise",
+    ingredients: [
+      { id: "pate-feuilletee", quantite: 2, unite: "pièce" },
+      { id: "oeuf", quantite: 3, unite: "pièce" },
+      { id: "bacon", quantite: 4, unite: "tranche" },
+      { id: "gruyere", quantite: 60, unite: "g" },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Préchauffer le four à 220 °C. Poser une pâte feuilletée au fond d'un petit plat et la faire remonter sur les bords. La pâte en trop se garde pour une autre fois.", "Parsemer un peu de gruyère râpé au fond, puis casser les œufs dessus et crever les jaunes de la moitié d'entre eux. Ne pas mélanger.", "Saler, poivrer, ajouter du gruyère, étaler les tranches de bacon, puis remettre du gruyère.", "Couvrir avec la seconde pâte, faire un petit trou au milieu pour laisser sortir la vapeur et souder les bords avec la pâte du dessous.", "Cuire environ 25 minutes."]
   },
   {
     id: "sauce-a-la-menthe", nom: "Sauce à la menthe (sauce britannique pour l'agneau)", cuisine: "britannique", type: "sauce",

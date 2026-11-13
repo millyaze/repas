@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine indienne, reprises de Wikilivres (5 recettes, pour 2 personnes)
+// RECETTES : cuisine indienne, reprises de Wikilivres (7 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
@@ -73,5 +73,42 @@ ajouterRecettes([
       { id: "pistaches", quantite: 12, unite: "g" }
     ],
     etapes: ["Mélanger le lait concentré non sucré, le lait concentré sucré, la crème, la poudre d'amandes et la moitié des pistaches concassées.", "Verser dans deux ramequins ou petits moules coniques.", "Faire prendre au congélateur 3 à 4 heures.", "Démouler dans une assiette, inciser en croix sur le dessus, verser un peu de crème autour et décorer avec le reste des pistaches."]
+  },
+  {
+    id: "pakoras-d-oignons", nom: "Pakoras d'oignons (beignets à la farine de pois chiches)", cuisine: "indienne", type: "entree",
+    difficulte: "facile", tempsMinutes: 45, portions: 2,
+    source: "Wikilivres", idSource: "Pakora",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPakora",
+    ingredients: [
+      { id: "farine-de-pois-chiches", quantite: 125, unite: "g" },
+      { id: "levure-chimique", quantite: 1, unite: "g" },
+      { id: "oignon", quantite: 2, unite: "pièce" },
+      { id: "citron-vert", quantite: 1, unite: "pièce" },
+      { id: "huile-de-tournesol", quantite: 100, unite: "ml" },
+      { id: "eau", quantite: 100, unite: "ml" },
+      { id: "sel", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Couper les oignons en rondelles.", "Tamiser la farine de pois chiches dans un bol, ajouter la levure et le sel (et, si on en a, une cuillère à café de graines de nigelle).", "Verser l'eau peu à peu jusqu'à obtenir la consistance d'une pâte à beignets.", "Chauffer l'huile dans une poêle antiadhésive.", "Passer les rondelles d'oignon dans la pâte, bien enrobées, puis les faire dorer dans l'huile chaude.", "Les égoutter sur du papier absorbant avant de servir, avec un zeste de citron vert pour plus de saveur."]
+  },
+  {
+    id: "poulet-gingembre-cardamome", nom: "Poulet au gingembre et à la cardamome (sauce aux amandes et au yaourt)", cuisine: "indienne", type: "plat",
+    difficulte: "moyen", tempsMinutes: 50, portions: 2,
+    source: "Wikilivres", idSource: "Poulet au gingembre et cardamome",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPoulet_au_gingembre_et_cardamome",
+    ingredients: [
+      { id: "blanc-de-poulet", quantite: 2, unite: "pièce" },
+      { id: "poudre-d-amandes", quantite: 40, unite: "g" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "gingembre", quantite: 10, unite: "g" },
+      { id: "cardamome", quantite: 1, unite: "g" },
+      { id: "cumin", quantite: 3, unite: "g" },
+      { id: "yaourt-nature", quantite: 1, unite: "pièce" },
+      { id: "creme-fraiche", quantite: 50, unite: "ml", optionnel: true },
+      { id: "eau", quantite: 25, unite: "ml" },
+      { id: "huile-de-tournesol", quantite: 10, unite: "ml" },
+      { id: "riz", quantite: 200, unite: "g" }
+    ],
+    etapes: ["Éplucher le gingembre et le mixer avec l'ail, la poudre d'amandes et l'eau.", "Couper le poulet en dés et le faire dorer 7 à 8 minutes dans un filet d'huile. Le réserver.", "Dans la même poêle, faire revenir l'oignon émincé avec les capsules de cardamome pendant une dizaine de minutes. Retirer la cardamome.", "Ajouter le mélange mixé et le cumin, en remuant sans arrêt.", "Incorporer le yaourt cuillère par cuillère, puis la crème fraîche si on en met et le poulet.", "Laisser cuire 10 minutes à feu doux.", "Servir avec le riz cuit à l'eau."]
   }
 ]);

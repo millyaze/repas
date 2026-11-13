@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine polonaise, reprises de Wikilivres (3 recettes, pour 2 personnes)
+// RECETTES : cuisine polonaise, reprises de Wikilivres (4 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
@@ -36,6 +36,22 @@ ajouterRecettes([
       { id: "beurre", quantite: 10, unite: "g" }
     ],
     etapes: ["Mélangez la farine et les œufs jusqu'à obtenir une pâte à nouilles.", "Étalez-la au rouleau en une feuille très fine.", "Hachez les fruits confits et mélangez-les avec les raisins secs.", "Dans un saladier, mélangez 200 ml de crème fraîche avec les fruits confits hachés et les raisins.", "Recouvrez la feuille de pâte de ce mélange, roulez-la et formez une couronne.", "Posez le gâteau sur un plat à four beurré et nappez-le du reste de crème (environ 130 ml).", "Faites cuire 2 heures à four moyen."]
+  },
+  {
+    id: "placki-ziemniaczane", nom: "Placki ziemniaczane (galettes de pommes de terre)", cuisine: "polonaise", type: "accompagnement",
+    difficulte: "facile", tempsMinutes: 30, portions: 2,
+    source: "Wikilivres", idSource: "Placki ziemniaczane",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPlacki_ziemniaczane",
+    ingredients: [
+      { id: "pomme-de-terre", quantite: 500, unite: "g" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "farine", quantite: 30, unite: "g" },
+      { id: "huile-de-tournesol", quantite: 45, unite: "ml" },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Éplucher les pommes de terre et l'oignon, puis les mixer (ou les râper finement).", "Ajouter l'œuf et mélanger.", "Ajouter la farine pour épaissir la pâte, saler, poivrer et bien mélanger.", "Former de petites galettes d'environ 1/2 cm d'épaisseur.", "Les cuire dans une poêle avec l'huile chaude, des deux côtés.", "Les déposer sur du papier absorbant avant de servir."]
   },
   {
     id: "sernik", nom: "Sernik (gâteau polonais au fromage blanc et aux raisins secs)", cuisine: "polonaise", type: "dessert",

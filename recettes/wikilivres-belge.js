@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine belge, reprises de Wikilivres (7 recettes, pour 2 personnes)
+// RECETTES : cuisine belge, reprises de Wikilivres (9 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
@@ -45,6 +45,21 @@ ajouterRecettes([
     etapes: ["Dans un saladier, mélangez d'abord les ingrédients secs (farine, sucre, sel, levure) au fouet.", "Ajoutez les œufs et le beurre fondu, puis mélangez doucement jusqu'à obtenir une pâte homogène, encore un peu grumeleuse.", "Ajoutez la bière en plusieurs fois pour éviter qu'elle mousse trop, en mélangeant à chaque fois, jusqu'à ce que la pâte ne contienne plus de grumeaux. Le choix de la bière change beaucoup le goût. Parfumez, si vous voulez, d'un peu d'eau de fleur d'oranger ou de rhum.", "Quand le gaufrier est bien chaud, versez la pâte et laissez cuire environ 5 minutes par gaufre. Elles deviennent croustillantes quelques minutes après la cuisson.", "Elles se gardent 1 à 2 jours dans une boîte hermétique ou du papier aluminium : elles ramollissent mais restent très bonnes."]
   },
   {
+    id: "matoufet", nom: "Matoufet (omelette belge aux lardons, servie sur du pain)", cuisine: "belge", type: "plat",
+    difficulte: "facile", tempsMinutes: 25, portions: 2,
+    source: "Wikilivres", idSource: "Matoufet",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FMatoufet",
+    ingredients: [
+      { id: "oeuf", quantite: 3, unite: "pièce" },
+      { id: "farine", quantite: 50, unite: "g" },
+      { id: "lait", quantite: 500, unite: "ml" },
+      { id: "lardons", quantite: 200, unite: "g" },
+      { id: "pain", quantite: 4, unite: "tranche" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Mélanger les œufs et la farine, ajouter le lait et un peu de poivre. Fouetter vigoureusement pour obtenir un mélange homogène.", "Dans une poêle, faire fondre le gras des lardons, le retirer, puis cuire les lardons sans ajouter de matière grasse.", "Quand les lardons sont cuits, verser le mélange dessus.", "Cuire à feu vif quelques minutes, en remuant constamment.", "Servir sur des tranches de pain."]
+  },
+  {
     id: "palets-de-dame", nom: "Palets de dame (biscuits belges aux raisins, glacés au citron)", cuisine: "belge", type: "dessert",
     difficulte: "facile", tempsMinutes: 35, portions: 2,
     source: "Wikilivres", idSource: "Palet de dame",
@@ -60,6 +75,26 @@ ajouterRecettes([
       { id: "citron", quantite: 1, unite: "pièce" }
     ],
     etapes: ["Préchauffez le four à 200 °C (thermostat 7).", "Lavez les raisins et laissez-les tremper dans le rhum.", "Dans un saladier, fouettez le beurre mou avec le sucre. Ajoutez 1 œuf entier (séparez le second : gardez-en le blanc pour le glaçage), la farine et les raisins avec leur rhum.", "Déposez la pâte en petits tas aplatis, en forme de macarons, sur une plaque beurrée et farinée ou sur du papier sulfurisé. Laissez de la place entre les palets : ils s'étalent à la cuisson. Cela donne environ 10 palets.", "Enfournez environ 10 minutes, jusqu'à ce que les biscuits soient dorés. À la sortie du four, laissez-les refroidir sur une grille.", "Glaçage : faites chauffer à feu très doux le sucre glace, le blanc d'œuf légèrement battu et le jus d'un demi-citron, pendant 5 minutes, en remuant vigoureusement pour éviter les grumeaux.", "Nappez les palets de glaçage et laissez refroidir jusqu'à ce qu'il durcisse."]
+  },
+  {
+    id: "ragout-de-boeuf-au-sirop-de-liege", nom: "Ragoût de bœuf au sirop de Liège", cuisine: "belge", type: "plat",
+    difficulte: "facile", tempsMinutes: 115, portions: 2,
+    source: "Wikilivres", idSource: "Ragoût de bœuf",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FRago%C3%BBt_de_b%C5%93uf",
+    ingredients: [
+      { id: "boeuf-a-braiser", quantite: 500, unite: "g" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "beurre", quantite: 25, unite: "g" },
+      { id: "concentre-de-tomates", quantite: 15, unite: "g" },
+      { id: "sirop-de-liege", quantite: 50, unite: "ml", ou: { id: "melasse", quantite: 70, unite: "g" } },
+      { id: "carotte", quantite: 1, unite: "pièce" },
+      { id: "bouillon-cube", quantite: 1, unite: "pièce" },
+      { id: "eau", quantite: 250, unite: "ml" },
+      { id: "vin-rouge", quantite: 250, unite: "ml" },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Saisir les morceaux de bœuf au beurre dans une cocotte.", "Ajouter l'oignon émincé et la carotte en rondelles, puis assaisonner.", "Ajouter le concentré de tomate, mélanger, puis verser le sirop de Liège et mélanger de nouveau.", "Mouiller avec le bouillon (le cube délayé dans 250 ml d'eau chaude) et le vin rouge.", "Laisser réduire la sauce, puis cuire 1 h 30."]
   },
   {
     id: "salade-liegeoise", nom: "Salade liégeoise (haricots verts, pommes de terre et lard fumé)", cuisine: "belge", type: "plat",
