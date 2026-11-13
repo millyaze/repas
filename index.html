@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 42;
+    const VERSION = 43;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
     // Mode clair ou sombre, choisi avant l'affichage (voir js/apparence.js)
     document.write('<script src="js/apparence.js?v=' + VERSION + '"><\/script>');
@@ -172,6 +172,15 @@
           <input type="range" id="filtre-completion" min="0" max="100" step="5" value="50">
         </label>
         </details>
+        <!-- Mon matériel de cuisine : je coche ce que j'ai (js/materiel.js) -->
+        <details id="mon-materiel" class="plus-filtres">
+        <summary><span id="titre-materiel">Mon matériel</span></summary>
+        <p class="aide">Décoche ce que tu n'as pas : les recettes qui en ont besoin sont cachées. (Deviné d'après les étapes de chaque recette ; retenu sur cet appareil.)</p>
+        <div id="liste-materiel" class="liste-materiel"></div>
+        <label class="case case-montrer">
+          <input type="checkbox" id="materiel-montrer"> Montrer quand même ces recettes (avec un avertissement)
+        </label>
+        </details>
         <p id="aide-favoris" class="vide" hidden>Aucun favori pour l'instant : ouvre une recette et touche « Ajouter aux favoris ».</p>
       </section>
 
@@ -269,7 +278,7 @@
       ["data/ingredients.js", "js/ingredient.js", "js/analyse.js", "data/stock-test.js", "js/memoire.js", "js/stock.js", "js/scan.js", "js/synchro.js"],
       ["recettes/toutes.js"], // prépare la liste des recettes, avant les cuisines
       CUISINES.map(function (nom) { return "recettes/" + nom + ".js"; }),
-      ["js/regime.js", "js/cuisiner.js", "js/courses.js", "js/recettes.js", "js/onglets.js"]
+      ["js/regime.js", "js/materiel.js", "js/cuisiner.js", "js/courses.js", "js/recettes.js", "js/onglets.js"]
     );
 
     // Chargement de chaque fichier avec le numéro de version

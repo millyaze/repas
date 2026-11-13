@@ -121,6 +121,9 @@ function preparerFiltres() {
     changerFiltre();
   });
 
+  // Bloc « Mon matériel » : cases à cocher (js/materiel.js)
+  preparerMateriel(changerFiltre);
+
   // Bloc « Plus de filtres » : ouvert d'office si un de ses filtres est déjà réglé
   // (ex. curseur retenu à 30 %), pour ne pas cacher un filtre oublié
   const filtreActif = element("filtre-type").value || element("filtre-regime").value ||
@@ -169,6 +172,8 @@ function passeLesFiltres(recette) {
   if (difficulte && recette.difficulte !== difficulte) return false;
   if (temps && recette.tempsMinutes > Number(temps)) return false;
   if (element("filtre-favoris").checked && favoris.indexOf(recette.id) === -1) return false;
+  // Matériel que je n'ai pas (js/materiel.js)
+  if (cacheeParMateriel(recette)) return false;
   return true;
 }
 
@@ -334,6 +339,12 @@ function creerCarteRecette(analyse) {
   if (perimes.length > 0) {
     const noms = perimes.map(function (u) { return u.nom.toLowerCase(); });
     resume.appendChild(creer("span", "etiquette bientot", "Périmé, à vérifier : " + noms.join(", ")));
+  }
+
+  // Matériel que je n'ai pas (recette montrée « quand même » : js/materiel.js)
+  const sansMateriel = materielManquant(recette);
+  if (sansMateriel.length > 0) {
+    resume.appendChild(creer("span", "etiquette bientot", "Matériel manquant : " + sansMateriel.join(", ").toLowerCase()));
   }
 
   if (analyse.pourcent < 100) {
