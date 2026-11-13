@@ -286,6 +286,8 @@ button.bouton-modifier:hover { background: var(--bouton-survol); }
 /* Bloc « Mon matériel » : cases sur 2 colonnes (1 sur téléphone, voir plus bas) */
 .liste-materiel { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 12px; }
 .liste-materiel .case { margin-top: 0; }
+/* Filtrage désactivé : liste et case « Montrer quand même » grisées */
+.materiel-inactif .liste-materiel, .materiel-inactif .case-montrer { opacity: 0.45; }
 .case-montrer { border-top: 1px solid var(--bordure); padding-top: 8px; }
 /* Curseur « Complétion minimum » */
 .champ-curseur { margin-top: 8px; }

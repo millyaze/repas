@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 43;
+    const VERSION = 44;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
     // Mode clair ou sombre, choisi avant l'affichage (voir js/apparence.js)
     document.write('<script src="js/apparence.js?v=' + VERSION + '"><\/script>');
@@ -175,6 +175,9 @@
         <!-- Mon matériel de cuisine : je coche ce que j'ai (js/materiel.js) -->
         <details id="mon-materiel" class="plus-filtres">
         <summary><span id="titre-materiel">Mon matériel</span></summary>
+        <label class="case">
+          <input type="checkbox" id="materiel-actif"> Filtrer les recettes selon mon matériel
+        </label>
         <p class="aide">Décoche ce que tu n'as pas : les recettes qui en ont besoin sont cachées. (Deviné d'après les étapes de chaque recette ; retenu sur cet appareil.)</p>
         <div id="liste-materiel" class="liste-materiel"></div>
         <label class="case case-montrer">

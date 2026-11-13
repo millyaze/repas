@@ -31,6 +31,10 @@ const CLE_MATERIEL_MONTRER = "repas-materiel-montrer"; // case « Montrer quand 
 // Matériel que je n'ai pas (liste d'id), et case « Montrer quand même »
 let materielAbsent = [];
 let montrerSansMateriel = false;
+// Case « Filtrer selon mon matériel » : décochée = le matériel est ignoré (rien de caché, pas d'avertissement)
+const CLE_MATERIEL_ACTIF = "repas-materiel-actif";
+let materielActif = true;
+try { materielActif = localStorage.getItem(CLE_MATERIEL_ACTIF) !== "non"; } catch (erreur) { /* sans gravité */ }
 try {
   const retenu = JSON.parse(localStorage.getItem(CLE_MATERIEL_ABSENT) || "[]");
   if (Array.isArray(retenu)) {
@@ -77,6 +81,7 @@ function materielDeRecette(recette) {
 
 // Noms du matériel qu'il me manque pour une recette (liste vide = j'ai tout)
 function materielManquant(recette) {
+  if (!materielActif) return []; // filtrage désactivé : on fait comme si j'avais tout
   return materielDeRecette(recette)
     .filter(function (id) { return materielAbsent.indexOf(id) !== -1; })
     .map(function (id) { return MATERIELS.filter(function (m) { return m.id === id; })[0].nom; });
@@ -92,8 +97,15 @@ function cacheeParMateriel(recette) {
 // Titre du bloc : rappelle combien de matériels sont décochés
 function ecrireTitreMateriel() {
   const n = materielAbsent.length;
-  document.getElementById("titre-materiel").textContent =
-    "Mon matériel" + (n ? " (" + n + " absent" + (n > 1 ? "s" : "") + ")" : "");
+  document.getElementById("titre-materiel").textContent = "Mon matériel" +
+    (!materielActif ? " (filtre désactivé)" : n ? " (" + n + " absent" + (n > 1 ? "s" : "") + ")" : "");
+}
+
+// Filtrage désactivé : les autres cases du bloc sont grisées (mes choix sont gardés pour plus tard)
+function griserMateriel() {
+  const cases = document.querySelectorAll("#liste-materiel input, #materiel-montrer");
+  Array.prototype.forEach.call(cases, function (c) { c.disabled = !materielActif; });
+  document.getElementById("mon-materiel").classList.toggle("materiel-inactif", !materielActif);
 }
 
 // Fabrique les cases à cocher ; « siChange » est appelé à chaque changement (rafraîchit les recettes)
@@ -124,5 +136,16 @@ function preparerMateriel(siChange) {
     try { localStorage.setItem(CLE_MATERIEL_MONTRER, montrerSansMateriel ? "oui" : "non"); } catch (erreur) { /* sans gravité */ }
     siChange();
   });
+
+  const actif = document.getElementById("materiel-actif");
+  actif.checked = materielActif;
+  actif.addEventListener("change", function () {
+    materielActif = actif.checked;
+    try { localStorage.setItem(CLE_MATERIEL_ACTIF, materielActif ? "oui" : "non"); } catch (erreur) { /* sans gravité */ }
+    ecrireTitreMateriel();
+    griserMateriel();
+    siChange();
+  });
   ecrireTitreMateriel();
+  griserMateriel();
 }
