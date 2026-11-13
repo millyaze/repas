@@ -98,6 +98,8 @@ function preparerFiltres() {
   });
 
   ajouterOption(element("filtre-cuisine"), "", "Toutes");
+  // Ordre alphabétique français (les accents sont bien rangés : « égyptienne » avec les E)
+  cuisines.sort(function (a, b) { return a.localeCompare(b, "fr"); });
   cuisines.forEach(function (c) { ajouterOption(element("filtre-cuisine"), c, majuscule(c)); });
   ajouterOption(element("filtre-difficulte"), "", "Toutes");
   difficultes.forEach(function (d) { ajouterOption(element("filtre-difficulte"), d, majuscule(d)); });
