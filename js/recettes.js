@@ -29,6 +29,8 @@ function lireSeuilCompletion() {
   if (texte === null || texte === "" || isNaN(valeur) || valeur < 0 || valeur > 100) return SEUIL_INCOMPLET;
   return Math.round(valeur);
 }
+// Nom sous lequel le régime choisi est retenu dans la mémoire du navigateur
+const CLE_REGIME = "repas-regime";
 // Types de plat, dans l'ordre du menu (le « type » écrit dans chaque recette)
 const TYPES_DE_PLAT = [
   { id: "entree", nom: "Entrée" },
@@ -81,6 +83,14 @@ function preparerFiltres() {
   // Régime : calculé d'après les ingrédients (js/regime.js)
   ajouterOption(element("filtre-regime"), "", "Aucun");
   REGIMES.forEach(function (regime) { ajouterOption(element("filtre-regime"), regime.id, regime.nom); });
+  // Le régime choisi est retenu sur cet appareil (pas synchronisé, comme le curseur de complétion)
+  try {
+    const regimeRetenu = localStorage.getItem(CLE_REGIME);
+    if (REGIMES.some(function (r) { return r.id === regimeRetenu; })) element("filtre-regime").value = regimeRetenu;
+  } catch (erreur) { /* sans gravité */ }
+  element("filtre-regime").addEventListener("change", function () {
+    try { localStorage.setItem(CLE_REGIME, element("filtre-regime").value); } catch (erreur) { /* sans gravité */ }
+  });
 
   ajouterOption(element("filtre-cuisine"), "", "Toutes");
   cuisines.forEach(function (c) { ajouterOption(element("filtre-cuisine"), c, majuscule(c)); });
