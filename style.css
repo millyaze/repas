@@ -3,61 +3,72 @@
    ============================================================ */
 
 /* Couleurs réutilisées partout : à changer ici pour changer l'allure.
-   Rouge = périmé ou erreur seulement ; orange = périme bientôt. */
+   Rouge = périmé ou erreur seulement ; orange = périme bientôt.
+   MODE CLAIR = style « Marché branché » : fond crème, vert et rose vifs. */
 :root {
   color-scheme: light;          /* champs de date, listes… dessinés en clair */
-  --fond: #f6f4ef;
+  --fond: #f4f1e6;
   --carte: #ffffff;
-  --texte: #23282b;
-  --texte-discret: #667076;
-  --bordure: #dedad1;
-  --accent: #2f6f4f;            /* fond des boutons principaux, onglet actif */
-  --accent-survol: #275c42;
+  --texte: #1c2a14;
+  --texte-discret: #5f5e5a;
+  --bordure: #d6dfc3;
+  --accent: #0f6e56;            /* fond des boutons principaux, onglet actif */
+  --accent-survol: #0b5a46;
   --accent-texte: #ffffff;      /* texte sur le vert */
-  --accent-lien: #2f6f4f;       /* texte vert sur fond clair (« Plus de filtres ») */
+  --accent-lien: #0f6e56;       /* texte vert sur fond clair (« Plus de filtres ») */
   --champ: #ffffff;             /* fond des cases à remplir */
   --bouton: #ffffff;            /* boutons secondaires : blancs bordés */
-  --bouton-survol: #f1eee7;
-  --bordure-bouton: #cfc9bd;
-  --barre-fond: #e7e3d9;        /* partie vide de la barre de % */
-  --focus: #7fb69a;
+  --bouton-survol: #eaf3de;
+  --bordure-bouton: #b9cf9c;
+  --barre-fond: #fbeaf0;        /* partie vide de la barre de % */
+  --focus: #5dcaa5;
   --manque: #4a5257;            /* « Manque : … » et ingrédients ✗ (gris foncé) */
   --rouge: #b3261e;
   --rouge-fond: #fdecea;
-  --orange: #a15c00;
-  --orange-fond: #fff3dc;
-  --succes: #1d4a33;
-  --succes-fond: #e6f2ea;
+  --orange: #7a4a00;
+  --orange-fond: #faeeda;
+  --succes: #085041;
+  --succes-fond: #e1f5ee;
   --ombre: 0 4px 16px rgba(0, 0, 0, 0.18);
+  --neon-vert: #1d9e75;         /* contour des recettes réalisables */
+  --neon-rose: #d4537e;         /* contour des recettes presque réalisables */
+  --vert-fond: #e1f5ee;         /* pastille des recettes réalisables */
+  --rose: #993556;              /* petits titres entre crochets, % de complétion */
+  --rose-fond: #fbeaf0;         /* pastille des recettes presque réalisables */
 }
 
-/* MODE SOMBRE : mêmes noms, autres valeurs.
+/* MODE SOMBRE = style « Potager néon » : mêmes noms, autres valeurs (fond nuit, néons).
    Activé par js/apparence.js (réglage du téléphone, ou choix dans l'onglet Réglages). */
 :root[data-theme="sombre"] {
   color-scheme: dark;
-  --fond: #15191b;
-  --carte: #1f2528;
-  --texte: #e4e7e8;
-  --texte-discret: #9aa4a9;
-  --bordure: #343c40;
-  --accent: #2f7a55;
-  --accent-survol: #358a60;
-  --accent-texte: #ffffff;
-  --accent-lien: #7dcaa2;
-  --champ: #15191b;
-  --bouton: #2a3135;
-  --bouton-survol: #343c41;
-  --bordure-bouton: #465055;
-  --barre-fond: #343c40;
-  --focus: #7dcaa2;
-  --manque: #c2c9cc;
+  --fond: #0e0b1f;
+  --carte: #1a1535;
+  --texte: #e6f1fb;
+  --texte-discret: #afa9ec;
+  --bordure: #3c3489;
+  --accent: #5dcaa5;
+  --accent-survol: #7ad8b8;
+  --accent-texte: #04342c;
+  --accent-lien: #5dcaa5;
+  --champ: #0e0b1f;
+  --bouton: #241d47;
+  --bouton-survol: #2e2660;
+  --bordure-bouton: #534ab7;
+  --barre-fond: #3a1f3f;
+  --focus: #5dcaa5;
+  --manque: #cecbf6;
   --rouge: #ff8f85;
-  --rouge-fond: #3b2120;
-  --orange: #f2b45c;
-  --orange-fond: #3a2d16;
-  --succes: #bfe5cf;
-  --succes-fond: #1c3a2b;
-  --ombre: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --rouge-fond: #3b1a2a;
+  --orange: #fac775;
+  --orange-fond: #412402;
+  --succes: #9fe1cb;
+  --succes-fond: #04342c;
+  --ombre: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --neon-vert: #1d9e75;
+  --neon-rose: #d4537e;
+  --vert-fond: #04342c;
+  --rose: #ed93b1;
+  --rose-fond: #4b1528;
 }
 
 * { box-sizing: border-box; }
@@ -89,20 +100,32 @@ header {
   border-bottom: 1px solid var(--bordure);
   margin-bottom: 12px;
 }
-h1 { margin: 0; font-size: 1.2rem; }
+h1 { margin: 0; font-size: 1.2rem; color: var(--accent-lien); }
 /* Titres qui ne doivent pas passer sous l'en-tête collé quand la page y défile */
 h2, #message { scroll-margin-top: 110px; }
-h2 { margin: 0 0 12px; font-size: 1.1rem; }
+/* Petits titres : écriture « machine », entre crochets, en rose */
+h2 {
+  margin: 0 0 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: var(--rose);
+}
+h2::before { content: "[ "; }
+h2::after { content: " ]"; }
 .resume { margin: 4px 0 16px; color: var(--texte-discret); }
 
 /* Blocs blancs */
 .bloc {
   background: var(--carte);
   border: 1px solid var(--bordure);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 16px;
   margin-bottom: 16px;
 }
+/* Blocs des listes de recettes : pas de cadre, chaque recette est sa propre carte */
+.bloc-listes { background: none; border: none; padding: 0; }
 
 /* Bandeau de message, flottant en bas de l'écran (toucher pour fermer) */
 .message {
@@ -167,7 +190,7 @@ input, select, button {
   font: inherit;
   color: var(--texte);
   border: 1px solid var(--bordure);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 10px 12px;
   min-height: 44px; /* assez grand pour le doigt sur téléphone */
   background: var(--champ);
@@ -176,6 +199,8 @@ input, select, button {
 }
 /* Texte des champs en taille normale : en dessous, Safari sur iPhone zoome tout seul quand on touche un champ */
 input, select { font-size: 1rem; }
+/* Champs de recherche : en forme de pilule */
+input[type="search"] { border-radius: 999px; padding-left: 16px; }
 /* Textes d'exemple (« ex. Tomate ») : assez lisibles, surtout en mode sombre */
 ::placeholder { color: var(--texte-discret); opacity: 1; }
 button { width: auto; cursor: pointer; background: var(--bouton); border-color: var(--bordure-bouton); }
@@ -231,8 +256,10 @@ button.bouton-modifier:hover { background: var(--bouton-survol); }
 
 /* Onglets (Stock, Recettes) */
 .onglets { display: flex; gap: 8px; margin: 8px 0 10px; }
+/* Petit dessin de chaque onglet (dessiné dans index.html) */
+.onglet svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 /* nowrap : « Courses (12) » reste sur une seule ligne */
-.onglet { flex: 1; font-weight: 600; padding: 10px 4px; min-width: 0; white-space: nowrap; }
+.onglet { flex: 1; font-weight: 600; padding: 10px 4px; min-width: 0; white-space: nowrap; display: flex; align-items: center; justify-content: center; gap: 6px; }
 .onglet.actif { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); }
 
 /* Recettes */
@@ -260,22 +287,31 @@ button.bouton-modifier:hover { background: var(--bouton-survol); }
 .champ-curseur { margin-top: 8px; }
 .champ-curseur input { width: 100%; min-height: 44px; padding: 0; border: none; background: none; accent-color: var(--accent); cursor: pointer; }
 .bouton-favori { margin: 4px 0 8px; }
-.recette { border-top: 1px solid var(--bordure); }
-.recette:first-child { border-top: none; }
+/* Phrase d'accueil en haut de l'onglet Recettes */
+.accueil { margin: 0 0 12px; }
+.accueil-titre { margin: 0; font-size: 1.5rem; font-weight: 700; color: var(--accent-lien); }
+.accueil-texte { margin: 0; color: var(--texte-discret); }
+/* Chaque recette est une carte arrondie : contour vert si réalisable, rose si incomplète */
+.recette { background: var(--carte); border: 2px solid var(--neon-vert); border-radius: 16px; margin-bottom: 8px; }
+#liste-incompletes .recette { border-color: var(--neon-rose); }
 /* Bouton « Afficher plus » en bas d'une liste de recettes (js/recettes.js) */
 button.afficher-plus { width: 100%; margin-top: 8px; }
 .recette-resume {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  padding: 12px 28px 12px 4px;
+  display: grid;
+  grid-template-columns: 40px 1fr; /* pastille à gauche, textes à droite */
+  column-gap: 10px;
+  justify-items: start;
+  padding: 10px 30px 10px 10px;
   cursor: pointer;
   position: relative;
   list-style: none;
 }
 .recette-resume::-webkit-details-marker { display: none; }
-.recette-resume::after { content: "▾"; position: absolute; right: 6px; top: 12px; color: var(--texte-discret); }
+/* Pastille ronde avec le dessin du type de plat */
+.pastille { grid-column: 1; grid-row: 1 / span 8; align-self: center; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; background: var(--vert-fond); }
+#liste-incompletes .pastille { background: var(--rose-fond); }
+.recette-resume > :not(.pastille) { grid-column: 2; margin: 2px 0; }
+.recette-resume::after { content: "▾"; position: absolute; right: 10px; top: 12px; color: var(--texte-discret); }
 .recette[open] > .recette-resume::after { content: "▴"; }
 .recette-nom { font-weight: 600; }
 .recette-infos, .manque { font-size: 0.85rem; color: var(--texte-discret); }
@@ -291,9 +327,9 @@ button.afficher-plus { width: 100%; margin-top: 8px; }
 .etiquette.perime { background: var(--rouge-fond); color: var(--rouge); }
 .ligne-barre { display: flex; align-items: center; gap: 8px; width: 100%; }
 .barre { flex: 1; height: 10px; border-radius: 999px; background: var(--barre-fond); overflow: hidden; }
-.barre-remplie { display: block; height: 100%; background: var(--accent); }
-.pourcent { font-size: 0.85rem; font-weight: 600; font-variant-numeric: tabular-nums; }
-.recette-contenu { padding: 0 4px 12px; }
+.barre-remplie { display: block; height: 100%; background: var(--neon-rose); }
+.pourcent { font-size: 0.8rem; font-weight: 600; font-variant-numeric: tabular-nums; padding: 1px 8px; border-radius: 999px; background: var(--rose-fond); color: var(--rose); }
+.recette-contenu { padding: 0 12px 12px; }
 .recette-contenu h3 { margin: 8px 0 6px; font-size: 0.95rem; }
 .recette-ingredients { list-style: none; margin: 0; padding: 0; }
 .recette-ingredients li { padding: 2px 0; }
@@ -314,7 +350,7 @@ input.a-remplir { border-color: var(--rouge); box-shadow: 0 0 0 1px var(--rouge)
 
 /* ---------- Cuisiner et historique (js/cuisiner.js) ---------- */
 .bouton-cuisiner { margin-top: 14px; }
-.cuisiner { margin-top: 14px; padding: 12px; border: 1px solid var(--bordure); border-radius: 8px; }
+.cuisiner { margin-top: 14px; padding: 12px; border: 1px solid var(--bordure); border-radius: 12px; }
 .cuisiner h3 { margin-top: 0; }
 .cuisiner-ligne {
   display: grid;
@@ -360,10 +396,14 @@ input.a-remplir { border-color: var(--rouge); box-shadow: 0 0 0 1px var(--rouge)
     margin: 0;
     gap: 4px;
     padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
-    background: var(--fond);
+    background: var(--carte);
     border-top: 1px solid var(--bordure);
   }
-  .onglet { font-size: 0.85rem; padding: 10px 2px; }
+  /* Dessin au-dessus du mot ; l'onglet ouvert est seulement coloré */
+  .onglet { font-size: 0.75rem; padding: 4px 2px; flex-direction: column; gap: 2px; border: none; background: none; color: var(--texte-discret); }
+  .onglet:hover { background: none; }
+  .onglet svg { width: 22px; height: 22px; }
+  .onglet.actif { background: none; color: var(--accent-lien); }
   /* Place pour la barre d'onglets en bas */
   main { padding-bottom: 96px; }
   /* Message du bas : au-dessus de la barre d'onglets */

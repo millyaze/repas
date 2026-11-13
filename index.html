@@ -7,7 +7,7 @@
   <script>
     // NUMÉRO DE VERSION : le seul endroit où il est écrit.
     // À augmenter de 1 à chaque mise en ligne (il oblige les appareils à reprendre les nouveaux fichiers).
-    const VERSION = 38;
+    const VERSION = 39;
     document.write('<link rel="stylesheet" href="style.css?v=' + VERSION + '">');
     // Mode clair ou sombre, choisi avant l'affichage (voir js/apparence.js)
     document.write('<script src="js/apparence.js?v=' + VERSION + '"><\/script>');
@@ -16,12 +16,12 @@
 <body>
   <header>
     <h1>Générateur de repas</h1>
-    <!-- Onglets : voir js/onglets.js -->
+    <!-- Onglets : voir js/onglets.js (chaque onglet = un petit dessin + un mot) -->
     <nav class="onglets" aria-label="Parties de l'outil">
-      <button type="button" class="onglet" data-onglet="stock">Stock</button>
-      <button type="button" class="onglet" data-onglet="recettes">Recettes</button>
-      <button type="button" class="onglet" data-onglet="courses">Courses</button>
-      <button type="button" class="onglet" data-onglet="reglages">Réglages</button>
+      <button type="button" class="onglet" data-onglet="stock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M6 10h12M10 6v2M10 13v3"/></svg><span class="onglet-texte">Stock</span></button>
+      <button type="button" class="onglet" data-onglet="recettes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14a4 4 0 1 1 1.5-7.7 4 4 0 0 1 7 0A4 4 0 1 1 17 14v5H7zM7 17h10"/></svg><span class="onglet-texte">Recettes</span></button>
+      <button type="button" class="onglet" data-onglet="courses"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.5 11h10L20 7H6.5"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg><span class="onglet-texte">Courses</span></button>
+      <button type="button" class="onglet" data-onglet="reglages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg><span class="onglet-texte">Réglages</span></button>
     </nav>
   </header>
 
@@ -132,8 +132,13 @@
 
     <!-- ===================== ONGLET RECETTES (voir js/recettes.js) ===================== -->
     <div id="vue-recettes" hidden>
+      <!-- Phrase d'accueil : le nombre est écrit par js/recettes.js -->
+      <div class="accueil">
+        <p class="accueil-titre">Ce soir</p>
+        <p class="accueil-texte" id="accueil-texte"></p>
+      </div>
+
       <section class="bloc">
-        <h2>Filtres</h2>
         <!-- Recherche : dans le nom et les ingrédients (plusieurs mots = tous obligatoires) -->
         <label class="champ champ-recherche">Rechercher (nom ou ingrédient)
           <input type="search" id="filtre-recherche" placeholder="ex. poulet riz" autocomplete="off">
@@ -170,14 +175,14 @@
         <p id="aide-favoris" class="vide" hidden>Aucun favori pour l'instant : ouvre une recette et touche « Ajouter aux favoris ».</p>
       </section>
 
-      <section class="bloc">
+      <section class="bloc bloc-listes">
         <h2 id="titre-realisables">Réalisables maintenant</h2>
         <p class="aide">Tu as tout ce qu'il faut. Celles qui utilisent un ingrédient à utiliser vite sont en premier.</p>
         <div id="liste-realisables"></div>
         <p id="vide-realisables" class="vide" hidden></p>
       </section>
 
-      <section class="bloc">
+      <section class="bloc bloc-listes">
         <h2 id="titre-incompletes">Presque réalisables</h2>
         <p class="aide" id="aide-incompletes">Tu as au moins 50 % des ingrédients.</p>
         <div id="liste-incompletes"></div>

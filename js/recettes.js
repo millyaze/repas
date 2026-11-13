@@ -33,15 +33,20 @@ function lireSeuilCompletion() {
 const CLE_REGIME = "repas-regime";
 // Types de plat, dans l'ordre du menu (le « type » écrit dans chaque recette)
 const TYPES_DE_PLAT = [
-  { id: "entree", nom: "Entrée" },
-  { id: "soupe", nom: "Soupe" },
-  { id: "plat", nom: "Plat" },
-  { id: "accompagnement", nom: "Accompagnement" },
-  { id: "dessert", nom: "Dessert" },
-  { id: "petit-dejeuner", nom: "Petit-déjeuner" },
-  { id: "boisson", nom: "Boisson" },
-  { id: "sauce", nom: "Sauce" }
+  { id: "entree", nom: "Entrée", icone: "🥗" },
+  { id: "soupe", nom: "Soupe", icone: "🍲" },
+  { id: "plat", nom: "Plat", icone: "🍽️" },
+  { id: "accompagnement", nom: "Accompagnement", icone: "🥔" },
+  { id: "dessert", nom: "Dessert", icone: "🍰" },
+  { id: "petit-dejeuner", nom: "Petit-déjeuner", icone: "🥐" },
+  { id: "boisson", nom: "Boisson", icone: "🥤" },
+  { id: "sauce", nom: "Sauce", icone: "🥫" }
 ];
+// Petit dessin d'un type, affiché dans la pastille ronde de chaque recette
+function iconeDuType(id) {
+  const type = TYPES_DE_PLAT.filter(function (t) { return t.id === id; })[0];
+  return type ? type.icone : "🍽️";
+}
 // Nom affiché d'un type : « petit-dejeuner » -> « Petit-déjeuner »
 function nomDuType(id) {
   const type = TYPES_DE_PLAT.filter(function (t) { return t.id === id; })[0];
@@ -222,6 +227,10 @@ function afficherRecettes() {
   remplirListe("liste-incompletes", "vide-incompletes", incompletes, enRecherche
     ? "Aucune autre recette ne correspond à cette recherche et à ces filtres."
     : "Aucune recette presque réalisable avec ces filtres.");
+  // Phrase d'accueil en haut de l'onglet
+  element("accueil-texte").textContent = realisables.length === 0
+    ? "Aucune recette possible pour l'instant avec ton stock."
+    : realisables.length + (realisables.length > 1 ? " recettes possibles" : " recette possible") + " avec ton stock";
   element("titre-realisables").textContent = "Réalisables maintenant (" + realisables.length + ")";
   element("titre-incompletes").textContent = "Presque réalisables (" + incompletes.length + ")";
   element("valeur-completion").textContent = "Complétion minimum : " + seuilCompletion + " %";
@@ -301,6 +310,9 @@ function creerCarteRecette(analyse) {
 
   // --- Partie toujours visible ---
   const resume = creer("summary", "recette-resume");
+  const pastille = creer("span", "pastille", iconeDuType(recette.type));
+  pastille.setAttribute("aria-hidden", "true");
+  resume.appendChild(pastille);
   resume.appendChild(creer("span", "recette-nom", (estFavori ? "★ " : "") + recette.nom));
   resume.appendChild(creer("span", "recette-infos",
     nomDuType(recette.type) + " · " + majuscule(recette.cuisine) + " · " + recette.difficulte + " · " + recette.tempsMinutes + " min"));

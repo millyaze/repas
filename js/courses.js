@@ -96,7 +96,7 @@ function afficherCourses() {
   element("bouton-ranger").hidden = coches === 0 || rangementOuvert;
   element("bouton-ranger").textContent = "Ranger les courses cochées (" + coches + ")";
   // Le nombre d'articles restant à acheter s'affiche sur l'onglet
-  document.querySelector('.onglet[data-onglet="courses"]').textContent = "Courses" + (restants > 0 ? " (" + restants + ")" : "");
+  document.querySelector('.onglet[data-onglet="courses"] .onglet-texte').textContent = "Courses" + (restants > 0 ? " (" + restants + ")" : "");
 
   // Récapitulatif « Ranger les courses »
   const zone = element("zone-rangement");
