@@ -1,11 +1,28 @@
 // ============================================================
-// RECETTES : cuisine algérienne, reprises de Wikilivres (3 recettes, pour 2 personnes)
+// RECETTES : cuisine algérienne, reprises de Wikilivres (4 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
 // ============================================================
 ajouterRecettes([
+  {
+    id: "chrik-brioches-au-sesame", nom: "Chrik (petites brioches au sésame)", cuisine: "algérienne", type: "dessert",
+    difficulte: "moyen", tempsMinutes: 50, portions: 2,
+    source: "Wikilivres", idSource: "Chrik",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FChrik",
+    ingredients: [
+      { id: "farine", quantite: 200, unite: "g" },
+      { id: "sucre", quantite: 50, unite: "g" },
+      { id: "beurre", quantite: 40, unite: "g" },
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "levure-de-boulanger", quantite: 5, unite: "g" },
+      { id: "graines-de-sesame", quantite: 40, unite: "g" },
+      { id: "lait", quantite: 20, unite: "ml" }
+    ],
+    etapes: ["Préchauffer le four à 180 °C. Mélanger la farine et le sucre, faire un puits.", "Y verser le beurre fondu, un œuf entier, le sel et la levure délayée dans un peu d'eau. Mélanger, puis ajouter 30 g de graines de sésame.", "Ajouter le lait tiédi et pétrir environ 15 minutes, jusqu'à obtenir une pâte élastique.", "Former des boules de la taille d'une mandarine (environ 5) et les poser sur une plaque beurrée.", "Badigeonner avec le second œuf battu et saupoudrer du reste de sésame.", "Laisser reposer une demi-heure, puis cuire 20 à 30 minutes."]
+  },
   {
     id: "frita", nom: "Frita (poivrons et tomates confits, côtes poêlées)", cuisine: "algérienne", type: "plat",
     difficulte: "moyen", tempsMinutes: 60, portions: 2,

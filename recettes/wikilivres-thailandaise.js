@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine thaïlandaise, reprises de Wikilivres (1 recette, pour 2 personnes)
+// RECETTES : cuisine thaïlandaise, reprises de Wikilivres (2 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
@@ -25,5 +25,21 @@ ajouterRecettes([
       { id: "citron-vert", quantite: 1, unite: "pièce" }
     ],
     etapes: ["Cuire l'œuf 10 min pour qu'il soit dur, l'écaler. Cuire les nouilles aux œufs selon le paquet et les répartir dans 2 bols.", "Dans une casserole, chauffer le lait de coco à feu moyen et y délayer la pâte de curry jaune (ou massaman).", "Remuer doucement. Quand ça bout, ajouter l'ail haché, 500 ml de bouillon de poule (fait avec le cube), le curcuma, la sauce de poisson et 2 cuillères à café de jus de citron vert.", "Après 1 min, ajouter le porc haché (ou le poulet en petits morceaux) et cuire jusqu'à ce qu'il soit bien cuit.", "Verser la soupe sur les nouilles, ajouter un demi-œuf dur par bol et servir."]
+  },
+  {
+    id: "nam-prik-kapi", nom: "Nam prik kapi (sauce pimentée thaïlandaise aux crevettes)", cuisine: "thaïlandaise", type: "sauce",
+    difficulte: "facile", tempsMinutes: 15, portions: 2,
+    source: "Wikilivres", idSource: "Nam Prik Kapi",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FNam_Prik_Kapi",
+    ingredients: [
+      { id: "crevettes-sechees", quantite: 15, unite: "g" },
+      { id: "ail", quantite: 2, unite: "gousse" },
+      { id: "piment-frais", quantite: 2, unite: "pièce" },
+      { id: "pate-de-crevettes", quantite: 15, unite: "g" },
+      { id: "sauce-poisson", quantite: 25, unite: "ml" },
+      { id: "sucre-de-palme", quantite: 15, unite: "g", ou: { id: "cassonade", quantite: 15, unite: "g" } },
+      { id: "citron", quantite: 1, unite: "pièce" }
+    ],
+    etapes: ["Pilez finement les crevettes séchées dans un mortier. Pelez l'ail.", "Lavez les piments, retirez les graines et les membranes.", "Pilez ensemble l'ail, les piments et la pâte de crevettes.", "Ajoutez les crevettes pilées, la sauce de poisson (nam pla), le sucre de palme et le jus du citron.", "Mélangez jusqu'à obtenir une pâte lisse."]
   }
 ]);

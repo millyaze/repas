@@ -50,7 +50,8 @@ const FAMILLES = {
     "creme-anglaise", "creme-aigre", "creme-liquide", "gouda", "mascarpone", "fromage-fondu",
     "confiture-de-lait", "lait-concentre-sucre", "pecorino", "comte", "gruyere", "fromage-blanc",
     "vacherin-fribourgeois", "brousse", "chocolat-au-lait", "glace-a-la-vanille", "barres-chocolatees",
-    "pesto", "pain-naan", "pate-feuilletee", "pate-brisee", "biscuits-secs", "pudding-de-noel"],
+    "pesto", "pain-naan", "pate-feuilletee", "pate-brisee", "biscuits-secs", "pudding-de-noel",
+    "lait-concentre-non-sucre", "lait-caille", "speculoos"],
 
   // Œufs et produits qui en contiennent
   oeuf: ["oeuf", "mayonnaise", "meringues", "creme-anglaise", "glace-a-la-vanille", "pudding-de-noel"],
@@ -60,7 +61,7 @@ const FAMILLES = {
 
   // Alcools (les vinaigres ne sont pas comptés)
   alcool: ["vin-blanc", "sake", "mirin", "vin-de-shaoxing", "vin-rouge", "biere", "cognac", "xeres",
-    "liqueur-d-orange", "rhum", "cidre", "pudding-de-noel"],
+    "liqueur-d-orange", "rhum", "cidre", "pudding-de-noel", "biere-stout", "creme-de-menthe-blanche"],
 
   // Blé, orge, seigle, avoine et produits qui en contiennent
   gluten: ["pates", "feuilles-de-lasagne", "nouilles-chinoises", "semoule", "pain", "pain-de-mie",
@@ -71,7 +72,7 @@ const FAMILLES = {
     "cannelloni", "ciabatta", "farine-de-seigle", "petit-pain", "pate-a-pizza", "feuille-de-brick",
     "pain-d-epices", "farine-a-levure-incorporee", "biere", "pudding-de-noel", "barres-chocolatees",
     "pate-kadaif", "levure-maltee", "sauce-hoisin", "gochujang", "pate-de-haricots-noirs-chunjang",
-    "sauce-worcestershire", "galettes-de-poisson"],
+    "sauce-worcestershire", "galettes-de-poisson", "speculoos", "farine-complete", "biere-stout"],
 
   // Viandes interdites en casher, en plus du porc
   nonCasher: ["lapin"]

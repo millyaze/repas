@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine grecque, reprises de Wikilivres (3 recettes, pour 2 personnes)
+// RECETTES : cuisine grecque, reprises de Wikilivres (4 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
@@ -52,5 +52,22 @@ ajouterRecettes([
       { id: "beurre", quantite: 5, unite: "g" }
     ],
     etapes: ["Préchauffer le four à 250 °C. Beurrer un petit plat et y étaler la moitié de la pâte feuilletée.", "Battre l'œuf et en garder un peu pour dorer.", "Mélanger les épinards en branches, la feta coupée en morceaux (ou une bûche de chèvre) et le reste de l'œuf battu.", "Verser ce mélange sur la pâte et recouvrir avec l'autre moitié de pâte.", "Badigeonner le dessus avec l'œuf gardé de côté et cuire au four environ 45 min."]
+  },
+  {
+    id: "vassilopita", nom: "Vassilopita (gâteau grec du Nouvel An à l'orange et au cognac)", cuisine: "grecque", type: "dessert",
+    difficulte: "moyen", tempsMinutes: 50, portions: 2,
+    source: "Wikilivres", idSource: "Vassilopita",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FVassilopita",
+    ingredients: [
+      { id: "beurre", quantite: 130, unite: "g" },
+      { id: "farine", quantite: 125, unite: "g" },
+      { id: "oeuf", quantite: 3, unite: "pièce" },
+      { id: "sucre", quantite: 40, unite: "g" },
+      { id: "orange", quantite: 2, unite: "pièce" },
+      { id: "citron", quantite: 1, unite: "pièce" },
+      { id: "bicarbonate-de-soude", quantite: 3, unite: "g" },
+      { id: "cognac", quantite: 20, unite: "ml" }
+    ],
+    etapes: ["Préchauffez le four à 160 °C et beurrez un moule d'environ 18 cm avec un peu du beurre.", "Faites fondre 125 g de beurre. Pressez les oranges et un demi-citron, et ajoutez le jus au beurre fondu.", "Séparez les œufs. Battez les jaunes avec le sucre et ajoutez-les au mélange.", "Ajoutez le cognac, le bicarbonate de soude et la farine.", "Montez les blancs en neige ferme et incorporez-les délicatement (cette étape n'est pas écrite dans la page d'origine).", "Versez dans le moule et faites cuire 30 minutes à 160 °C."]
   }
 ]);

@@ -524,6 +524,22 @@ const INGREDIENTS = [
   { id: "saucisse-aux-choux",          nom: "Saucisse aux choux",          unite: "pièce" },
   { id: "pied-de-porc",                nom: "Pied de porc",                unite: "pièce" },
   { id: "vinaigre-noir-chinois",       nom: "Vinaigre noir chinois",       unite: "ml" },
+  // Wikilivres, réserve (desserts, sauces, boissons, pains)
+  { id: "speculoos",                  nom: "Spéculoos",                  unite: "g" },
+  { id: "lait-concentre-non-sucre",   nom: "Lait concentré non sucré",   unite: "g" },
+  { id: "lait-caille",                nom: "Lait caillé",                unite: "ml" },
+  { id: "farine-de-chataignes",       nom: "Farine de châtaignes",       unite: "g" },
+  { id: "creme-de-marrons",           nom: "Crème de marrons",           unite: "g" },
+  { id: "creme-de-menthe-blanche",    nom: "Crème de menthe blanche",    unite: "ml" },
+  { id: "biere-stout",                nom: "Bière stout",                unite: "ml" },
+  { id: "sucre-de-palme",             nom: "Sucre de palme",             unite: "g" },
+  { id: "farine-complete",            nom: "Farine complète",            unite: "g" },
+  { id: "sucre-vanille",              nom: "Sucre vanillé",              unite: "g" },
+  { id: "glucose",                    nom: "Glucose",                    unite: "g" },
+  { id: "gelee-de-groseilles",        nom: "Gelée de groseilles",        unite: "g" },
+  { id: "haricots-azuki",             nom: "Haricots azuki",             unite: "g" },
+  { id: "puree-de-haricots-rouges",   nom: "Purée de haricots rouges",   unite: "g" },
+  { id: "farine-de-riz-gluant",       nom: "Farine de riz gluant",       unite: "g" },
 
   // --- Ingrédients de base : jamais comptés comme manquants ---
   { id: "sel",    nom: "Sel",    unite: "g",  base: true },

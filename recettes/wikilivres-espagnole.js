@@ -1,11 +1,25 @@
 // ============================================================
-// RECETTES : cuisine espagnole, reprises de Wikilivres (8 recettes, pour 2 personnes)
+// RECETTES : cuisine espagnole, reprises de Wikilivres (11 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
 // ============================================================
 ajouterRecettes([
+  {
+    id: "bienmesabe", nom: "Bienmesabe (dessert andalou aux amandes et aux jaunes d'œufs)", cuisine: "espagnole", type: "dessert",
+    difficulte: "facile", tempsMinutes: 30, portions: 2,
+    source: "Wikilivres", idSource: "Bienmesabe",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FBienmesabe",
+    ingredients: [
+      { id: "poudre-d-amandes", quantite: 125, unite: "g" },
+      { id: "sucre", quantite: 125, unite: "g" },
+      { id: "eau", quantite: 125, unite: "ml" },
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "cannelle", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Pour 2 à 4 petites coupes. Cuire l'eau et le sucre dans une petite casserole en remuant jusqu'à obtenir un sirop, puis ôter du feu.", "Ajouter la poudre d'amandes et la cannelle, et mélanger.", "Remettre sur le feu et cuire en remuant jusqu'à ce que la préparation épaississe. Laisser tiédir.", "À part, séparer les œufs (garder les blancs pour autre chose) et battre les 2 jaunes. Les verser dans la casserole.", "Remettre sur le feu et cuire 5 minutes en remuant sans arrêt.", "Laisser refroidir avant de servir."]
+  },
   {
     id: "calmars-a-l-encre", nom: "Calmars dans leur encre (chipirones en su tinta)", cuisine: "espagnole", type: "plat",
     difficulte: "moyen", tempsMinutes: 40, portions: 2,
@@ -22,6 +36,23 @@ ajouterRecettes([
       { id: "eau", quantite: 30, unite: "ml" }
     ],
     etapes: ["Nettoyer 300 g de petits calmars frais : retirer les poches d'encre et les garder (si vos calmars sont déjà nettoyés, on trouve de l'encre en sachet chez le poissonnier). Séparer les ailes et les tentacules des corps.", "Hacher les ailes et les tentacules. Dans un bol, mixer l'encre avec un peu d'eau et une pincée de sel.", "Hacher l'ail et 5 échalotes, et les faire revenir dans une poêle avec un peu d'huile d'olive.", "Quand ils commencent à dorer, ajouter les ailes et tentacules hachés, les corps des calmars et environ 1 cuillère à soupe et demie de farine de maïs. Remuer et cuire encore un peu.", "Verser l'encre mixée et 150 ml de vin blanc, puis cuire à feu moyen 10 à 15 min."]
+  },
+  {
+    id: "coca-de-llanda", nom: "Coca de llanda (gâteau catalan à l'orange)", cuisine: "espagnole", type: "dessert",
+    difficulte: "facile", tempsMinutes: 50, portions: 2,
+    source: "Wikilivres", idSource: "Coca de llanda",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FCoca_de_llanda",
+    ingredients: [
+      { id: "farine", quantite: 130, unite: "g" },
+      { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "lait", quantite: 80, unite: "ml" },
+      { id: "sucre", quantite: 75, unite: "g" },
+      { id: "huile-d-olive", quantite: 50, unite: "ml" },
+      { id: "orange", quantite: 1, unite: "pièce" },
+      { id: "levure-chimique", quantite: 4, unite: "g" },
+      { id: "cannelle", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Pour un petit moule rectangulaire d'environ 20 cm. Huiler le moule.", "Laver l'orange, râper finement le zeste, puis presser le fruit : on doit obtenir environ 50 ml de jus.", "Mélanger le jus, le zeste, l'œuf, la farine, la levure, le lait, 65 g de sucre et l'huile d'olive.", "Verser dans le moule. Mélanger 10 g de sucre avec la cannelle et dessiner des rayures sur la pâte.", "Cuire 35 minutes à 180 °C, four préchauffé."]
   },
   {
     id: "dattes-au-chorizo-et-au-bacon", nom: "Dattes au chorizo et au bacon", cuisine: "espagnole", type: "entree",
@@ -87,6 +118,19 @@ ajouterRecettes([
       { id: "poivre", quantite: 1, unite: "g" }
     ],
     etapes: ["Faire des croûtons avec un peu du pain et les réserver.", "Piler l'ail avec une pincée de sel (ou le mixer). Émietter le reste du pain et l'ajouter.", "Verser l'huile peu à peu en remuant pour obtenir une pâte homogène. Laisser reposer 30 min.", "Laver ou éplucher les légumes (tomates, concombre, oignon, poivron rouge et vert), les épépiner si besoin. Couper un tiers des légumes en petits dés et les réserver.", "Écraser ou mixer le reste des légumes avec la pâte. Passer au chinois et allonger avec le vinaigre (de xérès de préférence) et 250 ml d'eau.", "Laisser au moins 2 h au réfrigérateur.", "Bien remuer, saler, poivrer et servir avec les croûtons et les dés de légumes."]
+  },
+  {
+    id: "mahonesa", nom: "Mahonesa (mayonnaise espagnole)", cuisine: "espagnole", type: "sauce",
+    difficulte: "facile", tempsMinutes: 5, portions: 2,
+    source: "Wikilivres", idSource: "Mahonesa",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FMahonesa",
+    ingredients: [
+      { id: "huile-d-olive", quantite: 200, unite: "ml" },
+      { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "citron", quantite: 1, unite: "pièce" },
+      { id: "sel", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Pour un petit bol de sauce. Mettre dans un récipient étroit et haut l'œuf, l'huile d'olive, quelques gouttes de jus de citron (environ 4) et le sel.", "Poser le mixeur plongeant au fond du récipient et mixer sans le bouger jusqu'à ce que l'émulsion prenne, puis le remonter doucement.", "Goûter et rectifier l'assaisonnement en sel."]
   },
   {
     id: "paella-valencienne", nom: "Paella valencienne (poulet et lapin)", cuisine: "espagnole", type: "plat",

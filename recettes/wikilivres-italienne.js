@@ -1,5 +1,5 @@
 // ============================================================
-// RECETTES : cuisine italienne, reprises de Wikilivres (17 recettes, pour 2 personnes)
+// RECETTES : cuisine italienne, reprises de Wikilivres (23 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
@@ -40,6 +40,46 @@ ajouterRecettes([
     etapes: ["Cuire 700 g de pommes de terre avec la peau dans l'eau bouillante (ou au four, pour une pâte moins humide et moins collante), puis les éplucher et les écraser au presse-purée.", "Mélanger la purée avec 140 g de farine (1/5 du poids des pommes de terre), l'œuf et un filet d'huile d'olive.", "Former une grosse boule, puis façonner de petits cylindres d'environ 2 cm de long et les poser côte à côte.", "Écraser légèrement chaque cylindre avec une fourchette pour lui donner sa forme.", "Cuire les gnocchis dans une grande casserole d'eau salée : ils sont cuits quand ils remontent à la surface."]
   },
   {
+    id: "nouilles-fraiches-maison", nom: "Nouilles fraîches maison", cuisine: "italienne", type: "accompagnement",
+    difficulte: "moyen", tempsMinutes: 25, portions: 2,
+    source: "Wikilivres", idSource: "Nouilles fraîches",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FNouilles_fra%C3%AEches",
+    ingredients: [
+      { id: "farine", quantite: 200, unite: "g" },
+      { id: "huile-de-tournesol", quantite: 10, unite: "ml" },
+      { id: "sel", quantite: 2, unite: "g" },
+      { id: "eau", quantite: 90, unite: "ml" }
+    ],
+    etapes: ["Mélanger la farine, l'huile et le sel dans un saladier, puis ajouter l'eau peu à peu jusqu'à obtenir une pâte ferme.", "Pétrir quelques minutes en ajoutant un peu de farine si la pâte colle, former une boule et laisser reposer 30 minutes au frais.", "Étaler la pâte sur 5 mm d'épaisseur environ, puis la rouler sur elle-même en tube.", "Couper des tranches fines de la largeur d'une nouille, dérouler et laisser sécher un peu.", "Cuire dans une grande casserole d'eau bouillante légèrement salée (quelques minutes, jusqu'à ce qu'elles soient tendres).", "Assaisonner à votre goût : huile d'olive, beurre, sauce tomate, ail, basilic, persil, noix..."]
+  },
+  {
+    id: "panna-cotta", nom: "Panna cotta (crème italienne vanillée à la gélatine)", cuisine: "italienne", type: "dessert",
+    difficulte: "facile", tempsMinutes: 15, portions: 2,
+    source: "Wikilivres", idSource: "Panna cotta",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPanna_cotta",
+    ingredients: [
+      { id: "creme-fraiche", quantite: 200, unite: "ml" },
+      { id: "lait", quantite: 50, unite: "ml" },
+      { id: "sucre", quantite: 40, unite: "g" },
+      { id: "sucre-vanille", quantite: 4, unite: "g" },
+      { id: "feuille-de-gelatine", quantite: 2, unite: "pièce" }
+    ],
+    etapes: ["Faites ramollir les feuilles de gélatine dans de l'eau froide (à défaut, environ 0,5 g d'agar-agar).", "Portez la crème fraîche et le lait à ébullition.", "Retirez du feu et ajoutez le sucre, le sucre vanillé et les feuilles de gélatine essorées.", "Mélangez bien et répartissez dans 2 ramequins individuels.", "Mettez au réfrigérateur pendant au moins 2 heures."]
+  },
+  {
+    id: "pate-a-raviole", nom: "Pâte à raviole (pâte fraîche à l'huile d'olive)", cuisine: "italienne", type: "accompagnement",
+    difficulte: "moyen", tempsMinutes: 20, portions: 2,
+    source: "Wikilivres", idSource: "Pâte à raviole",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FP%C3%A2te_%C3%A0_raviole",
+    ingredients: [
+      { id: "farine", quantite: 300, unite: "g" },
+      { id: "oeuf", quantite: 3, unite: "pièce" },
+      { id: "huile-d-olive", quantite: 60, unite: "ml" },
+      { id: "sel", quantite: 3, unite: "g" }
+    ],
+    etapes: ["Versez la farine sur le plan de travail, creusez un puits au centre et versez-y les œufs battus en omelette.", "Ajoutez l'huile d'olive et le sel, puis mélangez en intégrant la farine peu à peu.", "Travaillez à la main jusqu'à obtenir une pâte lisse et ferme.", "Roulez la pâte en boule, enveloppez-la dans du film alimentaire et laissez-la reposer 1 heure au frais avant de l'utiliser. Cette quantité suffit pour une trentaine de raviolis."]
+  },
+  {
     id: "pates-au-thon-a-la-tomate", nom: "Pâtes au thon à la tomate", cuisine: "italienne", type: "plat",
     difficulte: "facile", tempsMinutes: 25, portions: 2,
     source: "Wikilivres", idSource: "Pâtes au thon",
@@ -71,6 +111,22 @@ ajouterRecettes([
       { id: "pates", quantite: 200, unite: "g" }
     ],
     etapes: ["Faire revenir l'ail haché dans l'huile d'olive, ajouter les poivrons (jaune, orange, rouge) en fines lamelles, saler et poivrer.", "Laisser mijoter à couvert pour garder le jus des poivrons.", "Pendant ce temps, cuire les pâtes selon le paquet, les égoutter et les mélanger aux poivrons. Servir aussitôt."]
+  },
+  {
+    id: "pesto", nom: "Pesto maison (basilic, pignons et parmesan)", cuisine: "italienne", type: "sauce",
+    difficulte: "facile", tempsMinutes: 15, portions: 2,
+    source: "Wikilivres", idSource: "Pesto",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPesto",
+    ingredients: [
+      { id: "basilic", quantite: 30, unite: "g" },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "pignons-de-pin", quantite: 20, unite: "g" },
+      { id: "parmesan", quantite: 40, unite: "g" },
+      { id: "huile-d-olive", quantite: 80, unite: "ml" },
+      { id: "eau", quantite: 15, unite: "ml" },
+      { id: "sel", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Effeuillez le basilic, pelez l'ail et râpez le parmesan. Faites griller les pignons à sec dans une poêle.", "Mixez les feuilles de basilic, l'ail et la moitié de l'huile d'olive.", "Ajoutez les pignons, le parmesan et le reste de l'huile, puis mixez à nouveau.", "Allongez avec un peu d'eau chaude salée jusqu'à la consistance voulue. Cela donne un petit pot d'environ 150 g."]
   },
   {
     id: "pizza-au-chevre-et-aux-lardons", nom: "Pizza au chèvre et aux lardons", cuisine: "italienne", type: "plat",
@@ -253,6 +309,36 @@ ajouterRecettes([
       { id: "parmesan", quantite: 30, unite: "g" }
     ],
     etapes: ["Éplucher et hacher l'oignon, le faire revenir 5 min dans une poêle avec l'huile.", "Ajouter le riz (rond) et remuer jusqu'à ce qu'il devienne nacré.", "Verser le vin blanc et mélanger.", "Ajouter environ 100 ml de fumet de poisson chaud et remuer. Quand le riz a tout absorbé, en remettre, et ainsi de suite jusqu'à ce que le riz soit cuit.", "Ajouter la chair de saumon coupée en dés et cuire 5 min.", "Ajouter le parmesan râpé, laisser reposer quelques minutes et servir."]
+  },
+  {
+    id: "sauce-cinq-p", nom: "Sauce « cinq P » (crème, tomate, parmesan et persil)", cuisine: "italienne", type: "sauce",
+    difficulte: "facile", tempsMinutes: 10, portions: 2,
+    source: "Wikilivres", idSource: "Sauce cinq P",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSauce_cinq_P",
+    ingredients: [
+      { id: "creme-fraiche", quantite: 100, unite: "ml" },
+      { id: "concentre-de-tomates", quantite: 15, unite: "g" },
+      { id: "parmesan", quantite: 15, unite: "g" },
+      { id: "persil", quantite: 5, unite: "g" },
+      { id: "poivre", quantite: 1, unite: "g" }
+    ],
+    etapes: ["Hacher le persil.", "Mettre tous les ingrédients dans une casserole.", "Porter à ébullition puis laisser cuire à feu doux 5 minutes en remuant. Idéale sur des pâtes."]
+  },
+  {
+    id: "sauce-bolognaise-rapide", nom: "Sauce bolognaise rapide (bœuf haché, carotte et tomates)", cuisine: "italienne", type: "sauce",
+    difficulte: "facile", tempsMinutes: 30, portions: 2,
+    source: "Wikilivres", idSource: "Sauce bolognaise (2)",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSauce_bolognaise_(2)",
+    ingredients: [
+      { id: "boeuf-hache", quantite: 200, unite: "g" },
+      { id: "tomates-concassees", quantite: 400, unite: "g" },
+      { id: "carotte", quantite: 1, unite: "pièce" },
+      { id: "oignon", quantite: 1, unite: "pièce" },
+      { id: "ail", quantite: 1, unite: "gousse" },
+      { id: "huile-d-olive", quantite: 15, unite: "ml" },
+      { id: "basilic", quantite: 3, unite: "g" }
+    ],
+    etapes: ["Coupez la carotte en petits dés et faites-la cuire dans une poêle avec un peu d'huile d'olive.", "Avant la fin de cuisson de la carotte, ajoutez l'oignon et l'ail finement coupés.", "Ajoutez la viande hachée et les tomates concassées.", "Laissez cuire encore une dizaine de minutes en remuant, puis parsemez de basilic."]
   },
   {
     id: "spaghetti-au-jambon-de-parme", nom: "Spaghetti au jambon de Parme", cuisine: "italienne", type: "plat",

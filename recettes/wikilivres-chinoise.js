@@ -1,11 +1,67 @@
 // ============================================================
-// RECETTES : cuisine chinoise, reprises de Wikilivres (3 recettes, pour 2 personnes)
+// RECETTES : cuisine chinoise, reprises de Wikilivres (9 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
 // ============================================================
 ajouterRecettes([
+  {
+    id: "boulettes-de-riz-gluant-aux-haricots-rouges", nom: "Boulettes de riz gluant aux haricots rouges (dessert chinois)", cuisine: "chinoise", type: "dessert",
+    difficulte: "moyen", tempsMinutes: 30, portions: 2,
+    source: "Wikilivres", idSource: "Boulettes de riz gluant aux haricots rouges",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FBoulettes_de_riz_gluant_aux_haricots_rouges",
+    ingredients: [
+      { id: "farine-de-riz-gluant", quantite: 100, unite: "g" },
+      { id: "eau", quantite: 70, unite: "ml" },
+      { id: "puree-de-haricots-rouges", quantite: 90, unite: "g" }
+    ],
+    etapes: ["Pour une dizaine de boulettes. Mettre la farine de riz gluant dans un saladier et verser l'eau chaude petit à petit en mélangeant.", "Pétrir quelques minutes, jusqu'à obtenir une pâte de la consistance de la pâte à modeler.", "Prélever de petits morceaux de pâte, les aplatir, poser une grosse cuillère à café de purée de haricots rouges au centre, puis refermer en soudant bien, sans percer.", "Couvrir les boulettes d'un linge humide en attendant de les cuire.", "Les pocher dans une casserole d'eau frémissante. Une fois remontées à la surface, les laisser cuire encore 1 à 2 minutes."]
+  },
+  {
+    id: "brioches-vapeur-mantou", nom: "Brioches vapeur chinoises (mantou, pains cuits à la vapeur)", cuisine: "chinoise", type: "accompagnement",
+    difficulte: "moyen", tempsMinutes: 45, portions: 2,
+    source: "Wikilivres", idSource: "Brioche vapeur",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FBrioche_vapeur",
+    ingredients: [
+      { id: "farine", quantite: 225, unite: "g" },
+      { id: "eau", quantite: 110, unite: "ml" },
+      { id: "sucre", quantite: 15, unite: "g" },
+      { id: "levure-chimique", quantite: 3, unite: "g" },
+      { id: "levure-de-boulanger", quantite: 5, unite: "g" },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "huile-de-sesame", quantite: 5, unite: "ml" }
+    ],
+    etapes: ["Pour 6 petits pains. Délayer la levure de boulanger avec 1 cuillère à café de sucre dans l'eau à température ambiante. Laisser reposer 15 minutes.", "Tamiser la farine, ajouter le reste du sucre et le sel, puis verser l'eau à la levure doucement en remuant, jusqu'à obtenir un pâton. Si la pâte ne se rassemble pas, ajouter quelques cuillerées d'eau.", "Pétrir 5 à 10 minutes : la pâte doit devenir ferme, lisse et légèrement brillante.", "Huiler le fond d'un grand bol avec l'huile de sésame, y mettre la pâte et la rouler pour l'enduire. La laisser lever 1 h à 1 h 30 au chaud, jusqu'à ce qu'elle double (ou 2 à 3 heures au réfrigérateur, pour une texture plus fine).", "Étaler la pâte en ovale, saupoudrer la levure chimique et pétrir de nouveau. Ajouter un peu de farine si la pâte est trop humide.", "Former un long rouleau et le découper en 6 morceaux, puis rouler chacun en boule. Cuits ainsi, on obtient des mantou nature.", "Pour les garnir, aplatir une boule en disque de 15 cm (bords plus fins que le centre), déposer une cuillère de farce (non précisée dans la page d'origine), puis replier les bords en plis d'éventail et pincer pour fermer.", "Poser chaque brioche sur un carré de papier cuisson et laisser lever 1 heure, jusqu'à ce que la pâte soit élastique.", "Cuire à la vapeur 10 à 15 minutes, sans que les brioches se touchent.", "Retirer du feu sans soulever le couvercle pour que la vapeur retombe doucement et qu'elles ne s'affaissent pas. Servir chaud."]
+  },
+  {
+    id: "nougat-chinois", nom: "Nougat chinois (caramel au sésame et aux cacahuètes)", cuisine: "chinoise", type: "dessert",
+    difficulte: "moyen", tempsMinutes: 55, portions: 2,
+    source: "Wikilivres", idSource: "Nougat chinois",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FNougat_chinois",
+    ingredients: [
+      { id: "sucre", quantite: 200, unite: "g" },
+      { id: "graines-de-sesame", quantite: 50, unite: "g" },
+      { id: "citron", quantite: 1, unite: "pièce" },
+      { id: "miel", quantite: 15, unite: "g" },
+      { id: "cacahuetes", quantite: 25, unite: "g" },
+      { id: "eau", quantite: 250, unite: "ml" }
+    ],
+    etapes: ["Pour une quinzaine de petits carrés. Mélanger le sucre, l'eau et le jus du citron dans une casserole à fond épais.", "Porter à frémissement, puis baisser le feu et cuire environ 40 minutes, jusqu'à obtenir un sirop caramélisé épais et doré.", "Ajouter le miel et les cacahuètes, puis verser dans un petit moule recouvert de papier cuisson.", "Laisser refroidir complètement et durcir au moins 6 heures.", "Découper en petits carrés et les rouler dans les graines de sésame."]
+  },
+  {
+    id: "pate-a-wonton", nom: "Pâte à wonton (carrés de pâte fraîche)", cuisine: "chinoise", type: "accompagnement",
+    difficulte: "facile", tempsMinutes: 30, portions: 2,
+    source: "Wikilivres", idSource: "Pâte wonton",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FP%C3%A2te_wonton",
+    ingredients: [
+      { id: "farine", quantite: 125, unite: "g" },
+      { id: "oeuf", quantite: 1, unite: "pièce" },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "eau", quantite: 40, unite: "ml" }
+    ],
+    etapes: ["Pour une vingtaine de carrés de pâte. Tamiser la farine avec le sel et creuser un puits.", "Battre légèrement l'œuf, le verser dans le puits et mélanger.", "Ajouter un peu d'eau froide, mouiller les mains et pétrir jusqu'à obtenir une pâte lisse.", "Laisser reposer 30 minutes à 1 heure au réfrigérateur, dans un récipient couvert.", "Fariner le plan de travail et abaisser la pâte très finement : elle doit être en partie transparente.", "Couper en bandes de 5 à 8 cm de large, fariner légèrement et les empiler. Découper en carrés.", "Couvrir les carrés d'un torchon humide : la pâte est prête à être garnie."]
+  },
   {
     id: "pieds-de-porc-au-vinaigre-et-gingembre", nom: "Pieds de porc au vinaigre noir et au gingembre", cuisine: "chinoise", type: "plat",
     difficulte: "difficile", tempsMinutes: 120, portions: 2,
@@ -38,6 +94,18 @@ ajouterRecettes([
     etapes: ["Couper 500 g d'épaule de porc en longues bandes épaisses, pour qu'elles gardent leur forme à la cuisson.", "Piquer la viande à la fourchette : elle sera plus tendre et prendra mieux la marinade.", "Mélanger la sauce soja (moitié foncée, moitié ordinaire si possible), la sauce d'huître, le vin de Shaoxing (ou du xérès), le miel, la sauce hoisin et le cinq-épices.", "Enrober complètement la viande de cette marinade, couvrir et laisser au réfrigérateur plusieurs heures, idéalement toute une nuit.", "Préchauffer le four à 230 °C et couvrir un plat de papier aluminium. Suspendre la viande si possible, ou poser les morceaux sur le plat sans les entasser.", "Rôtir environ 20 min, jusqu'à ce que la viande soit bien cuite, en la badigeonnant au moins deux fois de marinade pour former une croûte rouge caramélisée.", "Laisser refroidir la viande suspendue ou sur une grille, puis servir."]
   },
   {
+    id: "puree-sucree-de-haricots-rouges", nom: "Purée sucrée de haricots rouges azuki (pâte de haricots)", cuisine: "chinoise", type: "dessert",
+    difficulte: "facile", tempsMinutes: 185, portions: 2,
+    source: "Wikilivres", idSource: "Purée de haricots rouges",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FPur%C3%A9e_de_haricots_rouges",
+    ingredients: [
+      { id: "haricots-azuki", quantite: 80, unite: "g", ou: { id: "haricots-rouges-secs", quantite: 80, unite: "g" } },
+      { id: "sucre", quantite: 65, unite: "g" },
+      { id: "eau", quantite: 150, unite: "ml" }
+    ],
+    etapes: ["À commencer la veille. Pour environ 230 g de purée. Faire tremper les haricots azuki dans de l'eau plusieurs heures.", "Le lendemain, rincer abondamment et égoutter les haricots. Les mettre dans une marmite avec le sucre et l'eau.", "Porter à ébullition, puis couvrir et laisser cuire à feu doux au moins 3 heures, en veillant à ce qu'il reste de l'eau.", "Mixer les haricots une fois bien cuits. Si la purée est trop épaisse, ajouter un peu d'eau bouillante.", "Laisser refroidir : la purée est prête à être utilisée ou mangée telle quelle."]
+  },
+  {
     id: "riz-cantonais", nom: "Riz cantonais", cuisine: "chinoise", type: "plat",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
     source: "Wikilivres", idSource: "Riz cantonais",
@@ -55,5 +123,17 @@ ajouterRecettes([
       { id: "sel", quantite: 2, unite: "g" }
     ],
     etapes: ["Mettre 100 g de riz (thaï ou basmati) dans une casserole et le couvrir de 200 ml d'eau bouillante salée (2 fois son volume). Couvrir et porter à ébullition sur feu doux, en remuant de temps en temps avec une spatule en bois.", "Quand il ne reste presque plus d'eau, fermer le couvercle le plus hermétiquement possible (au besoin avec un poids dessus) et laisser cuire encore 10 min sur feu très doux.", "Pendant ce temps, couper en très petits dés 100 g de porc (échine), les saucisses chinoises (ou du jambon cru) et ¼ de poivron rouge. Les faire revenir à la poêle dans le saindoux avec quelques petits pois.", "Battre l'œuf et le cuire en omelette très fine dans une poêle antiadhésive, puis la couper en petits morceaux.", "Quand la viande est bien rissolée, arroser de sauce soja, incorporer le riz cuit puis les morceaux d'omelette. Servir."]
+  },
+  {
+    id: "soupe-sucree-de-haricots-rouges", nom: "Soupe sucrée de haricots rouges azuki (dessert chinois)", cuisine: "chinoise", type: "dessert",
+    difficulte: "facile", tempsMinutes: 185, portions: 2,
+    source: "Wikilivres", idSource: "Soupe sucrée de haricots rouges",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FSoupe_sucr%C3%A9e_de_haricots_rouges",
+    ingredients: [
+      { id: "haricots-azuki", quantite: 60, unite: "g", ou: { id: "haricots-rouges-secs", quantite: 60, unite: "g" } },
+      { id: "eau", quantite: 350, unite: "ml" },
+      { id: "sucre", quantite: 35, unite: "g" }
+    ],
+    etapes: ["À commencer la veille. Faire tremper les haricots azuki dans de l'eau pendant plusieurs heures.", "Les rincer abondamment, puis les mettre dans une marmite avec l'eau et porter à ébullition.", "Ajouter le sucre (de canne en cristaux si possible), couvrir et laisser cuire à feu doux au moins 3 heures.", "Se mange tiède ou froid, à la cuillère."]
   }
 ]);

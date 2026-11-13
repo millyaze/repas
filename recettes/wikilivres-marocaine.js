@@ -1,11 +1,42 @@
 // ============================================================
-// RECETTES : cuisine marocaine, reprises de Wikilivres (3 recettes, pour 2 personnes)
+// RECETTES : cuisine marocaine, reprises de Wikilivres (5 recettes, pour 2 personnes)
 // Source : fr.wikibooks.org (Livre de cuisine), licence CC BY-SA : chaque recette garde
 // le lien vers sa page d'origine (lienSource), affiché en bas de la recette.
 // Textes adaptés par Claude. Même format que recettes/espagnole.js (+ lienSource).
 // « ou » = remplaçant accepté quand l'ingrédient d'origine manque.
 // ============================================================
 ajouterRecettes([
+  {
+    id: "batbout", nom: "Batbouts (petits pains marocains cuits à la poêle)", cuisine: "marocaine", type: "accompagnement",
+    difficulte: "facile", tempsMinutes: 30, portions: 2,
+    source: "Wikilivres", idSource: "Batbout",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FBatbout",
+    ingredients: [
+      { id: "farine", quantite: 50, unite: "g" },
+      { id: "semoule", quantite: 125, unite: "g" },
+      { id: "levure-de-boulanger", quantite: 4, unite: "g" },
+      { id: "eau", quantite: 100, unite: "ml" },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "sucre", quantite: 5, unite: "g" }
+    ],
+    etapes: ["Pour environ 6 batbouts. Dans un bol, délayer la levure et le sucre avec un peu d'eau tiède et laisser gonfler 5 minutes.", "Dans un plat, mélanger la farine, la semoule, le sel et la levure activée.", "Ajouter le reste de l'eau petit à petit en pétrissant, puis laisser reposer 30 minutes.", "Dégazer la pâte, former des boules de même taille et les aplatir.", "Laisser reposer 1 heure.", "Cuire à feu moyen dans une poêle, environ 5 minutes de chaque côté."]
+  },
+  {
+    id: "bouches-de-dames", nom: "Bouches de dames (gâteau moelleux aux amandes et à l'orange)", cuisine: "marocaine", type: "dessert",
+    difficulte: "moyen", tempsMinutes: 45, portions: 2,
+    source: "Wikilivres", idSource: "Bouches de dames",
+    lienSource: "https://fr.wikibooks.org/wiki/Livre_de_cuisine%2FBouches_de_dames",
+    ingredients: [
+      { id: "oeuf", quantite: 2, unite: "pièce" },
+      { id: "sucre", quantite: 65, unite: "g" },
+      { id: "poudre-d-amandes", quantite: 65, unite: "g" },
+      { id: "farine", quantite: 10, unite: "g" },
+      { id: "orange", quantite: 1, unite: "pièce" },
+      { id: "sel", quantite: 1, unite: "g" },
+      { id: "sucre-glace", quantite: 10, unite: "g", optionnel: true }
+    ],
+    etapes: ["Préchauffer le four à 200 °C. Séparer les blancs des jaunes.", "Battre les jaunes avec le sucre environ 5 minutes, puis ajouter le zeste râpé de l'orange.", "Incorporer la poudre d'amandes et la farine.", "Monter les blancs en neige avec une pincée de sel et les incorporer délicatement.", "Verser dans un petit moule rond (environ 18 cm) et cuire 25 à 30 minutes.", "Laisser refroidir, saupoudrer de sucre glace et couper en petits carrés."]
+  },
   {
     id: "briouats-au-boeuf-et-a-la-coriandre", nom: "Briouats au bœuf et à la coriandre", cuisine: "marocaine", type: "entree",
     difficulte: "moyen", tempsMinutes: 45, portions: 2,
